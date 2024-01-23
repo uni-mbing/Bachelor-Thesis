@@ -1,0 +1,68 @@
+\section{Modelling}
+
+\subsection{Mathematical Formulation}
+
+The model propsed by Anderson et al. \cite{anderson_continuous_1998,anderson_mathematical_2000} 
+and Chaplain et al. \cite{anderson_continuous_1998,chaplain_mathematical_2006,chaplain_mathematical_2006-1,franssen_mathematical_2019} 
+consists of a system of linearly coupled partial differential equations; 
+\begin{align*}
+	\frac{\partial c}{\partial t} &= D_c \Delta c - \chi \nabla \cdot (c\nabla e)  + \mu_1 c\left(1-\frac{c}{c_0}-\frac{e}{e_0}\right)
+    \\
+	\frac{\partial e}{\partial t} &= -\delta m e  + \mu_2 c\left(1-\frac{c}{c_0}-\frac{e}{e_0}\right)\\
+	\frac{\partial m}{\partial t} &= D_m¸ \Delta c + \mu_3 c - \lambda m
+\end{align*}
+with zero-flux boundary conditions, 
+\begin{align*}
+	n\cdot (-D_c \nabla c + c \chi\nabla f) &= 0 \\
+	n \cdot (-D_m\nabla m ) &= 0
+\end{align*}
+where the free parameters are $D_c$, $D_m$, $\chi$, $\delta$, $\mu_1$, $\mu_2$, $\mu_3$ and $\lambda$. \newline
+The variable $c$ describes the tumor cell concentration, $e$ the concentration of the extracellular matrix and $m$ the matrix-degrading enzyme concentration. All of those functions are mathematically defined to be mapping a 1,2 or 3 dimensional spacial value to a scalar value describing the concentration at this point in space at a point in time, $\{c,e,m\} : \mathbb{R}^{3} \times \mathbb{R} \rightarrow \mathbb{R}$.\newline
+To derive at the expression for the tumor cell concentration $c$ we are going to assume that the tumor cell's moement is only subject to two effects, first haptotaxis and second random movement. Haptotaxis is a directed migratory response of cells to gradients of fixed or bound chemicals \cite{anderson_continuous_1998} and random movement is influenced by mechanical stress, electric voltage or other such physical effects. A flux is defined as the amount of substance  which crosses a unit area in unit time. Incorporating these two factors into our mathematical model we define the haptotatic flux $J_{hapto} = \chi c \nabla e$, where $\chi$ is the haptotactic flux coefficient, and the random flux $J_{random} = -D_c \nabla c$, where $D_c$ is random mobility constant, but in general this parameter could also be a function of both extracellular matrix concentration and matrix-degrading enzyme concentration $D_c \rightarrow D(e,m)$. Combining both formulas for flux, our model for the tumor cell concentration looks like follows: $\frac{\partial c}{\partial t} + \nabla (J_{hapto} + J_{random}) = \frac{\partial c}{\partial t} + \chi \nabla (c \nabla e) - D_c \Delta c)$.\newline 
+To model the matrix-degrading enzyme concentration $e$, we asssume that the enzymes degrade the extracellular matrix upon contact. This assumption is simply modeled by the equation $\frac{\partial e}{\partial t} = -\delta m e$, $\delta$ is a positive constant describing this mutual dissolution(Aufloesung/Ausloeschung) process.\newline 
+Modelling the extracellular-matrix concentration $m$, we need to incorporate a diffusion term, as well as production and decay terms. The diffusion term is described like in tumor cell concentration, with the addition that haptotatic fluxes are neglected and only random mobility is observed, $J_{random} = -D_m \nabla m$ (\textcolor{red}{?????}). The production terms depends on the momentarily tumor cell concentration and the decay term on the momentarily extracellular matrix concentration. This results in the term: $\frac{\partial m}{\partial t} = \nabla J_{random} + \mu c - \lambda e = D_m \Delta c + \mu c - \lambda m$, $\mu$ and $\delta$ describing production and decay rates.
+
+\textcolor{red}{Check variables, parameters}
+
+\subsection{Modelparameters and Assumptions}
+
+For each of the above parameters we are going to look reasonable ranges in which they are definded:
+\begin{itemize}
+    \item $D_c$:
+    \item $D_m$:
+    \item $\chi$:
+    \item $\delta$:
+    \item $\mu_1$:
+    \item $\mu_2$:
+    \item $\mu_3$:
+    \item $\lambda$:
+\end{itemize}
+These ranges will later govern the parameter analysis in the Experiment section.
+
+\begin{comment}
+\subsubsection{Diffusion Koefficient $D_x$}
+Those parameters are now given an in-depth biological meaning and assumptions on their areas of definition. \newline 
+Starting with $D_c$ and $D_m$, they are the diffusion coefficients, describing how fast a particle may diffuse through a medium. 
+Diffusion means particles moving from areas of higher concentration to areas of lower concentration, with the goal of creating an equillibrium 
+state, where everywhere of the defined space we have the same concentration of particles. For example knwoing from the biological foundation 
+that cancer cells need to have a higher motility than normal cells to invade the surrouding tissue, the diffusion coefficients for 
+the malignant cells is likely to be higher than the one of normal cells. 
+In mathematical terms Fick's Law is often used to describe diffusion, creating a relationship between a concentration gradient and the flux of a substance. 
+The flux describes the amount of a substances which crosses a unit area in unit time:
+\begin{align*}
+    F = - D \frac{\partial c}{\partial x} = -D \nabla c
+\end{align*}
+With this formulation 
+
+\subsubsection{Haptotatic Flux Koefficient}
+$\chi$
+
+\subsubsection{Production and Decay Rates}
+$\lambda$, $mu$
+
+
+\subsubsection{Degradation}
+$\delta$
+
+\subsubsection{Assumptions}
+\end{comment}
