@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.12.12)  23 JAN 2024 11:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.12.12)  24 JAN 2024 15:34
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/max/Desktop/Bachelor_Thesis/bachelors_report.tex
-(/home/max/Desktop/Bachelor_Thesis/bachelors_report.tex
+**/home/max/Desktop/Bachelor-Thesis/bachelors_report.tex
+(/home/max/Desktop/Bachelor-Thesis/bachelors_report.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -893,42 +893,40 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 ]) [9]
 \openout2 = `x/modelling.aux'.
 
- (./x/modelling.tex
-
-LaTeX Warning: Command \c invalid in math mode on input line 13.
-
-
-LaTeX Warning: Command \c invalid in math mode on input line 13.
-
-[10
+ (./x/modelling.tex [10
 
 
 
-]) [11]
+]
+Overfull \hbox (19.05428pt too wide) in paragraph at lines 48--59
+\T1/cmr/m/n/12 di-men-sion $\OML/cmm/m/it/12 c$ \T1/cmr/m/n/12 is hav-ing the ini-tial den-sity dis-tri-bu-tion, $\OML/cmm/m/it/12 c\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; \OT1/cmr/m/n/12 0) = []$\T1/cmr/m/n/12 ,
+ []
+
+[11]) [12]
 \openout2 = `x/methods.aux'.
 
- (./x/methods.tex) [12
+ (./x/methods.tex) [13
 
 
 
 ]
 \openout2 = `x/simulation.aux'.
 
- (./x/simulation.tex) [13
+ (./x/simulation.tex) [14
 
 
 
 ]
 \openout2 = `x/evaluation.aux'.
 
- (./x/evaluation.tex) [14
+ (./x/evaluation.tex) [15
 
 
 
 ]
 \openout2 = `x/conclusion.aux'.
 
- (./x/conclusion.tex) [15
+ (./x/conclusion.tex) [16
 
 
 
@@ -936,7 +934,7 @@ LaTeX Warning: Command \c invalid in math mode on input line 13.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 35.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [16
+) [17
 
 
 ] (./bachelors_report.aux (./y/bachelors_title_page.aux) (./y/eigenständigkeitserklärung.aux) (./y/abstract.aux) (./x/introduction.aux) (./x/theoretical_background.aux) (./x/modelling.aux) (./x/methods.aux) (./x/simulation.aux) (./x/evaluation.aux) (./x/conclusion.aux))
@@ -947,16 +945,16 @@ Package logreq Info: Writing requests to 'bachelors_report.run.xml'.
 Here is how much of TeX's memory you used:
  26849 strings out of 480171
  567099 string characters out of 5894488
- 1288702 words of memory out of 5000000
+ 1290702 words of memory out of 5000000
  44326 multiletter control sequences out of 15000+600000
  482087 words of font info for 58 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 86i,12n,94p,1485b,1280s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on bachelors_report.pdf (17 pages, 416133 bytes).
+ 86i,14n,94p,1491b,1280s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on bachelors_report.pdf (18 pages, 451392 bytes).
 PDF statistics:
- 470 PDF objects out of 1000 (max. 8388607)
- 103 compressed objects within 2 object streams
+ 487 PDF objects out of 1000 (max. 8388607)
+ 114 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
