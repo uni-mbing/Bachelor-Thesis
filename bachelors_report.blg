@@ -1,15 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'bachelors_report.blg'
-[87] biber:340> INFO - === Mi Jan 24, 2024, 15:07:12
-[101] Biber.pm:418> INFO - Reading 'bachelors_report.bcf'
-[166] Biber.pm:972> INFO - Found 5 citekeys in bib section 0
-[178] Biber.pm:4383> INFO - Processing section 0
-[187] Biber.pm:4574> INFO - Looking for bibtex file 'y/library.bib' for section 0
-[188] bibtex.pm:1713> INFO - LaTeX decoding ...
-[205] bibtex.pm:1518> INFO - Found BibTeX data source 'y/library.bib'
-[273] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[273] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[273] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[273] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[281] bbl.pm:654> INFO - Writing 'bachelors_report.bbl' with encoding 'UTF-8'
-[285] bbl.pm:757> INFO - Output to bachelors_report.bbl
+[89] biber:340> INFO - === Do Jan 25, 2024, 14:37:08
+[104] Biber.pm:418> INFO - Reading 'bachelors_report.bcf'
+[171] Biber.pm:972> INFO - Found 5 citekeys in bib section 0
+[184] Biber.pm:4383> INFO - Processing section 0
+[195] Biber.pm:4574> INFO - Looking for bibtex file 'y/library.bib' for section 0
+[197] bibtex.pm:1713> INFO - LaTeX decoding ...
+[216] bibtex.pm:1518> INFO - Found BibTeX data source 'y/library.bib'
+[297] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[297] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[297] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[297] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[304] bbl.pm:654> INFO - Writing 'bachelors_report.bbl' with encoding 'UTF-8'
+[309] bbl.pm:757> INFO - Output to bachelors_report.bbl
