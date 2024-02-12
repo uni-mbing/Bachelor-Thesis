@@ -130,6 +130,68 @@
       \verb http://www.hindawi.com/journals/cmmm/2000/490902/abs/
       \endverb
     \endentry
+    \entry{franssen_mathematical_2019}{article}{}
+      \name{author}{4}{}{%
+        {{hash=5c0e319449d7341ef938d6476c1d64b4}{%
+           family={Franssen},
+           familyi={F\bibinitperiod},
+           given={Linnea\bibnamedelima C.},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=95d548450d8ee2cd68a94d8a362e3869}{%
+           family={Lorenzi},
+           familyi={L\bibinitperiod},
+           given={Tommaso},
+           giveni={T\bibinitperiod}}}%
+        {{hash=e40a4dc0b6255c50912d87385ca603aa}{%
+           family={Burgess},
+           familyi={B\bibinitperiod},
+           given={Andrew\bibnamedelimb E.\bibnamedelimi F.},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=46edb43182feaff0a026de8f8df3f16e}{%
+           family={Chaplain},
+           familyi={C\bibinitperiod},
+           given={Mark\bibnamedelimb A.\bibnamedelimi J.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{064a638fff452f33394b95c25e6fe0be}
+      \strng{fullhash}{799315e6a2abd1cb95227706ac7367b8}
+      \strng{bibnamehash}{799315e6a2abd1cb95227706ac7367b8}
+      \strng{authorbibnamehash}{799315e6a2abd1cb95227706ac7367b8}
+      \strng{authornamehash}{064a638fff452f33394b95c25e6fe0be}
+      \strng{authorfullhash}{799315e6a2abd1cb95227706ac7367b8}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0092-8240, 1522-9602}
+      \field{journaltitle}{Bulletin of Mathematical Biology}
+      \field{month}{6}
+      \field{number}{6}
+      \field{title}{A {Mathematical} {Framework} for {Modelling} the {Metastatic} {Spread} of {Cancer}}
+      \field{urlday}{19}
+      \field{urlmonth}{12}
+      \field{urlyear}{2023}
+      \field{volume}{81}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \field{pages}{1965\bibrangedash 2010}
+      \range{pages}{46}
+      \verb{doi}
+      \verb 10.1007/s11538-019-00597-x
+      \endverb
+      \verb{file}
+      \verb Full Text:/home/valentin/Zotero/storage/8G296NPP/Franssen et al. - 2019 - A Mathematical Framework for Modelling the Metasta.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/s11538-019-00597-x
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/s11538-019-00597-x
+      \endverb
+    \endentry
     \entry{chaplain_mathematical_2006}{article}{}
       \name{author}{3}{}{%
         {{hash=6b105805ece9632a432753099f721c1b}{%
@@ -158,8 +220,8 @@
       \strng{authornamehash}{132df924acb8e1a2bc91073d36a63047}
       \strng{authorfullhash}{584b10aa759ab6e9311a0a691a3b48ba}
       \field{extraname}{1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Angiogenesis, the growth of a network of blood vessels, is a crucial component of solid tumor growth, linking the relatively harmless avascular and the potentially fatal vascular growth phases of the tumor. As a process, angiogenesis is a well-orchestrated sequence of events involving endothelial cell migration and proliferation; degradation of tissue; new capillary vessel formation; loop formation (anastomosis) and, crucially, blood flow through the network. Once there is flow associated with the nascent network, subsequent growth evolves both temporally and spatially in response to the combined effects of angiogenic factors, migratory cues via the extracellular matrix, and perfusion-related hemodynamic forces in a manner that may be described as both adaptive and dynamic. In this article, we first present a review of previous theoretical and computational models of angiogenesis and then indicate how recent developments in flow models are providing insight into antiangiogenic and chemotherapeutic drug treatment of solid tumors.}
@@ -215,8 +277,8 @@
       \strng{authornamehash}{132df924acb8e1a2bc91073d36a63047}
       \strng{authorfullhash}{e83974044700dd345e2f510a557b13ad}
       \field{extraname}{2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{issn}{1556-181X}
@@ -243,68 +305,6 @@
       \endverb
       \verb{url}
       \verb http://aimsciences.org//article/doi/10.3934/nhm.2006.1.399
-      \endverb
-    \endentry
-    \entry{franssen_mathematical_2019}{article}{}
-      \name{author}{4}{}{%
-        {{hash=5c0e319449d7341ef938d6476c1d64b4}{%
-           family={Franssen},
-           familyi={F\bibinitperiod},
-           given={Linnea\bibnamedelima C.},
-           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
-        {{hash=95d548450d8ee2cd68a94d8a362e3869}{%
-           family={Lorenzi},
-           familyi={L\bibinitperiod},
-           given={Tommaso},
-           giveni={T\bibinitperiod}}}%
-        {{hash=e40a4dc0b6255c50912d87385ca603aa}{%
-           family={Burgess},
-           familyi={B\bibinitperiod},
-           given={Andrew\bibnamedelimb E.\bibnamedelimi F.},
-           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
-        {{hash=46edb43182feaff0a026de8f8df3f16e}{%
-           family={Chaplain},
-           familyi={C\bibinitperiod},
-           given={Mark\bibnamedelimb A.\bibnamedelimi J.},
-           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {en}%
-      }
-      \strng{namehash}{064a638fff452f33394b95c25e6fe0be}
-      \strng{fullhash}{799315e6a2abd1cb95227706ac7367b8}
-      \strng{bibnamehash}{799315e6a2abd1cb95227706ac7367b8}
-      \strng{authorbibnamehash}{799315e6a2abd1cb95227706ac7367b8}
-      \strng{authornamehash}{064a638fff452f33394b95c25e6fe0be}
-      \strng{authorfullhash}{799315e6a2abd1cb95227706ac7367b8}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0092-8240, 1522-9602}
-      \field{journaltitle}{Bulletin of Mathematical Biology}
-      \field{month}{6}
-      \field{number}{6}
-      \field{title}{A {Mathematical} {Framework} for {Modelling} the {Metastatic} {Spread} of {Cancer}}
-      \field{urlday}{19}
-      \field{urlmonth}{12}
-      \field{urlyear}{2023}
-      \field{volume}{81}
-      \field{year}{2019}
-      \field{urldateera}{ce}
-      \field{pages}{1965\bibrangedash 2010}
-      \range{pages}{46}
-      \verb{doi}
-      \verb 10.1007/s11538-019-00597-x
-      \endverb
-      \verb{file}
-      \verb Full Text:/home/valentin/Zotero/storage/8G296NPP/Franssen et al. - 2019 - A Mathematical Framework for Modelling the Metasta.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://link.springer.com/10.1007/s11538-019-00597-x
-      \endverb
-      \verb{url}
-      \verb http://link.springer.com/10.1007/s11538-019-00597-x
       \endverb
     \endentry
   \enddatalist

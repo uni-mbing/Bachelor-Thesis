@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.12.12)  25 JAN 2024 14:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.12.12)  12 FEB 2024 14:39
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -822,80 +822,72 @@ Package biblatex Info: Reference segment=0 on input line 23.
 \openout2 = `y/abstract.aux'.
 
  (./y/abstract.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 11.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 11.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+Underfull \hbox (badness 10000) in paragraph at lines 3--12
 
-LaTeX Warning: Command \c invalid in math mode on input line 19.
+ []
 
 
-LaTeX Warning: Command \c invalid in math mode on input line 19.
+Underfull \hbox (badness 10000) in paragraph at lines 3--12
 
-<y/anderson_tumor_invasion_model_2Dvs3Dtime0_7_thick.png, id=16, 1792.6975pt x 1622.06pt>
-File: y/anderson_tumor_invasion_model_2Dvs3Dtime0_7_thick.png Graphic file (type png)
-<use y/anderson_tumor_invasion_model_2Dvs3Dtime0_7_thick.png>
-Package pdftex.def Info: y/anderson_tumor_invasion_model_2Dvs3Dtime0_7_thick.png  used on input line 36.
-(pdftex.def)             Requested size: 204.85846pt x 185.35732pt.
-<y/anderson_tumor_invasion_model_2Dvs3D_time3_thick.png, id=17, 1792.6975pt x 1622.06pt>
-File: y/anderson_tumor_invasion_model_2Dvs3D_time3_thick.png Graphic file (type png)
-<use y/anderson_tumor_invasion_model_2Dvs3D_time3_thick.png>
-Package pdftex.def Info: y/anderson_tumor_invasion_model_2Dvs3D_time3_thick.png  used on input line 37.
-(pdftex.def)             Requested size: 204.85846pt x 185.35732pt.
+ []
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--12
+
+ []
 
 [2
 
 
 
-] [3 <./y/anderson_tumor_invasion_model_2Dvs3Dtime0_7_thick.png (PNG copy)> <./y/anderson_tumor_invasion_model_2Dvs3D_time3_thick.png (PNG copy)>]
+])
+Underfull \hbox (badness 10000) in paragraph at lines 15--26
 
-LaTeX Warning: Command \c invalid in math mode on input line 73.
+ []
 
 
-LaTeX Warning: Command \c invalid in math mode on input line 73.
+Underfull \hbox (badness 10000) in paragraph at lines 15--26
 
-File: y/anderson_tumor_invasion_model_2Dvs3Dtime0_7_thick.png Graphic file (type png)
-<use y/anderson_tumor_invasion_model_2Dvs3Dtime0_7_thick.png>
-Package pdftex.def Info: y/anderson_tumor_invasion_model_2Dvs3Dtime0_7_thick.png  used on input line 89.
-(pdftex.def)             Requested size: 204.85846pt x 185.35732pt.
-File: y/anderson_tumor_invasion_model_2Dvs3D_time3_thick.png Graphic file (type png)
-<use y/anderson_tumor_invasion_model_2Dvs3D_time3_thick.png>
-Package pdftex.def Info: y/anderson_tumor_invasion_model_2Dvs3D_time3_thick.png  used on input line 90.
-(pdftex.def)             Requested size: 204.85846pt x 185.35732pt.
+ []
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [4
+Underfull \hbox (badness 10000) in paragraph at lines 15--26
 
-] [5] (./bachelors_report.toc)
+ []
+
+[3
+
+] (./bachelors_report.toc)
 \tf@toc=\write6
 \openout6 = `bachelors_report.toc'.
 
- [6
+ [4
 
 
 ]
 \openout2 = `x/introduction.aux'.
 
- (./x/introduction.tex) [7
+ (./x/introduction.tex) [5
 
 ]
 \openout2 = `x/theoretical_background.aux'.
 
- (./x/theoretical_background.tex [8
+ (./x/theoretical_background.tex [6
 
 
 
-]) [9]
+]) [7]
 \openout2 = `x/modelling.aux'.
 
- (./x/modelling.tex [10
+ (./x/modelling.tex [8
 
 
 
@@ -904,31 +896,31 @@ Overfull \hbox (19.05428pt too wide) in paragraph at lines 48--59
 \T1/cmr/m/n/12 di-men-sion $\OML/cmm/m/it/12 c$ \T1/cmr/m/n/12 is hav-ing the ini-tial den-sity dis-tri-bu-tion, $\OML/cmm/m/it/12 c\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; \OT1/cmr/m/n/12 0) = []$\T1/cmr/m/n/12 ,
  []
 
-[11]) [12]
+[9]) [10]
 \openout2 = `x/methods.aux'.
 
- (./x/methods.tex) [13
+ (./x/methods.tex) [11
 
 
 
 ]
 \openout2 = `x/simulation.aux'.
 
- (./x/simulation.tex) [14
+ (./x/simulation.tex) [12
 
 
 
 ]
 \openout2 = `x/evaluation.aux'.
 
- (./x/evaluation.tex) [15
+ (./x/evaluation.tex) [13
 
 
 
 ]
 \openout2 = `x/conclusion.aux'.
 
- (./x/conclusion.tex) [16
+ (./x/conclusion.tex) [14
 
 
 
@@ -936,7 +928,7 @@ Overfull \hbox (19.05428pt too wide) in paragraph at lines 48--59
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 36.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [17
+) [15
 
 
 ] (./bachelors_report.aux (./y/bachelors_title_page.aux) (./y/eigenständigkeitserklärung.aux) (./y/abstract.aux) (./x/introduction.aux) (./x/theoretical_background.aux) (./x/modelling.aux) (./x/methods.aux) (./x/simulation.aux) (./x/evaluation.aux) (./x/conclusion.aux))
@@ -945,18 +937,18 @@ Package logreq Info: Writing requests to 'bachelors_report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26881 strings out of 480171
- 567798 string characters out of 5894488
- 1304164 words of memory out of 5000000
- 44354 multiletter control sequences out of 15000+600000
+ 26863 strings out of 480171
+ 566945 string characters out of 5894488
+ 1304138 words of memory out of 5000000
+ 44339 multiletter control sequences out of 15000+600000
  482856 words of font info for 59 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 86i,14n,94p,1491b,1280s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 86i,14n,94p,1491b,1278s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on bachelors_report.pdf (18 pages, 461627 bytes).
+Output written on bachelors_report.pdf (16 pages, 237342 bytes).
 PDF statistics:
- 494 PDF objects out of 1000 (max. 8388607)
- 114 compressed objects within 2 object streams
+ 483 PDF objects out of 1000 (max. 8388607)
+ 110 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
