@@ -20,7 +20,7 @@ The variable $c$ describes the tumor cell concentration, $e$ the concentration o
 To derive at the expression for the tumor cell concentration $c$ we are going to assume that the tumor cell's moement is subject to two influences, haptotaxis and random movement. Haptotaxis is a directed migratory response of cells to gradients of fixed or bound chemicals \cite{anderson_continuous_1998} and random movement is influenced by for example mechanical stress, electric voltage or other such physical effects. To get an expression for how much or how fast the tumor cells move, we need to define what flux is, flux is defined to be the amount of a substance  which crosses a unit area in unit time. Incorporating the two assumed influencing factors into our mathematical model we define the haptotatic flux $J_{hapto} = \chi c \nabla e$, where $\chi$ is the haptotactic flux coefficient, and the random flux $J_{random} = -D_c \nabla c$, where $D_c$ is random mobility constant. In general this parameter could also be a function of both extracellular matrix and matrix-degrading enzyme concentration $D_c \rightarrow D(e,m)$. As we know cells proliferate and grow over time, so we want to respect this in our model with a term for tumor cell proliferation; $\mu_1 c (1-\frac{c}{c_0} - \frac{e}{e_0})$. The idea is that this term describes the cell proliferation with a logisitic growth model, $\mu_1$ describing the proliferation rate.
 Combining all 3 formulas for flux, and proliferation our model for the tumor cell concentration looks like follows: $\frac{\partial c}{\partial t} + \nabla (J_{hapto} + J_{random}) + \mu_1 c (1-\frac{c}{c_0} - \frac{e}{e_0}) = \frac{\partial c}{\partial t} + \chi \nabla (c \nabla e) - D_c \Delta c) + \mu_1 c (1-\frac{c}{c_0} - \frac{e}{e_0})$.\newline 
 To model the matrix-degrading enzyme concentration $e$, we asssume that the enzymes degrade the extracellular matrix upon contact. This assumption is simply modeled by the equation $\frac{\partial e}{\partial t} = -\delta m e$, $\delta$ is a positive constant describing this annihilation process. To this we also add a term describing the proliferation process; $\frac{\partial e}{\partial t} = -\delta m e + \mu_2 c (1 - \frac{c}{c_0} - \frac{e}{e_0})$\newline 
-Modelling the extracellular-matrix concentration $m$, we need to incorporate a diffusion term, as well as production and decay terms. The diffusion term is described like in tumor cell concentration, with the addition that haptotatic fluxes are neglected and only random mobility is assumed, $J_{random} = -D_m \nabla m$ (\textcolor{red}{?????}). The production terms depends on the momentarily tumor cell concentration and the decay term on the momentarily extracellular matrix concentration. This results in the term: $\frac{\partial m}{\partial t} = \nabla J_{random} + \mu c - \lambda e = D_m \Delta c + \mu c - \lambda m$, $\mu$ and $\delta$ describing production and decay rates.
+Modelling the extracellular-matrix concentration $m$, we need to incorporate a diffusion term, as well as production and decay terms. The diffusion term is described like in tumor cell concentration, with the addition that haptotatic fluxes are neglected and only random mobility is assumed, $J_{random} = -D_m \nabla m$. The production terms depends on the momentarily tumor cell concentration and the decay term on the momentarily extracellular matrix concentration. This results in the term: $\frac{\partial m}{\partial t} = \nabla J_{random} + \mu c - \lambda e = D_m \Delta c + \mu c - \lambda m$, $\mu$ and $\delta$ describing production and decay rates.
 
 \textcolor{red}{Check variables, parameters}
 
@@ -32,13 +32,13 @@ We start with rescaling the distance with an appropriate length scale $L$, time 
     \tilde{c} = \frac{c}{c_0};  \tilde{e} = \frac{e}{e_0};  \tilde{m} = \frac{m}{m_0}  
 \end{align*}
 
-We also modify most of the free parameters from the above system of equations: $d_c = \frac{D_c}{D}, \gamma = \chi \frac{f_0}{D}, \nu = \tau m_0 \delta, d_m = \frac{D_m}{D}, \alpha = \tau \mu_3 \frac{c_0}{m_0}, \beta = \tau \lambda$. \newline 
+We also modify most of the free parameters from the above system of equations: $d_c = \frac{D_c}{D}, \gamma = \chi \frac{f_0}{D}, \eta = \tau m_0 \delta, d_m = \frac{D_m}{D}, \alpha = \tau \mu_3 \frac{c_0}{m_0}, \beta = \tau \lambda$. \newline 
 These modifications make the new system of linearly coupled partial differential equations:
 
 \begin{align*}
 	\frac{\partial c}{\partial t} &= d_c \Delta c - \gamma \nabla \cdot (c\nabla e)  + \mu_1 c\left(1-\frac{c}{c_0}-\frac{e}{e_0}\right)
     \\
-	\frac{\partial e}{\partial t} &= -\nu m e  + \mu_2 c\left(1-\frac{c}{c_0}-\frac{e}{e_0}\right)\\
+	\frac{\partial e}{\partial t} &= -\eta m e  + \mu_2 c\left(1-\frac{c}{c_0}-\frac{e}{e_0}\right)\\
 	\frac{\partial m}{\partial t} &= d_m \Delta c + \alpha c - \beta m
 \end{align*}
 with zero-flux boundary conditions, 
@@ -56,8 +56,6 @@ exp(\frac{-x^2}{\epsilon}), x\in [-0.25, 0.25]\\
 \end{cases}
 $, with $\epsilon$ being a postive constant. 
 The tumor will have degraded some of its surrounding tissue in every experiment and hence we take the inital profile of the extracellular matrix to be $e(x,0) = 1 - 0.5 c(x,0)$. At last we assume the initial matrix-degrading enzyme concentration to be proportional to the initial tumor cell density and therefore take $m(x,0) = 0.5 c(x,0)$.
-
-\textcolor{red}{Mit Valentin absprechen, sodass die Angaben hier stimmen!}
 
 For each of the free parameters we are going to look at reasonable values or ranges in which they are defined experimentally determined: 
 \begin{itemize}
