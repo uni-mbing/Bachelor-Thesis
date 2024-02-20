@@ -229,7 +229,7 @@
       \field{journaltitle}{Annual Review of Biomedical Engineering}
       \field{month}{8}
       \field{number}{1}
-      \field{title}{{MATHEMATICAL} {MODELING} {OF} {TUMOR}-{INDUCED} {ANGIOGENESIS}}
+      \field{title}{{MATHEMATIC﻿@Article{Kolev2010, author={Kolev, M. and Zubik-Kowal, B.}, title={Numerical Solutions for a Model of Tissue Invasion and Migration of Tumour Cells}, journal={Computational and Mathematical Methods in Medicine}, year={2010}, month={Dec}, day={30}, publisher={Hindawi Publishing Corporation}, volume={2011}, pages={452320}, abstract={The goal of this paper is to construct a new algorithm for the numerical simulations of the evolution of tumour invasion and metastasis. By means of mathematical model equations and their numerical solutions we investigate how cancer cells can produce and secrete matrixdegradative enzymes, degrade extracellular matrix, and invade due to diffusion and haptotactic migration. For the numerical simulationsof the interactions between the tumour cells and the surrounding tissue, we apply numerical approximations, which are spectrally accurateand based on small amounts of grid-points. Our numerical experiments illustrate the metastatic ability of tumour cells.}, issn={1748-670X}, doi={10.1155/2011/452320}, url={https://doi.org/10.1155/2011/452320} } AL} {MODELING} {OF} {TUMOR}-{INDUCED} {ANGIOGENESIS}}
       \field{urlday}{24}
       \field{urlmonth}{1}
       \field{urlyear}{2023}
