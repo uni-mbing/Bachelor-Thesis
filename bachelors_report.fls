@@ -955,6 +955,11 @@ INPUT ./content/method.tex
 INPUT content/method.tex
 INPUT ./content/method.tex
 INPUT content/method.tex
+INPUT ./resources/images/method_photo.png
+INPUT ./resources/images/method_photo.png
+INPUT resources/images/method_photo.png
+INPUT ./resources/images/method_photo.png
+INPUT ./resources/images/method_photo.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1095.tfm
 INPUT ./content/experiments_results.tex
 INPUT ./content/experiments_results.tex
