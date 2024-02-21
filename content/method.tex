@@ -3,8 +3,10 @@
 %insert correct equation labels, figure refrences
 %insert correct citataions
 %correct systematic variation table
+%insert initial values figure.
 
 This work will investigate how the free parameters of the model given by the equations 7-11 will affect the spatial temporal progress of the numerical simulation. For the numerical simulation we will use the weak form given with equations 12-14 and solve it using HiFlow. To study the results of the numerical simulation ParaView is used, producing informative plots to compare the evolution of the simulation. For this we rely on the tool Plot Over Line to give radially symmetrical reulsts of the three variables of tumour and extracellular matrix density and matrix-degrading enzymes, like seen in the inital distribution in figure , in figure you can see the configuraion for the Plot Over Line tool used, the grey line in the middle of the simulation to the middle of the top of the square.\newline
+All experiments, except when introducing the heterogenous ECM, start with the same initial values as seen in figuer initial values.\newline 
 First replications of simulations of previous works will be discussed whhich serves the purpose to first verify the correctness of our result, as well as to give a starting point describing the phenomena this model exhibits. We start with the 2D case, since for this there are many examples already given and then move on to 3D simulation where the examples are fewer. \newline
 After having taken a look at the preexisting experiments the main part of this work will begin with a systematic parameter analysis. Like before it will start investigating 2D simulation and will then move on to 3D simulation. Here we will compare what effect the dimensionality has on the simulation an try replicating the behaviour of the 2D cases in the 3D variant. \newline
 At last we will have a prospect on how an heterogneous extracellular matrix influences the results, which is the more realistic case, since tumourous cells tend to appear at border regions of tissue where we do not have a homogenous ECM. \newline
@@ -17,7 +19,7 @@ The results of the above experiments will be summarized and discussed in the Con
     \label{fig:PlotOverLine}
 \end{figure}
 
-Looking at these estimates of section 3 we are left with plenty of room to investigate the effects of every single non-fixed parameter. According to previous experiments cite anderson and chaplain, numerical simulation and stuff.... this work will use the baseline set of parameters with $(d_c, \gamma, \mu_1, \eta, \mu_2, d_m, \alpha, \beta) = (0.001, 0.005, 0, 10, 0, 0.001,0.1, 0)$ for experiments without proliferation and 
+Looking at these estimates of section 3 we are left with plenty of room to investigate the effects of every single non-fixed parameter. According to previous experiments cite anderson and chaplain, numerical simulation and stuff.... this work will use the baseline set of parameters with $(d_c, \gamma, \mu_1, \eta, \mu_2, d_m, \alpha, \beta) = (0.001, 0.005, 0, 10, 0, 0.001,0.1, 0)$ for experiments without proliferation and \newline
 $(d_c, \gamma, \mu_1, \eta, \mu_2, d_m, \alpha, \beta) = (0.001, 0.005, 0.3, 10, 0.3, 0.001,0.1, 0.1)$ for experiments with proliferation.
 The systematic variation will be same for 2D as well as 3D experiments and will then look like follows: 
 
