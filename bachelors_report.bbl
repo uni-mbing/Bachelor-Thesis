@@ -1,0 +1,359 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{anderson_continuous_1998}{article}{}
+      \name{author}{1}{}{%
+        {{hash=076c274796c1620dbfad5894924750da}{%
+           family={Anderson},
+           familyi={A\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{076c274796c1620dbfad5894924750da}
+      \strng{fullhash}{076c274796c1620dbfad5894924750da}
+      \strng{bibnamehash}{076c274796c1620dbfad5894924750da}
+      \strng{authorbibnamehash}{076c274796c1620dbfad5894924750da}
+      \strng{authornamehash}{076c274796c1620dbfad5894924750da}
+      \strng{authorfullhash}{076c274796c1620dbfad5894924750da}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00928240}
+      \field{journaltitle}{Bulletin of Mathematical Biology}
+      \field{month}{9}
+      \field{number}{5}
+      \field{title}{Continuous and {Discrete} {Mathematical} {Models} of {Tumor}-induced {Angiogenesis}}
+      \field{urlday}{19}
+      \field{urlmonth}{12}
+      \field{urlyear}{2023}
+      \field{volume}{60}
+      \field{year}{1998}
+      \field{urldateera}{ce}
+      \field{pages}{857\bibrangedash 899}
+      \range{pages}{43}
+      \verb{doi}
+      \verb 10.1006/bulm.1998.0042
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1006/bulm.1998.0042
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1006/bulm.1998.0042
+      \endverb
+    \endentry
+    \entry{anderson_mathematical_2000}{article}{}
+      \name{author}{5}{}{%
+        {{hash=799e3a25a7423ad8a23bb13efa4dee3c}{%
+           family={Anderson},
+           familyi={A\bibinitperiod},
+           given={A.\bibnamedelimi R.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=6b105805ece9632a432753099f721c1b}{%
+           family={Chaplain},
+           familyi={C\bibinitperiod},
+           given={M.\bibnamedelimi A.\bibnamedelimi J.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=174960c7ae51f56d3cbca28cb2fe428a}{%
+           family={Newman},
+           familyi={N\bibinitperiod},
+           given={E.\bibnamedelimi L.},
+           giveni={E\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=2d07f5622acd17cecaaa400fd7814238}{%
+           family={Steele},
+           familyi={S\bibinitperiod},
+           given={R.\bibnamedelimi J.\bibnamedelimi C.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=4bc482e6699a701b60c1cb85f351a643}{%
+           family={Thompson},
+           familyi={T\bibinitperiod},
+           given={A.\bibnamedelimi M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{d0e4f3ae6912f59b4b0cb21858a81850}
+      \strng{fullhash}{7a2e01e2c91c19297159e9abb5b40071}
+      \strng{bibnamehash}{7a2e01e2c91c19297159e9abb5b40071}
+      \strng{authorbibnamehash}{7a2e01e2c91c19297159e9abb5b40071}
+      \strng{authornamehash}{d0e4f3ae6912f59b4b0cb21858a81850}
+      \strng{authorfullhash}{7a2e01e2c91c19297159e9abb5b40071}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper we present two types of mathematical model which describe the invasion of host tissue by tumour cells. In the models, we focus on three key variables implicated in the invasion process, namely, tumour cells, host tissue (extracellular matrix) and matrix-degradative enzymes associated with the tumour cells. The first model focusses on the macro-scale structure (cell population level) and considers the tumour as a single mass. The mathematical model consists of a system of partial differential equations describing the production and/or activation of degradative enzymes by the tumour cells, the degradation of the matrix and the migratory response of the tumour cells. Numerical simulations are presented in one and two space dimensions and compared qualitatively with experimental and clinical observations. The second type of model focusses on the micro-scale (individual cell) level and uses a discrete technique developed in previous models of angiogenesis. This technique enables one to model migration and invasion at the level of individual cells and hence it is possible to examine the implications of metastatic spread. Finally, the results of the models are compared with actual clinical observations and the implications of the model for improved surgical treatment of patients are considered.}
+      \field{issn}{1027-3662, 1607-8578}
+      \field{journaltitle}{Journal of Theoretical Medicine}
+      \field{number}{2}
+      \field{title}{Mathematical {Modelling} of {Tumour} {Invasion} and {Metastasis}}
+      \field{urlday}{15}
+      \field{urlmonth}{12}
+      \field{urlyear}{2023}
+      \field{volume}{2}
+      \field{year}{2000}
+      \field{urldateera}{ce}
+      \field{pages}{129\bibrangedash 154}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1080/10273660008833042
+      \endverb
+      \verb{file}
+      \verb Full Text:/home/valentin/Zotero/storage/NMZM6PCB/Anderson et al. - 2000 - Mathematical Modelling of Tumour Invasion and Meta.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.hindawi.com/journals/cmmm/2000/490902/abs/
+      \endverb
+      \verb{url}
+      \verb http://www.hindawi.com/journals/cmmm/2000/490902/abs/
+      \endverb
+    \endentry
+    \entry{franssen_mathematical_2019}{article}{}
+      \name{author}{4}{}{%
+        {{hash=5c0e319449d7341ef938d6476c1d64b4}{%
+           family={Franssen},
+           familyi={F\bibinitperiod},
+           given={Linnea\bibnamedelima C.},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=95d548450d8ee2cd68a94d8a362e3869}{%
+           family={Lorenzi},
+           familyi={L\bibinitperiod},
+           given={Tommaso},
+           giveni={T\bibinitperiod}}}%
+        {{hash=e40a4dc0b6255c50912d87385ca603aa}{%
+           family={Burgess},
+           familyi={B\bibinitperiod},
+           given={Andrew\bibnamedelimb E.\bibnamedelimi F.},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=46edb43182feaff0a026de8f8df3f16e}{%
+           family={Chaplain},
+           familyi={C\bibinitperiod},
+           given={Mark\bibnamedelimb A.\bibnamedelimi J.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{064a638fff452f33394b95c25e6fe0be}
+      \strng{fullhash}{799315e6a2abd1cb95227706ac7367b8}
+      \strng{bibnamehash}{799315e6a2abd1cb95227706ac7367b8}
+      \strng{authorbibnamehash}{799315e6a2abd1cb95227706ac7367b8}
+      \strng{authornamehash}{064a638fff452f33394b95c25e6fe0be}
+      \strng{authorfullhash}{799315e6a2abd1cb95227706ac7367b8}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0092-8240, 1522-9602}
+      \field{journaltitle}{Bulletin of Mathematical Biology}
+      \field{month}{6}
+      \field{number}{6}
+      \field{title}{A {Mathematical} {Framework} for {Modelling} the {Metastatic} {Spread} of {Cancer}}
+      \field{urlday}{19}
+      \field{urlmonth}{12}
+      \field{urlyear}{2023}
+      \field{volume}{81}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \field{pages}{1965\bibrangedash 2010}
+      \range{pages}{46}
+      \verb{doi}
+      \verb 10.1007/s11538-019-00597-x
+      \endverb
+      \verb{file}
+      \verb Full Text:/home/valentin/Zotero/storage/8G296NPP/Franssen et al. - 2019 - A Mathematical Framework for Modelling the Metasta.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/s11538-019-00597-x
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/s11538-019-00597-x
+      \endverb
+    \endentry
+    \entry{chaplain_mathematical_2006-1}{article}{}
+      \name{author}{3}{}{%
+        {{hash=6b105805ece9632a432753099f721c1b}{%
+           family={Chaplain},
+           familyi={C\bibinitperiod},
+           given={M.A.J},
+           giveni={M\bibinitperiod}}}%
+        {{hash=bb821a3ac6d331d4adb0a427b6f069f1}{%
+           family={Lolas},
+           familyi={L\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=a110eba6e78eb261e2661d0f0cfbd016}{%
+           family={{,The SIMBIOS Centre, Division of Mathematics, University of Dundee, Dundee DD1 4HN}},
+           familyi={,\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{132df924acb8e1a2bc91073d36a63047}
+      \strng{fullhash}{e83974044700dd345e2f510a557b13ad}
+      \strng{bibnamehash}{e83974044700dd345e2f510a557b13ad}
+      \strng{authorbibnamehash}{e83974044700dd345e2f510a557b13ad}
+      \strng{authornamehash}{132df924acb8e1a2bc91073d36a63047}
+      \strng{authorfullhash}{e83974044700dd345e2f510a557b13ad}
+      \field{extraname}{1}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{1556-181X}
+      \field{journaltitle}{Networks \& Heterogeneous Media}
+      \field{number}{3}
+      \field{shorttitle}{Mathematical modelling of cancer invasion of tissue}
+      \field{title}{Mathematical modelling of cancer invasion of tissue: dynamic heterogeneity}
+      \field{urlday}{15}
+      \field{urlmonth}{12}
+      \field{urlyear}{2023}
+      \field{volume}{1}
+      \field{year}{2006}
+      \field{urldateera}{ce}
+      \field{pages}{399\bibrangedash 439}
+      \range{pages}{41}
+      \verb{doi}
+      \verb 10.3934/nhm.2006.1.399
+      \endverb
+      \verb{file}
+      \verb Full Text:/home/valentin/Zotero/storage/PFIL4EWJ/Chaplain et al. - 2006 - Mathematical modelling of cancer invasion of tissu.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://aimsciences.org//article/doi/10.3934/nhm.2006.1.399
+      \endverb
+      \verb{url}
+      \verb http://aimsciences.org//article/doi/10.3934/nhm.2006.1.399
+      \endverb
+    \endentry
+    \entry{chaplain_mathematical_2006}{article}{}
+      \name{author}{3}{}{%
+        {{hash=6b105805ece9632a432753099f721c1b}{%
+           family={Chaplain},
+           familyi={C\bibinitperiod},
+           given={M.A.J.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f75d81d2c1ca2442ee9d7d17204cc4cb}{%
+           family={McDougall},
+           familyi={M\bibinitperiod},
+           given={S.R.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=799e3a25a7423ad8a23bb13efa4dee3c}{%
+           family={Anderson},
+           familyi={A\bibinitperiod},
+           given={A.R.A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{132df924acb8e1a2bc91073d36a63047}
+      \strng{fullhash}{584b10aa759ab6e9311a0a691a3b48ba}
+      \strng{bibnamehash}{584b10aa759ab6e9311a0a691a3b48ba}
+      \strng{authorbibnamehash}{584b10aa759ab6e9311a0a691a3b48ba}
+      \strng{authornamehash}{132df924acb8e1a2bc91073d36a63047}
+      \strng{authorfullhash}{584b10aa759ab6e9311a0a691a3b48ba}
+      \field{extraname}{2}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Angiogenesis, the growth of a network of blood vessels, is a crucial component of solid tumor growth, linking the relatively harmless avascular and the potentially fatal vascular growth phases of the tumor. As a process, angiogenesis is a well-orchestrated sequence of events involving endothelial cell migration and proliferation; degradation of tissue; new capillary vessel formation; loop formation (anastomosis) and, crucially, blood flow through the network. Once there is flow associated with the nascent network, subsequent growth evolves both temporally and spatially in response to the combined effects of angiogenic factors, migratory cues via the extracellular matrix, and perfusion-related hemodynamic forces in a manner that may be described as both adaptive and dynamic. In this article, we first present a review of previous theoretical and computational models of angiogenesis and then indicate how recent developments in flow models are providing insight into antiangiogenic and chemotherapeutic drug treatment of solid tumors.}
+      \field{issn}{1523-9829, 1545-4274}
+      \field{journaltitle}{Annual Review of Biomedical Engineering}
+      \field{month}{8}
+      \field{number}{1}
+      \field{title}{{MATHEMATIC﻿@Article{Kolev2010, author={Kolev, M. and Zubik-Kowal, B.}, title={Numerical Solutions for a Model of Tissue Invasion and Migration of Tumour Cells}, journal={Computational and Mathematical Methods in Medicine}, year={2010}, month={Dec}, day={30}, publisher={Hindawi Publishing Corporation}, volume={2011}, pages={452320}, abstract={The goal of this paper is to construct a new algorithm for the numerical simulations of the evolution of tumour invasion and metastasis. By means of mathematical model equations and their numerical solutions we investigate how cancer cells can produce and secrete matrixdegradative enzymes, degrade extracellular matrix, and invade due to diffusion and haptotactic migration. For the numerical simulationsof the interactions between the tumour cells and the surrounding tissue, we apply numerical approximations, which are spectrally accurateand based on small amounts of grid-points. Our numerical experiments illustrate the metastatic ability of tumour cells.},@article{10.14492/hokmj/1520928060, author = {Akio ITO}, title = {{Large-time behavior of solutions to a tumor invasion model of Chaplain–Anderson type with quasi-variational structure}}, volume = {47}, journal = {Hokkaido Mathematical Journal}, number = {1}, publisher = {Hokkaido University, Department of Mathematics}, pages = {33 -- 67}, keywords = {large-time behavior, quasi-variational structure, tumor invasion}, year = {2018}, doi = {10.14492/hokmj/1520928060}, URL = {https://doi.org/10.14492/hokmj/1520928060} } doi={10.1155/2011/452320}, url={https://doi.org/10.1155/2011/452320} } AL} {MODELING} {OF} {TUMOR}-{INDUCED} {ANGIOGENESIS}}
+      \field{urlday}{24}
+      \field{urlmonth}{1}
+      \field{urlyear}{2023}
+      \field{volume}{8}
+      \field{year}{2006}
+      \field{urldateera}{ce}
+      \field{pages}{233\bibrangedash 257}
+      \range{pages}{25}
+      \verb{doi}
+      \verb 10.1146/annurev.bioeng.8.061505.095807
+      \endverb
+      \verb{file}
+      \verb Full Text:/home/valentin/Zotero/storage/ZY9YVELZ/Chaplain et al. - 2006 - MATHEMATICAL MODELING OF TUMOR-INDUCED ANGIOGENESI.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.annualreviews.org/doi/10.1146/annurev.bioeng.8.061505.095807
+      \endverb
+      \verb{url}
+      \verb https://www.annualreviews.org/doi/10.1146/annurev.bioeng.8.061505.095807
+      \endverb
+    \endentry
+    \entry{Kolev2010}{article}{}
+      \name{author}{2}{}{%
+        {{hash=cb57a2a127322c5e47f9d41e5d5b348e}{%
+           family={Kolev},
+           familyi={K\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=02bd4d98ee2c7620b38758877619e116}{%
+           family={Zubik-Kowal},
+           familyi={Z\bibinithyphendelim K\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Hindawi Publishing Corporation}%
+      }
+      \strng{namehash}{72ad5a221fcbf4c0495dff50596d5b34}
+      \strng{fullhash}{72ad5a221fcbf4c0495dff50596d5b34}
+      \strng{bibnamehash}{72ad5a221fcbf4c0495dff50596d5b34}
+      \strng{authorbibnamehash}{72ad5a221fcbf4c0495dff50596d5b34}
+      \strng{authornamehash}{72ad5a221fcbf4c0495dff50596d5b34}
+      \strng{authorfullhash}{72ad5a221fcbf4c0495dff50596d5b34}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The goal of this paper is to construct a new algorithm for the numerical simulations of the evolution of tumour invasion and metastasis. By means of mathematical model equations and their numerical solutions we investigate how cancer cells can produce and secrete matrixdegradative enzymes, degrade extracellular matrix, and invade due to diffusion and haptotactic migration. For the numerical simulationsof the interactions between the tumour cells and the surrounding tissue, we apply n@article{10.14492/hokmj/1520928060, author = {Akio ITO}, title = {{Large-time behavior of solutions to a tumor invasion model of Chaplain–Anderson type with quasi-variational structure}}, volume = {47}, journal = {Hokkaido Mathematical Journal}, number = {1}, publisher = {Hokkaido University, Department of Mathematics}, pages = {33 -- 67}, keywords = {large-time behavior, quasi-variational structure, tumor invasion}, year = {2018}, doi = {10.14492/hokmj/1520928060}, URL = {https://doi.org/10.14492/hokmj/1520928060} }umerical approximations, which are spectrally accurateand based on small amounts of grid-points. Our numerical experiments illustrate the metastatic ability of tumour cells.}
+      \field{issn}{1748-670X}
+      \field{journaltitle}{Computational and Mathematical Methods in Medicine}
+      \field{month}{12}
+      \field{title}{Numerical Solutions for a Model of Tissue Invasion and Migration of Tumour Cells}
+      \field{volume}{2011}
+      \field{year}{2010}
+      \field{pages}{452320}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1155/2011/452320
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1155/2011/452320
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1155/2011/452320
+      \endverb
+    \endentry
+  \enddatalist
+  \missing{andrson_mathematical_2000}
+\endrefsection
+\endinput
+
