@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.12.12)  22 FEB 2024 11:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.12.12)  22 FEB 2024 12:03
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -805,15 +805,7 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'bachelors_report.bbl' found.
- (./bachelors_report.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                andrson_mathematical_2000
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+ (./bachelors_report.bbl)
 Package biblatex Info: Reference section=0 on input line 24.
 Package biblatex Info: Reference segment=0 on input line 24.
 \openout2 = `formalia/bachelors_title_page.aux'.
@@ -897,26 +889,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--27
 ]) [7]
 \openout2 = `content/modelling.aux'.
 
- (./content/modelling.tex
-
-LaTeX Warning: Citation 'andrson_mathematical_2000' on page 8 undefined on input line 20.
-
-[8
+ (./content/modelling.tex [8
 
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
-
- []
-
-[9]
+] [9]
 <resources/images/inital_value_plot_figure.png, id=52, 939.51pt x 505.89pt>
 File: resources/images/inital_value_plot_figure.png Graphic file (type png)
 <use resources/images/inital_value_plot_figure.png>
-Package pdftex.def Info: resources/images/inital_value_plot_figure.png  used on input line 70.
+Package pdftex.def Info: resources/images/inital_value_plot_figure.png  used on input line 69.
 (pdftex.def)             Requested size: 455.24411pt x 245.13249pt.
-) [10] [11 <./resources/images/inital_value_plot_figure.png>]
+
+Overfull \hbox (51.61644pt too wide) in paragraph at lines 58--72
+\T1/cmr/m/n/12 in one di-men-sion $\OML/cmm/m/it/12 c$ \T1/cmr/m/n/12 is hav-ing the ini-tial den-sity dis-tri-bu-tion, $\OML/cmm/m/it/12 c\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; \OT1/cmr/m/n/12 0) = []$\T1/cmr/m/n/12 ,
+ []
+
+[10 <./resources/images/inital_value_plot_figure.png>]) [11]
 \openout2 = `content/method.aux'.
 
  (./content/method.tex
@@ -929,7 +917,7 @@ LABELS NOT IMPORTED.
 <resources/images/plot_over_line_tool.png, id=63, 1347.0325pt x 1353.055pt>
 File: resources/images/plot_over_line_tool.png Graphic file (type png)
 <use resources/images/plot_over_line_tool.png>
-Package pdftex.def Info: resources/images/plot_over_line_tool.png  used on input line 13.
+Package pdftex.def Info: resources/images/plot_over_line_tool.png  used on input line 10.
 (pdftex.def)             Requested size: 136.57462pt x 137.17155pt.
 [12
 
@@ -939,12 +927,18 @@ Package pdftex.def Info: resources/images/plot_over_line_tool.png  used on input
 \openout2 = `content/experiments_results.aux'.
 
  (./content/experiments_results.tex
+
+Package xr Warning: 
+No file modelling.aux
+LABELS NOT IMPORTED.
+ on input line 1.
+
 <resources/images/0.001_0.001_0.001_10_0.1_0_0.005_0_0.png, id=72, 939.51pt x 703.9098pt>
 File: resources/images/0.001_0.001_0.001_10_0.1_0_0.005_0_0.png Graphic file (type png)
 <use resources/images/0.001_0.001_0.001_10_0.1_0_0.005_0_0.png>
-Package pdftex.def Info: resources/images/0.001_0.001_0.001_10_0.1_0_0.005_0_0.png  used on input line 10.
+Package pdftex.def Info: resources/images/0.001_0.001_0.001_10_0.1_0_0.005_0_0.png  used on input line 12.
 (pdftex.def)             Requested size: 455.24411pt x 341.08437pt.
- [14
+[14
 
 
 
@@ -952,22 +946,22 @@ Package pdftex.def Info: resources/images/0.001_0.001_0.001_10_0.1_0_0.005_0_0.p
 <resources/images/0.001_0.001_0.001_10_0.1_0_0.01_0_0.png, id=77, 1336.995pt x 703.9098pt>
 File: resources/images/0.001_0.001_0.001_10_0.1_0_0.01_0_0.png Graphic file (type png)
 <use resources/images/0.001_0.001_0.001_10_0.1_0_0.01_0_0.png>
-Package pdftex.def Info: resources/images/0.001_0.001_0.001_10_0.1_0_0.01_0_0.png  used on input line 19.
+Package pdftex.def Info: resources/images/0.001_0.001_0.001_10_0.1_0_0.01_0_0.png  used on input line 21.
 (pdftex.def)             Requested size: 455.24411pt x 239.68062pt.
 <resources/images/0.001_0.001_0.001_10_0.1_0_0.001_0_0.png, id=78, 1336.995pt x 703.9098pt>
 File: resources/images/0.001_0.001_0.001_10_0.1_0_0.001_0_0.png Graphic file (type png)
 <use resources/images/0.001_0.001_0.001_10_0.1_0_0.001_0_0.png>
-Package pdftex.def Info: resources/images/0.001_0.001_0.001_10_0.1_0_0.001_0_0.png  used on input line 28.
+Package pdftex.def Info: resources/images/0.001_0.001_0.001_10_0.1_0_0.001_0_0.png  used on input line 30.
 (pdftex.def)             Requested size: 455.24411pt x 239.68062pt.
 <resources/images/0.001_0.001_0.001_10_0.1_0.5_0.005_0_0.png, id=79, 939.51pt x 703.9098pt>
 File: resources/images/0.001_0.001_0.001_10_0.1_0.5_0.005_0_0.png Graphic file (type png)
 <use resources/images/0.001_0.001_0.001_10_0.1_0.5_0.005_0_0.png>
-Package pdftex.def Info: resources/images/0.001_0.001_0.001_10_0.1_0.5_0.005_0_0.png  used on input line 37.
+Package pdftex.def Info: resources/images/0.001_0.001_0.001_10_0.1_0.5_0.005_0_0.png  used on input line 39.
 (pdftex.def)             Requested size: 455.24411pt x 341.08437pt.
 <resources/images/0.001_0.001_0.001_20_0.1_0_0.002_0_0.png, id=80, 939.51pt x 703.9098pt>
 File: resources/images/0.001_0.001_0.001_20_0.1_0_0.002_0_0.png Graphic file (type png)
 <use resources/images/0.001_0.001_0.001_20_0.1_0_0.002_0_0.png>
-Package pdftex.def Info: resources/images/0.001_0.001_0.001_20_0.1_0_0.002_0_0.png  used on input line 44.
+Package pdftex.def Info: resources/images/0.001_0.001_0.001_20_0.1_0_0.002_0_0.png  used on input line 46.
 (pdftex.def)             Requested size: 455.24411pt x 341.08437pt.
  [15 <./resources/images/0.001_0.001_0.001_10_0.1_0_0.01_0_0.png>] [16 <./resources/images/0.001_0.001_0.001_10_0.1_0_0.001_0_0.png>] [17 <./resources/images/0.001_0.001_0.001_10_0.1_0.5_0.005_0_0.png>] [18 <./resources/images/0.001_0.001_0.001_20_0.1_0_0.002_0_0.png>]) [19]
 \openout2 = `content/conclusion_discussion.aux'.
@@ -995,16 +989,16 @@ Package logreq Info: Writing requests to 'bachelors_report.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  26947 strings out of 480171
- 572042 string characters out of 5894488
- 1291078 words of memory out of 5000000
- 44418 multiletter control sequences out of 15000+600000
+ 572045 string characters out of 5894488
+ 1291028 words of memory out of 5000000
+ 44417 multiletter control sequences out of 15000+600000
  482087 words of font info for 58 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 86i,14n,94p,1818b,1278s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 86i,14n,94p,2417b,1278s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on bachelors_report.pdf (23 pages, 678347 bytes).
+Output written on bachelors_report.pdf (23 pages, 678672 bytes).
 PDF statistics:
- 530 PDF objects out of 1000 (max. 8388607)
+ 529 PDF objects out of 1000 (max. 8388607)
  126 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  48 words of extra memory for PDF output out of 10000 (max. 10000000)

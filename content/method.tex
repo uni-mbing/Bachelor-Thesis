@@ -2,12 +2,9 @@
 
 \section{Method}
 
-%insert correct equation labels, figure refrences
-%insert correct citataions
 %correct systematic variation table
-%insert initial values figure.
 
-This work will investigate how the free parameters of the model given by the equations \ref{eq:6}-\ref{eq:10} will affect the spatial temporal progress of the numerical simulation. For the numerical simulation we will use the weak form given with equations \ref{eq:11} - \ref{eq:13} and solve it using HiFlow. To study the results of the numerical simulation ParaView is used, producing informative plots to compare the evolution of the simulation in time. For this we rely on the tool Plot Over Line to give radially symmetrical reulsts of the three variables of tumour and extracellular matrix density and matrix-degrading enzymes, like seen in the inital distribution in figure , in figure you can see the configuraion for the Plot Over Line tool used, the grey line in the middle of the simulation to the middle of the top of the square.\newline
+This work will investigate how the free parameters of the model given by the equations~\ref{eq:6} -~\ref{eq:10} will affect the spatial temporal progress of the numerical simulation. For the numerical simulation we will use the weak form given with equations~\ref{eq:11} -~\ref{eq:13} and solve it using HiFlow. To study the results of the numerical simulation ParaView is used, producing informative plots to compare the evolution of the simulation in time. For this we rely on the tool Plot Over Line to give radially symmetrical reulsts of the three variables of tumour and extracellular matrix density and matrix-degrading enzymes, like seen in the inital distribution in figure~\ref{fig:Initial_Value_Distribution}, in figure you can see the configuraion for the Plot Over Line tool used, the grey line in the middle of the simulation to the middle of the top of the square.\newline
 \begin{figure}
     \centering
     \includegraphics[width=0.3\textwidth]{resources/images/plot_over_line_tool.png}
@@ -20,7 +17,7 @@ After having taken a look at the preexisting experiments the main part of this w
 At last we will have a prospect on how an heterogneous extracellular matrix influences the results, which is the more realistic case, since tumourous cells tend to appear at border regions of tissue where we do not have a homogenous ECM, like it is rather found inside a tissue region. \newline
 The results of the above experiments will be summarized and discussed in the Conclusion and Discussion part, pointing out the important characteristics of the simulation and disucssing the sensitivity of each of the parameters. At this point we will have an outlook on how to extend the model in more continuous and or discrete adaptations.
 Looking at these estimates of section 3 we are left with plenty of room to investigate the effects of every single parameter. For this systematic analysis we are going to assume a baseline set of parameters, $(d_c, \gamma, \mu_1, \eta, \mu_2, d_m, \alpha, \beta) = (0.001, 0.005, 0, 10, 0, 0.001,0.1, 0)$ for experiments without proliferation and \newline
-$(d_c, \gamma, \mu_1, \eta, \mu_2, d_m, \alpha, \beta) = (0.001, 0.005, 0.3, 10, 0.3, 0.001,0.1, 0.1)$ for experiments with proliferation, where in every experiment one paramter will be changed. Later this will be extended to study a cross-analysis, where more than one parameter is changed at a time. The set of baseline parameters is taken from previous experiments done by Anderson et. al \cite{anderson_mathematical_2000} and Kolev et al.\cite{Kolev2010}. The systematic variations will be same for 2D as well as 3D experiments and can be found in talbe \ref{tab:systematic_analysis}.
+$(d_c, \gamma, \mu_1, \eta, \mu_2, d_m, \alpha, \beta) = (0.001, 0.005, 0.3, 10, 0.3, 0.001,0.1, 0.1)$ for experiments with proliferation, where in every experiment one paramter will be changed. Later this will be extended to study a cross-analysis, where more than one parameter is changed at a time. The set of baseline parameters is taken from previous experiments done by Anderson et al.~\cite{anderson_mathematical_2000} and Kolev et al.~\cite{Kolev2010}. The systematic variations will be same for 2D as well as 3D experiments and can be found in talbe~\ref{tab:systematic_analysis}.
 
 \begin{table}[!h]
     \begin{center}
