@@ -4,20 +4,37 @@
 
 %correct systematic variation table
 
-This work will investigate how the free parameters of the model given by the equations~\ref{eq:6} -~\ref{eq:10} will affect the spatial temporal progress of the numerical simulation. For the numerical simulation we will use the weak form given with equations~\ref{eq:11} -~\ref{eq:13} and solve it using HiFlow. To study the results of the numerical simulation ParaView is used, producing informative plots to compare the evolution of the simulation in time. For this we rely on the tool Plot Over Line to give radially symmetrical reulsts of the three variables of tumour and extracellular matrix density and matrix-degrading enzymes, like seen in the inital distribution in figure~\ref{fig:Initial_Value_Distribution}, in figure you can see the configuraion for the Plot Over Line tool used, the grey line in the middle of the simulation to the middle of the top of the square.\newline
-\begin{figure}
+This work will investigate how the free parameters of the model given by the equations~\ref{eq:6} -~\ref{eq:10} will affect the spatial temporal progress of the numerical simulation. For the numerical simulation we will use the weak form given with equations~\ref{eq:11} -~\ref{eq:13} and solve it using HiFlow. To study the results of the numerical simulation ParaView is used, producing informative plots to compare the evolution of the simulation in time. For this we rely on the tool Plot Over Line to give radially symmetrical reulsts of the three variables of tumour and extracellular matrix density and matrix-degrading enzymes, an example for this can be seen in figure~\ref{fig:Initial_Value_Distribution} showing the initial conditions. In figure~\ref{fig:PlotOverLine} you can see the configuraion for the Plot Over Line tool, since we are consider the experiments on the unit squre in 2D dimensional case, the line starts at $x=0.5, y=0.5$ and ends at $x=0.5, y=1$.\newline
+\begin{figure}[h]
     \centering
     \includegraphics[width=0.3\textwidth]{resources/images/plot_over_line_tool.png}
     \caption{Plot Over Line Tool Configuration}
     \label{fig:PlotOverLine}
 \end{figure}
-All experiments, except when introducing the heterogenous ECM, start with the same initial values as seen in figuer initial values.\newline 
-First replications of simulations of previous works will be discussed whhich serves the purpose to first verify the correctness of our result, as well as to give a starting point describing the phenomena this model exhibits. We start with the 2D case, since for this there are many examples already given and then move on to 3D simulation where the examples are fewer. \newline
-After having taken a look at the preexisting experiments the main part of this work will begin with a systematic parameter analysis. Like before it will start investigating 2D simulation and will then move on to 3D simulation. Here we will also compare what effect the dimensionality has on the simulation, for example of the amount of overall values for $c,e,m$ and try replicating the behaviour of the 2D cases in the 3D variant. \newline
-At last we will have a prospect on how an heterogneous extracellular matrix influences the results, which is the more realistic case, since tumourous cells tend to appear at border regions of tissue where we do not have a homogenous ECM, like it is rather found inside a tissue region. \newline
-The results of the above experiments will be summarized and discussed in the Conclusion and Discussion part, pointing out the important characteristics of the simulation and disucssing the sensitivity of each of the parameters. At this point we will have an outlook on how to extend the model in more continuous and or discrete adaptations.
-Looking at these estimates of section 3 we are left with plenty of room to investigate the effects of every single parameter. For this systematic analysis we are going to assume a baseline set of parameters, $(d_c, \gamma, \mu_1, \eta, \mu_2, d_m, \alpha, \beta) = (0.001, 0.005, 0, 10, 0, 0.001,0.1, 0)$ for experiments without proliferation and \newline
-$(d_c, \gamma, \mu_1, \eta, \mu_2, d_m, \alpha, \beta) = (0.001, 0.005, 0.3, 10, 0.3, 0.001,0.1, 0.1)$ for experiments with proliferation, where in every experiment one paramter will be changed. Later this will be extended to study a cross-analysis, where more than one parameter is changed at a time. The set of baseline parameters is taken from previous experiments done by Anderson et al.~\cite{anderson_mathematical_2000} and Kolev et al.~\cite{Kolev2010}. The systematic variations will be same for 2D as well as 3D experiments and can be found in talbe~\ref{tab:systematic_analysis}.
+For the three dimensional experiments a different tool was used ....$\textcolor{red}{explain 3D experients methodology}$
+All experiments that consider the ECM to be homogenous start with the same initial values as seen in figure~\ref{fig:Initial_Value_Distribution}. Experiments observing the effects of a heterogenous ECM use different initial values, like seen in $\textcolor{red}{initial values heterogenous ECM}$\newline 
+This work starts with \textcolor{red}{trying to replicate/replicating} numerical simulations done by other papers. Since there were only 1D simulations done previously, the model will be adjusted in such a way, that the Plot Over Line graphs mimick the plots given by the previous experiments. This will serve two purposes, first and minor it will verify a correct implemntation of the model and second this will give us a starting point by which we can vary the parameters, investigating the phenomena this model exhibits. \newline 
+We will start with exmaining 2D experiments with homogenous ECMs, using our model with the parameters $mu_1$ and $mu_2$ both set to zero, considering a case with no proliferation, after this we will introduce proliferation, varying also $mu_1$ and $mu_2$. The same will be done for the 3D cases, also at first neglecting proliferation to apply it in a later stage. Our focus here lies on investigating the effects of the parameters, but also on how the dimension changes results, with fixed free parameters. At last we will have a brief outlook on how a heterogenous ECM influences our results\newline
+The results of the above experiments will be summarized and discussed in the Conclusion and Discussion part, pointing out the important characteristics of the simulations and disucssing the sensitivity of each of the parameters and the influence of the dimension. At this point we will have an outlook on how to extend the model with more continuous and or discrete adaptations. \newline \newline
+
+Looking at the parameter estimates from \cite{anderson_mathematical_2000} to non-dimensionalise the time, we see that with $L \in [0.1cm,1cm]$ and $D\approx 10^{-6}\frac{cm^2}{s}$, $\tau = \frac{L^2}{D}$ gives a relative big temporal range, $\tau_{min} = 1000s = 16.66 min$ and $\tau_{max} = 1000000s = 16666.66min$, which makes it hard, to find the correct time step value to compare our simulation results with the one from \cite{anderson_mathematical_2000} and \cite{Kolev2010}. Another challenge are the diffusion coefficients, since they are dependent on the dimension we are in, we have to find our own estimate as a baseline value. \newline 
+For our experiments we will use a set of baseline parameters, which will be evaluated experimentally, and from there vary one parameter at a time to get a overview of their effects and later we will incorporate variation of multiple paramters in accordance with the numerical model. 
+
+
+\begin{comment}
+
+    For each of the modified free parameters $d_c, \gamma, \eta, d_m, \alpha, \beta, \mu_1, \mu_2$ we are going to take look at values or ranges which were used in previous experiments: 
+\begin{itemize}
+    \item $d_c = 0.001$
+    \item $\gamma \in \{0.001, 0.002, 0.005\}$
+    \item $\mu_1 \in \{0.1, 0.5\}$
+    \item $\eta \in \{10, 20\}$
+    \item $\mu_2 \in \{0.1, 0.5\}$
+    \item $d_m \in \{0.001, 0.01\}$
+    \item $\alpha \in \{0.1, 10\}$
+    \item $\beta \in \{0, 0.07, 0.5\}$
+\end{itemize}
+
 
 \begin{table}[!h]
     \begin{center}
@@ -41,7 +58,8 @@ $(d_c, \gamma, \mu_1, \eta, \mu_2, d_m, \alpha, \beta) = (0.001, 0.005, 0.3, 10,
     \end{center}
 \end{table}
 
-\begin{comment}
+Looking at the estimates of section 3 we are left with plenty of room to investigate the effects of every single parameter. For this systematic analysis we are going to assume a baseline set of parameters, $(d_c, \gamma, \mu_1, \eta, \mu_2, d_m, \alpha, \beta) = (0.001, 0.005, 0, 10, 0, 0.001,0.1, 0)$ for experiments without proliferation and \newline
+$(d_c, \gamma, \mu_1, \eta, \mu_2, d_m, \alpha, \beta) = (0.001, 0.005, 0.3, 10, 0.3, 0.001,0.1, 0.1)$ for experiments with proliferation, where in every experiment one paramter will be changed. Later this will be extended to study a cross-analysis, where more than one parameter is changed at a time. The set of baseline parameters is taken from previous experiments done by Anderson et al.~\cite{anderson_mathematical_2000} and Kolev et al.~\cite{Kolev2010}. The systematic variations will be same for 2D as well as 3D experiments and can be found in talbe~\ref{tab:systematic_analysis}.
 
 \subsection{Software and Implementation}
 \subsection{Systematic Parameter Analysis}
