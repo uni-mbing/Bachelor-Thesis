@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.12.12)  11 MAR 2024 12:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.12.12)  12 MAR 2024 10:05
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -958,18 +958,42 @@ Package pdftex.def Info: resources/images/2D_1e-3_1e-3_1e-3_10_0.1_0_0.005_1e-2_
 
 
  <./resources/images/2D_1e-3_1e-3_1e-3_10_0.1_0_0.005_1e-2_10_plot.png>]
+<resources/images/alpha_comparison.png, id=76, 1336.995pt x 703.9098pt>
+File: resources/images/alpha_comparison.png Graphic file (type png)
+<use resources/images/alpha_comparison.png>
+Package pdftex.def Info: resources/images/alpha_comparison.png  used on input line 25.
+(pdftex.def)             Requested size: 455.24411pt x 239.68062pt.
+<resources/images/dc_comparison.png, id=77, 1336.995pt x 703.9098pt>
+File: resources/images/dc_comparison.png Graphic file (type png)
+<use resources/images/dc_comparison.png>
+Package pdftex.def Info: resources/images/dc_comparison.png  used on input line 33.
+(pdftex.def)             Requested size: 455.24411pt x 239.68062pt.
+<resources/images/gamma_comparison.png, id=78, 1336.995pt x 703.9098pt>
+File: resources/images/gamma_comparison.png Graphic file (type png)
+<use resources/images/gamma_comparison.png>
+Package pdftex.def Info: resources/images/gamma_comparison.png  used on input line 40.
+(pdftex.def)             Requested size: 455.24411pt x 239.68062pt.
+<resources/images/2D_5e-4_1e-3_1e-3_10_0.35645_0_0.0055_1e-2_10_plot.png, id=79, 939.51pt x 578.16pt>
+File: resources/images/2D_5e-4_1e-3_1e-3_10_0.35645_0_0.0055_1e-2_10_plot.png Graphic file (type png)
+<use resources/images/2D_5e-4_1e-3_1e-3_10_0.35645_0_0.0055_1e-2_10_plot.png>
+Package pdftex.def Info: resources/images/2D_5e-4_1e-3_1e-3_10_0.35645_0_0.0055_1e-2_10_plot.png  used on input line 48.
+(pdftex.def)             Requested size: 455.24411pt x 280.15143pt.
+ [15]
 
-LaTeX Warning: Reference `tab:systematic_analysis' on page 15 undefined on input line 59.
+LaTeX Warning: Reference `fig:0.001_0.001_0.001_10_0.1_0_0.005_0_0' on page 16 undefined on input line 99.
 
 
-Overfull \hbox (12.87997pt too wide) in paragraph at lines 63--63
+LaTeX Warning: Reference `tab:systematic_analysis' on page 16 undefined on input line 99.
+
+
+Overfull \hbox (12.87997pt too wide) in paragraph at lines 103--103
 []\T1/cmr/bx/n/14.4 Three Di-men-sional Sim-u-la-tions with Het-eroge-nous ECM Struc-
  []
 
-) [15]
+) [16 <./resources/images/alpha_comparison.png>] [17 <./resources/images/dc_comparison.png>] [18 <./resources/images/gamma_comparison.png> <./resources/images/2D_5e-4_1e-3_1e-3_10_0.35645_0_0.0055_1e-2_10_plot.png>]
 \openout2 = `content/conclusion_discussion.aux'.
 
- (./content/conclusion_discussion.tex) [16
+ (./content/conclusion_discussion.tex) [19
 
 
 
@@ -982,10 +1006,10 @@ Overfull \hbox (155.09105pt too wide) in paragraph at lines 37--37
 \T1/cmr/m/n/12 https://doi.org/10.14492/hokmj/1520928060  doi=10.1155/2011/452320, url=https://doi.org/10.1155/2011/452320
  []
 
-[17
+[20
 
 
-] [18] (./bachelors_report.aux (./formalia/bachelors_title_page.aux) (./formalia/eigenständigkeitserklärung.aux) (./formalia/abstract.aux) (./content/introduction.aux) (./content/theoretical_background.aux) (./content/modelling.aux) (./content/method.aux) (./content/experiments_results.aux) (./content/conclusion_discussion.aux))
+] [21] (./bachelors_report.aux (./formalia/bachelors_title_page.aux) (./formalia/eigenständigkeitserklärung.aux) (./formalia/abstract.aux) (./content/introduction.aux) (./content/theoretical_background.aux) (./content/modelling.aux) (./content/method.aux) (./content/experiments_results.aux) (./content/conclusion_discussion.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -994,18 +1018,18 @@ Package logreq Info: Writing requests to 'bachelors_report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26912 strings out of 480171
- 570168 string characters out of 5894488
- 1289983 words of memory out of 5000000
- 44387 multiletter control sequences out of 15000+600000
+ 26945 strings out of 480171
+ 571621 string characters out of 5894488
+ 1290019 words of memory out of 5000000
+ 44416 multiletter control sequences out of 15000+600000
  481750 words of font info for 57 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  86i,14n,94p,2417b,1278s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on bachelors_report.pdf (19 pages, 404503 bytes).
+Output written on bachelors_report.pdf (22 pages, 672064 bytes).
 PDF statistics:
- 504 PDF objects out of 1000 (max. 8388607)
- 114 compressed objects within 2 object streams
+ 522 PDF objects out of 1000 (max. 8388607)
+ 120 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 48 words of extra memory for PDF output out of 10000 (max. 10000000)
 
