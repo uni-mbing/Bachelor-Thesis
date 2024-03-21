@@ -2373,13 +2373,12 @@
     <bcf:citekey order="13">Kolev2010</bcf:citekey>
     <bcf:citekey order="14">anderson_mathematical_2000</bcf:citekey>
     <bcf:citekey order="15">anderson_mathematical_2000</bcf:citekey>
-    <bcf:citekey order="16">anderson_mathematical_2000</bcf:citekey>
-    <bcf:citekey order="17">anderson_continuous_1998</bcf:citekey>
-    <bcf:citekey order="18">anderson_mathematical_2000</bcf:citekey>
-    <bcf:citekey order="19">franssen_mathematical_2019</bcf:citekey>
-    <bcf:citekey order="20">chaplain_mathematical_2006-1</bcf:citekey>
-    <bcf:citekey order="21">chaplain_mathematical_2006</bcf:citekey>
-    <bcf:citekey order="22">Kolev2010</bcf:citekey>
+    <bcf:citekey order="16">anderson_continuous_1998</bcf:citekey>
+    <bcf:citekey order="17">anderson_mathematical_2000</bcf:citekey>
+    <bcf:citekey order="18">franssen_mathematical_2019</bcf:citekey>
+    <bcf:citekey order="19">chaplain_mathematical_2006-1</bcf:citekey>
+    <bcf:citekey order="20">chaplain_mathematical_2006</bcf:citekey>
+    <bcf:citekey order="21">Kolev2010</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
