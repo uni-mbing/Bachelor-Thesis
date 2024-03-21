@@ -3,7 +3,9 @@
 \section{Experiments and Results}
 For all the plots of the experiments the red curve indicates the tumour cell density, the blue curve the ECM density and the green curve the MDE concentration. In all of the experiments we used the value of $\epsilon = 0.01$ to match the inital conditions from \cite{anderson_mathematical_2000} and \cite{Kolev2010}. \newline 
 Mathematical Intuition of the three curves and how the parameters interact.
-\subsection{Two dimensional Results}
+
+
+\subsection{Two dimensional Results without Proliferation}
 \subsubsection{Replicating results}
 We will start with replicating previous results from Anderson et al.\cite{anderson_mathematical_2000}, Figure 1, making our curves fit the findings in their diagramms. 
 
@@ -86,6 +88,12 @@ Comparing this to the plots for $\alpha=1.0$ we can see that after already $t=4$
 \subsubsection*{$\beta$ Variation}
 
 Looking at $\beta$ which is the parameter describing decay of the MDEs, we can assume that with varying $\beta$ the MDE curve will be lower, influcencing the ECM degrading process and therefore also the invasion pace. Since all previous experiments assumed a value of $\beta=0$ we can expect that with growing $\beta$ these effects will increase contininuously. We first of all needed to determine a range in which to experiment. Starting with a range of values between $0.1$ and $1.0$, since this is the range $\alpha$ yields reasonable results we saw that those values were much too high. Even for $\beta=0.1$ the MDEs are almost completely decayed after only $t=0.4$, looking closer at ParaView this happened after already $t=0.1$. This also affects the haptotatic effects of the tumour cell invasion, having no secession formed at the leading edge of the tumour cells. Reducing the range for $\beta$ one potence we can see the same behaviour, with a fast dacay of the MDEs therefore lower ECM degrading and slower invasion pace. Yet looking at $\beta=0.01$ we see the effects of haptotaxis now again and the ECM degrading happens here visibly faster, though the MDE concentration is generally lower. This lead us to decrease $\beta$ even further. Though if we look at $\beta=0.001$ we see that the effects of $\beta$ are barely recognizable anymore. Taking the middle of those and setting $\beta$ to $0.005$, we see all the presumed effects of slowed degradation of the ECM therefore also slowed invasion pace, yet still having the effects of haptotaxis also clearly visible.
+
+\subsubsection*{Cross Variation}
+Having done all those experiments it will be interesting to compare countering effects and supporting effects two at a time
+
+
+\subsection{Two dimensional Results with Proliferation}
 
 
 \subsection{Three Dimensional Results}
