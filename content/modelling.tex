@@ -34,10 +34,10 @@ Next we modify the system's free parameters $D_c, \chi, \delta, D_m, \mu_3, \lam
     $d_c = \frac{D_c}{D},\quad \gamma = \chi \frac{e_0}{D},\quad \eta = \tau m_0 \delta,\quad d_m = \frac{D_m}{D},\quad \alpha = \tau \mu_3 \frac{c_0}{m_0},\quad \beta = \tau \lambda$.
 \end{center} 
 with $D$ being a refrence chemical diffusion coeffizcient.\newline 
-These modifications make the new system of linearly coupled partial differential equations, where the tildes are dropped for simplicitie's sake:
+These modifications make the new system of coupled partial differential equations, where the tildes are dropped for simplicitie's sake:
 \begin{align}
 	\frac{\partial c}{\partial t} &= d_c \Delta c - \gamma \nabla \cdot (c\nabla e)  + \mu_1 c\left(1-\frac{c}{c_0}-\frac{e}{e_0}\right)\label{eq:6}\\
-	\frac{\partial e}{\partial t} &= -\eta m e  + \mu_2 c\left(1-\frac{c}{c_0}-\frac{e}{e_0}\right)\label{eq:7}\\
+	\frac{\partial e}{\partial t} &= -\eta m e  + \mu_2 e\left(1-\frac{c}{c_0}-\frac{e}{e_0}\right)\label{eq:7}\\
 	\frac{\partial m}{\partial t} &= d_m \Delta c + \alpha c - \beta m\label{eq:8}
 \end{align}
 with also updated zero-flux boundary conditions, 

@@ -18,14 +18,18 @@
 \usepackage{fancybox}
 \usepackage{fancyhdr}
 \usepackage{xr}
+\usepackage{multicol}
+
 
 \addbibresource{lib.bib}
 
 \begin{document}
+
 \include{formalia/bachelors_title_page}
 \include{formalia/eigenständigkeitserklärung}
 \include{formalia/abstract}
 \tableofcontents
+%\begin{multicols}{2}
 \include{content/introduction}
 \include{content/theoretical_background}
 \include{content/modelling}
@@ -34,5 +38,5 @@
 \include{content/conclusion_discussion}
 
 \printbibliography
-
+%\end{multicols}
 \end{document}
