@@ -1056,6 +1056,11 @@ INPUT ./resources/images/alpha_variation.png
 INPUT resources/images/alpha_variation.png
 INPUT ./resources/images/alpha_variation.png
 INPUT ./resources/images/alpha_variation.png
+INPUT ./resources/images/beta_variation.png
+INPUT ./resources/images/beta_variation.png
+INPUT resources/images/beta_variation.png
+INPUT ./resources/images/beta_variation.png
+INPUT ./resources/images/beta_variation.png
 INPUT ./content/conclusion_discussion.tex
 INPUT ./content/conclusion_discussion.tex
 INPUT ./content/conclusion_discussion.tex

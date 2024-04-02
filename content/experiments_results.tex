@@ -85,7 +85,7 @@ Though the intuition is met that with increasing $\gamma$ the invasion pace of t
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{resources/images/2D_plot.png}
+    \includegraphics[width=0.9\textwidth]{resources/images/2D_plot.png}
     \caption{2D plot of variation}
     \label{fig:gamma_2D_plot}
 \end{figure}
@@ -106,10 +106,11 @@ Though the intuition is met that with increasing $\gamma$ the invasion pace of t
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{resources/images/eta_variation.png}
-    \caption{eta variation}
+    \caption{Plots show results for varying $\eta$ whilst keeping the other parameters constant, in the images you can see the effects of $\eta=20$ in the dashed curve, $\eta=0$ in the dotted curve and $\eta=12$ in the solid line.}
     \label{fig:eta_variation}
 \end{figure}
-The parameter $\eta$ only directly influences the degrading of the ECM, which happens faster for higher $\eta$ coefficients in regions where both MDE and ECM concentration are high. Varying this parameter yet may have a high impact of the solution because, the gradient of the ECM is a deciding factor for the effects of haptotaxis on the tumour cells. \newline
+The parameter $\eta$ influences the degrading of the ECM, which happens faster for higher $\eta$ coefficients in regions where both MDE and ECM concentration are high. Varying this parameter may have a high impact of curves for $c$ as well, because the gradient of the ECM is a deciding factor for the effects of haptotaxis on the tumour cells, thus increasing the degradation may cause a faster shift of the ECM outwards, therefore also pulling the tumour cells faster farther out, which in turn will affect also the MDE curve.\newline
+Inspecting the images in figure~\ref{fig:eta_variation} we see those assumptions met. 
 The first experiment in figure~\ref{fig:eta_variation} shows that if $\eta = 0$, which means that the ECM is not degraded by the MDEs, we get completely differnt results comparing it to the base case. Not only does $\eta$ influcence the curve for the ECM $e$ but has also a high impact on both tumour cell density and MDE concentration. Due that no degrading happens $e$ stays constant all the time, with $\frac{\partial e}{\partial t} = 0$, this also means that $\nabla e$ stays also constant, we see this effect in the images, showing that $c$ does not invade further than the point where $\nabla e$ is highest, this implies that if $c$ converges towards this point it will also have its maximum at this point, which also fixes the point $c\nabla e$, what does this mean for the MDEs? After initially increasing slightly around the point $x=0$ and increasing where $c$ was high previously, it also converges with its highest concentration at $c\nabla e$. Since the motility of $c$ is highly restricted due to no degradation of the ECM, the MDEs will progress to increase $c$ takes on values higher than 0. If this simulation for $\eta=0$ will be continued we will see that the MDEs $m$ will also a curve that is not monotone decreasing.
 Increasing $\eta$ to $\eta=20$ the behaviour change is not so drastically comparing it to the base case. The degradation of the ECM happens twice as fast, which results in a faster invasion pace of the tumour cells, though with decreased influcence of haptotaxis, making the hill at the leading edge smaller. After dimensionless time $t=8$ the ECMs have degrading has visibly increased, but the MDE concentration is still higher. This only makes sense since, needing a lower concentration to degrade the ECM, this process happens faster, and also since haptotactic influences are lower the concentration of tumour cells at the origin is higher, which will also produce more MDEs at the origin. 
 $\eta$ has a strong influcene on all curves, if its value is lower the degradation of $e$ happens slower, slowing also $c$ and $m$'s invasion pace down. 
@@ -118,7 +119,7 @@ $\eta$ has a strong influcene on all curves, if its value is lower the degradati
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{resources/images/dm_variation.png}
-    \caption{dm variation}
+    \caption{Plots show results for varying $d_m$ whilst keeping the other parameters constant, in the images you can see the effects of $d_m=1e-1=0.1$ in the dashed curve, $d_m=0$ in the dotted curve and $d_m=1e-3=0.001$ in the solid line.}
     \label{fig:dm_variation}
 \end{figure}
 $d_m$ is the parameter describing the diffusion of the matrix degrading enzymes MDEs, it is influcenced by the second derivative of c. Looking at the equations we can expect with higher values for $d_m$ a faster degradation of $e$, since the MDEs can invade faster into the space and there are not too much MDEs needed to degrade $e$. This will then cause a faster invasion pace of $c$, because the haptotatic flux pulls heavier outward.
@@ -130,7 +131,7 @@ If we look in the other direction, setting $d_m$ to $1e-1=0.1$ we see that after
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{resources/images/alpha_variation.png}
-    \caption{alpha variation}
+    \caption{Plots show results for varying $\alpha$ whilst keeping the other parameters constant, in the images you can see the effects of $\alpha=1.0$ in the dashed curve, $\alpha=0$ in the dotted curve and $\alpha=0.6$ in the solid line.}
     \label{fig:alpha_variation}
 \end{figure}
 When we look at $\alpha$ in a range from $0.0$ to $1.0$ we can expect with growing $\alpha$ a faster degrading of the ECM and higher values form the MDEs themselves. Faster ECM degrading could mean fast invasion of the tissue of the tumour cells. As we saw in the previous comparison, the MDEs can take on values higher than one, we can also expect this here when $\alpha$ is sufficiently high. 
@@ -138,6 +139,12 @@ Looking at the experiment with $\alpha=0.0$ we can see that at the end the ECM h
 Comparing this to the plots for $\alpha=1.0$ we can see that after already $t=4$ the MDEs have taken on a contration of greater than one at $x=0$. Overall is the degradation happening faster and therefore also the tumour invasion happens faster. In the end we are left with a clearly lower ECM concentration than for example the baseline experiment. 
 
 \subsubsection*{$\beta$ Variation}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{resources/images/beta_variation.png}
+    \caption{Plots show results for varying $\beta$ whilst keeping the other parameters constant, in the images you can see the effects of $\beta=0.005$ in the dashed curve, $\beta=0.1$ in the dotted curve and $\beta=0.01$ in the solid line.}
+    \label{fig:beta_variation}
+\end{figure}
 
 Looking at $\beta$ which is the parameter describing decay of the MDEs, we can assume that with varying $\beta$ the MDE curve will be lower, influcencing the ECM degrading process and therefore also the invasion pace. Since all previous experiments assumed a value of $\beta=0$ we can expect that with growing $\beta$ these effects will increase contininuously. We first of all needed to determine a range in which to experiment. Starting with a range of values between $0.1$ and $1.0$, since this is the range $\alpha$ yields reasonable results we saw that those values were much too high. Even for $\beta=0.1$ the MDEs are almost completely decayed after only $t=0.4$, looking closer at ParaView this happened after already $t=0.1$. This also affects the haptotatic effects of the tumour cell invasion, having no secession formed at the leading edge of the tumour cells. Reducing the range for $\beta$ one potence we can see the same behaviour, with a fast dacay of the MDEs therefore lower ECM degrading and slower invasion pace. Yet looking at $\beta=0.01$ we see the effects of haptotaxis now again and the ECM degrading happens here visibly faster, though the MDE concentration is generally lower. This lead us to decrease $\beta$ even further. Though if we look at $\beta=0.001$ we see that the effects of $\beta$ are barely recognizable anymore. Taking the middle of those and setting $\beta$ to $0.005$, we see all the presumed effects of slowed degradation of the ECM therefore also slowed invasion pace, yet still having the effects of haptotaxis also clearly visible.
 
