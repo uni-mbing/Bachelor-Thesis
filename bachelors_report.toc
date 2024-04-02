@@ -9,12 +9,12 @@
 \contentsline {section}{\numberline {5}Experiments and Results}{14}{}%
 \contentsline {subsection}{\numberline {5.1}Two dimensional Results without Proliferation}{14}{}%
 \contentsline {subsubsection}{\numberline {5.1.1}Replicating results}{14}{}%
-\contentsline {subsubsection}{\numberline {5.1.2}Parameter Analysis}{18}{}%
-\contentsline {subsection}{\numberline {5.2}Two dimensional Results with Proliferation}{25}{}%
-\contentsline {subsection}{\numberline {5.3}Three Dimensional Results}{25}{}%
-\contentsline {subsubsection}{\numberline {5.3.1}Replicating Results}{25}{}%
-\contentsline {subsubsection}{\numberline {5.3.2}Parameter Analysis}{25}{}%
-\contentsline {subsection}{\numberline {5.4}Three Dimensional Simulations with Heterogenous ECM Structure}{25}{}%
-\contentsline {section}{\numberline {6}Conclusion and Discussion}{27}{}%
-\contentsline {subsection}{\numberline {6.1}Extra-Dimension Evaluation}{27}{}%
-\contentsline {subsection}{\numberline {6.2}Inter-Dimension Evaluation}{27}{}%
+\contentsline {subsubsection}{\numberline {5.1.2}Parameter Analysis}{17}{}%
+\contentsline {subsection}{\numberline {5.2}Two dimensional Results with Proliferation}{27}{}%
+\contentsline {subsection}{\numberline {5.3}Three Dimensional Results}{27}{}%
+\contentsline {subsubsection}{\numberline {5.3.1}Replicating Results}{27}{}%
+\contentsline {subsubsection}{\numberline {5.3.2}Parameter Analysis}{27}{}%
+\contentsline {subsection}{\numberline {5.4}Three Dimensional Simulations with Heterogenous ECM Structure}{27}{}%
+\contentsline {section}{\numberline {6}Conclusion and Discussion}{29}{}%
+\contentsline {subsection}{\numberline {6.1}Extra-Dimension Evaluation}{29}{}%
+\contentsline {subsection}{\numberline {6.2}Inter-Dimension Evaluation}{29}{}%
