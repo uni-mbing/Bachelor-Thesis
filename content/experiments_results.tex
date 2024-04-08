@@ -40,12 +40,12 @@ Looking at $d_c$ we chose a value of $d_c=5e-4$. Using higher values for this pa
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{resources/images/2D_5e-4_1e-3_1e-3_10_0.35645_0_0.0055_1e-2_10_plot.png}
-    \label{fig:2D_5e-4_1e-3_1e-3_10_0.35645_0_0.0055}
+    \includegraphics[width=\textwidth]{resources/images/basecase_without_proliferation.png}
+    \label{fig:basecase_without_proliferation}
 \end{figure}
 
-These adjustments leave with the final configuration for replicating the system with the curves in figure~\ref{fig:2D_5e-4_1e-3_1e-3_10_0.35645_0_0.0055} and the parameter settings also seen in the same figure.
-Slightly adjusting the haptotatic flux to $\gamma=0.0055$ yields the following results, seen in figure~\ref{fig:2D_5e-4_1e-3_1e-3_10_0.35645_0_0.0055}. comparing our final version with the original one we can see that in the second point in time, at $t=4$ in our case, the values of the three curves at the $x=0$ are nearly the same. In the original experiment the bump in the curve for the tumour concentration looks more pregnant, but this is only due to the fact, that this experiment was most likely done on the unit line, not the unit cube, it also seems that they have done a rescaling of the x-axis. The two later points in time confirm the similarity with having also nealy the same values for the three curves at $x=0$ but also their respective propagations in time look to be in line with the original experiment. 
+These adjustments leave with the final configuration for replicating the system with the curves in figure~\ref{fig:basecase_without_proliferation} and the parameter settings also seen in the same figure.
+Slightly adjusting the haptotatic flux to $\gamma=0.0055$ yields the following results, seen in figure~\ref{fig:fig:basecase_without_proliferation} comparing our final version with the original one we can see that in the second point in time, at $t=4$ in our case, the values of the three curves at the $x=0$ are nearly the same. In the original experiment the bump in the curve for the tumour concentration looks more pregnant, but this is only due to the fact, that this experiment was most likely done on the unit line, not the unit cube, it also seems that they have done a rescaling of the x-axis. The two later points in time confirm the similarity with having also nealy the same values for the three curves at $x=0$ but also their respective propagations in time look to be in line with the original experiment. 
 
 
 
@@ -56,7 +56,7 @@ The parameter analysed in this section describes the diffusion of the tumour cel
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{resources/images/dc_variation.png}
-    \caption{Plots show results for varying $d_c$ whilst keeping the other parameters constant, in the images you can see the effects of $d_c=1e-5$ in the dashed curve, $d_c=1e-1$ in the dotted curve and $d_c=5e-4$ in the solid line.}
+    \caption{Plots show results for varying $d_c$ whilst keeping the other parameters constant, in the images you can see the effects of $d_c=5e-5$ in the dashed curve, $d_c=1e-1$ in the dotted curve and $d_c=5e-4$ in the solid line.}
     \label{fig:dc_comparison}
 \end{figure}
 Looking at both experiments in figure~\ref{fig:dc_comparison}, we can see these assumptions confirmed. The smaller $d_c$ gets the higher the influence of $\gamma$ will be and vice versa. Considering the red curves, the tumour cell density, after $t=4$ timesteps the dashed curve, describing $d_c=1e-5$, takes on a value a little higher than for the basecase of the solid curve with $d_c=5e-4$ whilst the dotted curve, showing the results for $d_c=1e-1$, has already taken on a near constant concentration throughout space. This shows that the higher the values for $d_c$ are the faster the diffusion spreading throughout space will be, where for the solid and dashed line we can see small effects of haptotaxis in the second image, nothing of this is visible for the dotted line, where the diffusion effects completly cover up the effects of haptotaxis. For the MDE concentration we can observe that with rising values for $d_c$ they also spread faster throughotu space, this is first due to influece of the current $c$ density on the motility of the MDEs and also due to the production term, meaning with faster spread throughout space we will get more even prodution of MDEs. The effect on the ECM concentration varying $d_c$ seems to be little at stage. 
@@ -166,7 +166,7 @@ Having done all those experiments it will be interesting to cross vary both effe
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.85\textwidth]{resources/images/dc_gamma_variation.png}
-    \caption{Plots show results for varying both $d_c$ and $\gamma$ whilst keeping the other parameters constant, in the images on the left $d_c$ is set to $d_c=1e-5$ with the solid line showing $\gamma = 0.01$ and the dotted line $\gamma=0.001$ on the right $d_c$ is set to $d_c=1e-1$ with the solid line showing $\gamma = 0.01$ and the dotted line $\gamma=0.001$.}
+    \caption{Plots show results for varying both $d_c$ and $\gamma$ whilst keeping the other parameters constant, in the images on the left $d_c$ is set to $d_c=5e-5$ with the solid line showing $\gamma = 0.01$ and the dotted line $\gamma=0.001$ on the right $d_c$ is set to $d_c=1e-1$ with the solid line showing $\gamma = 0.01$ and the dotted line $\gamma=0.001$.}
     \label{fig:dc_gamma_variation}
 \end{figure}
 lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum
@@ -194,6 +194,114 @@ lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ips
 lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum
 
 \subsection{Two dimensional Results with Proliferation}
+
+
+\subsubsection{Basecase Analysis}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{resources/images/basecase_proliferation.png}
+    \label{fig:basecase_proliferation}
+\end{figure}
+
+
+
+\subsubsection{Parameter Analysis}
+
+\subsubsection*{$d_c$ Variation}
+% TODO: dc_variation schaubild einfuegen
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{resources/images/dc_variation.png}
+    \caption{Plots show results for varying $d_c$ whilst keeping the other parameters constant, in the images you can see the effects of $d_c=5e-5$ in the dashed curve, $d_c=1e-1$ in the dotted curve and $d_c=5e-4$ in the solid line.}
+    \label{fig:dc_comparison}
+\end{figure}
+
+
+\subsubsection*{$\gamma$ Variation}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{resources/images/prolif_gamma_variation.png}
+    \caption{Plots show results for varying $\gamma$ whilst keeping the other parameters constant, in the images you can see the effects of $\gamma=0.01$ in the dashed curve, $\gamma=0.002$ in the dotted curve and $\gamma=0.008$ in the solid line.}
+    \label{fig:gamma_variation}
+\end{figure}
+
+
+\subsubsection*{$\mu_1$ Variation}
+% TODO:mu1 schaubild
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{resources/images/prolif_mu_1_variation.png}
+    \caption{Plots show results for varying $\eta$ whilst keeping the other parameters constant, in the images you can see the effects of $\eta=20$ in the dashed curve, $\eta=0$ in the dotted curve and $\eta=12$ in the solid line.}
+    \label{fig:eta_variation}
+\end{figure}
+
+
+\subsubsection*{$\eta$ Variation}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{resources/images/prolif_eta_variation.png}
+    \caption{Plots show results for varying $\eta$ whilst keeping the other parameters constant, in the images you can see the effects of $\eta=20$ in the dashed curve, $\eta=0$ in the dotted curve and $\eta=12$ in the solid line.}
+    \label{fig:eta_variation}
+\end{figure}
+
+
+\subsubsection*{$mu_2$ Variation}
+%TODO: mu2 Schaubild einfuegen
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{resources/images/prolif_eta_variation.png}
+    \caption{Plots show results for varying $\eta$ whilst keeping the other parameters constant, in the images you can see the effects of $\eta=20$ in the dashed curve, $\eta=0$ in the dotted curve and $\eta=12$ in the solid line.}
+    \label{fig:eta_variation}
+\end{figure}
+
+\subsubsection*{$d_m$ Variation}
+%TODO: d_m Schaubild einfuegen
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{resources/images/dm_variation.png}
+    \caption{Plots show results for varying $d_m$ whilst keeping the other parameters constant, in the images you can see the effects of $d_m=0.1$ in the dashed curve, $d_m=0$ in the dotted curve and $d_m=0.001$ in the solid line.}
+    \label{fig:dm_variation}
+\end{figure}
+
+\subsubsection*{$\alpha$ Variation}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{resources/images/prolif_alpha_variation.png}
+    \caption{Plots show results for varying $\alpha$ whilst keeping the other parameters constant, in the images you can see the effects of $\alpha=1.0$ in the dashed curve, $\alpha=0$ in the dotted curve and $\alpha=0.6$ in the solid line.}
+    \label{fig:alpha_variation}
+\end{figure}
+
+\subsubsection*{$\beta$ Variation}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{resources/images/prolif_beta_variation.png}
+    \caption{Plots show results for varying $\beta$ whilst keeping the other parameters constant, in the images you can see the effects of $\beta=0.005$ in the dashed curve, $\beta=0.1$ in the dotted curve and $\beta=0.01$ in the solid line.}
+    \label{fig:beta_variation}
+\end{figure}
+
+\subsubsection*{Cross Variation}
+
+\subsubsection*{$d_c - \gamma - \mu_1$ Variation}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.85\textwidth]{resources/images/dc_gamma_variation.png}
+    \caption{Plots show results for varying both $d_c$ and $\gamma$ whilst keeping the other parameters constant, in the images on the left $d_c$ is set to $d_c=5e-5$ with the solid line showing $\gamma = 0.01$ and the dotted line $\gamma=0.001$ on the right $d_c$ is set to $d_c=1e-1$ with the solid line showing $\gamma = 0.01$ and the dotted line $\gamma=0.001$.}
+    \label{fig:dc_gamma_variation}
+\end{figure}
+
+\subsubsection*{$\eta -\mu_2$ Variation}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.85\textwidth]{resources/images/dm_eta_variation.png}
+    \caption{Plots show results for varying both $d_m$ and $\eta$ whilst keeping the other parameters constant, in the images on the left $d_m$ is set to $d_c=1e-10$ with the solid line showing $\eta = 2$ and the dotted line $\eta=20$ on the right $d_m$ is set to $d_m=1e-1$ with the solid line showing $\eta = 2$ and the dotted line $\eta=20$.}
+    \label{fig:dm_eta_variation}
+\end{figure}
+
+
+
+
 
 
 \subsection{Three Dimensional Results}
