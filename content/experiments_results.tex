@@ -169,7 +169,9 @@ Having done all those experiments it will be interesting to cross vary both effe
     \caption{Plots show results for varying both $d_c$ and $\gamma$ whilst keeping the other parameters constant, in the images on the left $d_c$ is set to $d_c=5e-5$ with the solid line showing $\gamma = 0.01$ and the dotted line $\gamma=0.001$ on the right $d_c$ is set to $d_c=1e-1$ with the solid line showing $\gamma = 0.01$ and the dotted line $\gamma=0.001$.}
     \label{fig:dc_gamma_variation}
 \end{figure}
-lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum
+
+Having set $d_c=5e-5$ and $\gamma=0.001$ we see no secession of the tumour cells, the effects of haptotaxis are too small leaving the tumour cells only subject to diffusion which results in an even distribution process over time, which also causes a slower invasion pace. Because the tumour cells stay in a lump with its maxima at the origin $x=0$ the MDEs also take on their maximum there, moving farther out they also distribute very evenly. This staying with values around the origin of the MDEs causes a slower ECM degradation. Increasing $\gamma=0.01$ we see that the effects of haptotaxis are now pregnantly visible with a very sharp maxima seen at $t=40$, which equals the maxima of the remaining tumour cell lump at $x=0$. Stronger influence of haptotaxis leads to a faster invasion pace of the tumour cells into the tissue and allowing to create matrix degrading enzymes in their wake, causing a more even distribution compared to $\gamma=0.001$ and also a faster ECM degrading process. 
+Looking at the right side of the plot ~\ref{fig:dc_gamma_variation} we see the results for $d_c=1e-1$ here for both $\gamma$ values diffusion overshadows the effects of haptotaxis completely, with after already $t=4$ having a constant distribution of tumour cells throughout space. Due to this fast spread of tumour cells, the MDEs are also produced evenly throughout space, and an even faster ECM degradataion. 
 
 \subsubsection*{$d_m - \eta$ Variation}
 \begin{figure}[h]
@@ -178,7 +180,8 @@ lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ips
     \caption{Plots show results for varying both $d_m$ and $\eta$ whilst keeping the other parameters constant, in the images on the left $d_m$ is set to $d_c=1e-10$ with the solid line showing $\eta = 2$ and the dotted line $\eta=20$ on the right $d_m$ is set to $d_m=1e-1$ with the solid line showing $\eta = 2$ and the dotted line $\eta=20$.}
     \label{fig:dm_eta_variation}
 \end{figure}
-lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum
+
+Looking at low values for both $d_m$ and $\eta$ in the figure~\ref{fig:dm_eta_variation}, the dotted curve in the left column, we see that slow diffusion of the matrix degrading enzymes and slow degradation of the extra cellular matrix causes the tumour cells to only develop one lump that invades space, due to stronger haptotatic exposition to a slower degraded ECM, to create larger values for $\nabla (c \nabla e)$, this is also observable for the higher diffusion values and lowwer ECM degrading factors. Having this single lump with a lower maxima and larger length causes the MDEs to produce more evenly farther away from the origin. The low value for the ECM degrading factor results in an overall slower ECM degradation. Looking on the solid line on the left colum we see that increasing $\eta$ enables the tumour cells to develop two hills, one staying at $x=0$ and one invading space by haptotatic pull. Due to a higher density of tumour cells at the origin the MDEs produced there exceed a value of one and ECM degrading happens faster due to first the higher coefficient but also because of a faster invasion pace of matrix degrading enzymes, due to faster invasion of the tumour cells. Increasing $d_m$ to $d_m=1e-1$ causes the MDE concentration to flatten throughout space, taking on a constant distribution in space for one point in time, neglecting the values for $\eta$. Though $\eta$ still has an influence on both tumour cell density and ECM concentration. We see that, as previously mentioned, for $\eta=2$ the degrading happens so slow that the tumour cells form only one lump invading the tissue, with its maxima travelling along the x-axis. In contrast to this for $\eta=20$, we also see only one lump develop though this one stays with it's maxima at the origin. For $\eta=20$ we see that after $t=40$ the ECM has almost completly degraded, making the formation of a secondary lump invading the tissue not possible due to too low haptotatic pull. 
 
 \subsubsection*{$\alpha - \beta$ Variation}
 \begin{figure}[h]
@@ -187,47 +190,62 @@ lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ips
     \caption{Plots show results for varying both $\alpha$ and $\beta$ whilst keeping the other parameters constant, in the images on the left $\alpha=0.1$ with the solid line showing $\beta = 0.005$ and the dotted line $\beta=0.1$ on the right $\alpha=1.0$ with the solid line showing $\beta = 0.005$ and the dotted line $\beta=0.1$.}
     \label{fig:alpha_beta_variation}
 \end{figure}
-lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum
 
+Looking at figure~\ref{fig:alpha_beta_variation} we see experimental results varying both $\alpha$ and $\beta$. For low MDE production but also low MDE decay we can see that the curve for the MDEs is still visible at up to $t=40$, at $t=80$ it is zero. We see that first the ECM degrading happens faster than for high $\beta$ values and therefore the tumour cells develop two lumps with one invading the tissue the other staying at $x=0$. The maxima for both lumps is lower than in previous experiments, though the cells seem to be more evenly distributed in between the two lumps. Increasing $\beta=0.1$ the MDE curve seems to be zero after already $t=$ and stays there until the end of this experiment. This low concentration of MDEs casuses a slower ECM degrading process and therefore leads the tumour cells to only develop one lump, invading the space, with its maxima moving at the center of this lump. For $\alpha=0.1$ both values for $\beta$ have proven to be to high, decaying the matrix degrading enzymes too fast to keep up with production.
+On the other hand increasing $\alpha$ to $1.0$ and keeping $\beta=0.05$, we see that production outweighs decay, with at the end of the experiment the MDEs still have a concentration of about $0.4$ at $x=0$. For this experiment we seee that the tumour cells develop two lumps indicating that diffusion and haptotaxis effects are also in some balance, and ECM degradation seems to resemble due to similiarities with the basecase for the MDE curve, also the ECM degradation of the basecase experiment.
+Increasing both $\alpha$ and $\beta$ we see in the solid line of the right column of figure~\ref{fig:alpha_beta_variation} that decay outweighs production again, after $t=4$ we can only see a small remaining portion of matrix degrading enzymes at the origin. This causes a slower ECM degradataion and therefore to forming only one lump of tumour cells, due to too strong effects of haptotaxis, though this singular lump is streched flat along the x-axis.
 
 \subsubsection*{$d_m - \alpha - \beta$ Variation}
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.85\textwidth]{resources/images/dm_alpha_beta_variation_1.png}
     \caption{Plots show results for varying both $\alpha$ and $\beta$ whilst keeping the other parameters constant, in the images on the left $\alpha=0.1$ with the solid line showing $\beta = 0.005$ and the dotted line $\beta=0.1$ on the right $\alpha=1.0$ with the solid line showing $\beta = 0.005$ and the dotted line $\beta=0.1$.}
-    \label{fig:alpha_beta_variation}
+    \label{fig:dm_alpha_beta_variation_1}
 \end{figure}
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.85\textwidth]{resources/images/dm_alpha_beta_variation_2.png}
     \caption{Plots show results for varying both $\alpha$ and $\beta$ whilst keeping the other parameters constant, in the images on the left $\alpha=0.1$ with the solid line showing $\beta = 0.005$ and the dotted line $\beta=0.1$ on the right $\alpha=1.0$ with the solid line showing $\beta = 0.005$ and the dotted line $\beta=0.1$.}
-    \label{fig:alpha_beta_variation}
+    \label{fig:dm_alpha_beta_variation_2}
 \end{figure}
-lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum
+
+Experimenting with all parameters regarding the equation for the matrix degrading enzymes required to split the results into two figures,~\ref{fig:dm_alpha_beta_variation_1} and ~\ref{fig:dm_alpha_beta_variation_2}, due to clarity reasons. 
+Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+
 
 \subsection{Two dimensional Results with Proliferation}
-
+In this section we are going to inspect the updated system, consisting of equation ~\ref{eq:6} to ~\ref{eq:10}, to describe the effects of tumour cell proliferation and extra cellular matrix renewal processes.
 
 \subsubsection{Basecase Analysis}
+
+Here is also makes sense to establish a basecase to compare the following parameter analysis resulst against. For this we used the values $\mu_1= 0.1$ and $\mu_2=0.5$ according to the only experiment found for this system of equations in the paper of Kolev et al. \cite{Kolev2010}.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{resources/images/basecase_proliferation.png}
-    \label{fig:basecase_proliferation}
+    \includegraphics[width=\textwidth]{resources/images/basecase_comparison.png}
+    \label{fig:prolif_basecase}
+    \caption{Describing the updated basecase, in the image above only the updated basecase is plotted, below it is compared to the initial basecase.}
 \end{figure}
+
+Comparing this new basecase to our initial model's basecase we can see the influences of both $\mu_1$ and $\mu_2$, as for the tumour cell density curve is visibly higher than without proliferation, causing a higher production of matrix degrading enzymes, which would lead to faster ECM degradation, though this is countered by the renewal factor $\mu_2$ causing the ECM concentration to be higher at the end, at $t=80$, than in the initial basecase experiment.
 
 
 
 \subsubsection{Parameter Analysis}
+
+For the Parameter Analysis of the model with proliferation and renewal we are focusing on comparing the results of the updated model with the results produced by the model without renewal and proliferation, this will point out again the influence of $\mu_1$ and $\mu_2$ on the system. 
 
 \subsubsection*{$d_c$ Variation}
 % TODO: dc_variation schaubild einfuegen
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{resources/images/prolif_dc_variation.png}
-    \caption{Plots show results for varying $d_c$ whilst keeping the other parameters constant, in the images you can see the effects of $d_c=5e-5$ in the dashed curve, $d_c=1e-1$ in the dotted curve and $d_c=5e-4$ in the solid line.}
-    \label{fig:dc_comparison}
+    \caption{Plots show results for varying $d_c$ whilst keeping the other parameters constant}
+    \label{fig:prolif_dc_comparison}
 \end{figure}
+
+Varying $d_c$ with proliferation terms, we see the same effects as without proliferation. Higher values for $d_c$ cause a stronger influence of diffusion and a weaker for the haptotaxis, which leads to a curve with less or none of a leading edge invading the space, but to a faster rather constant distribution throughout space. The MDE concentration follows this behaviour, depending on its production on the tumour cell density distribution in space and the ECM is decayed faster, the faster the tissue is invaded, thus the higher the diffusion factor is. Comparing them we see little differences, only tumour cell density and ECM are raised a little in each plot due to the renewal and proliferation factors, which in turn also causes a higher MDE concentration, due to higher tumour cell densities. 
 
 
 \subsubsection*{$\gamma$ Variation}
@@ -235,61 +253,68 @@ lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ips
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{resources/images/prolif_gamma_variation.png}
-    \caption{Plots show results for varying $\gamma$ whilst keeping the other parameters constant, in the images you can see the effects of $\gamma=0.01$ in the dashed curve, $\gamma=0.002$ in the dotted curve and $\gamma=0.008$ in the solid line.}
-    \label{fig:gamma_variation}
+    \caption{Plots show results for varying $\gamma$ whilst keeping the other parameters constant.}
+    \label{fig:prolif_gamma_variation}
 \end{figure}
 
+When we look at $\gamma$ we also can see the same effects as the model without proliferation shows, with the adjustments as varying $d_c$, with raised curves for all variables. Increasing $\gamma$ means increasing haptotaxis effects, pulling the tumour cells stronger towards the extra cellular matrix molecules, which causes a faster invasion pace and also a higher density of tumour cells invading the tissue, but a lower staying at the centere at $x=0$. This also means that the ECM degrading process happens faster and the MDEs are more evenly distributed through space the higher $\gamma$ is. As mentioned above the same effects come in this experiment, introducing proliferation and renewal, with higher values for tumour cell density, MDE and ECM concentration especially at the later points in time clearly depictable. It is interessting to observe that though introducing a renewal factor for the extra cellular matrix, the proliferation of the tumour cells causes a faster production of matrix degrading enzymes, which makes the system produce nearly the same results as without proliferation and renewal concerning the ECM concentration, still  it is to say that introducing the renewal of the ECM results in overall slightly higher concentrations of it.
 
 \subsubsection*{$\mu_1$ Variation}
-% TODO:mu1 schaubild
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{resources/images/prolif_mu_1_variation.png}
-    \caption{Plots show results for varying $\eta$ whilst keeping the other parameters constant, in the images you can see the effects of $\eta=20$ in the dashed curve, $\eta=0$ in the dotted curve and $\eta=12$ in the solid line.}
-    \label{fig:eta_variation}
+    \caption{Plots show results for varying $\mu_1$ whilst keeping the other parameters constant.}
+    \label{fig:prolif_mu_1_variation}
 \end{figure}
+
+The parameter $\mu_1$ describes the proliferation of the tumour cells, with assuming logisitcal growth in this term, being limited by the already present ECM molecules and tumour cells. We see that with varying $\mu_1$ the other curves are also strongly influenced though it takes some time as the plots in figure~\ref{fig:prolif_mu_1_variation} indicate, with after $t=4$ they seem to overlay each other At $t=40$ we see that first of all the tumour cells curve obviously increases with increasing $\mu_1$, this causes the MDE concentration to also increase and in turn the ECM curve is decreased due to faster ECM degradation, because of more availabe matrix degrading enzumes. At the last point in time this befaviour intensifies, the tumour cells having for high $\mu_1$ values a density of one in the range of $x$ being between $0$ and $0.2$ and for $\mu_1=0.5$ also a lot higher than without proliferation of tumour cells. The MDE concentration exceeds one for the two higher values for $\mu_1$ and the ECM having again degraded faster. Looking at the dotted curve, we can observe what only renewal does to our system and we see clearly, comparing it to the basecase of the model without proliferation, that the concentration of the extra cellular matrix especially at the end is visibly higher.
+
 
 
 \subsubsection*{$\eta$ Variation}
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{resources/images/prolif_eta_variation.png}
-    \caption{Plots show results for varying $\eta$ whilst keeping the other parameters constant, in the images you can see the effects of $\eta=20$ in the dashed curve, $\eta=0$ in the dotted curve and $\eta=12$ in the solid line.}
-    \label{fig:eta_variation}
+    \caption{Plots show results for varying $\eta$ whilst keeping the other parameters constant.}
+    \label{fig:prolif_eta_variation}
 \end{figure}
+
+As we compare the $\eta$ variation between with and without proliferation and renewal models we see mostly the same effects. For the solid and dashed curves we see little though the curves of the new model are all slightly raised. Looking at $\eta=0$ we see some interesting deviations, at the time point $t=4$ the plots still look rather similar, but looking at $t=40$ we see that the curve of the tumour cells has a more even distribution along the x-axis and also its maximum is visibly lower with value of about $0.2$ at $x=1.4$ instead of $0.25$ at $x=1.3$. This behaviour is due to the renewal of the ECM, where without proliferation this curve stayed constant throughout the experiment, here it can increase, which it does altering the slope of the curve and therefore influecing the haptotatic pull for the tumour cells, additionally to this the other two experiments showed a visible increase of the tumour cell density and the matrix degrading enzyme concentration, but only a slight for the ECM concentration, here we can see no increasing of area for the tumour cell density at all. The renewal of the ECM counters the proliferation of the tumour cells and the slowed ECM degrading process in such a way that at the last two point in time we see that the ECM has visibly increased, with both curves ECM and tumour cells almost mirroring each other. Summing up the areas of both variables we see that they toghether occupy the space completely needed for the logistical growth terms, which means that proliferation and renewal will play no more important role continuing with this experiment as they have reached a equlibrium state and cancel each other out. 
 
 
 \subsubsection*{$\mu_2$ Variation}
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{resources/images/prolif_mu_2_variation.png}
-    \caption{Plots show results for varying $\eta$ whilst keeping the other parameters constant, in the images you can see the effects of $\eta=20$ in the dashed curve, $\eta=0$ in the dotted curve and $\eta=12$ in the solid line.}
-    \label{fig:eta_variation}
+    \caption{Plots show results for varying $\mu_2$ whilst keeping the other parameters constant.}
+    \label{fig:prolif_mu_2_variation}
 \end{figure}
 
+The parameter $\mu_2$ describes the renewal processes of the extra cellular matrix moleculs, with also assuming logisitcal growth in this term, being also limited by the already present ECM molecules and tumour cells.
+Like we saw for $\mu_1$ the effects of $\mu_2$ need some time to show, here again we can see them after $t=40$ timesteps clearly. Wtih higher ECM renewal we see that we get slightly lower MDE maximum at $x=0$, though having stretched a little more into x-direction. The same goes for the tumour cell density, having a lower maximum at the origin, yet being more evenly distributed, whcih is due to the ECM curve being shifted slightly towards the left, intensifying the effects of haptotaxis. The last image confirms the aforementioned effects with higher ECM concentration due to renewal causes less MDE concentration at its maxima and more stretchig along x-direction, the same holding for the tumour cells. We also observe that the effects of $\mu_2$ are not as impactful on the system as the effects of $\mu_1$ were.
+
 \subsubsection*{$d_m$ Variation}
-%TODO: d_m Schaubild einfuegen
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{resources/images/prolif_dm_variation.png}
-    \caption{Plots show results for varying $d_m$ whilst keeping the other parameters constant, in the images you can see the effects of $d_m=0.1$ in the dashed curve, $d_m=0$ in the dotted curve and $d_m=0.001$ in the solid line.}
-    \label{fig:dm_variation}
+    \caption{Plots show results for varying $d_m$ whilst keeping the other parameters constant.}
+    \label{fig:prolif_dm_variation}
 \end{figure}
 
 \subsubsection*{$\alpha$ Variation}
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{resources/images/prolif_alpha_variation.png}
-    \caption{Plots show results for varying $\alpha$ whilst keeping the other parameters constant, in the images you can see the effects of $\alpha=1.0$ in the dashed curve, $\alpha=0$ in the dotted curve and $\alpha=0.6$ in the solid line.}
-    \label{fig:alpha_variation}
+    \caption{Plots show results for varying $\alpha$ whilst keeping the other parameters constant.}
+    \label{fig:prolif_alpha_variation}
 \end{figure}
 
 \subsubsection*{$\beta$ Variation}
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{resources/images/prolif_beta_variation.png}
-    \caption{Plots show results for varying $\beta$ whilst keeping the other parameters constant, in the images you can see the effects of $\beta=0.005$ in the dashed curve, $\beta=0.1$ in the dotted curve and $\beta=0.01$ in the solid line.}
-    \label{fig:beta_variation}
+    \caption{Plots show results for varying $\beta$ whilst keeping the other parameters constant.}
+    \label{fig:prolif_beta_variation}
 \end{figure}
 
 \subsubsection*{Cross Variation}
@@ -298,31 +323,31 @@ lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ips
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.85\textwidth]{resources/images/prolif_mu_1_mu_2_variation.png}
-    \caption{Plots show results for varying both $d_c$ and $\gamma$ whilst keeping the other parameters constant, in the images on the left $d_c$ is set to $d_c=5e-5$ with the solid line showing $\gamma = 0.01$ and the dotted line $\gamma=0.001$ on the right $d_c$ is set to $d_c=1e-1$ with the solid line showing $\gamma = 0.01$ and the dotted line $\gamma=0.001$.}
-    \label{fig:dc_gamma_variation}
+    \caption{Plots show results for varying both $\mu_1$ and $\mu_2$ whilst keeping the other parameters constant.}
+    \label{fig:prolif_mu_1_mu_2_variation}
 \end{figure}
 
 \subsubsection*{$d_c - \gamma - \mu_1$ Variation}
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.85\textwidth]{resources/images/prolif_dc_gamma_mu1_1.png}
-    \caption{Plots show results for varying both $d_c$ and $\gamma$ whilst keeping the other parameters constant, in the images on the left $d_c$ is set to $d_c=5e-5$ with the solid line showing $\gamma = 0.01$ and the dotted line $\gamma=0.001$ on the right $d_c$ is set to $d_c=1e-1$ with the solid line showing $\gamma = 0.01$ and the dotted line $\gamma=0.001$.}
-    \label{fig:dc_gamma_variation}
+    \caption{Plots show results for varying both $d_c$, $\gamma$ and $\mu_1$ whilst keeping the other parameters constant. This plot is the first of two, with the same $d_c$ value for every plot in this figure.}
+    \label{fig:prolif_dc_gamma_mu_1_variation_1}
 \end{figure}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.85\textwidth]{resources/images/prolif_dc_gamma_mu1_2.png}
-    \caption{Plots show results for varying both $d_c$ and $\gamma$ whilst keeping the other parameters constant, in the images on the left $d_c$ is set to $d_c=5e-5$ with the solid line showing $\gamma = 0.01$ and the dotted line $\gamma=0.001$ on the right $d_c$ is set to $d_c=1e-1$ with the solid line showing $\gamma = 0.01$ and the dotted line $\gamma=0.001$.}
-    \label{fig:dc_gamma_variation}
+    \caption{Plots show results for varying both $d_c$, $\gamma$ and $\mu_1$ whilst keeping the other parameters constant. This plot is the second of two, with the same $d_c$ value for every plot in this figure.}
+    \label{fig:prolif_dc_gamma_mu_1_variation_2}
 \end{figure}
 
 \subsubsection*{$\eta -\mu_2$ Variation}
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.85\textwidth]{resources/images/dm_eta_variation.png}
-    \caption{Plots show results for varying both $d_m$ and $\eta$ whilst keeping the other parameters constant, in the images on the left $d_m$ is set to $d_c=1e-10$ with the solid line showing $\eta = 2$ and the dotted line $\eta=20$ on the right $d_m$ is set to $d_m=1e-1$ with the solid line showing $\eta = 2$ and the dotted line $\eta=20$.}
-    \label{fig:dm_eta_variation}
+    \includegraphics[width=0.85\textwidth]{resources/images/prolif_eta_mu2_variation.png}
+    \caption{Plots show results for varying both $\eta$ and $\mu_2$ whilst keeping the other parameters constant.}
+    \label{fig:prolif_eta_mu_2_variation}
 \end{figure}
 
 

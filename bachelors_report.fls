@@ -1091,6 +1091,11 @@ INPUT ./resources/images/basecase_proliferation.png
 INPUT resources/images/basecase_proliferation.png
 INPUT ./resources/images/basecase_proliferation.png
 INPUT ./resources/images/basecase_proliferation.png
+INPUT ./resources/images/basecase_comparison.png
+INPUT ./resources/images/basecase_comparison.png
+INPUT resources/images/basecase_comparison.png
+INPUT ./resources/images/basecase_comparison.png
+INPUT ./resources/images/basecase_comparison.png
 INPUT ./resources/images/prolif_dc_variation.png
 INPUT ./resources/images/prolif_dc_variation.png
 INPUT resources/images/prolif_dc_variation.png
@@ -1146,10 +1151,11 @@ INPUT ./resources/images/prolif_dc_gamma_mu1_2.png
 INPUT resources/images/prolif_dc_gamma_mu1_2.png
 INPUT ./resources/images/prolif_dc_gamma_mu1_2.png
 INPUT ./resources/images/prolif_dc_gamma_mu1_2.png
-INPUT ./resources/images/dm_eta_variation.png
-INPUT ./resources/images/dm_eta_variation.png
-INPUT resources/images/dm_eta_variation.png
-INPUT ./resources/images/dm_eta_variation.png
+INPUT ./resources/images/prolif_eta_mu2_variation.png
+INPUT ./resources/images/prolif_eta_mu2_variation.png
+INPUT resources/images/prolif_eta_mu2_variation.png
+INPUT ./resources/images/prolif_eta_mu2_variation.png
+INPUT ./resources/images/prolif_eta_mu2_variation.png
 INPUT ./content/conclusion_discussion.tex
 INPUT ./content/conclusion_discussion.tex
 INPUT ./content/conclusion_discussion.tex
