@@ -951,6 +951,11 @@ INPUT ./content/theoretical_background.tex
 INPUT content/theoretical_background.tex
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm
+INPUT ./resources/images/tumour_invasion_stage.png
+INPUT ./resources/images/tumour_invasion_stage.png
+INPUT resources/images/tumour_invasion_stage.png
+INPUT ./resources/images/tumour_invasion_stage.png
+INPUT ./resources/images/tumour_invasion_stage.png
 INPUT ./content/modelling.tex
 INPUT ./content/modelling.tex
 INPUT ./content/modelling.tex
