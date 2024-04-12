@@ -803,6 +803,7 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 INPUT ./bachelors_report.aux
 INPUT bachelors_report.aux
 INPUT bachelors_report.aux

@@ -19,6 +19,14 @@
 \usepackage{fancyhdr}
 \usepackage{xr}
 \usepackage{multicol}
+\usepackage{fancyhdr}
+
+% Define header and footer
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyhead[L]{\leftmark} % Section title on the left
+\fancyhead[R]{\thepage} % Page number on the right
+\renewcommand{\headrulewidth}{0.4pt} % Header rule
 
 
 \addbibresource{lib.bib}
