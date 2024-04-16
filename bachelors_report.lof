@@ -1,7 +1,7 @@
 \contentsline {figure}{\numberline {1}{\ignorespaces Visualization of the initial value distribution for an experiment in two space dimensions, radially symmetrical}}{14}{}%
 \contentsline {figure}{\numberline {2}{\ignorespaces Plot Over Line Tool Configuration}}{15}{}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Images on left side 2D tumour cell density plots of the experiment, images on right side results produced by applying Plot Over Line tool}}{17}{}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Caption}}{19}{}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Experimental results using Anderson et al's parameters with on left side showing 2D tumour cell density plots of the experiment, on right side results produced by applying the Plot Over Line tool as described in the Method section}}{17}{}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Experimental results using Anderson et al's parameters but varying $\alpha $ }}{19}{}%
 \contentsline {figure}{\numberline {5}{\ignorespaces Caption}}{20}{}%
 \contentsline {figure}{\numberline {6}{\ignorespaces Caption}}{21}{}%
 \contentsline {figure}{\numberline {7}{\ignorespaces Experimental results of varying $d_c$, keeping the other parameters constant}}{23}{}%
