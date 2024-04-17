@@ -20,6 +20,15 @@
 \usepackage{xr}
 \usepackage{multicol}
 \usepackage{fancyhdr}
+\usepackage{lipsum}
+\usepackage{adjustbox}
+\usepackage{mathtools,tikz,caption}
+\captionsetup{labelfont=sc,labelsep=period}
+\DeclareRobustCommand\sampleline[1]{%
+  \tikz\draw[#1] (0,0) (0,\the\dimexpr\fontdimen22\textfont2\relax)
+  -- (2em,\the\dimexpr\fontdimen22\textfont2\relax);%
+}
+\usepackage{longtable}
 
 % Define header and footer
 \pagestyle{fancy}

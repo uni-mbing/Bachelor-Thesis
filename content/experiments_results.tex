@@ -2,21 +2,102 @@
 
 \section{Experiments and Results}
 
+All experiments that consider the ECM to be homogenous start with the same initial values as seen in figure~\ref{fig:2D_homogenous_ECM_initial}. Experiments observing the effects of a heterogenous ECM use different initial values, as seen in figure~\ref{fig:2D_heterogenous_ECM_initial}.\newline 
+This work starts with replicating numerical simulations done by other papers in higher dimensions. Since there were only 1D simulations done previously, the model will be adjusted in such a way, that the Plot Over Line graphs mimick the plots given by the previous experiments. This will serve two purposes, first it will verify a correct implementation of the model and second this will give us a starting point by which we can vary the parameters, investigating the phenomena this model exhibits. \newline 
+We will start with examining 2D experiments with homogenous ECMs, using our model with the parameters $mu_1$ and $mu_2$ both set to zero, considering a case with no proliferation of tumour cells and no renewal of the extracellular matrix molecules, after this we will introduce proliferation and renewal, Incorporating $\mu_1$ and $\mu_2$ into the variation.
+Considering 3D experiments we will do a slimmer replication and parameter analysis due to the immense computational effort. After examining the model with a homogenous ECM initial condition we will move on to look at a case considering a heterogenous ECM in 2D.\newline
+Looking at the parameter estimates from \cite{anderson_mathematical_2000} to non-dimensionalise the time, we see that with $L \in [0.1cm,1cm]$ and $D\approx 10^{-6}\frac{cm^2}{s}$, $\tau = \frac{L^2}{D}$ gives a relative big temporal range, $\tau_{min} = 1000s = 16.66 min$ and $\tau_{max} = 1000000s = 16666.66min$, which makes it hard, to find the correct time step value to compare our simulation results with the one from \cite{anderson_mathematical_2000} and \cite{Kolev2010}. Another challenge are the diffusion coefficients, since they are dependent on the dimension we are in, we have to find our own estimates as a baseline value. \newline 
+For each stage of experiments we will use a set of baseline parameters, which will be evaluated experimentally, and from there vary one or more parameter at a time to get an overview of their effects. \newline
 For all the plots of the experiments the red curve indicates the tumour cell density, the blue curve the ECM density and the green curve the MDE concentration. In all of the experiments we used the value of $\epsilon = 0.01$ to match the inital conditions from \cite{anderson_mathematical_2000} and \cite{Kolev2010}. \newline 
 
 
 \subsection{Two dimensional Results without Proliferation}
+
+\begin{longtable}{|c c c c c c c c c c|}
+    \hline
+    Figure & Linestyle & $d_c$ & $\gamma$ & $\mu_1$ & $\eta$ & $\mu_2$ & $d_m$ & $\alpha$ & $\beta$ \\ [0.5ex] 
+    \hline\hline
+    \endfirsthead
+    \multicolumn{10}{c}%
+    {{\bfseries \tablename\ \thetable{} -- Fortsetzung von vorheriger Seite}} \\
+    \hline
+    Figure & Linestyle & $d_c$ & $\gamma$ & $\mu_1$ & $\eta$ & $\mu_2$ & $d_m$ & $\alpha$ & $\beta$ \\ [0.5ex] 
+    \hline\hline
+    \endhead
+    \hline \multicolumn{10}{|r|}{{continued on next page}} \\ \hline
+    \endfoot
+    \hline
+    \endlastfoot
+    4 & \sampleline{} & 0.001 & 0.005 & 0 & 10 & 0 & 0.001 & 0.1 & 0\\  \hline
+    5 & \sampleline{dash pattern=on .7em off .2em on .05em off .2em} & 0.001 & 0.005 & 0 & 10 & 0 & 0.001 & 0.2 & 0\\  \hline
+    5 & \sampleline{dotted} & 0.001 & 0.005 & 0 & 10 & 0 & 0.001 & 0.3 & 0\\  \hline
+    5 & \sampleline{} & 0.001 & 0.005 & 0 & 10 & 0 & 0.001 & 0.35 & 0\\  \hline
+    5 & \sampleline{dashed} & 0.001 & 0.005 & 0 & 10 & 0 & 0.001 & 0.4 & 0\\  \hline
+    6 & \sampleline{dash pattern=on .7em off .2em on .05em off .2em} & 0.001 & 0.005 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\  \hline
+    6 & \sampleline{dotted} & 0.0001 & 0.005 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\  \hline
+    6 & \sampleline{} & 0.0005 & 0.005 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\  \hline
+    6 & \sampleline{dashed} & 0.00001 & 0.005 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\  \hline
+    7 & \sampleline{dash pattern=on .7em off .2em on .05em off .2em} & 0.0005 & 0.005 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\  \hline
+    7 & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\  \hline
+    7 & \sampleline{} & 0.0005 & 0.006 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\  \hline
+    7 & \sampleline{dashed} & 0.0005 & 0.007 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\  \hline
+    8 & \sampleline{} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\ \hline
+    9 & \sampleline{dash pattern=on .7em off .2em on .05em off .2em} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\ \hline
+    9 & \sampleline{} & 0.001 & 0.0055 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\ \hline
+    9 & \sampleline{dotted} & 0.1 & 0.0055 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\ \hline
+    10 & \sampleline{dotted} & 0.0005 & 0.002 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\ \hline
+    10 & \sampleline{} & 0.0005 & 0.008 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\ \hline
+    10 & \sampleline{dashed} & 0.0005 & 0.01 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\ \hline
+    11 & \sampleline{} & 0.0005 & 0.1 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\ \hline
+    12 & \sampleline{} & 0.0005 & 0.1 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\ \hline
+    13 & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 0 & 0 & 0.001 & 0.3546 & 0\\ \hline
+    13 & \sampleline{} & 0.0005 & 0.0055 & 0 & 12 & 0 & 0.001 & 0.3546 & 0 \\ \hline
+    13 & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 20 & 0 & 0.001 & 0.3546 & 0 \\ \hline
+    14 & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.00001 & 0.3546 & 0 \\ \hline
+    14 & \sampleline{} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.001 & 0.3546 & 0 \\ \hline
+    14 & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.1 & 0.3546 & 0 \\ \hline
+    15 & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.001 & 0 & 0 \\ \hline
+    15 & \sampleline{} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.001 & 0.6 & 0 \\ \hline
+    15 & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.001 & 1.0 & 0 \\ \hline
+    16 & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.001 & 0.3546 & 0.1 \\ \hline
+    16 & \sampleline{} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.001 & 0.3546 & 0.01 \\ \hline
+    16 & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.001 & 0.3546 & 0.005 \\ \hline
+    17 - left& \sampleline{dotted} & 0.00005 & 0.001 & 0 & 10 & 0  & 0.001 & 0.3546 & 0 \\ \hline
+    17 - left & \sampleline{} & 0.00005 & 0.01 & 0 & 10 & 0 & 0.001 & 0.3546 & 0 \\ \hline
+    17 -right & \sampleline{dotted} & 0.1 & 0.001 & 0 & 10 & 0 & 0.001 & 0.3546 & 0 \\ \hline
+    17 -right & \sampleline{} & 0.1 & 0.01 & 0 & 10 & 0 & 0.001 & 0.3546 & 0 \\ \hline
+    18 - left & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 2 & 0 & 0.0000000001 & 0.3546 & 0 \\ \hline
+    18 - left & \sampleline{} & 0.0005 & 0.0055 & 0 & 20 & 0 & 0.0000000001 & 0.3546 & 0 \\ \hline
+    18 -right & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 2 & 0 & 0.1 & 0.3546 & 0 \\ \hline
+    18 -right & \sampleline{} & 0.0005 & 0.0055 & 0 & 20 & 0 & 0.1 & 0.3546 & 0 \\ \hline
+    19 - left & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.001 & 0.1 & 0.005 \\ \hline
+    19 - left & \sampleline{} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.001 & 0.1 & 0.1 \\ \hline
+    19 -right & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.001 & 1.0 & 0.005 \\ \hline
+    19 -right & \sampleline{} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.001 & 1.0 & 0.1 \\ \hline
+    20 - left & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.0000000001 & 0.1 & 0.005 \\ \hline
+    20 - left & \sampleline{} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.0000000001 & 0.1 & 0.1 \\ \hline
+    20 -right & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.0000000001 & 1.0 & 0.005 \\ \hline
+    20 -right & \sampleline{} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.0000000001 & 1.0 & 0.1 \\ \hline
+    21 - left & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.1 & 0.1 & 0.005 \\ \hline
+    21 - left & \sampleline{} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.1 & 0.1 & 0.1 \\ \hline
+    21 -right & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.1 & 1.0 & 0.005 \\ \hline
+    21 -right & \sampleline{} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.1 & 1.0 & 0.1 \\ \hline
+    \caption{Overview of all experiments conducted for the model without proliferation and renewal producing 2D output}
+    \label{table:2D_experiments_without_proliferation}
+\end{longtable}
+Table~\ref{table:2D_experiments_without_proliferation} shows all the experiments done in two space dimensions using the model without proliferation or renewal. You can see the figure and the linestyle to verify exactly which experiment uses which values. 
+    
 \subsubsection{Replicating results}
 We will start with replicating the experiment from  Anderson et al.\cite{anderson_mathematical_2000}, Figure~\ref{fig:unadjsuted_replication}, trying to make our curves fit the results of their experiment. 
 
 \begin{figure}
     \centering
     \includegraphics[width=0.65\textwidth]{resources/images/first_replication_results.png}
-    \caption{Experimental results using Anderson et al's parameters with on left side showing 2D tumour cell density plots of the experiment, on right side results produced by applying the Plot Over Line tool as described in the Method section}
+    \caption{Results using Anderson et al's parameters, on left side showing 2D tumour cell density plots, on right side results produced by applying the Plot Over Line tool as described in the Method section}
     \label{fig:unadjsuted_replication}
 \end{figure}
 
-We start with the same parameters as in Anderson et al's first $1D$ experiment: $d_c = 0.001, d_m = 0.001, \gamma = 0.005, \eta = 10, \alpha = 0.1, \beta = 0, \mu_1 = 0, \mu_2 = 0$. Figure~\ref{fig:unadjsuted_replication} shows these results for four different points in time. Since our experiments are preformed in two dimensions you can see on the left side the two dimensional plots of the tumour cell density and on the right side you can see plots produced by applying the Plot Over Line tool confiugrated like described in the section~\ref{sec:method}, where there is not only the tumour cell density visible but also the matrix degrading enzymes concentration and the extracellular matrix concentration. We choose these points in time, because we used a different timescale than Anderson et al. and as you will later see, our time points capture the effects that can be observed studying their results quite well, which implies that for every time step Anderson et al. did we had to do 4. The problem with the two dimensional plots is that as you can see overlaying the different variables of tumour cell density, MDE concentration and ECM concentration, makes the plots unreadable, so you can only show one at a time, additionally to this it is harder to estimate values for $c$, $e$ and $m$ at different locations in space and time. These problems are solved using the Plot Over Line tool, as you can see in the plots of figure~\ref{fig:unadjsuted_replication} on the right side the curves for the three variables are clearly distinguishable and we can estimate their values spacially and temporarily better. This is why for most experiments we resort to using only the results produced by the Plot Over Line method instead of full 2D simulation images, this makes evaluating and comparing the respective experiments a lot easier and still captures all occuring effects. \newline
+We start with the same parameters as in Anderson et al's first one dimensional experiment: $d_c = 0.001, d_m = 0.001, \gamma = 0.005, \eta = 10, \alpha = 0.1, \beta = 0, \mu_1 = 0, \mu_2 = 0$. Figure~\ref{fig:unadjsuted_replication} shows these results for four different points in time. Since our experiments are preformed in two dimensions you can see on the left side the two dimensional plots of the tumour cell density and on the right side you can see plots produced by applying the Plot Over Line tool confiugrated like described in the section~\ref{sec:method}, where there is not only the tumour cell density visible but also the matrix degrading enzymes concentration and the extracellular matrix concentration. We choose these points in time, because we used a different timescale than Anderson et al. and as you will later see, our time points capture the effects that can be observed studying their results quite well, which implies that for every time step Anderson et al. did we had to do 4. The problem with the two dimensional plots is that as you can see overlaying the different variables of tumour cell density, MDE concentration and ECM concentration, makes the plots unreadable, so you can only show one at a time, additionally to this it is harder to estimate values for $c$, $e$ and $m$ at different locations in space and time. These problems are solved using the Plot Over Line tool, as you can see in the plots of figure~\ref{fig:unadjsuted_replication} on the right side the curves for the three variables are clearly distinguishable and we can estimate their values spacially and temporarily better. This is why for most experiments we resort to using only the results produced by the Plot Over Line method instead of full 2D simulation images, this makes evaluating and comparing the respective experiments a lot easier and still captures all occuring effects. \newline
 Starting from the inital values at $t=0$ we see that after four time steps a very small secession is starting to form for the tumour cell density at $x\approx 0.1$. Diffusion and Haptotaxis have stretched the curve for the tumour cells along the x-axis as did diffusion for the MDEs. The ECM has  been visibly degraded at the origin, being still fully present in outer regions exceeding $x\approx 0.2$.\newline
 The next image shows the simulation after 40 timesteps; we see that the secession of the tumour cell concentration of the previous point in time has been propagated to form a small hill at the leading edge of the tumour cells invading the surrounding tissue, this effect is due to the haptotatic influence, which pulls the tumour cells further into the accessible area towards higher values of $\nabla (c \nabla e)$, creating a seperation for the tumour cells, where the other part is still oriented towards the origin. The MDEs also continue their diffusion into the area, degrading the ECM in their wake.\newline 
 In the last image, after 80 simulation time steps, we see that as well the hill that has formed at the leading edge of the tumour cells as well as the concentration of tumour cells at the origin, have flattened visibly and striving to take on a constant concentration throughout space, though we can still clearly distinguish both areas. If we were to look at the simulation at later points in time, the curve will flatten even more, since with more time the ECM will be further degraded and therefore the haptotactic flux coefficient $\gamma$ will lose its significance, leaving the movement of the tumour cells to diffusion only and spreading them constantly along the x-axis. The curve for the MDEs will also flattened due to diffusion,with the MDEs degrading the rest of the extracellular matrix molecules decrease their concentration further and the MDE concentration will increase over time due to no limiting factors in this experiment and on-going production contributed by the tumour cells $c$.\newline
@@ -27,21 +108,21 @@ This first of all confirms the initial supposition that with changing the dimens
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{resources/images/alpha_comparison.png}
-    \caption{Experimental results using Anderson et al's parameters but varying $\alpha$ }
+    \caption{Results using Anderson et al's parameters but varying $\alpha$ using the Plot Over Line tool}
     \label{fig:replication_alpha_comparison}
 \end{figure}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{resources/images/dc_comparison.png}
-    \caption{Caption}
+    \caption{Results using Anderson et al's parameters but varying $d_c$ using the Plot Over Line tool}
     \label{fig:replication_dc_comparison}
 \end{figure}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{resources/images/gamma_comparison.png}
-    \caption{Caption}
+    \caption{Results using Anderson et al's parameters but varying $\gamma$ using the Plot Over Line tool.}
     \label{fig:replication_gamma_comparison}
 \end{figure}
 
@@ -53,6 +134,7 @@ Looking at $d_c$ we chose a value of $d_c=5e-4$. Using values below $1e-5$ will 
     \centering
     \includegraphics[width=\textwidth]{resources/images/basecase_without_proliferation.png}
     \label{fig:basecase_without_proliferation}
+    \caption{Results of using the parameters as described, this experiment describes the basecase used to compare further experiments to}
 \end{figure}
 
 These adjustments leave us with the final configuration for replicating the system with the curves in figure~\ref{fig:basecase_without_proliferation} and the parameter settings also seen in the same figure. Comparing our final version with the original experiment we are trying to replicate we can see that in the second point in time, at $t=4$ in our case, the values of the three curves at the $x=0$ are nearly the same, and moving farther out along the x-axis the curves mimick each other quite well. In the original experiment the bump in the curve for the tumour concentration looks more pregnant, but this is due to the differing dimensions and the rescaling of the x-axis done in Anderson et al's experiment. The two later points in time confirm the similarity with having also nealy the same values for the three curves over the whole space domain.
@@ -70,7 +152,7 @@ The mathematical intuition is that if we will decrease $d_c$ we will see the eff
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{resources/images/dc_variation.png}
-    \caption{Experimental results of varying $d_c$, keeping the other parameters constant}
+    \caption{Results of varying $d_c$ in the basecase parameter set, keeping the other parameters constant, using the Plot Over Line tool}
     \label{fig:dc_comparison}
 \end{figure}
 Looking at the experiments in figure~\ref{fig:dc_comparison}, we can see these assumptions met. The smaller $d_c$ gets the higher the influence of $\gamma$ will be and vice versa. 
@@ -91,7 +173,7 @@ $\gamma$ describes the effects of haptotaxis, it is assumed that it is evenly di
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{resources/images/gamma_variation.png}
-    \caption{Plots show results for varying $\gamma$ whilst keeping the other parameters constant, in the images you can see the effects of $\gamma=0.01$ in the dashed curve, $\gamma=0.002$ in the dotted curve and $\gamma=0.008$ in the solid line.}
+    \caption{Results of varying $\gamma$ in the basecase parameter set, keeping the other parameters constant, using the Plot Over Line tool}
     \label{fig:gamma_variation}
 \end{figure}
 The experiments, described in figure~\ref{fig:gamma_variation} verify the expected behaviour. After $t=4$ we already see clear changes for varying $\gamma$, the higher $\gamma$ is set, the more of a secession for the tumour cells is observable, that will later from the secondary lump. The lowest value for $\gamma$, undercutting the one for the basecase, shows no signs of a leading edge forming that invades the tissue seperately. The other two variables show little deviation with varying $\gamma$ at this point in time. \newline 
@@ -259,21 +341,101 @@ Looking at the right side of figure ~\ref{fig:dm_alpha_beta_variation_2} we see 
 
 
 \subsection{Two dimensional Results with Proliferation}
-In this section we are going to inspect the updated system, consisting of equation ~\ref{eq:6} to ~\ref{eq:10}, to describe the effects of tumour cell proliferation and extra cellular matrix renewal processes.
+In this section we are going to inspect the updated system, consisting of equation ~\ref{eq:6} to ~\ref{eq:10}, to describe the effects of tumour cell proliferation and extracellular matrix renewal processes. Like for the model neglecting proliferation and renewal we can see in table~\ref{table:2D_experiments_with_proliferation} all the experiments done in two space dimensions using the updated model. 
+\begin{longtable}{|c c c c c c c c c c|}
+    \hline
+    Figure & Linestyle & $d_c$ & $\gamma$ & $\mu_1$ & $\eta$ & $\mu_2$ & $d_m$ & $\alpha$ & $\beta$ \\ [0.5ex] 
+    \hline\hline
+    \endfirsthead
+    \multicolumn{10}{c}%
+    {{\bfseries \tablename\ \thetable{} -- Fortsetzung von vorheriger Seite}} \\
+    \hline
+    Figure & Linestyle & $d_c$ & $\gamma$ & $\mu_1$ & $\eta$ & $\mu_2$ & $d_m$ & $\alpha$ & $\beta$ \\ [0.5ex] 
+    \hline\hline
+    \endhead
+    \hline \multicolumn{10}{|r|}{{continued on next page}} \\ \hline
+    \endfoot
+    \hline
+    \endlastfoot
+    22 & \sampleline{} & 0.0005 & 0.0055 & 0.1 & 10 & 0.5 & 0.001 & 0.3564 & 0\\  \hline
+    23 & \sampleline{dotted} & 0.0005 & 0.0055 & 0.1 & 10 & 0.5 & 0.001 & 0.3564 & 0\\  \hline
+    23 & \sampleline{} & 0.0005 & 0.0055 & 0.1 & 10 & 0.5 & 0.001 & 0.3564 & 0\\  \hline
+    5 & \sampleline{dash pattern=on .7em off .2em on .05em off .2em} & 0.001 & 0.005 & 0 & 10 & 0 & 0.001 & 0.2 & 0\\  \hline
+    5 & \sampleline{dotted} & 0.001 & 0.005 & 0 & 10 & 0 & 0.001 & 0.3 & 0\\  \hline
+    5 & \sampleline{} & 0.001 & 0.005 & 0 & 10 & 0 & 0.001 & 0.35 & 0\\  \hline
+    5 & \sampleline{dashed} & 0.001 & 0.005 & 0 & 10 & 0 & 0.001 & 0.4 & 0\\  \hline
+    6 & \sampleline{dash pattern=on .7em off .2em on .05em off .2em} & 0.001 & 0.005 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\  \hline
+    6 & \sampleline{dotted} & 0.0001 & 0.005 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\  \hline
+    6 & \sampleline{} & 0.0005 & 0.005 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\  \hline
+    6 & \sampleline{dashed} & 0.00001 & 0.005 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\  \hline
+    7 & \sampleline{dash pattern=on .7em off .2em on .05em off .2em} & 0.0005 & 0.005 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\  \hline
+    7 & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\  \hline
+    7 & \sampleline{} & 0.0005 & 0.006 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\  \hline
+    7 & \sampleline{dashed} & 0.0005 & 0.007 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\  \hline
+    8 & \sampleline{} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\ \hline
+    9 & \sampleline{dash pattern=on .7em off .2em on .05em off .2em} & 0.0005 & 0.0055 & 0 & 9 & 0 & 0.001 & 0.3546 & 0\\ \hline
+    9 & \sampleline{} & 0.001 & 0.0055 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\ \hline
+    9 & \sampleline{dotted} & 0.1 & 0.0055 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\ \hline
+    10 & \sampleline{dotted} & 0.0005 & 0.002 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\ \hline
+    10 & \sampleline{} & 0.0005 & 0.008 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\ \hline
+    10 & \sampleline{dashed} & 0.0005 & 0.01 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\ \hline
+    11 & \sampleline{} & 0.0005 & 0.1 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\ \hline
+    12 & \sampleline{} & 0.0005 & 0.1 & 0 & 10 & 0 & 0.001 & 0.3546 & 0\\ \hline
+    13 & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 0 & 0 & 0.001 & 0.3546 & 0\\ \hline
+    13 & \sampleline{} & 0.0005 & 0.0055 & 0 & 12 & 0 & 0.001 & 0.3546 & 0 \\ \hline
+    13 & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 20 & 0 & 0.001 & 0.3546 & 0 \\ \hline
+    14 & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.00001 & 0.3546 & 0 \\ \hline
+    14 & \sampleline{} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.001 & 0.3546 & 0 \\ \hline
+    14 & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.1 & 0.3546 & 0 \\ \hline
+    15 & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.001 & 0 & 0 \\ \hline
+    15 & \sampleline{} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.001 & 0.6 & 0 \\ \hline
+    15 & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.001 & 1.0 & 0 \\ \hline
+    16 & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.001 & 0.3546 & 0.1 \\ \hline
+    16 & \sampleline{} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.001 & 0.3546 & 0.01 \\ \hline
+    16 & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.001 & 0.3546 & 0.005 \\ \hline
+    17 - left& \sampleline{dotted} & 0.00005 & 0.001 & 0 & 10 & 0  & 0.001 & 0.3546 & 0 \\ \hline
+    17 - left & \sampleline{} & 0.00005 & 0.01 & 0 & 10 & 0 & 0.001 & 0.3546 & 0 \\ \hline
+    17 -right & \sampleline{dotted} & 0.1 & 0.001 & 0 & 10 & 0 & 0.001 & 0.3546 & 0 \\ \hline
+    17 -right & \sampleline{} & 0.1 & 0.01 & 0 & 10 & 0 & 0.001 & 0.3546 & 0 \\ \hline
+    18 - left & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 2 & 0 & 0.0000000001 & 0.3546 & 0 \\ \hline
+    18 - left & \sampleline{} & 0.0005 & 0.0055 & 0 & 20 & 0 & 0.0000000001 & 0.3546 & 0 \\ \hline
+    18 -right & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 2 & 0 & 0.1 & 0.3546 & 0 \\ \hline
+    18 -right & \sampleline{} & 0.0005 & 0.0055 & 0 & 20 & 0 & 0.1 & 0.3546 & 0 \\ \hline
+    19 - left & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.001 & 0.1 & 0.005 \\ \hline
+    19 - left & \sampleline{} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.001 & 0.1 & 0.1 \\ \hline
+    19 -right & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.001 & 1.0 & 0.005 \\ \hline
+    19 -right & \sampleline{} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.001 & 1.0 & 0.1 \\ \hline
+    20 - left & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.0000000001 & 0.1 & 0.005 \\ \hline
+    20 - left & \sampleline{} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.0000000001 & 0.1 & 0.1 \\ \hline
+    20 -right & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.0000000001 & 1.0 & 0.005 \\ \hline
+    20 -right & \sampleline{} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.0000000001 & 1.0 & 0.1 \\ \hline
+    21 - left & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.1 & 0.1 & 0.005 \\ \hline
+    21 - left & \sampleline{} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.1 & 0.1 & 0.1 \\ \hline
+    21 -right & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.1 & 1.0 & 0.005 \\ \hline
+    21 -right & \sampleline{} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.1 & 1.0 & 0.1 \\ \hline
+    \caption{Overview of all experiments conducted for the model with proliferation and renewal producing 2D output}
+    \label{table:2D_experiments_with_proliferation}
+\end{longtable}
+
 
 \subsubsection*{Basecase Analysis}
 
-Here is also makes sense to establish a basecase to compare the following parameter analysis resulst against. For this we used the values $\mu_1= 0.1$ and $\mu_2=0.5$ according to the only experiment found for this system of equations in the paper of Kolev et al. \cite{Kolev2010}.\newline
-Comparing this new basecase to our initial model's basecase we can see the influences of both $\mu_1$ and $\mu_2$, as for the tumour cell density curve is visibly higher than without proliferation, causing a higher production of matrix degrading enzymes, which would lead to faster ECM degradation, though this is countered by the renewal factor $\mu_2$ causing the ECM concentration to be higher at the end, at $t=80$, than in the initial basecase experiment.
-
-\begin{figure}[h]
+\begin{figure}[!htb]
     \centering
     \includegraphics[width=\textwidth]{resources/images/basecase_proliferation.png}
+    \label{fig:prolif_basecase}
+    \caption{Describing the updated basecase, in the image above only the updated basecase is plotted, below it is compared to the initial basecase.}
+\end{figure}
+
+\begin{figure}[!htb]
+    \centering
     \includegraphics[width=0.8\textwidth]{resources/images/basecase_comparison.png}
     \label{fig:prolif_basecase}
     \caption{Describing the updated basecase, in the image above only the updated basecase is plotted, below it is compared to the initial basecase.}
 \end{figure}
 
+Here is also makes sense to establish a basecase to compare the following parameter analysis resulst against. For this we used the values $\mu_1= 0.1$ and $\mu_2=0.5$ according to the only experiment found for this system of equations in the paper of Kolev et al. \cite{Kolev2010}.\newline
+Comparing this new basecase to our initial model's basecase we can see the influences of both $\mu_1$ and $\mu_2$, as for the tumour cell density curve is visibly higher than without proliferation, causing a higher production of matrix degrading enzymes, which would lead to faster ECM degradation, though this is countered by the renewal factor $\mu_2$ causing the ECM concentration to be higher at the end, at $t=80$, than in the initial basecase experiment.
 
 
 
@@ -382,26 +544,28 @@ The effects to observe in this cross variation take some time as did the seperat
 \subsubsection*{$d_c - \gamma - \mu_1$ Variation}
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.85\textwidth]{resources/images/prolif_dc_gamma_mu1_1.png}
+    \adjustbox{width=\textwidth}{\includegraphics{resources/images/prolif_dc_gamma_mu1_1.png}}
     \caption{Plots show results for varying both $d_c$, $\gamma$ and $\mu_1$ whilst keeping the other parameters constant. This plot is the first of two, with the same $d_c$ value for every plot in this figure.}
     \label{fig:prolif_dc_gamma_mu_1_variation_1}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \adjustbox{width=\textwidth}{\includegraphics{resources/images/prolif_dc_gamma_mu1_2.png}}
+    \caption{Plots show results for varying both $d_c$, $\gamma$ and $\mu_1$ whilst keeping the other parameters constant. This plot is the second of two, with the same $d_c$ value for every plot in this figure.}
+    \label{fig:prolif_dc_gamma_mu_1_variation_2}
 \end{figure}
 
 First we are goint to take a look at how chaning $\gamma$ and $\mu_1$ affects the system whils having low diffusion values for the tumour cells with $d_c=5e-5$, in figure~\ref{fig:prolif_dc_gamma_mu_1_variation_1}. Inspecting the dotted curve on the left side column, shows the results for all parameters set to low, we see that diffusion is tha mian factor for the movement of the tumour cells, with only little influence of haptotaxis, the tumour cells staying with their maximum at the center. Becasue fo this we also get a high MDE concentration there, but very little excedding the region past $x=0.3$. Due to the MDE also staying centered around thr origin the ECM there is completely degraded, though at $x=0.4$ and further still completely there. Increasing the proliferation factor to $\mu_1=1.0$ shifts the tumour cell density rightwards, making proliferation also a factor for the cell density movement, though keeping the same shape as the low proliferation factor experiment. This right shift causes the MDE concentration to also shift to the right, leading to a faster ECM degradation. Comparing these two experiments already shows the influence of proliferation.\newline
 Taking now a look at the right column in figure ~\ref{fig:prolif_dc_gamma_mu_1_variation_1} we see the effects of increased $\gamma$ to $\gamma=1.0$. Foremost we see for the tumour cell density a leading edge developing, seperating it into two lumps, with one staying at the center the other invading the tissue and staying where $\nabla (c \nabla e)$ is highest. With increased $\mu_1$ this secession moving into the tissue is getting more pointy, defying differentiability. After $t=40$ we can ovserve clear differences regarding ECM and MDE concentration. We see that for higher $\mu_1$ we also get a higher MDE concentration which degrades the ECM visibly faster at the end of the experiments at $t=80$. Though interestingly at $t=40$ the ECM degradataion difference is only minor, at the last point in time the accellerated tumour cell proliferation shows its effet with producignmore MDEs and degrading the ECM considerably faster. What is also interesting to note is that increasing $\gamma$ and keeping $\mu_1$ low the total area of the MDE concentration is lowered also.
 Increasing now $d_c$ to $0.1$ we see for all experiments in figure~\ref{fig:prolif_dc_gamma_mu_1_variation_2} that the diffusion of the tumour cells was sufficiently high to evenly distribute the tumour cells constatnly in the space. This constant distribution allows to get an even better look at how $\mu_1$ affects the results, by seeing the lines, describing the tumour cells, rise through time. Looking at the tumour cells over time we can see no observable difference for varying $\gamma$. Haptotaxis effects are completely overlaid by diffusion. We see in the left column that if keeping dc high and $\gamma$ low, but increasing $\mu_1$ leads to higher MDE production rates and also faster ECM degradation. The same behaviour is observable in the right column showing the results for high $\gamma$. That we see no difference is clear, since the tumour cell density development is identical over time as mentioned above. 
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.85\textwidth]{resources/images/prolif_dc_gamma_mu1_2.png}
-    \caption{Plots show results for varying both $d_c$, $\gamma$ and $\mu_1$ whilst keeping the other parameters constant. This plot is the second of two, with the same $d_c$ value for every plot in this figure.}
-    \label{fig:prolif_dc_gamma_mu_1_variation_2}
-\end{figure}
+
 
 \subsubsection*{$\eta -\mu_2$ Variation}
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.85\textwidth]{resources/images/prolif_eta_mu2_variation.png}
+    \adjustbox{width=\textwidth}{\includegraphics{resources/images/prolif_eta_mu2_variation.png}}
     \caption{Plots show results for varying both $\eta$ and $\mu_2$ whilst keeping the other parameters constant.}
     \label{fig:prolif_eta_mu_2_variation}
 \end{figure}
@@ -413,6 +577,12 @@ Taking now a look at the experiments with raised $\eta$ to accellerate the ECM d
 
 
 \subsection{Three Dimensional Results}
-\subsubsection{Replicating Results}
-\subsubsection{Parameter Analysis}
-\subsection{Three Dimensional Simulations with Heterogenous ECM Structure}
+\lipsum[1-3]
+\subsection{Heterogenous ECM Structure}
+\begin{figure}[h]
+    \centering
+    \adjustbox{width=\textwidth}{\includegraphics{resources/images/2D_heterogenous_ECM.png}} 
+    \caption{heterogenous ECM plot}
+    \label{fig:2D_heterogenous_ECM}
+\end{figure}
+\lipsum[1-3]
