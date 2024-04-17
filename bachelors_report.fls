@@ -1123,6 +1123,10 @@ INPUT ./bachelors_report.lof
 INPUT bachelors_report.lof
 INPUT bachelors_report.lof
 OUTPUT bachelors_report.lof
+INPUT ./bachelors_report.lot
+INPUT bachelors_report.lot
+INPUT bachelors_report.lot
+OUTPUT bachelors_report.lot
 INPUT ./content/introduction.tex
 INPUT ./content/introduction.tex
 INPUT ./content/introduction.tex
