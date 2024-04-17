@@ -358,7 +358,7 @@ In this section we are going to inspect the updated system, consisting of equati
     \hline
     \endlastfoot
     22 & \sampleline{} & 0.0005 & 0.0055 & 0.1 & 10 & 0.5 & 0.001 & 0.3564 & 0\\  \hline
-    23 & \sampleline{dotted} & 0.0005 & 0.0055 & 0.1 & 10 & 0.5 & 0.001 & 0.3564 & 0\\  \hline
+    23 & \sampleline{dotted} & 0.0005 & 0.0055 & 0 & 10 & 0 & 0.001 & 0.3564 & 0\\  \hline
     23 & \sampleline{} & 0.0005 & 0.0055 & 0.1 & 10 & 0.5 & 0.001 & 0.3564 & 0\\  \hline
     5 & \sampleline{dash pattern=on .7em off .2em on .05em off .2em} & 0.001 & 0.005 & 0 & 10 & 0 & 0.001 & 0.2 & 0\\  \hline
     5 & \sampleline{dotted} & 0.001 & 0.005 & 0 & 10 & 0 & 0.001 & 0.3 & 0\\  \hline
@@ -420,21 +420,14 @@ In this section we are going to inspect the updated system, consisting of equati
 
 \subsubsection*{Basecase Analysis}
 
-\begin{figure}[!htb]
-    \centering
-    \includegraphics[width=\textwidth]{resources/images/basecase_proliferation.png}
-    \label{fig:prolif_basecase}
-    \caption{Describing the updated basecase, in the image above only the updated basecase is plotted, below it is compared to the initial basecase.}
-\end{figure}
-
-\begin{figure}[!htb]
+\begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{resources/images/basecase_comparison.png}
-    \label{fig:prolif_basecase}
+    \label{fig:2D_basecase_comparison}
     \caption{Describing the updated basecase, in the image above only the updated basecase is plotted, below it is compared to the initial basecase.}
 \end{figure}
 
-Here is also makes sense to establish a basecase to compare the following parameter analysis resulst against. For this we used the values $\mu_1= 0.1$ and $\mu_2=0.5$ according to the only experiment found for this system of equations in the paper of Kolev et al. \cite{Kolev2010}.\newline
+Here is also makes sense to establish a basecase to compare the following parameter analysis resulst against. In figure~\ref{fig:2D_basecase_comparison} you can see how intoducting tumour cell proliferation and extracellular matrix renewal changes the outcome of the simulation. For this we used the values $\mu_1= 0.1$ and $\mu_2=0.5$ according to the only experiment found for this system of equations in the paper of Kolev et al. \cite{Kolev2010}.\newline
 Comparing this new basecase to our initial model's basecase we can see the influences of both $\mu_1$ and $\mu_2$, as for the tumour cell density curve is visibly higher than without proliferation, causing a higher production of matrix degrading enzymes, which would lead to faster ECM degradation, though this is countered by the renewal factor $\mu_2$ causing the ECM concentration to be higher at the end, at $t=80$, than in the initial basecase experiment.
 
 

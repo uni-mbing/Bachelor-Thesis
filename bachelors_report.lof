@@ -20,17 +20,16 @@
 \contentsline {figure}{\numberline {20}{\ignorespaces Plots show results for varying both $\alpha $ and $\beta $ whilst keeping the other parameters constant, in the images on the left $\alpha =0.1$ with the solid line showing $\beta = 0.005$ and the dotted line $\beta =0.1$ on the right $\alpha =1.0$ with the solid line showing $\beta = 0.005$ and the dotted line $\beta =0.1$.\relax }}{39}{}%
 \contentsline {figure}{\numberline {21}{\ignorespaces Plots show results for varying both $\alpha $ and $\beta $ whilst keeping the other parameters constant, in the images on the left $\alpha =0.1$ with the solid line showing $\beta = 0.005$ and the dotted line $\beta =0.1$ on the right $\alpha =1.0$ with the solid line showing $\beta = 0.005$ and the dotted line $\beta =0.1$.\relax }}{40}{}%
 \contentsline {figure}{\numberline {22}{\ignorespaces Describing the updated basecase, in the image above only the updated basecase is plotted, below it is compared to the initial basecase.\relax }}{43}{}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Describing the updated basecase, in the image above only the updated basecase is plotted, below it is compared to the initial basecase.\relax }}{44}{}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Plots show results for varying $d_c$ whilst keeping the other parameters constant\relax }}{45}{}%
-\contentsline {figure}{\numberline {25}{\ignorespaces Plots show results for varying $\gamma $ whilst keeping the other parameters constant.\relax }}{46}{}%
-\contentsline {figure}{\numberline {26}{\ignorespaces Plots show results for varying $\mu _1$ whilst keeping the other parameters constant.\relax }}{47}{}%
-\contentsline {figure}{\numberline {27}{\ignorespaces Plots show results for varying $\eta $ whilst keeping the other parameters constant.\relax }}{48}{}%
-\contentsline {figure}{\numberline {28}{\ignorespaces Plots show results for varying $\mu _2$ whilst keeping the other parameters constant.\relax }}{49}{}%
-\contentsline {figure}{\numberline {29}{\ignorespaces Plots show results for varying $d_m$ whilst keeping the other parameters constant.\relax }}{50}{}%
-\contentsline {figure}{\numberline {30}{\ignorespaces Plots show results for varying $\alpha $ whilst keeping the other parameters constant.\relax }}{51}{}%
-\contentsline {figure}{\numberline {31}{\ignorespaces Plots show results for varying $\beta $ whilst keeping the other parameters constant.\relax }}{52}{}%
-\contentsline {figure}{\numberline {32}{\ignorespaces Plots show results for varying both $\mu _1$ and $\mu _2$ whilst keeping the other parameters constant.\relax }}{53}{}%
-\contentsline {figure}{\numberline {33}{\ignorespaces Plots show results for varying both $d_c$, $\gamma $ and $\mu _1$ whilst keeping the other parameters constant. This plot is the first of two, with the same $d_c$ value for every plot in this figure.\relax }}{56}{}%
-\contentsline {figure}{\numberline {34}{\ignorespaces Plots show results for varying both $d_c$, $\gamma $ and $\mu _1$ whilst keeping the other parameters constant. This plot is the second of two, with the same $d_c$ value for every plot in this figure.\relax }}{57}{}%
-\contentsline {figure}{\numberline {35}{\ignorespaces Plots show results for varying both $\eta $ and $\mu _2$ whilst keeping the other parameters constant.\relax }}{58}{}%
-\contentsline {figure}{\numberline {36}{\ignorespaces heterogenous ECM plot\relax }}{59}{}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Plots show results for varying $d_c$ whilst keeping the other parameters constant\relax }}{44}{}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Plots show results for varying $\gamma $ whilst keeping the other parameters constant.\relax }}{45}{}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Plots show results for varying $\mu _1$ whilst keeping the other parameters constant.\relax }}{46}{}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Plots show results for varying $\eta $ whilst keeping the other parameters constant.\relax }}{47}{}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Plots show results for varying $\mu _2$ whilst keeping the other parameters constant.\relax }}{48}{}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Plots show results for varying $d_m$ whilst keeping the other parameters constant.\relax }}{49}{}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Plots show results for varying $\alpha $ whilst keeping the other parameters constant.\relax }}{50}{}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Plots show results for varying $\beta $ whilst keeping the other parameters constant.\relax }}{51}{}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Plots show results for varying both $\mu _1$ and $\mu _2$ whilst keeping the other parameters constant.\relax }}{52}{}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Plots show results for varying both $d_c$, $\gamma $ and $\mu _1$ whilst keeping the other parameters constant. This plot is the first of two, with the same $d_c$ value for every plot in this figure.\relax }}{55}{}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Plots show results for varying both $d_c$, $\gamma $ and $\mu _1$ whilst keeping the other parameters constant. This plot is the second of two, with the same $d_c$ value for every plot in this figure.\relax }}{56}{}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Plots show results for varying both $\eta $ and $\mu _2$ whilst keeping the other parameters constant.\relax }}{57}{}%
+\contentsline {figure}{\numberline {35}{\ignorespaces heterogenous ECM plot\relax }}{58}{}%
