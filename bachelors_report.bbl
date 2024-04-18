@@ -246,8 +246,8 @@
       \strng{authorbibnamehash}{799315e6a2abd1cb95227706ac7367b8}
       \strng{authornamehash}{064a638fff452f33394b95c25e6fe0be}
       \strng{authorfullhash}{799315e6a2abd1cb95227706ac7367b8}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0092-8240, 1522-9602}
@@ -302,8 +302,8 @@
       \strng{authornamehash}{132df924acb8e1a2bc91073d36a63047}
       \strng{authorfullhash}{e83974044700dd345e2f510a557b13ad}
       \field{extraname}{1}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{issn}{1556-181X}
@@ -331,6 +331,54 @@
       \verb{url}
       \verb http://aimsciences.org//article/doi/10.3934/nhm.2006.1.399
       \endverb
+    \endentry
+    \entry{Merino-Casallo2022-di}{article}{}
+      \name{author}{4}{}{%
+        {{hash=49ab4e39320206b774fd265934157b5b}{%
+           family={Merino-Casallo},
+           familyi={M\bibinithyphendelim C\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod}}}%
+        {{hash=f793211749ebc474290e8cf6e90f6458}{%
+           family={Gomez-Benito},
+           familyi={G\bibinithyphendelim B\bibinitperiod},
+           given={Maria\bibnamedelima Jose},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=a20ad839be07c1da713b04f117aee6ad}{%
+           family={Hervas-Raluy},
+           familyi={H\bibinithyphendelim R\bibinitperiod},
+           given={Silvia},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c9700290e99f58d4c2abcb4edb694370}{%
+           family={Garcia-Aznar},
+           familyi={G\bibinithyphendelim A\bibinitperiod},
+           given={Jose\bibnamedelima Manuel},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {Informa UK Limited}%
+      }
+      \strng{namehash}{7f1297c47e829a7202c6911377afeaac}
+      \strng{fullhash}{932660537794171b28c234ed5cc38224}
+      \strng{bibnamehash}{932660537794171b28c234ed5cc38224}
+      \strng{authorbibnamehash}{932660537794171b28c234ed5cc38224}
+      \strng{authornamehash}{7f1297c47e829a7202c6911377afeaac}
+      \strng{authorfullhash}{932660537794171b28c234ed5cc38224}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cell Adh. Migr.}
+      \field{month}{12}
+      \field{number}{1}
+      \field{title}{Unravelling cell migration: defining movement from the cell surface}
+      \field{volume}{16}
+      \field{year}{2022}
+      \field{pages}{25\bibrangedash 64}
+      \range{pages}{40}
     \endentry
     \entry{chaplain_mathematical_2006}{article}{}
       \name{author}{3}{}{%
