@@ -439,41 +439,6 @@
       \verb https://www.annualreviews.org/doi/10.1146/annurev.bioeng.8.061505.095807
       \endverb
     \endentry
-    \entry{hiflow3}{article}{}
-      \name{author}{3}{}{%
-        {{hash=82192861ec43b543847b9720ebcb895c}{%
-           family={Klawonn},
-           familyi={K\bibinitperiod},
-           given={A.},
-           giveni={A\bibinitperiod}}}%
-        {{hash=7fba9a367d21df28b83c200070d6dfba}{%
-           family={Köhler},
-           familyi={K\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod}}}%
-        {{hash=657221a0c1792cd9f84afb8e81f3f5da}{%
-           family={Rheinbach},
-           familyi={R\bibinitperiod},
-           given={O.},
-           giveni={O\bibinitperiod}}}%
-      }
-      \strng{namehash}{87fe38180bc50573f336e6e1772e80d2}
-      \strng{fullhash}{f45288edc3258de0fe304de9111065ce}
-      \strng{bibnamehash}{f45288edc3258de0fe304de9111065ce}
-      \strng{authorbibnamehash}{f45288edc3258de0fe304de9111065ce}
-      \strng{authornamehash}{87fe38180bc50573f336e6e1772e80d2}
-      \strng{authorfullhash}{f45288edc3258de0fe304de9111065ce}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Innovative Parallel Computing, Proceedings of the 5th International Conference ParCo2001}
-      \field{title}{HiFlow3 -- A Hardware-Oriented Parallel Finite Element Package}
-      \field{volume}{13}
-      \field{year}{2002}
-      \field{pages}{213\bibrangedash 220}
-      \range{pages}{8}
-    \endentry
     \entry{paraview}{misc}{}
       \name{author}{1}{}{%
         {{hash=0cba5b3fb661b1cee240f2c6ad2b02d8}{%
