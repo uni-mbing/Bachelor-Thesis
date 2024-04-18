@@ -1195,11 +1195,11 @@ INPUT ./resources/images/gamma_comparison.png
 INPUT resources/images/gamma_comparison.png
 INPUT ./resources/images/gamma_comparison.png
 INPUT ./resources/images/gamma_comparison.png
-INPUT ./resources/images/basecase_without_proliferation.png
-INPUT ./resources/images/basecase_without_proliferation.png
-INPUT resources/images/basecase_without_proliferation.png
-INPUT ./resources/images/basecase_without_proliferation.png
-INPUT ./resources/images/basecase_without_proliferation.png
+INPUT ./resources/images/basecase_without_proliferation_.png
+INPUT ./resources/images/basecase_without_proliferation_.png
+INPUT resources/images/basecase_without_proliferation_.png
+INPUT ./resources/images/basecase_without_proliferation_.png
+INPUT ./resources/images/basecase_without_proliferation_.png
 INPUT ./resources/images/dc_variation.png
 INPUT ./resources/images/dc_variation.png
 INPUT resources/images/dc_variation.png
