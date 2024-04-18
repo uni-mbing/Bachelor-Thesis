@@ -1119,14 +1119,6 @@ INPUT bachelors_report.toc
 INPUT bachelors_report.toc
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm
 OUTPUT bachelors_report.toc
-INPUT ./bachelors_report.lof
-INPUT bachelors_report.lof
-INPUT bachelors_report.lof
-OUTPUT bachelors_report.lof
-INPUT ./bachelors_report.lot
-INPUT bachelors_report.lot
-INPUT bachelors_report.lot
-OUTPUT bachelors_report.lot
 INPUT ./content/introduction.tex
 INPUT ./content/introduction.tex
 INPUT ./content/introduction.tex

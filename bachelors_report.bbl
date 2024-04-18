@@ -130,6 +130,90 @@
       \verb http://www.hindawi.com/journals/cmmm/2000/490902/abs/
       \endverb
     \endentry
+    \entry{BEKISZ2020101198}{article}{}
+      \name{author}{2}{}{%
+        {{hash=e30583b42099c033c54e38448ea3dc12}{%
+           family={Bekisz},
+           familyi={B\bibinitperiod},
+           given={Sophie},
+           giveni={S\bibinitperiod}}}%
+        {{hash=d7d5a469e6cacf7fd17b60a8ea17b99f}{%
+           family={Geris},
+           familyi={G\bibinitperiod},
+           given={Liesbet},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{91999dd88b9da25c150cec6485c86984}
+      \strng{fullhash}{91999dd88b9da25c150cec6485c86984}
+      \strng{bibnamehash}{91999dd88b9da25c150cec6485c86984}
+      \strng{authorbibnamehash}{91999dd88b9da25c150cec6485c86984}
+      \strng{authornamehash}{91999dd88b9da25c150cec6485c86984}
+      \strng{authorfullhash}{91999dd88b9da25c150cec6485c86984}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Cancer is still one of the major causes of death worldwide. Even if its comprehension is improving continuously, the complexity and heterogeneity of this group of diseases invariably make some cancer cases incurable and lethal. By focusing only on one or two cancerous molecular species simultaneously, traditional in vitro and in vivo approaches do not provide a global view on this disease and are sometimes unable to generate significant insights about cancer. In silico techniques are increasingly used in the oncology domain for their remarkable integration capacity. In basic cancer research, a vast number of mathematical and computational models has been implemented in the past decades, allowing for a better understanding of these complex diseases, generating new hypotheses and predictions, and guiding scientists towards the most impactful experiments. Although clinical uptake of such in silico approaches is still limited, some treatment strategies are currently under investigation in phase I or II clinical trials. Besides being responsible for new therapeutic ideas, in silico models could play a significant role in optimizing clinical trial design and patient stratification. This review provides a non-exhaustive overview of models according to their intrinsic features. In silico contributions to basic cancer science are discussed, using the hallmarks of cancer as a guidance. Subsequently, in silico cancer models, that are a part of currently ongoing clinical trials, are addressed. In a forward-looking section, issues such as the need for adequate regulatory processes related to in silico models, and advances in model technologies are discussed.}
+      \field{issn}{1877-7503}
+      \field{journaltitle}{Journal of Computational Science}
+      \field{note}{20 years of computational science}
+      \field{title}{Cancer modeling: From mechanistic to data-driven approaches, and from fundamental insights to clinical applications}
+      \field{volume}{46}
+      \field{year}{2020}
+      \field{pages}{101198}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.jocs.2020.101198
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S1877750320304993
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S1877750320304993
+      \endverb
+      \keyw{Mathematical oncology,methods,Cancer biology,Computational modeling,clinical trials}
+    \endentry
+    \entry{10.1158/2159-8290.CD-21-1059}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9c8b741d2c8c28b13b59cd96340147de}{%
+           family={Hanahan},
+           familyi={H\bibinitperiod},
+           given={Douglas},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c8b741d2c8c28b13b59cd96340147de}
+      \strng{fullhash}{9c8b741d2c8c28b13b59cd96340147de}
+      \strng{bibnamehash}{9c8b741d2c8c28b13b59cd96340147de}
+      \strng{authorbibnamehash}{9c8b741d2c8c28b13b59cd96340147de}
+      \strng{authornamehash}{9c8b741d2c8c28b13b59cd96340147de}
+      \strng{authorfullhash}{9c8b741d2c8c28b13b59cd96340147de}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{The hallmarks of cancer conceptualization is a heuristic tool for distilling the vast complexity of cancer phenotypes and genotypes into a provisional set of underlying principles. As knowledge of cancer mechanisms has progressed, other facets of the disease have emerged as potential refinements. Herein, the prospect is raised that phenotypic plasticity and disrupted differentiation is a discrete hallmark capability, and that nonmutational epigenetic reprogramming and polymorphic microbiomes both constitute distinctive enabling characteristics that facilitate the acquisition of hallmark capabilities. Additionally, senescent cells, of varying origins, may be added to the roster of functionally important cell types in the tumor microenvironment.Cancer is daunting in the breadth and scope of its diversity, spanning genetics, cell and tissue biology, pathology, and response to therapy. Ever more powerful experimental and computational tools and technologies are providing an avalanche of “big data” about the myriad manifestations of the diseases that cancer encompasses. The integrative concept embodied in the hallmarks of cancer is helping to distill this complexity into an increasingly logical science, and the provisional new dimensions presented in this perspective may add value to that endeavor, to more fully understand mechanisms of cancer development and malignant progression, and apply that knowledge to cancer medicine.}}
+      \field{issn}{2159-8274}
+      \field{journaltitle}{Cancer Discovery}
+      \field{month}{01}
+      \field{number}{1}
+      \field{title}{{Hallmarks of Cancer: New Dimensions}}
+      \field{volume}{12}
+      \field{year}{2022}
+      \field{pages}{31\bibrangedash 46}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1158/2159-8290.CD-21-1059
+      \endverb
+      \verb{eprint}
+      \verb https://aacrjournals.org/cancerdiscovery/article-pdf/12/1/31/3052722/31.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1158/2159-8290.CD-21-1059
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1158/2159-8290.CD-21-1059
+      \endverb
+    \endentry
     \entry{franssen_mathematical_2019}{article}{}
       \name{author}{4}{}{%
         {{hash=5c0e319449d7341ef938d6476c1d64b4}{%
@@ -162,8 +246,8 @@
       \strng{authorbibnamehash}{799315e6a2abd1cb95227706ac7367b8}
       \strng{authornamehash}{064a638fff452f33394b95c25e6fe0be}
       \strng{authorfullhash}{799315e6a2abd1cb95227706ac7367b8}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0092-8240, 1522-9602}
@@ -218,8 +302,8 @@
       \strng{authornamehash}{132df924acb8e1a2bc91073d36a63047}
       \strng{authorfullhash}{e83974044700dd345e2f510a557b13ad}
       \field{extraname}{1}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{issn}{1556-181X}
@@ -276,8 +360,8 @@
       \strng{authornamehash}{132df924acb8e1a2bc91073d36a63047}
       \strng{authorfullhash}{584b10aa759ab6e9311a0a691a3b48ba}
       \field{extraname}{2}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Angiogenesis, the growth of a network of blood vessels, is a crucial component of solid tumor growth, linking the relatively harmless avascular and the potentially fatal vascular growth phases of the tumor. As a process, angiogenesis is a well-orchestrated sequence of events involving endothelial cell migration and proliferation; degradation of tissue; new capillary vessel formation; loop formation (anastomosis) and, crucially, blood flow through the network. Once there is flow associated with the nascent network, subsequent growth evolves both temporally and spatially in response to the combined effects of angiogenic factors, migratory cues via the extracellular matrix, and perfusion-related hemodynamic forces in a manner that may be described as both adaptive and dynamic. In this article, we first present a review of previous theoretical and computational models of angiogenesis and then indicate how recent developments in flow models are providing insight into antiangiogenic and chemotherapeutic drug treatment of solid tumors.}
@@ -331,8 +415,8 @@
       \strng{authorbibnamehash}{f45288edc3258de0fe304de9111065ce}
       \strng{authornamehash}{87fe38180bc50573f336e6e1772e80d2}
       \strng{authorfullhash}{f45288edc3258de0fe304de9111065ce}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Innovative Parallel Computing, Proceedings of the 5th International Conference ParCo2001}
