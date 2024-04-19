@@ -7,7 +7,8 @@ Solving the numerical model HiFlow\textsuperscript{3} will be used with the weak
 This work starts with replicating numerical simulations done by other papers in higher dimensions. Since there were only 1D simulations done previously, the model will be adjusted in such a way, that the Plot Over Line graphs mimick the plots given by the previous experiments. This will serve two purposes, first it will verify a correct implementation of the model and second this will give us a starting point by which we can vary the parameters, investigating the phenomena this model exhibits. \newline 
 We will start with examining 2D experiments with homogenous ECMs, using our model with the parameters $mu_1$ and $mu_2$ both set to zero, considering a case with no proliferation of tumour cells and no renewal of the extracellular matrix molecules, after this we will introduce proliferation and renewal, Incorporating $\mu_1$ and $\mu_2$ into the variation.
 Considering 3D experiments we will do a slimmer replication and parameter analysis due to the immense computational effort. After examining the model with a homogenous ECM initial condition we will move on to look at a case considering a heterogenous ECM in 2D.\newline
-Looking at the parameter estimates from \cite{anderson_mathematical_2000} to non-dimensionalise the time, we see that with $L \in [0.1cm,1cm]$ and $D\approx 10^{-6}\frac{cm^2}{s}$, $\tau = \frac{L^2}{D}$ gives a relative big temporal range, $\tau_{min} = 1000s = 16.66 min$ and $\tau_{max} = 1000000s = 16666.66min$, which makes it hard, to find the correct time step value to compare our simulation results with the one from \cite{anderson_mathematical_2000} and \cite{Kolev2010}. Another challenge are the diffusion coefficients, since they are dependent on the dimension we are in, we have to find our own estimates as a baseline value. \newline 
+Looking at the parameter estimates from \cite{anderson_mathematical_2000} to non-dimensionalise the time, we see that with $L \in [0.1cm,1cm]$ and $D\approx 10^{-6}\frac{cm^2}{s}$, $\tau = \frac{L^2}{D}$ gives a relative big temporal range, $\tau_{min} = 1000s = 16.66 min$ and $\tau_{max} = 1000000s = 16666.66min$, which makes it hard, to find the correct time step value to compare our simulation results with the one from \cite{anderson_mathematical_2000} or \cite{Kolev2010}. We resorted to using a timestep of $dt=0.01$ and let the simulations run for a dimensionless time of $t=8$.\newline 
+Another challenge are the diffusion coefficients, since they are dependent on the dimension we are in, we have to find our own estimates as a baseline value. \newline 
 For each stage of experiments we will use a set of baseline parameters, which will be evaluated experimentally, and from there vary one or more parameter at a time to get an overview of their effects. \newline
 For all the plots of the experiments the red curve indicates the tumour cell density, the blue curve the ECM density and the green curve the MDE concentration. In all of the experiments we used the value of $\epsilon = 0.01$ to match the inital conditions from \cite{anderson_mathematical_2000} and \cite{Kolev2010}. \newline 
 
@@ -126,7 +127,7 @@ This first of all confirms the initial supposition that with changing the dimens
 
 
 
-Figures~\ref{fig:replication_alpha_comparison}, ~\ref{fig:replication_dc_comparison} and ~\ref{fig:replication_gamma_comparison} show these comparisons of the parameters $\alpha$, $d_c$ and $\gamma$. Comparing different values for $\alpha$ and their effect on the curve of the MDE concentration, shows in figure~\ref{fig:replication_alpha_comparison} that, especially looking at the later points in time $t=40$ and $t=80$, with values for $\alpha$ between $0.3$ and $0.4$ we will get a good approximation. The values of the original paper for the MDEs are for $t=4$ approximately $0.6$ at $x=0$ and for $t=8$ about $0.7$ at the same point in space. Fine tuning this parameter led us use $\alpha=0.35645$.\newline 
+Figures~\ref{fig:replication_alpha_comparison}, ~\ref{fig:replication_dc_comparison} and ~\ref{fig:replication_gamma_comparison} show these comparisons of the parameters $\alpha$, $d_c$ and $\gamma$. Comparing different values for $\alpha$ and their effect on the curve of the MDE concentration, shows in figure~\ref{fig:replication_alpha_comparison} that, especially looking at the later points in time $t=40$ and $t=80$, with values for $\alpha$ between $0.3$ and $0.4$ we will get a good approximation. The values of the original paper for the MDEs are for $t=4$ approximately $0.6$ at $x=0$ and for $t=8$ about $0.7$ at the same point in space. With a value  $\alpha=0.35645$ we got the best results regarding the MDE concentration.\newline 
 Looking at $d_c$ we chose a value of $d_c=5e-4$. Using values below $1e-5$ will result in numerical instabilities and results that are not longer useable. For $\gamma$ we made a slight adjustment upwards to $\gamma=0.0055$ to have a little bit more pull on the tumour cells outward, to match the invasion speed observed in the original paper. 
 \begin{figure}[h]
     \centering
@@ -181,13 +182,13 @@ For the MDE curve we also observe that the lower $\gamma$ is the more of the con
 In the last image at $t=80$ we see observations rom the previous points in time confirmed; the higher $\gamma$ the faster the invasion pace of the tumour cells and the farhter out the MDE concentration has spread resulting in faster ECM degradation.\newline 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.9\textwidth]{resources/images/2D_plot.png}
+    \includegraphics[width=0.9\textwidth]{resources/images/gamma_2D_plot.png}
     \caption{2D plot of variation}
     \label{fig:gamma_2D_plot}
 \end{figure}
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{resources/images/pol_comparison.png}
+    \includegraphics[width=\textwidth]{resources/images/gamma_pol_comparison.png}
     \caption{Plot OVer Line Comparison Gamma}
     \label{fig:gamma_pol_comparison}
 \end{figure}
