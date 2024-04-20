@@ -4,13 +4,13 @@
 
 The model propsed by Anderson et al.~\cite{anderson_continuous_1998,anderson_mathematical_2000} and Chaplain et al.~\cite{anderson_continuous_1998,chaplain_mathematical_2006-1,franssen_mathematical_2019}, extended with terms for modelling cell proliferation and extracellular matrix renewal consists of a system of coupled partial differential equations with zero-flux boundry conditions: 
 \begin{align}
-	\frac{\partial c}{\partial t} &= D_c \Delta c - \chi \nabla (c\nabla e)  + \mu_1 c\left(1-\frac{c}{c_0}-\frac{e}{e_0}\right)\label{eq1}\\
+	\frac{\partial c}{\partial t} &= D_c \Delta c - \chi \nabla \cdot (c\nabla e)  + \mu_1 c\left(1-\frac{c}{c_0}-\frac{e}{e_0}\right)\label{eq1}\\
 	\frac{\partial e}{\partial t} &= -\delta m e  + \mu_2 c\left(1-\frac{c}{c_0}-\frac{e}{e_0}\right)\label{eq2}\\
 	\frac{\partial m}{\partial t} &= D_m \Delta c + \mu_3 c - \lambda m\label{eq3}
 \end{align}
 \begin{align}
-	c (-D_c \nabla c + c \chi\nabla e) &= 0 \label{eq4}\\
-	c (-D_m\nabla m ) &= 0\label{eq5}
+	\zeta \cdot  (-D_c \nabla c + c \chi\nabla e) &= 0 \label{eq4}\\
+	\zeta \cdot (-D_m\nabla m ) &= 0\label{eq5}
 \end{align}
 
 with the free parameters $D_c$, $D_m$, $\chi$, $\delta$, $\mu_1$, $\mu_2$, $\mu_3$ and $\lambda$. \newline
@@ -23,14 +23,14 @@ To derive the expression of the tumor cell density $c$ we are going to assume th
 $\chi$ is the haptotactic flux coefficient and $D_c$ is a random mobility coefficient. In general these Parameters could also be a function of both extracellular matrix and matrix-degrading enzyme concentration. Knowing that cells grow over time and proliferate, we want to respect this in our model with a term for tumor cell proliferation: $\mu_1 c (1-\frac{c}{c_0} - \frac{e}{e_0})$.\newline  
 The idea is that this term describes the cell proliferation with a logisitic growth model respecting spacial limiting factors of already present extracellular matrix molecules and tumour cells, $\mu_1$ describes the rate at which proliferation happens. In the initial model proposed by Anderson et al.~\cite{anderson_continuous_1998, anderson_mathematical_2000} and Chaplain et al.~\cite{anderson_continuous_1998,chaplain_mathematical_2006,chaplain_mathematical_2006-1,franssen_mathematical_2019}, they did not respect proliferation of tumor cells and extracellular matrix renewal and applied a conservation equation for the tumor cells which yields:
 \begin{align*}
-    \frac{\partial c}{\partial t} = -\nabla (J_{hapto} + J_{random}) \\
-    \frac{\partial c}{\partial t} = -\nabla (\chi c \nabla e -D_c \nabla c ) \\
-    \frac{\partial c}{\partial t} = D_c \Delta c - \chi \nabla (c\nabla e)
+    \frac{\partial c}{\partial t} = -\nabla \cdot (J_{hapto} + J_{random}) \\
+    \frac{\partial c}{\partial t} = -\nabla \cdot (\chi c \nabla e -D_c \nabla c ) \\
+    \frac{\partial c}{\partial t} = D_c \Delta c - \chi \nabla \cdot (c\nabla e)
 \end{align*}
 The extended model incorporates proliferation and renewal into this conservation formula resulting in equation~\ref{eq1}:
 \begin{align*}
-    \frac{\partial c}{\partial t} = -\nabla (J_{hapto} + J_{random}) + \mu_1 c (1-\frac{c}{c_0} - \frac{e}{e_0}) \\
-    \frac{\partial c}{\partial t} = D_c \Delta c - \chi \nabla (c\nabla e) + \mu_1 c (1-\frac{c}{c_0} - \frac{e}{e_0})
+    \frac{\partial c}{\partial t} = -\nabla \cdot (J_{hapto} + J_{random}) + \mu_1 c (1-\frac{c}{c_0} - \frac{e}{e_0}) \\
+    \frac{\partial c}{\partial t} = D_c \Delta c - \chi \nabla \cdot (c\nabla e) + \mu_1 c (1-\frac{c}{c_0} - \frac{e}{e_0})
 \end{align*}
 To model the extracellular-matrix concentration $e$, we assume that the enzymes degrade the extracellular matrix upon contact. This assumption is simply modeled by the equation:
 \begin{align*}
@@ -43,7 +43,7 @@ where $\delta$ is a positive constant describing this degradation process. For t
 with $mu_2$ being the coefficient describing the rate of the renewal process.\newline
 Modelling the matrix-degrading enzyme concentration $m$, we combine a diffusion term with production and decay terms. The diffusion term is described like in tumor cell concentration, with the addition that haptotatic fluxes are neglected and only random mobility is assumed, $J_{random} = -D_m \nabla m$. The production term depends on the tumor cell density $c$ and the decay term on the extracellular matrix concentration $m$. Incorporating this gives us equation~\ref{eq3}:
 \begin{align*}
-    \frac{\partial m}{\partial t} = \nabla J_{random} + \mu c - \lambda e \\
+    \frac{\partial m}{\partial t} = \nabla \cdot J_{random} + \mu c - \lambda e \\
     \frac{\partial m}{\partial t} = D_m \Delta m + \mu_3 c - \lambda m
 \end{align*}
 $\mu_3$ and $\delta$ describing production and decay coefficients .
@@ -66,13 +66,13 @@ Modifying the system's free parameters $D_c, \chi, \delta, D_m, \mu_3, \lambda$ 
 with $D$ being the aforementioned reference chemical diffusion coefficient.\newline 
 These modifications make the new system of coupled partial differential equations, where the tildes are dropped and we assume $t$ as $\tau$ for simplicities' sake, with also updated zero-flux boundary conditions:
 \begin{align}
-	\frac{\partial c}{\partial t} &= d_c \Delta c - \gamma \nabla (c\nabla e)  + \mu_1 c\left(1-\frac{c}{c_0}-\frac{e}{e_0}\right)\label{eq:6}\\
+	\frac{\partial c}{\partial t} &= d_c \Delta c - \gamma \nabla \cdot (c\nabla e)  + \mu_1 c\left(1-\frac{c}{c_0}-\frac{e}{e_0}\right)\label{eq:6}\\
 	\frac{\partial e}{\partial t} &= -\eta m e  + \mu_2 e\left(1-\frac{c}{c_0}-\frac{e}{e_0}\right)\label{eq:7}\\
 	\frac{\partial m}{\partial t} &= d_m \Delta c + \alpha c - \beta m\label{eq:8}
 \end{align}
 \begin{align}
-	\zeta (-d_c \nabla c + c \gamma \nabla e) &= 0\label{eq:9}\\
-	\zeta (-d_m\nabla m ) &= 0\label{eq:10}
+	\zeta \cdot (-d_c \nabla c + c \gamma \nabla e) &= 0\label{eq:9}\\
+	\zeta \cdot (-d_m\nabla m ) &= 0\label{eq:10}
 \end{align}
 where $\zeta$ is an outward unit normal vector.\newline 
 In order to use the Finite Element Method we will change to the variational formulation. If we assume each species to be in the Hilbert space $H^1(\Omega)$, the variational formulation can be derived by multiplying with a test function $\varphi_i$, integrating over the domain $\Omega$ and use integration by parts and the Gauss theorem. This will give us a broader solution space and reduces the requirements of the solution regarding differentiability. With $\left(\cdot, \cdot\right)$ denoting the $L^2$-scalar product on $\Omega$ the following equation system results:
@@ -98,7 +98,7 @@ Assuming that at dimensionless time $t=0$ there is already a nodule of cells loc
 where for our experiments we used the value $\epsilon=0.01$.\newline
 Assuming that these tumour cells have already produced an amount of matrix-degrading enzymes, we can define the inital conditions for the variable $m$ the same way as the tumour cells were:
 \begin{align*}
-    m(x,0) = 0.5 c(x,0) = 0.5 \exp(\frac{-(x-mean)^2}{\epsilon})
+    m(x,0) = 0.5 c(x,0) = 0.5 \exp(\frac{-(x-0.5)^2}{\epsilon})
 \end{align*}
 Considering the initial strucutre of the extracellular matrix we suppose that the tumour cells have already degraded some of the extracellular matrix, especially at the center where the tumour cells are located. Furthermore we have to differentiate now between homogenous and heterogenous extracellular matrix structure. If the ECM has a homogenous structure, which means that it is evenly distributed in space we set its initial value as:
 \begin{align*}

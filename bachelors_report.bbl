@@ -460,6 +460,60 @@
       \field{title}{{ParaView}}
       \field{year}{2022}
     \endentry
+    \entry{STEPHANOU200696}{article}{}
+      \name{author}{4}{}{%
+        {{hash=2037183644acbb7fbd5f97978b79f22b}{%
+           family={Stéphanou},
+           familyi={S\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f75d81d2c1ca2442ee9d7d17204cc4cb}{%
+           family={McDougall},
+           familyi={M\bibinitperiod},
+           given={S.R.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=799e3a25a7423ad8a23bb13efa4dee3c}{%
+           family={Anderson},
+           familyi={A\bibinitperiod},
+           given={A.R.A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6b105805ece9632a432753099f721c1b}{%
+           family={Chaplain},
+           familyi={C\bibinitperiod},
+           given={M.A.J.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{b3592338dc4f1613910ce6e301a616d2}
+      \strng{fullhash}{befc3f0dd9e600c29f8400538f8def4b}
+      \strng{bibnamehash}{befc3f0dd9e600c29f8400538f8def4b}
+      \strng{authorbibnamehash}{befc3f0dd9e600c29f8400538f8def4b}
+      \strng{authornamehash}{b3592338dc4f1613910ce6e301a616d2}
+      \strng{authorfullhash}{befc3f0dd9e600c29f8400538f8def4b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper, we present a theoretical investigation of the influence of blood flow through a tumour-induced capillary network, whereby the vascular architecture adapts as it grows to the associated haemodynamic forces resulting in what we describe as adaptive tumour-induced angiogenesis (ATIA). The network is generated in response to tumour angiogenic factors (TAFs), which are released from hypoxic cells within a solid tumour. We first describe a refined model for tumour-induced angiogenesis, which aims to describe the capillary growth process at the cellular level by explicitly taking into account the effects of matrix degrading enzymes and the local properties of the host tissue during endothelial cell migration. We then incorporate blood rheological properties into the formulation and investigate the influence of wall shear stress induced by the blood flow during dynamic vascular growth. We then go on to examine a number of feedback mechanisms affecting vascular resistance and network architecture. The mechanisms considered include those proposed by Pries and co-workers [A.R. Pries, T.W. Secomb, P. Gaehtgens, Structural adaptation and stability of microvascular networks: theory and simulation, Am. J. Physiol. Heart Circ. Physiol. 44 (1998) H349–H360; A.R. Pries, B. Reglin, T.W. Secomb, Structural adaptation of microvascular networks: functional roles of adaptative responses, Am. J. Physiol. Heart Circ. Physiol. 281 (2001) H1015–H1025; A.R. Pries, B. Reglin, T.W. Secomb, Structural adaptation of microvascular networks: roles of the pressure response, Hypertension 38 (2001) 1476–1479] and both haemodynamic (non-linear viscosity) and metabolic constraints are taken into account. Subsequent simulations of chemotherapeutic drug perfusion through the system show that vascular adaptation leads to a significant benefit in treatment delivery to the tumour. The results clearly demonstrate that the combined effects of network architecture and vessel compliance should be included in future models of angiogenesis if therapy protocols and treatment efficacy are to be adequately assessed.}
+      \field{issn}{0895-7177}
+      \field{journaltitle}{Mathematical and Computer Modelling}
+      \field{note}{Advances in Business Modeling and Decision Technologies [pp. 1-95]}
+      \field{number}{1}
+      \field{title}{Mathematical modelling of the influence of blood rheological properties upon adaptative tumour-induced angiogenesis}
+      \field{volume}{44}
+      \field{year}{2006}
+      \field{pages}{96\bibrangedash 123}
+      \range{pages}{28}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.mcm.2004.07.021
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0895717705004565
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0895717705004565
+      \endverb
+      \keyw{Angiogenesis,Blood flow,Capillary remodelling}
+    \endentry
     \entry{Kolev2010}{article}{}
       \name{author}{2}{}{%
         {{hash=cb57a2a127322c5e47f9d41e5d5b348e}{%
@@ -482,8 +536,8 @@
       \strng{authorbibnamehash}{72ad5a221fcbf4c0495dff50596d5b34}
       \strng{authornamehash}{72ad5a221fcbf4c0495dff50596d5b34}
       \strng{authorfullhash}{72ad5a221fcbf4c0495dff50596d5b34}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The goal of this paper is to construct a new algorithm for the numerical simulations of the evolution of tumour invasion and metastasis. By means of mathematical model equations and their numerical solutions we investigate how cancer cells can produce and secrete matrixdegradative enzymes, degrade extracellular matrix, and invade due to diffusion and haptotactic migration. For the numerical simulationsof the interactions between the tumour cells and the surrounding tissue, we apply n@article{10.14492/hokmj/1520928060, author = {Akio ITO}, title = {{Large-time behavior of solutions to a tumor invasion model of Chaplain–Anderson type with quasi-variational structure}}, volume = {47}, journal = {Hokkaido Mathematical Journal}, number = {1}, publisher = {Hokkaido University, Department of Mathematics}, pages = {33 -- 67}, keywords = {large-time behavior, quasi-variational structure, tumor invasion}, year = {2018}, doi = {10.14492/hokmj/1520928060}, URL = {https://doi.org/10.14492/hokmj/1520928060} }umerical approximations, which are spectrally accurateand based on small amounts of grid-points. Our numerical experiments illustrate the metastatic ability of tumour cells.}

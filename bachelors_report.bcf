@@ -2374,8 +2374,8 @@
     <bcf:citekey order="14">anderson_mathematical_2000</bcf:citekey>
     <bcf:citekey order="15">paraview</bcf:citekey>
     <bcf:citekey order="16">anderson_mathematical_2000</bcf:citekey>
-    <bcf:citekey order="17">anderson_mathematical_2000</bcf:citekey>
-    <bcf:citekey order="18">Kolev2010</bcf:citekey>
+    <bcf:citekey order="17">STEPHANOU200696</bcf:citekey>
+    <bcf:citekey order="18">franssen_mathematical_2019</bcf:citekey>
     <bcf:citekey order="19">anderson_mathematical_2000</bcf:citekey>
     <bcf:citekey order="20">Kolev2010</bcf:citekey>
     <bcf:citekey order="21">anderson_mathematical_2000</bcf:citekey>
@@ -2393,7 +2393,8 @@
     <bcf:citekey order="33">Merino-Casallo2022-di</bcf:citekey>
     <bcf:citekey order="34">chaplain_mathematical_2006</bcf:citekey>
     <bcf:citekey order="35">paraview</bcf:citekey>
-    <bcf:citekey order="36">Kolev2010</bcf:citekey>
+    <bcf:citekey order="36">STEPHANOU200696</bcf:citekey>
+    <bcf:citekey order="37">Kolev2010</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
