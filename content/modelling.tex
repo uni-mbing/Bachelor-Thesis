@@ -58,7 +58,7 @@ We start with non-dimensionalising the three continuous variables $c,e,m$:
     \tilde{e} = \frac{e}{e_0} \\
     \tilde{m} = \frac{m}{m_0}  
 \end{align*}
-Next we rescale distance with an appropriate length scale $L$ (e.g. the maximum invasion distance of the cancer at this early stage of invasion $0.1-1cm$) and time with $\tau = \frac{L^2}{D}$ ($D$ being a chemical diffusion coefficient $D\approx 10^{-6} \frac{cm^2}{s}$)~\cite{anderson_mathematical_2000}. \newline
+Next we rescale distance with an appropriate length scale $L$ and time with $\tau = \frac{L^2}{D}$~\cite{anderson_mathematical_2000}, which will be described more detailed in section.~\ref{sec:experiments}\newline
 Modifying the system's free parameters $D_c, \chi, \delta, D_m, \mu_3, \lambda$ gives us:  
 \begin{center}
     $d_c = \frac{D_c}{D},\quad \gamma = \chi \frac{e_0}{D},\quad \eta = \tau m_0 \delta,\quad d_m = \frac{D_m}{D},\quad \alpha = \tau \mu_3 \frac{c_0}{m_0},\quad \beta = \tau \lambda$.
@@ -82,12 +82,3 @@ In order to use the Finite Element Method we will change to the variational form
     \left(\frac{\partial e}{\partial t}, \varphi_e\right) &=  -\eta \left( me, \varphi_e\right) + \mu_2 \left(e\left(1-\frac{c}{c_0}-\frac{e}{e_0}\right),\varphi_e\right) \label{eq:12}\\
     \left(\frac{\partial m}{\partial t}, \varphi_m\right) &= -d_m \left(\nabla m,\nabla \varphi_m\right) + \alpha \left(c,\varphi_m\right) - \beta \left(m,\varphi_m\right) \label{eq:13}
 \end{align}
-
-Non-dimensionalising our system of equations allows us to formulate the initial conditions in simple terms. Since our aim is to describe both homogenous as well as heterogenous extracellular matrix structures we have to respect this in regard to the initial conditions for the variable $e$.\newline 
-
-
-When we now assume a heterogenous ECM strucuture the initial conditions change to:
-\begin{align*}
-    e(x,0) = 1 - 0.5 c(x,0)
-\end{align*}
-In figure~\ref{fig:2D_heterogenous_ECM_initial} these change of structure is clearly shown in the middle plot, where red inidcates that only on the left side there are extracellular matrix molecules.
