@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  22 APR 2024 14:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  22 APR 2024 15:14
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1075,46 +1075,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--16
 File: resources/images/2D_initial_conditions_homogenous_ECM.png Graphic file (type png)
 <use resources/images/2D_initial_conditions_homogenous_ECM.png>
 Package pdftex.def Info: resources/images/2D_initial_conditions_homogenous_ECM.png  used on input line 35.
-(pdftex.def)             Requested size: 364.19667pt x 182.0949pt.
+(pdftex.def)             Requested size: 455.24411pt x 227.62082pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 32--40
 
  []
 
 [14 <./resources/images/2D_initial_conditions_homogenous_ECM.png>] [15]
-<resources/images/anderson_experiment.png, id=80, 732.7375pt x 598.235pt>
+<resources/images/anderson_experiment.png, id=80, 718.685pt x 603.25375pt>
 File: resources/images/anderson_experiment.png Graphic file (type png)
 <use resources/images/anderson_experiment.png>
-Package pdftex.def Info: resources/images/anderson_experiment.png  used on input line 117.
-(pdftex.def)             Requested size: 386.96027pt x 315.93112pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+Package pdftex.def Info: resources/images/anderson_experiment.png  used on input line 116.
+(pdftex.def)             Requested size: 386.96027pt x 324.81326pt.
 <resources/images/first_replication_results.png, id=81, 505.89pt x 650.43pt>
 File: resources/images/first_replication_results.png Graphic file (type png)
 <use resources/images/first_replication_results.png>
-Package pdftex.def Info: resources/images/first_replication_results.png  used on input line 125.
+Package pdftex.def Info: resources/images/first_replication_results.png  used on input line 123.
 (pdftex.def)             Requested size: 386.96027pt x 497.5277pt.
 <resources/images/alpha_comparison.png, id=82, 939.51pt x 578.16pt>
 File: resources/images/alpha_comparison.png Graphic file (type png)
 <use resources/images/alpha_comparison.png>
-Package pdftex.def Info: resources/images/alpha_comparison.png  used on input line 138.
+Package pdftex.def Info: resources/images/alpha_comparison.png  used on input line 135.
 (pdftex.def)             Requested size: 455.24411pt x 280.15143pt.
 <resources/images/dc_comparison.png, id=83, 939.51pt x 578.16pt>
 File: resources/images/dc_comparison.png Graphic file (type png)
 <use resources/images/dc_comparison.png>
-Package pdftex.def Info: resources/images/dc_comparison.png  used on input line 145.
+Package pdftex.def Info: resources/images/dc_comparison.png  used on input line 142.
 (pdftex.def)             Requested size: 455.24411pt x 280.15143pt.
 <resources/images/gamma_comparison.png, id=84, 939.51pt x 578.16pt>
 File: resources/images/gamma_comparison.png Graphic file (type png)
 <use resources/images/gamma_comparison.png>
-Package pdftex.def Info: resources/images/gamma_comparison.png  used on input line 152.
+Package pdftex.def Info: resources/images/gamma_comparison.png  used on input line 149.
 (pdftex.def)             Requested size: 455.24411pt x 280.15143pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--157
+Underfull \hbox (badness 10000) in paragraph at lines 113--154
 
  []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [16] [17 <./resources/images/anderson_experiment.png>] [18 <./resources/images/first_replication_results.png>] [19 <./resources/images/alpha_comparison.png>]
 
@@ -1124,40 +1123,40 @@ LaTeX Warning: Text page 20 contains only floats.
 <resources/images/basecase_without_proliferation_.png, id=109, 939.51pt x 578.16pt>
 File: resources/images/basecase_without_proliferation_.png Graphic file (type png)
 <use resources/images/basecase_without_proliferation_.png>
-Package pdftex.def Info: resources/images/basecase_without_proliferation_.png  used on input line 170.
+Package pdftex.def Info: resources/images/basecase_without_proliferation_.png  used on input line 167.
 (pdftex.def)             Requested size: 455.24411pt x 280.15143pt.
  [21 <./resources/images/basecase_without_proliferation_.png>]
 <resources/images/dc_variation.png, id=114, 939.51pt x 578.16pt>
 File: resources/images/dc_variation.png Graphic file (type png)
 <use resources/images/dc_variation.png>
-Package pdftex.def Info: resources/images/dc_variation.png  used on input line 190.
+Package pdftex.def Info: resources/images/dc_variation.png  used on input line 185.
 (pdftex.def)             Requested size: 455.24411pt x 280.15143pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [22] [23 <./resources/images/dc_variation.png>]
 <resources/images/gamma_variation.png, id=122, 939.51pt x 578.16pt>
 File: resources/images/gamma_variation.png Graphic file (type png)
 <use resources/images/gamma_variation.png>
-Package pdftex.def Info: resources/images/gamma_variation.png  used on input line 204.
+Package pdftex.def Info: resources/images/gamma_variation.png  used on input line 200.
 (pdftex.def)             Requested size: 455.24411pt x 280.15143pt.
 <resources/images/gamma_2D_plot.png, id=123, 650.43pt x 650.43pt>
 File: resources/images/gamma_2D_plot.png Graphic file (type png)
 <use resources/images/gamma_2D_plot.png>
-Package pdftex.def Info: resources/images/gamma_2D_plot.png  used on input line 215.
+Package pdftex.def Info: resources/images/gamma_2D_plot.png  used on input line 211.
 (pdftex.def)             Requested size: 409.71692pt x 409.72343pt.
 <resources/images/gamma_pol_comparison.png, id=124, 939.51pt x 578.16pt>
 File: resources/images/gamma_pol_comparison.png Graphic file (type png)
 <use resources/images/gamma_pol_comparison.png>
-Package pdftex.def Info: resources/images/gamma_pol_comparison.png  used on input line 221.
+Package pdftex.def Info: resources/images/gamma_pol_comparison.png  used on input line 217.
 (pdftex.def)             Requested size: 455.24411pt x 280.15143pt.
 
 
-LaTeX Warning: Reference `fig:gamma_alt_pol' on page 24 undefined on input line 225.
+LaTeX Warning: Reference `fig:gamma_alt_pol' on page 24 undefined on input line 221.
 
 
-LaTeX Warning: Reference `fig:gamma_alt_pol' on page 24 undefined on input line 225.
+LaTeX Warning: Reference `fig:gamma_alt_pol' on page 24 undefined on input line 221.
 
 [24 <./resources/images/gamma_variation.png>]
 
@@ -1170,7 +1169,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <resources/images/eta_variation.png, id=133, 939.51pt x 578.16pt>
 File: resources/images/eta_variation.png Graphic file (type png)
 <use resources/images/eta_variation.png>
-Package pdftex.def Info: resources/images/eta_variation.png  used on input line 248.
+Package pdftex.def Info: resources/images/eta_variation.png  used on input line 244.
 (pdftex.def)             Requested size: 455.24411pt x 280.15143pt.
  [26 <./resources/images/gamma_2D_plot.png>]
 
@@ -1180,28 +1179,24 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <resources/images/dm_variation.png, id=146, 939.51pt x 578.16pt>
 File: resources/images/dm_variation.png Graphic file (type png)
 <use resources/images/dm_variation.png>
-Package pdftex.def Info: resources/images/dm_variation.png  used on input line 264.
+Package pdftex.def Info: resources/images/dm_variation.png  used on input line 260.
 (pdftex.def)             Requested size: 455.24411pt x 280.15143pt.
 
-Overfull \hbox (7.06714pt too wide) in paragraph at lines 268--275
-\T1/cmr/m/n/12 dif-fu-sion of the tu-mour cells we as-sume it to be evenly dis-tributed with $\OML/cmm/m/it/12 d[] \OMS/cmsy/m/n/12 ^^X \OML/cmm/m/it/12 U\OT1/cmr/m/n/12 [0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 00001\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 1]$\T1/cmr/m/n/12 .
+Overfull \hbox (0.54095pt too wide) in paragraph at lines 264--271
+\T1/cmr/m/n/12 dif-fu-sion of the tu-mor cells we as-sume it to be evenly dis-tributed with $\OML/cmm/m/it/12 d[] \OMS/cmsy/m/n/12 ^^X \OML/cmm/m/it/12 U\OT1/cmr/m/n/12 [0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 00001\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 1]$\T1/cmr/m/n/12 .
  []
 
-[29 <./resources/images/dm_variation.png>]
-<resources/images/alpha_variation.png, id=151, 939.51pt x 578.16pt>
+[29 <./resources/images/dm_variation.png>] [30]
+<resources/images/alpha_variation.png, id=155, 939.51pt x 578.16pt>
 File: resources/images/alpha_variation.png Graphic file (type png)
 <use resources/images/alpha_variation.png>
-Package pdftex.def Info: resources/images/alpha_variation.png  used on input line 280.
+Package pdftex.def Info: resources/images/alpha_variation.png  used on input line 276.
 (pdftex.def)             Requested size: 455.24411pt x 280.15143pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[30] [31 <./resources/images/alpha_variation.png>]
+ [31 <./resources/images/alpha_variation.png>]
 <resources/images/beta_variation.png, id=160, 939.51pt x 578.16pt>
 File: resources/images/beta_variation.png Graphic file (type png)
 <use resources/images/beta_variation.png>
-Package pdftex.def Info: resources/images/beta_variation.png  used on input line 296.
+Package pdftex.def Info: resources/images/beta_variation.png  used on input line 292.
 (pdftex.def)             Requested size: 455.24411pt x 280.15143pt.
 
 
@@ -1211,27 +1206,19 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <resources/images/dc_gamma_variation.png, id=164, 722.7pt x 703.9098pt>
 File: resources/images/dc_gamma_variation.png Graphic file (type png)
 <use resources/images/dc_gamma_variation.png>
-Package pdftex.def Info: resources/images/dc_gamma_variation.png  used on input line 319.
+Package pdftex.def Info: resources/images/dc_gamma_variation.png  used on input line 315.
 (pdftex.def)             Requested size: 386.96027pt x 376.90489pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[33 <./resources/images/beta_variation.png>]
-<resources/images/dm_eta_variation.png, id=169, 722.7pt x 703.9098pt>
+ [33 <./resources/images/beta_variation.png>] [34 <./resources/images/dc_gamma_variation.png>]
+<resources/images/dm_eta_variation.png, id=173, 722.7pt x 703.9098pt>
 File: resources/images/dm_eta_variation.png Graphic file (type png)
 <use resources/images/dm_eta_variation.png>
-Package pdftex.def Info: resources/images/dm_eta_variation.png  used on input line 330.
+Package pdftex.def Info: resources/images/dm_eta_variation.png  used on input line 326.
 (pdftex.def)             Requested size: 386.96027pt x 376.90489pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[34 <./resources/images/dc_gamma_variation.png>] [35 <./resources/images/dm_eta_variation.png>]
+ [35 <./resources/images/dm_eta_variation.png>]
 <resources/images/alpha_beta_variation.png, id=178, 722.7pt x 703.9098pt>
 File: resources/images/alpha_beta_variation.png Graphic file (type png)
 <use resources/images/alpha_beta_variation.png>
-Package pdftex.def Info: resources/images/alpha_beta_variation.png  used on input line 340.
+Package pdftex.def Info: resources/images/alpha_beta_variation.png  used on input line 336.
 (pdftex.def)             Requested size: 386.96027pt x 376.90489pt.
 
 
@@ -1240,7 +1227,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <resources/images/dm_alpha_beta_variation_1.png, id=179, 722.7pt x 703.9098pt>
 File: resources/images/dm_alpha_beta_variation_1.png Graphic file (type png)
 <use resources/images/dm_alpha_beta_variation_1.png>
-Package pdftex.def Info: resources/images/dm_alpha_beta_variation_1.png  used on input line 352.
+Package pdftex.def Info: resources/images/dm_alpha_beta_variation_1.png  used on input line 348.
 (pdftex.def)             Requested size: 386.96027pt x 376.90489pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1248,7 +1235,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <resources/images/dm_alpha_beta_variation_2.png, id=180, 722.7pt x 703.9098pt>
 File: resources/images/dm_alpha_beta_variation_2.png Graphic file (type png)
 <use resources/images/dm_alpha_beta_variation_2.png>
-Package pdftex.def Info: resources/images/dm_alpha_beta_variation_2.png  used on input line 358.
+Package pdftex.def Info: resources/images/dm_alpha_beta_variation_2.png  used on input line 354.
 (pdftex.def)             Requested size: 386.96027pt x 376.90489pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1257,7 +1244,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <resources/images/basecase_comparison.png, id=200, 939.51pt x 578.16pt>
 File: resources/images/basecase_comparison.png Graphic file (type png)
 <use resources/images/basecase_comparison.png>
-Package pdftex.def Info: resources/images/basecase_comparison.png  used on input line 438.
+Package pdftex.def Info: resources/images/basecase_comparison.png  used on input line 434.
 (pdftex.def)             Requested size: 455.24411pt x 280.15143pt.
 
 
@@ -1267,27 +1254,27 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <resources/images/prolif_dc_variation.png, id=204, 939.51pt x 578.16pt>
 File: resources/images/prolif_dc_variation.png Graphic file (type png)
 <use resources/images/prolif_dc_variation.png>
-Package pdftex.def Info: resources/images/prolif_dc_variation.png  used on input line 456.
+Package pdftex.def Info: resources/images/prolif_dc_variation.png  used on input line 452.
 (pdftex.def)             Requested size: 455.24411pt x 280.15143pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<resources/images/prolif_gamma_variation.png, id=205, 939.51pt x 578.16pt>
-File: resources/images/prolif_gamma_variation.png Graphic file (type png)
-<use resources/images/prolif_gamma_variation.png>
-Package pdftex.def Info: resources/images/prolif_gamma_variation.png  used on input line 468.
-(pdftex.def)             Requested size: 455.24411pt x 280.15143pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [42 <./resources/images/basecase_comparison.png>]
+<resources/images/prolif_gamma_variation.png, id=210, 939.51pt x 578.16pt>
+File: resources/images/prolif_gamma_variation.png Graphic file (type png)
+<use resources/images/prolif_gamma_variation.png>
+Package pdftex.def Info: resources/images/prolif_gamma_variation.png  used on input line 464.
+(pdftex.def)             Requested size: 455.24411pt x 280.15143pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 <resources/images/prolif_mu_1_variation.png, id=211, 939.51pt x 578.16pt>
 File: resources/images/prolif_mu_1_variation.png Graphic file (type png)
 <use resources/images/prolif_mu_1_variation.png>
-Package pdftex.def Info: resources/images/prolif_mu_1_variation.png  used on input line 478.
+Package pdftex.def Info: resources/images/prolif_mu_1_variation.png  used on input line 474.
 (pdftex.def)             Requested size: 455.24411pt x 280.15143pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1295,7 +1282,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <resources/images/prolif_eta_variation.png, id=216, 939.51pt x 578.16pt>
 File: resources/images/prolif_eta_variation.png Graphic file (type png)
 <use resources/images/prolif_eta_variation.png>
-Package pdftex.def Info: resources/images/prolif_eta_variation.png  used on input line 490.
+Package pdftex.def Info: resources/images/prolif_eta_variation.png  used on input line 486.
 (pdftex.def)             Requested size: 455.24411pt x 280.15143pt.
 
 
@@ -1305,7 +1292,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <resources/images/prolif_mu_2_variation.png, id=221, 939.51pt x 578.16pt>
 File: resources/images/prolif_mu_2_variation.png Graphic file (type png)
 <use resources/images/prolif_mu_2_variation.png>
-Package pdftex.def Info: resources/images/prolif_mu_2_variation.png  used on input line 501.
+Package pdftex.def Info: resources/images/prolif_mu_2_variation.png  used on input line 497.
 (pdftex.def)             Requested size: 455.24411pt x 280.15143pt.
 
 
@@ -1315,27 +1302,27 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <resources/images/prolif_dm_variation.png, id=226, 939.51pt x 578.16pt>
 File: resources/images/prolif_dm_variation.png Graphic file (type png)
 <use resources/images/prolif_dm_variation.png>
-Package pdftex.def Info: resources/images/prolif_dm_variation.png  used on input line 512.
+Package pdftex.def Info: resources/images/prolif_dm_variation.png  used on input line 508.
 (pdftex.def)             Requested size: 455.24411pt x 280.15143pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<resources/images/prolif_alpha_variation.png, id=227, 939.51pt x 578.16pt>
-File: resources/images/prolif_alpha_variation.png Graphic file (type png)
-<use resources/images/prolif_alpha_variation.png>
-Package pdftex.def Info: resources/images/prolif_alpha_variation.png  used on input line 522.
-(pdftex.def)             Requested size: 455.24411pt x 280.15143pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [46 <./resources/images/prolif_eta_variation.png>]
+<resources/images/prolif_alpha_variation.png, id=231, 939.51pt x 578.16pt>
+File: resources/images/prolif_alpha_variation.png Graphic file (type png)
+<use resources/images/prolif_alpha_variation.png>
+Package pdftex.def Info: resources/images/prolif_alpha_variation.png  used on input line 518.
+(pdftex.def)             Requested size: 455.24411pt x 280.15143pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 <resources/images/prolif_beta_variation.png, id=232, 939.51pt x 578.16pt>
 File: resources/images/prolif_beta_variation.png Graphic file (type png)
 <use resources/images/prolif_beta_variation.png>
-Package pdftex.def Info: resources/images/prolif_beta_variation.png  used on input line 532.
+Package pdftex.def Info: resources/images/prolif_beta_variation.png  used on input line 528.
 (pdftex.def)             Requested size: 455.24411pt x 280.15143pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1343,62 +1330,70 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <resources/images/prolif_mu_1_mu_2_variation.png, id=237, 722.7pt x 703.9098pt>
 File: resources/images/prolif_mu_1_mu_2_variation.png Graphic file (type png)
 <use resources/images/prolif_mu_1_mu_2_variation.png>
-Package pdftex.def Info: resources/images/prolif_mu_1_mu_2_variation.png  used on input line 544.
+Package pdftex.def Info: resources/images/prolif_mu_1_mu_2_variation.png  used on input line 540.
 (pdftex.def)             Requested size: 386.96027pt x 376.90489pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<resources/images/prolif_dc_gamma_mu1_1.png, id=238, 722.7pt x 703.9098pt>
+[48 <./resources/images/prolif_dm_variation.png>]
+<resources/images/prolif_dc_gamma_mu1_1.png, id=243, 722.7pt x 703.9098pt>
 File: resources/images/prolif_dc_gamma_mu1_1.png Graphic file (type png)
 <use resources/images/prolif_dc_gamma_mu1_1.png>
-Package pdftex.def Info: resources/images/prolif_dc_gamma_mu1_1.png  used on input line 553.
+Package pdftex.def Info: resources/images/prolif_dc_gamma_mu1_1.png  used on input line 549.
 (pdftex.def)             Requested size: 722.69823pt x 703.9081pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<resources/images/prolif_dc_gamma_mu1_2.png, id=239, 722.7pt x 703.9098pt>
+<resources/images/prolif_dc_gamma_mu1_2.png, id=244, 722.7pt x 703.9098pt>
 File: resources/images/prolif_dc_gamma_mu1_2.png Graphic file (type png)
 <use resources/images/prolif_dc_gamma_mu1_2.png>
-Package pdftex.def Info: resources/images/prolif_dc_gamma_mu1_2.png  used on input line 560.
+Package pdftex.def Info: resources/images/prolif_dc_gamma_mu1_2.png  used on input line 556.
 (pdftex.def)             Requested size: 722.69823pt x 703.9081pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[48 <./resources/images/prolif_dm_variation.png>] [49 <./resources/images/prolif_alpha_variation.png>]
+[49 <./resources/images/prolif_alpha_variation.png>]
 <resources/images/prolif_eta_mu2_variation.png, id=250, 722.7pt x 703.9098pt>
 File: resources/images/prolif_eta_mu2_variation.png Graphic file (type png)
 <use resources/images/prolif_eta_mu2_variation.png>
-Package pdftex.def Info: resources/images/prolif_eta_mu2_variation.png  used on input line 574.
+Package pdftex.def Info: resources/images/prolif_eta_mu2_variation.png  used on input line 570.
 (pdftex.def)             Requested size: 722.69823pt x 703.9081pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[50 <./resources/images/prolif_beta_variation.png>]
+[50 <./resources/images/prolif_beta_variation.png>] [51 <./resources/images/prolif_mu_1_mu_2_variation.png>]
 
 Package lipsum Warning: Unknown language 'latin'. Hyphenation patterns for
 (lipsum)                'english' will be used instead.
 
-[51 <./resources/images/prolif_mu_1_mu_2_variation.png>] [52 <./resources/images/prolif_dc_gamma_mu1_1.png>]
-<resources/images/2D_initial_conditions_heterogenous_ECM.png, id=263, 578.16pt x 289.08pt>
+[52 <./resources/images/prolif_dc_gamma_mu1_1.png>] [53 <./resources/images/prolif_dc_gamma_mu1_2.png>]
+<resources/images/2D_initial_conditions_heterogenous_ECM.png, id=267, 578.16pt x 289.08pt>
 File: resources/images/2D_initial_conditions_heterogenous_ECM.png Graphic file (type png)
 <use resources/images/2D_initial_conditions_heterogenous_ECM.png>
-Package pdftex.def Info: resources/images/2D_initial_conditions_heterogenous_ECM.png  used on input line 595.
+Package pdftex.def Info: resources/images/2D_initial_conditions_heterogenous_ECM.png  used on input line 591.
 (pdftex.def)             Requested size: 364.19667pt x 182.0949pt.
- [53 <./resources/images/prolif_dc_gamma_mu1_2.png>]
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `fig:tumour_invasion_stage' on page 54 undefined on input line 596.
 
 [54 <./resources/images/prolif_eta_mu2_variation.png>]
 <resources/images/2D_heterogenous_ECM.png, id=273, 578.16pt x 650.43pt>
 File: resources/images/2D_heterogenous_ECM.png Graphic file (type png)
 <use resources/images/2D_heterogenous_ECM.png>
-Package pdftex.def Info: resources/images/2D_heterogenous_ECM.png  used on input line 614.
+Package pdftex.def Info: resources/images/2D_heterogenous_ECM.png  used on input line 610.
 (pdftex.def)             Requested size: 578.15858pt x 650.4284pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `fig:tumour_invasion_stage' on page 55 undefined on input line 615.
 
 ) [55 <./resources/images/2D_initial_conditions_heterogenous_ECM.png>] [56] [57 <./resources/images/2D_heterogenous_ECM.png>]
 \openout2 = `content/conclusion_discussion.aux'.
@@ -1433,15 +1428,15 @@ Package logreq Info: Writing requests to 'bachelors_report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30849 strings out of 480171
- 653131 string characters out of 5894489
+ 30850 strings out of 480171
+ 653157 string characters out of 5894489
  1532247 words of memory out of 5000000
- 48226 multiletter control sequences out of 15000+600000
+ 48227 multiletter control sequences out of 15000+600000
  485507 words of font info for 66 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 86i,12n,117p,2401b,1307s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 86i,12n,117p,2400b,1307s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1095.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home/max/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on bachelors_report.pdf (61 pages, 4058370 bytes).
+Output written on bachelors_report.pdf (61 pages, 4050677 bytes).
 PDF statistics:
  807 PDF objects out of 1000 (max. 8388607)
  225 compressed objects within 3 object streams
