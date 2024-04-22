@@ -1229,11 +1229,6 @@ INPUT ./resources/images/gamma_2D_plot.png
 INPUT resources/images/gamma_2D_plot.png
 INPUT ./resources/images/gamma_2D_plot.png
 INPUT ./resources/images/gamma_2D_plot.png
-INPUT ./resources/images/gamma_pol_comparison.png
-INPUT ./resources/images/gamma_pol_comparison.png
-INPUT resources/images/gamma_pol_comparison.png
-INPUT ./resources/images/gamma_pol_comparison.png
-INPUT ./resources/images/gamma_pol_comparison.png
 INPUT ./resources/images/eta_variation.png
 INPUT ./resources/images/eta_variation.png
 INPUT resources/images/eta_variation.png
