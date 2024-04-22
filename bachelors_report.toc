@@ -5,12 +5,12 @@
 \contentsline {section}{\numberline {3}Modelling}{9}{}%
 \contentsline {subsection}{\numberline {3.1}Mathematical Formulation}{9}{}%
 \contentsline {subsection}{\numberline {3.2}Numerical Formulation and Parameters}{10}{}%
-\contentsline {section}{\numberline {4}Experiments and Results}{14}{}%
-\contentsline {subsection}{\numberline {4.1}Two dimensional Results without Proliferation and Renewal}{15}{}%
+\contentsline {section}{\numberline {4}Experiments and Results}{13}{}%
+\contentsline {subsection}{\numberline {4.1}Two dimensional Results without Proliferation and Renewal}{14}{}%
 \contentsline {subsubsection}{\numberline {4.1.1}Replicating results}{16}{}%
-\contentsline {subsubsection}{\numberline {4.1.2}Parameter Analysis}{20}{}%
-\contentsline {subsection}{\numberline {4.2}Two dimensional Results with Proliferation and Renewal}{39}{}%
+\contentsline {subsubsection}{\numberline {4.1.2}Parameter Analysis}{21}{}%
+\contentsline {subsection}{\numberline {4.2}Two dimensional Results with Proliferation and Renewal}{40}{}%
 \contentsline {subsubsection}{\numberline {4.2.1}Parameter Analysis}{42}{}%
 \contentsline {subsection}{\numberline {4.3}Three Dimensional Results with Proliferation and Renewal}{52}{}%
 \contentsline {subsection}{\numberline {4.4}Heterogenous ECM Structure}{54}{}%
-\contentsline {section}{\numberline {5}Conclusion and Discussion}{56}{}%
+\contentsline {section}{\numberline {5}Conclusion and Discussion}{58}{}%

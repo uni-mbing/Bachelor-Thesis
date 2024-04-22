@@ -3,7 +3,7 @@
 \section{Experiments and Results}
 
 All experiments that consider the ECM to be homogenous start with the same initial values as seen in figure~\ref{fig:2D_homogenous_ECM_initial}. Experiments observing the effects of a heterogenous ECM use different initial values, as seen in figure~\ref{fig:2D_heterogenous_ECM_initial}.\newline 
-Solving the numerical model HiFlow\textsuperscript{3} will be used with the weak form given with equations~\ref{eq:11} -~\ref{eq:13}. To evaluate the results of the numerical simulation ParaView~\cite{paraview} is used, producing informative plots to compare the evolution of the simulation in time. For this we rely on the tool Plot Over Line to give results for the three variables of tumour cell density, extracellular matrix density and matrix-degrading enzymes concentration.\newline
+Solving the numerical model HiFlow\textsuperscript{3} will be used with the weak form given with equations~\ref{eq:11} -~\ref{eq:13}. To evaluate the results of the numerical simulation ParaView~\cite{paraview} is used, producing informative plots to compare the evolution of the simulation in time. For this we rely on the tool Plot Over Line to give results for the three variables of tumour cell density, extracellular matrix density and matrix-degrading enzymes concentration. This tool also allows us to compare all three variables in one plot whereas using 2D plots we would need to have one for each variable. Using it makes the results better readable and allows a clearer quantitative insight into the experiments as you will see in figure~\ref{fig:unadjsuted_replication}.\newline
 This work starts with replicating numerical simulations done by other papers in higher dimensions. Since there were only 1D simulations done previously, the model will be adjusted in such a way, that the Plot Over Line graphs mimick the plots given by the previous experiments. This will serve two purposes, first it will verify a correct implementation of the model and second this will give us a starting point by which we can vary the parameters, investigating the phenomena this model exhibits. \newline 
 We will start with examining 2D experiments with homogenous ECMs, using our model with the parameters $\mu_1$ and $\mu_2$ both set to zero, considering a case with no proliferation of tumour cells and no renewal of the extracellular matrix molecules, after this we will introduce proliferation and renewal, Incorporating $\mu_1$ and $\mu_2$ into the variation.
 Considering 3D experiments we will do a slimmer replication and parameter analysis due to the immense computational effort. After examining the model with a homogenous ECM initial condition we will move on to look at a case considering a heterogenous ECM in 2D.\newline
@@ -12,10 +12,30 @@ Since Anderson et al. don't specify their exact value used for $L$, we needed to
 Another challenge are the diffusion coefficients, since they are dependent on the dimension we are in, we have to find our own estimates as a baseline value. \newline 
 For each stage of experiments we will use a set of baseline parameters, which will be evaluated experimentally, and from there vary one or more parameter at a time to get an overview of their effects. \newline
 For all the plots of the experiments the red curve indicates the tumour cell density, the blue curve the ECM density and the green curve the MDE concentration. In all of the experiments we used the value of $\epsilon = 0.01$ to match the inital conditions from \cite{anderson_mathematical_2000} and \cite{Kolev2010}. \newline 
-$d_c=5e-4$ test $1\mathrm{e}{-10}$ test $5\cdot 10^{-4}$
-
 
 \subsection{Two dimensional Results without Proliferation and Renewal}
+\label{sec:2D_without_proliferation}
+
+In this section we assuem that at dimensionless time $t=0$ there is already a nodule of cells located at the center of the unit domain $\Omega$ that has produced a concentration of matrix-degrading enzymes and has already degraded the extracellular matrix at the center. Furthermore we assume the extracellular matrix structure to be homogenous.\newline 
+We define the initial conditions for the tumour cell denisity as:
+\begin{align*}
+    c(x,0)= \exp(\frac{-(x-0.5)^2}{0.01})
+\end{align*}
+The initial conditions of the matrix-degrading enzymes are describes as:
+\begin{align*}
+    m(x,0) = 0.5 c(x,0) = 0.5 \exp(\frac{-(x-0.5)^2}{0.01})
+\end{align*}
+The strucutre of the extracellular matrix looks as follow:
+\begin{align*}
+    e(x,0) = 1 - 0.5 c(x,0)
+\end{align*}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{resources/images/2D_initial_conditions_homogenous_ECM.png}
+    \caption{Visualization of the initial value distribution for an experiment in two space dimensions with a homogenous extracellular matrix}
+    \label{fig:2D_homogenous_ECM_initial}
+\end{figure}
+Figure~\ref{fig:2D_homogenous_ECM_initial} shows a 2D plot of the initial conditions using the homogenous extracellular matrix structure. For all three images you see that at the center there is either a high concentration, tumour cell density and matrix degrading enzymes concentration or a low concentration, the extracellular matrix.\newline 
 
 \begin{longtable}{|c c c c c c c c c c|}
     \hline
@@ -91,61 +111,75 @@ Table~\ref{table:2D_experiments_without_proliferation} shows all the experiments
 \subsubsection{Replicating results}
 We will start with replicating the experiment from  Anderson et al.\cite{anderson_mathematical_2000}, Figure~\ref{fig:unadjsuted_replication}, trying to make our curves fit the results of their experiment. 
 
-\begin{figure}
+\begin{figure}[h!]
     \centering
-    \includegraphics[width=0.65\textwidth]{resources/images/first_replication_results.png}
+    \includegraphics[width=0.85\textwidth]{resources/images/anderson_experiment.png}
+    \caption{Andersons first one dimensional experiment using the parameter values $d_c = 1\cdot 10^{-3}, d_m = 1\cdot 10^{-3}, \gamma = 0.005, \eta = 10, \alpha = 0.1, \beta = 0, \mu_1 = 0, \mu_2 = 0$}
+    \label{fig:anderson_experiment}
+\end{figure}
+In figure~\ref{fig:anderson_experiment} you can see that after $t=1$ in their timescale the tumour cells start to develop a secession at the part invading the tissue. This secession propagates to a pointy peak in the later point in time. The concentration of the matrix-degrading enzymes increases continuously and the concentration of the extracellular matrix decreases continuously. We see that their $x$-axis is streched or rescaled to show an intervale from $0$ to $1$. In our case the interval on the plots has only $x$-values from $0$ to $0.5$.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.85\textwidth]{resources/images/first_replication_results.png}
     \caption{Results using Anderson et al's parameters, left side 2D tumour cell density plots, right side results produced by applying the Plot Over Line tool}
     \label{fig:unadjsuted_replication}
 \end{figure}
 
-We start with the same parameters as in Anderson et al's first one dimensional experiment: $d_c = 1\cdot 10^{-3}, d_m = 1\cdot 10^{-3}, \gamma = 0.005, \eta = 10, \alpha = 0.1, \beta = 0, \mu_1 = 0, \mu_2 = 0$. Figure~\ref{fig:unadjsuted_replication} shows these results for four different points in time. Since our experiments are preformed in two dimensions you can see on the left side the two dimensional plots of the tumour cell density and on the right side you can see plots produced by applying the Plot Over Line tool confiugrated like described in the section~\ref{sec:method}, where there is not only the tumour cell density visible but also the matrix-degrading enzymes concentration and the extracellular matrix concentration. We choose these points in time, because we used a different timescale than Anderson et al. and as you will later see, our time points capture the effects that can be observed studying their results quite well, which implies that for every time step Anderson et al. did we had to do 4. The problem with the two dimensional plots is that as you can see overlaying the different variables of tumour cell density, MDE concentration and ECM concentration, makes the plots unreadable, so you can only show one at a time, additionally to this it is harder to estimate values for $c$, $e$ and $m$ at different locations in space and time. These problems are solved using the Plot Over Line tool, as you can see in the plots of figure~\ref{fig:unadjsuted_replication} on the right side the curves for the three variables are clearly distinguishable and we can estimate their values spacially and temporarily better. This is why for most experiments we resort to using only the results produced by the Plot Over Line method instead of full 2D simulation images, this makes evaluating and comparing the respective experiments a lot easier and still captures all occuring effects. \newline
-Starting from the inital values at $t=0$ we see that after four time steps a very small secession is starting to form for the tumour cell density at $x\approx 0.1$. Diffusion and Haptotaxis have stretched the curve for the tumour cells along the x-axis as did diffusion for the MDEs. The ECM has  been visibly degraded at the origin, being still fully present in outer regions exceeding $x\approx 0.2$.\newline
+We start with the same parameters as in Anderson et al's first one dimensional experiment. Figure~\ref{fig:unadjsuted_replication} shows these results for four different points in time. Since our experiments are preformed in two dimensions you can see on the left side the two dimensional plots of the tumour cell density and on the right side you can see plots produced by applying the Plot Over Line tool. As mentioned above we will, for the most cases, resort to using only the results produced by the Plot Over Line tool. You can see in the plots of figure~\ref{fig:unadjsuted_replication} on the right side the curves for the three variables are clearly distinguishable and we can estimate their values spacially and temporarily better, than using 2D plots to estimate values.\newline
+Starting from the inital values we see that after $t=4$ a very small secession of the tumour cells is starting to form. This secession 
+increases in the image at $t=4$, but at $t=8$ it has visibly flattened. This secession is not as pointy as seen in the one dimensional experiments. The interplay of the diffusion and haptotaxis factors determine how big this secession will be that splits from the main lump of the tumour cells and invades the tissue at a faster rate. It will also decide how pointy this secondary lump of tumour cells will be. Biologically this realtion between diffusion and haptotaxis translates to the invasion pace of the tumour cells and the rate of how much of them will remain at the center and how much will invade farther out into the tissue.\newline 
+Looking at the concentration for the matrix degrading enzymes we see that it is here visily lower than in Anderson et al's experiement. We see little increase across time. This is due to the production factor of $\alpha$. This factor determines how fast the tumour cells produce the matrix-degrading enzymes that are degrading the extracellular matrix and allow the tumour cells to invade the tissue further.\newline 
+Only the extracellular matrix concentration seems to mimick the behaviour of Anderson et al's experiment. It decreases continuously and in the last image you can see there is still a considerable amount left.\newline 
+To replicate Anderson et al's results we will start adjusting the mentioned parameters of diffusion coefficient of the tumour cells, haptotatic coeff of the tumour cells and the production rate of the matrix-degrading enzymes. Making the curves fit prefectly will be impossible due to the high degrees of freedom of the system and the change of dimension. Regradless we will replicate as best as possible with a special focus on the values the variables will take at the origin $x=0$.\newline 
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=\textwidth]{resources/images/alpha_comparison.png}
+    \caption{Comparison of $\alpha$ values to replicate Anderson et al's experiment}
+    \label{fig:replication_alpha_comparison}
+\end{figure}
+Starting with comparing different values for $\alpha$, we see in figuer~\ref{fig:replication_alpha_comparison} a comparison of how this affects the curve for matrix-degrading enzyme concentration. A maximum difference between the compared values of $0.2$ already causes drastic changes as you can see. In Anderson et al's experiment we observe a value of approximately $m(0,1)=0.5$ after, in their timescale, $t=1$ at the origin. This is mimicked best in our case for a value of $\alpha=0.2$. Thoug in the later points in time we see that this value for $\alpha$ is insufficiently low in terms of increase, though choosing $\alpha$ higher than $\alpha=0.4$ results in a accellerated ECM degradation that is too fast. Taking a value between those two allowed our simulations to exhibit the observed behaviour. We choose a value of $\alpha=0.35645$ to use in the later experiments as a basecase.\newline
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=\textwidth]{resources/images/dc_comparison.png}
+    \caption{Comparison of $d_c$ values to replicate Anderson et al's experiment}
+    \label{fig:replication_dc_comparison}
+\end{figure}
+Looking now at the diffusion coefficient for the tumour cells, in figure~\ref{fig:replication_dc_comparison} you can see different $d_c$ values compared in regard to the tumour cell concentration. It is clear that with decreasing $d_c$ the sharpness of the secondary lump of cells that forms to invade the tissue drastically increases due to increased effects of haptotaxis being now the main factor to control tumour motility, though we also observe that with decreasing $d_c$ the remaining lump of tumour cells at the origin also increases, due to little diffusion here. Over time we found that $dc=5 \cdot 10^{-4}$ describes Anderson et al's experimental results best for our simulations, with roughly matching density of tumour cells that remains at the origin at all times and, for our case, balanced effects of haptotaxis and diffusion.\newline
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=\textwidth]{resources/images/gamma_comparison.png}
+    \caption{Comparison of $\gamma$ values to replicate Anderson et al's experiment}
+    \label{fig:replication_gamma_comparison}
+\end{figure}
+At last we want to adjust the haptotatic pull slightly, for this we are looking at a comparision of different $\gamma$ values in figure~\ref{fig:replication_gamma_comparison} depicting the tumour cell density. Comparing our results with Anderson et al's we want a larger secondary lump that invades the tumour cells faster than the one remaining at the origin. For this we need to increase $\gamma$ to increase the haptotaic pull that controls tumour cells motility. In the figure you see that incresing $\gamma$ yields these effects, but increasing it too much results in a too fast invasion pace of the surrounding tissue. Increasing $\gamma$ slightly to $\gamma=0.0055$ is already sufficient to produce the desried effects.\newline
+
+\begin{comment}
+Diffusion and Haptotaxis have stretched the curve for the tumour cells along the x-axis as did diffusion for the MDEs. The ECM has  been visibly degraded at the origin, being still fully present in outer regions exceeding $x\approx 0.2$.\newline
 The next image shows the simulation after $0.4$ timesteps; we see that the secession of the tumour cell concentration of the previous point in time has been propagated to form a small hill at the leading edge of the tumour cells invading the surrounding tissue, this effect is due to the haptotatic influence, which pulls the tumour cells further into the accessible area towards higher values of $\nabla (c \nabla e)$, creating a seperation for the tumour cells, where the other part is still oriented towards the origin. The MDEs also continue their diffusion into the area, degrading the ECM in their wake.\newline 
 In the last image, after 8 simulation time steps, we see that as well the hill that has formed at the leading edge of the tumour cells as well as the concentration of tumour cells at the origin, have flattened visibly and striving to take on a constant concentration throughout space, though we can still clearly distinguish both areas. If we were to look at the simulation at later points in time, the curve will flatten even more, since with more time the ECM will be further degraded and therefore the haptotactic flux coefficient $\gamma$ will lose its significance, leaving the movement of the tumour cells to diffusion only and spreading them constantly along the x-axis. The curve for the MDEs will also flattened due to diffusion,with the MDEs degrading the rest of the extracellular matrix molecules decrease their concentration further and the MDE concentration will increase over time due to no limiting factors in this experiment and on-going production contributed by the tumour cells $c$.\newline
 Comparing \ref{fig:unadjsuted_replication} to figure 1 in \cite{anderson_mathematical_2000}, we can see major differences. The first image showing $t=0$ looks the same, which confirms that both experiments start with the same initial values condition. In the images showing the simulation at the second time checkpoint we see that though the tumour concentration and ECM density values are approximately the same, the MDE concentration is slightly lower in our experiment, which will get more pregnant in the later images. The unevenness having formed at the leading edge of the tumour cell concentration is also slightly smaller. The differences in the third image are more striking, both $c$ and $m$ have considerably lower concentrations, yet the ECM value looks is very similar. \newline 
 In our case the diffusion and haptotatic pull of the tumour cells has shown to be too stong making the invasion process into the tissue happen too fast. The last time checkpoints strengthens our findings, showing the same behaviour with ECM being approximately the same, tumour cell density and MDE concentration being clearly lower in our experiment and invasion of tissue happening too fast, leaving the lump at the origin $x=0$ too small. \newline 
 This first of all confirms the initial supposition that with changing the dimension for the simulations the results also vary. We will now adjust the parameters iteratively to make the results using two dimensions mimick the results from Anderson et. al as closely as possible. For this we will start with varying the MDE production coefficient $\alpha$, to get higher concentration values for the MDEs, and change the diffusion as well as haptotaxis coefficients of the tumour cells $d_c$ and  $\gamma$, to adjust the motitlity of the tumour cells and therefore also influence the invasion speed of them into the surrouding tissue.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{resources/images/alpha_comparison.png}
-    \caption{Results using Anderson et al's parameters but varying $\alpha$ using the Plot Over Line tool}
-    \label{fig:replication_alpha_comparison}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{resources/images/dc_comparison.png}
-    \caption{Results using Anderson et al's parameters but varying $d_c$ using the Plot Over Line tool}
-    \label{fig:replication_dc_comparison}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{resources/images/gamma_comparison.png}
-    \caption{Results using Anderson et al's parameters but varying $\gamma$ using the Plot Over Line tool.}
-    \label{fig:replication_gamma_comparison}
-\end{figure}
-
-
-
 Figures~\ref{fig:replication_alpha_comparison}, ~\ref{fig:replication_dc_comparison} and ~\ref{fig:replication_gamma_comparison} show these comparisons of the parameters $\alpha$, $d_c$ and $\gamma$. Comparing different values for $\alpha$ and their effect on the curve of the MDE concentration, shows in figure~\ref{fig:replication_alpha_comparison} that, especially looking at the later points in time $t=4$ and $t=8$, with values for $\alpha$ between $0.3$ and $0.4$ we will get a good approximation. The values of the original paper for the MDEs are for $t=4$ approximately $0.6$ at $x=0$ and for $t=8$ about $0.7$ at the same point in space. With a value  $\alpha=0.35645$ we got the best results regarding the MDE concentration.\newline 
-Looking at $d_c$ we chose a value of $d_c=5\cdot 10^{-4}$. Using values below $0.00001$ will result in numerical instabilities and results that are not longer useable. For $\gamma$ we made a slight adjustment upwards to $\gamma=0.0055$ to have a little bit more pull on the tumour cells outward, to match the invasion speed observed in the original paper. 
+Looking at $d_c$ we chose a value of $d_c=5\cdot 10^{-4}$. Using values below $0.00001$ will result in numerical instabilities and results that are not longer useable. For $\gamma$ we made a slight adjustment upwards to $\gamma=0.0055$ to have a little bit more pull on the tumour cells outward, to match the invasion speed observed in the original paper.
+\end{comment} 
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{resources/images/basecase_without_proliferation_.png}
     \caption{Results of using the parameters as described, this experiment will be used as the basecase to compare further experiments to ragarding the model without proliferation and renewal}
     \label{fig:basecase_without_proliferation}
 \end{figure}
-
-These adjustments leave us with the final configuration for replicating the system with the curves in figure~\ref{fig:basecase_without_proliferation} and the parameter settings also seen in the same figure. Comparing our final version with the original experiment we are trying to replicate we can see that in the second point in time, at $t=0.4$ in our case, the values of the three curves at the $x=0$ are nearly the same, and moving farther out along the x-axis the curves mimick each other quite well. In the original experiment the bump in the curve for the tumour concentration looks more pregnant, but this is due to the differing dimensions and the rescaling of the x-axis done in Anderson et al's experiment. The two later points in time confirm the similarity with having also nealy the same values for the three curves over the whole space domain.
-
+These adjustments leave us with the final configuration for replicating the system with the curves in figure~\ref{fig:basecase_without_proliferation} and the parameter settings of: $d_c=5\cdot 10^{-4}, \gamma=0.0055, \eta=10, d_m=1\cdot 10^{-3}, \alpha=0.35645, \beta=0$. Comparing our final version with the original experiment we are trying to replicate, figure~\ref{fig:anderson_experiment}, we see the important effects met. We see that the production of the matrix-degrading enzymes fits the original experiment and the motility of the tumour cells also match, with balanced effects of haptotaxis and diffusion.
 
 
 \subsubsection{Parameter Analysis}
 
 \textcolor{red}{Mathematical Intuition of the three curves and how the parameters interact}\newline 
-From the replicated results shown in figures~\ref{fig:basecase_without_proliferation}, we saw that if we vary certain parameters one at a time the results also vary strongly. Therefore we are now going to have a look at how changing one parameter affects the output of the whole system. For this we assume the parameter values of the replicated results to be our set of baseline parameters, from there in each experiment only one parameter is changed at first, later we will also perform cross variations, where more than one parameter is changed at a time, to see how they interact and change the results. 
+Before we start with the parameter analysis, we will discuss the mathematical intuition concerning the system partial differential equations, equations~\ref{eq:6} to~\ref{eq:10}. \newline The equation governing the tumour cell density incorporates in this version only two coefficients regarding its motility, diffusion and haptotaxis. As mentioned during replicating Anderson et al's experiment, the relation between those two factors determines if a secondary lump of tumour cells seccesses itself from the main lump and invades the tissue at a faster rate than the remaining cells, but also how large this lump will be. We saw this behaviour in figure~\ref{fig:replication_dc_comparison}, varying $d_c$ whilst keeping $\gamma$ constant. Diffusive motility depends on the laplacian of the tumour cells themselves, $\Delta c = \frac{\partial c}{\partial x} + \frac{\partial c}{\partial y} + \frac{\partial c}{\partial z}$, which is a fundamental tool in sciences of all sorts to describe the effects of spacial rate of change of a scalar field quantity, in our case tumour cell density, at a specific point in space. Typically this operator has high values where the respective quantity changes rapidly. For the haptotaxis we have a very similiar term $\nabla \cdot (c\nabla e) = \nabla c \cdot \nabla e + \Delta e$. This means that haptotatic effects are not only strong where the concentration of the extracellular matrix changes rapidly but also where both gradients for tumour cell density and extracellular matrix assimilate in direction, thought these effects can also annihilate each other.\newline 
+The equation describing the concentration of the extracellular matrix models exponential decay of it with taking the concentration of the matrix-degrading enzymes into account. In spacial and temporal positions where both ECM and MDE concentrations are high, we can expect a fast degradation of the extracellular matrix.\newline
+The equation modelling the matrix-degrading enzymes combines motility with production/decay terms. The motility of the MDEs is modelled by the same diffusion as the tumour cells, mimicking their behaviour in this regard. The tumour cells are responsible for producing the MDEs, the production is modelled by natural decay, both production and decay are modelled using exponential approaches.\newline 
+From the replicated results shown in figures~\ref{fig:basecase_without_proliferation}, we saw that if we vary the parameters one at a time the results can vary strongly. We are first going to have a look at how changing one parameter at a time affects the output of the simulation and after this we consider changing multiple parameters simultaneously in the cross variation section. For varying the parameters we assume the other parameters of the system to be constant and use the baseline experiment as their values.
 
 \subsubsection*{$d_c$ Variation}
 The parameter describes the diffusion of the tumour cells. We assume this parameter to be evenly distributed with $d_c \sim U[0.00005,0.1]$, as both lower and higher values for diffusion will distort the results and make them unusable.\newline 
@@ -335,7 +369,8 @@ Looking at the right side of figure ~\ref{fig:dm_alpha_beta_variation_2} we see 
 
 
 \subsection{Two dimensional Results with Proliferation and Renewal}
-In this section we are going to inspect the updated system, consisting of equation ~\ref{eq:6} to ~\ref{eq:10}, to describe the effects of tumour cell proliferation and extracellular matrix renewal processes. Like for the model neglecting proliferation and renewal we can see in table~\ref{table:2D_experiments_with_proliferation} all the experiments done in two space dimensions using the updated model. $\textcolor{red}{some text to extend table.}$
+In this section we are going to inspect the updated system, consisting of equation ~\ref{eq:6} to ~\ref{eq:10}. They describe the effects of tumour cell proliferation and extracellular matrix renewal processes. Like for the model neglecting proliferation and renewal we can see in table~\ref{table:2D_experiments_with_proliferation} all the experiments done in two space dimensions using the updated model. We are going perform a parameter analysis with the same values as done above to make the observed effects pregnant.\newline
+As in section~\ref{sec:2D_without_proliferation}, we are using the same inital conditions for all three variables under the assumption we have a homogenous ECM structure. Figure~\ref{fig:2D_homogenous_ECM_initial} depicts these initial conditions on the three variables $c,e,m$ at dimensionless time $t=0$.
 \begin{longtable}{|c c c c c c c c c c|}
     \hline
     Figure & Linestyle & $d_c$ & $\gamma$ & $\mu_1$ & $\eta$ & $\mu_2$ & $d_m$ & $\alpha$ & $\beta$ \\ [0.5ex] 
@@ -404,7 +439,7 @@ In this section we are going to inspect the updated system, consisting of equati
     \label{fig:2D_basecase_comparison}
 \end{figure}
 
-Here is also makes sense to establish a basecase to compare the following parameter analysis resulst against. In figure~\ref{fig:2D_basecase_comparison} you can see how intoducting tumour cell proliferation and extracellular matrix renewal changes the outcome of the simulation. For this we used the values $\mu_1= 0.1$ and $\mu_2=0.5$ according to the only experiment found for this system of equations in the paper of Kolev et al. \cite{Kolev2010}.\newline
+It makes sense to establish a basecase to compare the following parameter analysis resulst against it. In figure~\ref{fig:2D_basecase_comparison} you can see how intoducting tumour cell proliferation and extracellular matrix renewal changes the outcome of the simulation. For this we used the values $\mu_1= 0.1$ and $\mu_2=0.5$ according to the only experiment found for this system of equations in the paper of Kolev et al. \cite{Kolev2010}.\newline
 Comparing this new basecase to our initial model's basecase we can see the influences of both $\mu_1$ and $\mu_2$, as for the tumour cell density curve is visibly higher than without proliferation, causing a higher production of matrix-degrading enzymes, which would lead to faster ECM degradation, though this is countered by the renewal factor $\mu_2$ causing the ECM concentration to be higher at the end, at $t=8$, than in the initial basecase experiment.
 
 
@@ -553,6 +588,26 @@ Taking now a look at the experiments with raised $\eta$ to accellerate the ECM d
 
 
 \subsection{Heterogenous ECM Structure}
+\begin{figure}[h]
+    \centering
+    \label{fig:Initial_Value_Distribution}
+    \includegraphics[width=0.8\textwidth]{resources/images/2D_initial_conditions_heterogenous_ECM.png}
+    \caption{Visualization of the initial value distribution for an experiment in two space dimensions with a heterogenous extracellular matrix}
+    \label{fig:2D_heterogenous_ECM_initial}
+\end{figure}
+In this section we are investigating how a more realistic structure of the ECM will affect the results of a simulation. We are still using the model with proliferation and renewal. 
+For this scenario we assume that there is a nodule of tumour cells already in the center of the simulation that has produced a concentration of matrix-degrading enzymes. Contrary to previous experiments we are assuming that the tumour cells are located at a basement membrane that they already have invaded and are now pushing into the extracellular matrix that lies behind it. These assumptions are described in figure~\ref{fig:tumour_invasion_stage}. We model this in the following experiment with the initial conditions:
+\begin{align*}
+    c(x,0)= \exp(\frac{-(x-0.5)^2}{0.01})
+\end{align*}
+\begin{align*}
+    m(x,0) = 0.5 c(x,0) = 0.5 \exp(\frac{-(x-0.5)^2}{0.01})
+\end{align*}
+\begin{align*}
+    e(x,0) = 1 - 0.5 c(x,0)
+\end{align*}
+$\textcolor{red}{insert correct ecm description}$
+
 \begin{figure}[h]
     \centering
     \adjustbox{width=0.8\textwidth}{\includegraphics{resources/images/2D_heterogenous_ECM.png}} 

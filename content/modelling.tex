@@ -83,35 +83,9 @@ In order to use the Finite Element Method we will change to the variational form
     \left(\frac{\partial m}{\partial t}, \varphi_m\right) &= -d_m \left(\nabla m,\nabla \varphi_m\right) + \alpha \left(c,\varphi_m\right) - \beta \left(m,\varphi_m\right) \label{eq:13}
 \end{align}
 
-\begin{figure}[h]
-    \centering
-    \label{fig:Initial_Value_Distribution}
-    \includegraphics[width=0.8\textwidth]{resources/images/2D_initial_conditions_homogenous_ECM.png}
-    \caption{Visualization of the initial value distribution for an experiment in two space dimensions with a homogenous extracellular matrix}
-    \label{fig:2D_homogenous_ECM_initial}
-\end{figure}
 Non-dimensionalising our system of equations allows us to formulate the initial conditions in simple terms. Since our aim is to describe both homogenous as well as heterogenous extracellular matrix structures we have to respect this in regard to the initial conditions for the variable $e$.\newline 
-Assuming that at dimensionless time $t=0$ there is already a nodule of cells located at the center of the unit domain $\Omega$ we define the initial conditions for the tumour cell denisity as:
-\begin{align*}
-    c(x,0)= \exp(\frac{-(x-0.5)^2}{\epsilon})
-\end{align*}
-where for our experiments we used the value $\epsilon=0.01$.\newline
-Assuming that these tumour cells have already produced an amount of matrix-degrading enzymes, we can define the inital conditions for the variable $m$ the same way as the tumour cells were:
-\begin{align*}
-    m(x,0) = 0.5 c(x,0) = 0.5 \exp(\frac{-(x-0.5)^2}{\epsilon})
-\end{align*}
-Considering the initial strucutre of the extracellular matrix we suppose that the tumour cells have already degraded some of the extracellular matrix, especially at the center where the tumour cells are located. Furthermore we have to differentiate now between homogenous and heterogenous extracellular matrix structure. If the ECM has a homogenous structure, which means that it is evenly distributed in space we set its initial value as:
-\begin{align*}
-    e(x,0) = 1 - 0.5 c(x,0)
-\end{align*}
-Figure~\ref{fig:2D_homogenous_ECM_initial} shows a 2D plot of the initial conditions using the homogenous extracellular matrix structure.\newline 
-\begin{figure}[h]
-    \centering
-    \label{fig:Initial_Value_Distribution}
-    \includegraphics[width=0.8\textwidth]{resources/images/2D_initial_conditions_heterogenous_ECM.png}
-    \caption{Visualization of the initial value distribution for an experiment in two space dimensions with a heterogenous extracellular matrix}
-    \label{fig:2D_heterogenous_ECM_initial}
-\end{figure}
+
+
 When we now assume a heterogenous ECM strucuture the initial conditions change to:
 \begin{align*}
     e(x,0) = 1 - 0.5 c(x,0)
