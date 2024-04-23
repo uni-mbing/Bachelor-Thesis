@@ -395,17 +395,6 @@ keywords = {Cancer invasion model, Space-time adaptivity, Multilevel finite elem
 abstract = {The parallel space-time adaptivity techniques for solving a cancer invasion model are investigated in the present work. Mathematically, the model comprises three coupled reaction-diffusion equations that characterize the cancer cell density evolution, the matrix-degrading enzymes and the extracellular matrix. The numerical realization demands fine resolutions both in spatial and temporal due to the incorporation of the nonlinear density-dependent diffusion and haptotaxis effect. We investigate this challenging problem by combining adaptive space-time discretization techniques with a dynamic load balancing to reduce the computational cost without sacrificing the accuracy of the numerical solutions. For the spatial discretization, the multilevel finite element method is used, and for temporal discretization, the implicit Euler method, and the linearly implicit Runge-Kutta method with adaptive time step are used. A non-overlapping domain decomposition method is considered for the dynamic decomposition of the computational mesh. Furthermore, the mathematical analysis for the existence of the fully discretized system is presented. The numerical results show density-dependent diffusion and haptotaxis effects on tumor growth and invasion. We illustrate the superiority of the dynamic space and time adaptivity in a parallel setting using several test cases.}
 }
 
-@article{article,
-author = {Veeresha, P. and İlhan, Esin and Prakasha, D. G. and Baskonus, Haci Mehmet and Gao, Wei},
-year = {2021},
-month = {01},
-pages = {1013-1036},
-title = {Regarding on the Fractional Mathematical Model of Tumour Invasion and Metastasis},
-volume = {127},
-journal = {Computer Modeling in Engineering & Sciences},
-doi = {10.32604/cmes.2021.014988}
-}
-
 
 @misc{paraview,
     author = {{Kitware, Inc.}},
@@ -487,21 +476,14 @@ keywords = {Angiogenesis, Blood flow, Capillary remodelling},
 abstract = {In this paper, we present a theoretical investigation of the influence of blood flow through a tumour-induced capillary network, whereby the vascular architecture adapts as it grows to the associated haemodynamic forces resulting in what we describe as adaptive tumour-induced angiogenesis (ATIA). The network is generated in response to tumour angiogenic factors (TAFs), which are released from hypoxic cells within a solid tumour. We first describe a refined model for tumour-induced angiogenesis, which aims to describe the capillary growth process at the cellular level by explicitly taking into account the effects of matrix degrading enzymes and the local properties of the host tissue during endothelial cell migration. We then incorporate blood rheological properties into the formulation and investigate the influence of wall shear stress induced by the blood flow during dynamic vascular growth. We then go on to examine a number of feedback mechanisms affecting vascular resistance and network architecture. The mechanisms considered include those proposed by Pries and co-workers [A.R. Pries, T.W. Secomb, P. Gaehtgens, Structural adaptation and stability of microvascular networks: theory and simulation, Am. J. Physiol. Heart Circ. Physiol. 44 (1998) H349–H360; A.R. Pries, B. Reglin, T.W. Secomb, Structural adaptation of microvascular networks: functional roles of adaptative responses, Am. J. Physiol. Heart Circ. Physiol. 281 (2001) H1015–H1025; A.R. Pries, B. Reglin, T.W. Secomb, Structural adaptation of microvascular networks: roles of the pressure response, Hypertension 38 (2001) 1476–1479] and both haemodynamic (non-linear viscosity) and metabolic constraints are taken into account. Subsequent simulations of chemotherapeutic drug perfusion through the system show that vascular adaptation leads to a significant benefit in treatment delivery to the tumour. The results clearly demonstrate that the combined effects of network architecture and vessel compliance should be included in future models of angiogenesis if therapy protocols and treatment efficacy are to be adequately assessed.}
 }
 
-
-@article{10.1083/jcb.110.4.1427,
-    author = {Aznavoorian, S and Stracke, M L and Krutzsch, H and Schiffmann, E and Liotta, L A},
-    title = "{Signal transduction for chemotaxis and haptotaxis by matrix molecules in tumor cells.}",
-    journal = {Journal of Cell Biology},
-    volume = {110},
-    number = {4},
-    pages = {1427-1438},
-    year = {1990},
-    month = {04},
-    abstract = "{Transduction of signals initiating motility by extracellular matrix (ECM) molecules differed depending on the type of matrix molecule and whether the ligand was in solution or bound to a substratum. Laminin, fibronectin, and type IV collagen stimulated both chemotaxis and haptotaxis of the A2058 human melanoma cell line. Peak chemotactic responses were reached at 50-200 nM for laminin, 50-100 nM for fibronectin, and 200-370 nM for type IV collagen. Checkerboard analysis of each attractant in solution demonstrated a predominantly directional (chemotactic) response, with a minor chemokinetic component. The cells also migrated in a concentration-dependent manner to insoluble step gradients of substratum-bound attractant (haptotaxis). The haptotactic responses reached maximal levels at coating concentrations of 20 nM for laminin and type IV collagen, and from 30 to 45 nM for fibronectin. Pretreatment of cells with the protein synthesis inhibitor, cycloheximide (5 micrograms/ml), resulted in a 5-30\\% inhibition of both chemotactic and haptotactic responses to each matrix protein, indicating that de novo protein synthesis was not required for a significant motility response. Pretreatment of cells with 50-500 micrograms/ml of synthetic peptides containing the fibronectin cell-recognition sequence GRGDS resulted in a concentration-dependent inhibition of fibronectin-mediated chemotaxis and haptotaxis (70-80\\% inhibition compared to control motility); negative control peptide GRGES had only a minimal effect. Neither GRGDS nor GRGES significantly inhibited motility to laminin or type IV collagen. Therefore, these results support a role for the RGD-directed integrin receptor in both types of motility response to fibronectin. After pretreatment with pertussis toxin (PT), chemotactic responses to laminin, fibronectin, and type IV collagen were distinctly different. Chemotaxis to laminin was intermediate in sensitivity; chemotaxis to fibronectin was completely insensitive; and chemotaxis to type IV collagen was profoundly inhibited by PT. In marked contrast to the inhibition of chemotaxis, the hepatotactic responses to all three ligands were unaffected by any of the tested concentrations of PT. High concentrations of cholera toxin (CT; 10 micrograms/ml) or the cAMP analogue, 8-Br-cAMP (0.5 mM), did not significantly affect chemotactic or haptotactic motility to any of the attractant proteins, ruling out the involvement of cAMP in the biochemical pathway initiating motility in these cells. The sensitivity of chemotaxis induced by laminin and type IV collagen, but not fibronectin, to PT indicates the involvement of a PT-sensitive G protein in transduction of the signals initiating motility to soluble laminin and type IV collagen.(ABSTRACT TRUNCATED AT 400 WORDS)}",
-    issn = {0021-9525},
-    doi = {10.1083/jcb.110.4.1427},
-    url = {https://doi.org/10.1083/jcb.110.4.1427},
-    eprint = {https://rupress.org/jcb/article-pdf/110/4/1427/1466540/1427.pdf},
+@article{article,
+author = {Aznavoorian, S and Stracke, Mary and Krutzsch, H and Schiffmann, E and Liotta, Lance},
+year = {1990},
+month = {05},
+pages = {1427-38},
+title = {Signal transduction for chemotaxis and haptotaxis by matrix molecules in tumor cells},
+volume = {110},
+journal = {The Journal of cell biology}
 }
 
 

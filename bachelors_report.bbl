@@ -559,6 +559,52 @@
       \verb https://doi.org/10.1155/2011/452320
       \endverb
     \endentry
+    \entry{article}{article}{}
+      \name{author}{5}{}{%
+        {{hash=2b24c2399c94bceb810dc692ccf6f28c}{%
+           family={Aznavoorian},
+           familyi={A\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod}}}%
+        {{hash=6a1ac557e7ad058e4a0996c743fc4daf}{%
+           family={Stracke},
+           familyi={S\bibinitperiod},
+           given={Mary},
+           giveni={M\bibinitperiod}}}%
+        {{hash=60e97f0c571966ff19c6d3d6c330ee2b}{%
+           family={Krutzsch},
+           familyi={K\bibinitperiod},
+           given={H},
+           giveni={H\bibinitperiod}}}%
+        {{hash=a3cd2300db616bfe6083b3fd3d7c243a}{%
+           family={Schiffmann},
+           familyi={S\bibinitperiod},
+           given={E},
+           giveni={E\bibinitperiod}}}%
+        {{hash=31b7173f3dae05173d5771a0832d380a}{%
+           family={Liotta},
+           familyi={L\bibinitperiod},
+           given={Lance},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{f0da7845ff4b888ee344105c4af4eb36}
+      \strng{fullhash}{29db4543ecc9272e2bd791bdb4fbaf93}
+      \strng{bibnamehash}{29db4543ecc9272e2bd791bdb4fbaf93}
+      \strng{authorbibnamehash}{29db4543ecc9272e2bd791bdb4fbaf93}
+      \strng{authornamehash}{f0da7845ff4b888ee344105c4af4eb36}
+      \strng{authorfullhash}{29db4543ecc9272e2bd791bdb4fbaf93}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Journal of cell biology}
+      \field{month}{05}
+      \field{title}{Signal transduction for chemotaxis and haptotaxis by matrix molecules in tumor cells}
+      \field{volume}{110}
+      \field{year}{1990}
+      \field{pages}{1427\bibrangedash 38}
+      \range{pages}{12}
+    \endentry
     \entry{Lu2011-yt}{article}{}
       \name{author}{4}{}{%
         {{hash=7105372b0f161d8a7f87fcad27e4fcc9}{%
