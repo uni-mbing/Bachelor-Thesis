@@ -18,6 +18,7 @@ For all the plots of the experiments the red curve indicates the tumor cell dens
 \label{sec:2D_without_proliferation}
 
 We assume for the initial conditions that at dimensionless time $t=0$ there is already a nodule of cells located at the center of the unit domain $\Omega$ that has produced a concentration of matrix-degrading enzymes and has already degraded the extracellular matrix at the center. Furthermore we assume the extracellular matrix structure to be homogenous.\newline 
+Every experiment in this section is done in two spacial dimensions.
 We define the initial conditions for the tumor cell denisity as:
 \begin{align*}
     c(x,0)= \exp(\frac{-(x-0.5)^2}{0.01})
@@ -107,7 +108,7 @@ Figure~\ref{fig:2D_homogenous_ECM_initial} shows a 2D plot of the initial condit
     \caption{Overview of all experiments conducted for the model without proliferation and renewal producing 2D output}
     \label{table:2D_experiments_without_proliferation}
 \end{longtable}
-Table~\ref{table:2D_experiments_without_proliferation} shows all the experiments done in two space dimensions using the model without proliferation or renewal. You can see the figure and the linestyle to verify exactly which experiment uses which values. 
+Table~\ref{table:2D_experiments_without_proliferation} gives a detailed overview of all the experiments done in this section and the parameters used to produce the results. We are considering the model without proliferation of the tumor cells or renewal of the extracellular matrix, therefore both parameters $\mu_1$ and $\mu_2$ are set to zero. In most figures there will be more than one experiment described, the linestyle in table~\ref{table:2D_experiments_without_proliferation} determines which experiment exactly is described by the set of parameters.
     
 \subsubsection{Replicating results}
 We will start with replicating the first experiment from  Anderson et al.\cite{anderson_mathematical_2000}.  Figure~\ref{fig:anderson_experiment} shows a screenshot of this experiment, unfortunately in low resolution, since the original paper had not included any digital data containing the diagrams of their results.
@@ -334,7 +335,9 @@ Looking at the right side of figure ~\ref{fig:dm_alpha_beta_variation_2} we see 
 
 
 \subsection{Two dimensional Results with Proliferation and Renewal}
-In this section we are going to inspect the updated system, consisting of equation ~\ref{eq:6} to ~\ref{eq:10}. They describe the effects of tumor cell proliferation and extracellular matrix renewal processes. Like for the model neglecting proliferation and renewal we can see in table~\ref{table:2D_experiments_with_proliferation} all the experiments done in two space dimensions using the updated model. We are going perform a parameter analysis with the same values as done above to make the observed effects pregnant.\newline
+In this section we are going to inspect how introducing tumor cell proliferation and extracellular matrix renewal influences the system. Modelled as logistical growth terms, with a limiting factor of spacial occupation, the parameters $\mu_1$ for tumor cell proliferation and $\mu_2$ for extracellular matrix renewal describe their influences. In the previous experiments those parameters were also incorporated, though set to zero. Instead of treating them as parameters to vary, we are inspecting the whole system a new, since they have the potential to drastically change the resulting simulations.\newline 
+Tumor cell proliferation describes the natural ability of cells to proliferate. Though in the case of the tumor cells the production signalling comes from themselves, surpassing the control chain that limits normal cells to proliferate uncontrollably.\newline 
+The extracellular matrix is a naturally dynamic structure that undergoes continuous degradation and remodelling. It does this in order to secure tissue development, wound repair tasks, regulate cellular functions or many more tasks. In a model describing the ECM it is crucial to introduce a factor that incorporates these remodelling processes.\newline
 As in section~\ref{sec:2D_without_proliferation}, we are using the same inital conditions for all three variables under the assumption we have a homogenous ECM structure. Figure~\ref{fig:2D_homogenous_ECM_initial} depicts these initial conditions on the three variables $c,e,m$ at dimensionless time $t=0$.
 \begin{longtable}{|c c c c c c c c c c|}
     \hline
@@ -393,6 +396,7 @@ As in section~\ref{sec:2D_without_proliferation}, we are using the same inital c
     \caption{Overview of all experiments conducted for the model with proliferation and renewal producing 2D output}
     \label{table:2D_experiments_with_proliferation}
 \end{longtable}
+As in section~\ref{sec:2D_without_proliferation} we see in table~\ref{table:2D_experiments_with_proliferation} a detailed overview of all the experiments done in this section and the parameters used to produce the results. As before do most figures describe multiple experiments, the linestyle of the curve in the figure determines which experiment exactly is described by the set of parameters.
 
 
 \subsubsection*{Basecase Analysis}
@@ -404,7 +408,7 @@ As in section~\ref{sec:2D_without_proliferation}, we are using the same inital c
     \label{fig:2D_basecase_comparison}
 \end{figure}
 
-It makes sense to establish a basecase to compare the following parameter analysis resulst against it. In figure~\ref{fig:2D_basecase_comparison} you can see how intoducting tumor cell proliferation and extracellular matrix renewal changes the outcome of the simulation. For this we used the values $\mu_1= 0.1$ and $\mu_2=0.5$ according to the only experiment found for this system of equations in the paper of Kolev et al. \cite{Kolev2010}.\newline
+It makes sense to establish a basecase to compare the following parameter analysis resulsts against it. In figure~\ref{fig:2D_basecase_comparison} you can see how intoducting tumor cell proliferation and extracellular matrix renewal changes the outcome of the simulation. For this we used the values $\mu_1= 0.1$ and $\mu_2=0.5$ according to the only experiment found for this system of equations in the paper of Kolev et al. \cite{Kolev2010}.\newline
 Comparing this new basecase to our initial model's basecase we can see the influences of both $\mu_1$ and $\mu_2$, as for the tumor cell density curve is visibly higher than without proliferation, causing a higher production of matrix-degrading enzymes, which would lead to faster ECM degradation, though this is countered by the renewal factor $\mu_2$ causing the ECM concentration to be higher at the end, at $t=8$, than in the initial basecase experiment.
 
 
@@ -578,9 +582,9 @@ For this scenario we assume that there is a nodule of tumor cells already in the
 \end{align*}
 $\textcolor{red}{insert correct ecm description}$
 
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
-    \adjustbox{width=0.8\textwidth}{\includegraphics{resources/images/2D_heterogenous_ECM.png}} 
+    \adjustbox{width=0.85\textwidth}{\includegraphics{resources/images/2D_heterogenous_ECM.png}} 
     \caption{2D Results using a heterogenous ECM with the parameter values: $d_c=5\cdot 10^{-4}$, $\gamma=0.0055$, $\mu_1 = 0.1$, $\eta=10$, $\mu_2=0.5$, $d_m = 1\cdot 10^{-3}$, $\alpha = 0.3564$, $\beta = 0$; left: tumor cell density, middle: ECM concentration, right: MDE concentration.}
     \label{fig:2D_heterogenous_ECM}
 \end{figure}
