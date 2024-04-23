@@ -14,7 +14,7 @@ Another challenge are the diffusion coefficients, since they are dependent on th
 For each stage of experiments we will use a set of baseline parameters, which will be evaluated experimentally, and from there vary one or more parameter at a time to get an overview of their effects. \newline
 For all the plots of the experiments the red curve indicates the tumor cell density, the blue curve the ECM density and the green curve the MDE concentration. In all of the experiments we used the value of $\epsilon = 0.01$ to match the inital conditions from \cite{anderson_mathematical_2000} and \cite{Kolev2010}. \newline 
 
-\subsection{Two dimensional Results without Proliferation and Renewal}
+\subsection{2D Results without Proliferation and Renewal - Homogenous ECM}
 \label{sec:2D_without_proliferation}
 
 We assume for the initial conditions that at dimensionless time $t=0$ there is already a nodule of cells located at the center of the unit domain $\Omega$ that has produced a concentration of matrix-degrading enzymes and has already degraded the extracellular matrix at the center. Furthermore we assume the extracellular matrix structure to be homogenous.\newline 
@@ -110,7 +110,7 @@ Figure~\ref{fig:2D_homogenous_ECM_initial} shows a 2D plot of the initial condit
 \end{longtable}
 Table~\ref{table:2D_experiments_without_proliferation} gives a detailed overview of all the experiments done in this section and the parameters used to produce the results. We are considering the model without proliferation of the tumor cells or renewal of the extracellular matrix, therefore both parameters $\mu_1$ and $\mu_2$ are set to zero. In most figures there will be more than one experiment described, the linestyle in table~\ref{table:2D_experiments_without_proliferation} determines which experiment exactly is described by the set of parameters.
     
-\subsubsection{Replicating results}
+\subsubsection{Basecase Analysis}
 We will start with replicating the first experiment from  Anderson et al.\cite{anderson_mathematical_2000}.  Figure~\ref{fig:anderson_experiment} shows a screenshot of this experiment, unfortunately in low resolution, since the original paper had not included any digital data containing the diagrams of their results.
 \begin{figure}[h!]
     \centering
@@ -153,16 +153,6 @@ Looking now at the diffusion coefficient for the tumor cells, in figure~\ref{fig
 \end{figure}
 At last we want to adjust the haptotatic pull slightly, for this we are looking at a comparision of different $\gamma$ values in figure~\ref{fig:replication_gamma_comparison} depicting the tumor cell density. Comparing our results with Anderson et al's we want a larger secondary lump that invades the tumor cells faster than the one remaining at the origin. For this we need to increase $\gamma$ to increase the haptotaic pull that controls tumor cells motility. In the figure you see that incresing $\gamma$ yields these effects, but increasing it too much results in a too fast invasion pace of the surrounding tissue. Increasing $\gamma$ slightly to $\gamma=0.0055$ is already sufficient to produce the desried effects.\newline
 
-\begin{comment}
-Diffusion and Haptotaxis have stretched the curve for the tumor cells along the x-axis as did diffusion for the MDEs. The ECM has  been visibly degraded at the origin, being still fully present in outer regions exceeding $x\approx 0.2$.\newline
-The next image shows the simulation after $0.4$ timesteps; we see that the secession of the tumor cell concentration of the previous point in time has been propagated to form a small hill at the leading edge of the tumor cells invading the surrounding tissue, this effect is due to the haptotatic influence, which pulls the tumor cells further into the accessible area towards higher values of $\nabla (c \nabla e)$, creating a seperation for the tumor cells, where the other part is still oriented towards the origin. The MDEs also continue their diffusion into the area, degrading the ECM in their wake.\newline 
-In the last image, after 8 simulation time steps, we see that as well the hill that has formed at the leading edge of the tumor cells as well as the concentration of tumor cells at the origin, have flattened visibly and striving to take on a constant concentration throughout space, though we can still clearly distinguish both areas. If we were to look at the simulation at later points in time, the curve will flatten even more, since with more time the ECM will be further degraded and therefore the haptotactic flux coefficient $\gamma$ will lose its significance, leaving the movement of the tumor cells to diffusion only and spreading them constantly along the x-axis. The curve for the MDEs will also flattened due to diffusion,with the MDEs degrading the rest of the extracellular matrix molecules decrease their concentration further and the MDE concentration will increase over time due to no limiting factors in this experiment and on-going production contributed by the tumor cells $c$.\newline
-Comparing \ref{fig:unadjsuted_replication} to figure 1 in \cite{anderson_mathematical_2000}, we can see major differences. The first image showing $t=0$ looks the same, which confirms that both experiments start with the same initial values condition. In the images showing the simulation at the second time checkpoint we see that though the tumor concentration and ECM density values are approximately the same, the MDE concentration is slightly lower in our experiment, which will get more pregnant in the later images. The unevenness having formed at the leading edge of the tumor cell concentration is also slightly smaller. The differences in the third image are more striking, both $c$ and $m$ have considerably lower concentrations, yet the ECM value looks is very similar. \newline 
-In our case the diffusion and haptotatic pull of the tumor cells has shown to be too stong making the invasion process into the tissue happen too fast. The last time checkpoints strengthens our findings, showing the same behaviour with ECM being approximately the same, tumor cell density and MDE concentration being clearly lower in our experiment and invasion of tissue happening too fast, leaving the lump at the origin $x=0$ too small. \newline 
-This first of all confirms the initial supposition that with changing the dimension for the simulations the results also vary. We will now adjust the parameters iteratively to make the results using two dimensions mimick the results from Anderson et. al as closely as possible. For this we will start with varying the MDE production coefficient $\alpha$, to get higher concentration values for the MDEs, and change the diffusion as well as haptotaxis coefficients of the tumor cells $d_c$ and  $\gamma$, to adjust the motitlity of the tumor cells and therefore also influence the invasion speed of them into the surrouding tissue.
-Figures~\ref{fig:replication_alpha_comparison}, ~\ref{fig:replication_dc_comparison} and ~\ref{fig:replication_gamma_comparison} show these comparisons of the parameters $\alpha$, $d_c$ and $\gamma$. Comparing different values for $\alpha$ and their effect on the curve of the MDE concentration, shows in figure~\ref{fig:replication_alpha_comparison} that, especially looking at the later points in time $t=4$ and $t=8$, with values for $\alpha$ between $0.3$ and $0.4$ we will get a good approximation. The values of the original paper for the MDEs are for $t=4$ approximately $0.6$ at $x=0$ and for $t=8$ about $0.7$ at the same point in space. With a value  $\alpha=0.35645$ we got the best results regarding the MDE concentration.\newline 
-Looking at $d_c$ we chose a value of $d_c=5\cdot 10^{-4}$. Using values below $0.00001$ will result in numerical instabilities and results that are not longer useable. For $\gamma$ we made a slight adjustment upwards to $\gamma=0.0055$ to have a little bit more pull on the tumor cells outward, to match the invasion speed observed in the original paper.
-\end{comment} 
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{resources/images/basecase_without_proliferation_.png}
@@ -334,7 +324,7 @@ Looking at the right side of figure ~\ref{fig:dm_alpha_beta_variation_2} we see 
 
 
 
-\subsection{Two dimensional Results with Proliferation and Renewal}
+\subsection{2D Results with Proliferation and Renewal - Homogenous ECM}
 In this section we are going to inspect how introducing tumor cell proliferation and extracellular matrix renewal influences the system. Modelled as logistical growth terms, with a limiting factor of spacial occupation, the parameters $\mu_1$ for tumor cell proliferation and $\mu_2$ for extracellular matrix renewal describe their influences. In the previous experiments those parameters were also incorporated, though set to zero. Instead of treating them as parameters to vary, we are inspecting the whole system a new, since they have the potential to drastically change the resulting simulations.\newline 
 Tumor cell proliferation describes the natural ability of cells to proliferate. Though in the case of the tumor cells the production signalling comes from themselves, surpassing the control chain that limits normal cells to proliferate uncontrollably.\newline 
 The extracellular matrix is a naturally dynamic structure that undergoes continuous degradation and remodelling. It does this in order to secure tissue development, wound repair tasks, regulate cellular functions or many more tasks. In a model describing the ECM it is crucial to introduce a factor that incorporates these remodelling processes.\newline
@@ -399,7 +389,7 @@ As in section~\ref{sec:2D_without_proliferation}, we are using the same inital c
 As in section~\ref{sec:2D_without_proliferation} we see in table~\ref{table:2D_experiments_with_proliferation} a detailed overview of all the experiments done in this section and the parameters used to produce the results. As before do most figures describe multiple experiments, the linestyle of the curve in the figure determines which experiment exactly is described by the set of parameters.
 
 
-\subsubsection*{Basecase Analysis}
+\subsubsection{Basecase Analysis}
 
 \begin{figure}[h]
     \centering
@@ -555,13 +545,15 @@ Taking now a look at the experiments with raised $\eta$ to accellerate the ECM d
 
 
 
-\subsection{Three Dimensional Results with Proliferation and Renewal}
+\subsection{3D Results with Proliferation and Renewal - Homogenous ECM}
+\subsubsection{Basecase Analysis}
+\subsubsection{Parameter Analysis}
 \lipsum[1-3]
 
 
 
 
-\subsection{Heterogenous ECM Structure}
+\subsection{2D Results with Proliferation and Renewal - Heterogenous ECM}
 \begin{figure}[h]
     \centering
     \label{fig:Initial_Value_Distribution}
@@ -595,3 +587,5 @@ After four timesteps you see that the ECM is slowly being degraded and the tumor
 The next point in time shows increased ECM degradation with also further invading tumor cells into the tissue. The tumor cells behave as a semicircular wave moving into the direction of the ECM, you can see the main lump remains at the center, with the edge of having containinig a smaller amount of cells moving outwards. The image describing the matrix-degrading enzyme concentration shows still only minor effects, looking closely we can see that from the center moving to the right there is a slightly higher concentration of them than in the other direction.\newline
 The last row depicts the experiment after $t=8$ timesteps and we see the aforementioned effects propagated. The ECM degradation has continued as well as the invasion of the tumor cells. The wave moving in direction of the remaining extracellular matrix molecules has spread through space and therefore decreased in its strength. The MDEs still show only little influence of the heterogenous ECM with the main lump staying centered and only difficult to recognize more concentration towards the movement of the tumor cells and concentration of the extracellular matrix.\newline 
 Taking into account different extracellular matrix molecules and structure or physical influences as heat or radiation you can adjust the structure of the ECM and the behaviour of the system to better simulate reallife scenarios of cancer invading tissue.
+
+\subsection{3D Results with Proliferation and Renewal - Heterogenous ECM}

@@ -6,11 +6,15 @@
 \contentsline {subsection}{\numberline {3.1}Mathematical Formulation}{10}{}%
 \contentsline {subsection}{\numberline {3.2}Numerical Formulation and Parameters}{11}{}%
 \contentsline {section}{\numberline {4}Experiments and Results}{13}{}%
-\contentsline {subsection}{\numberline {4.1}Two dimensional Results without Proliferation and Renewal}{14}{}%
-\contentsline {subsubsection}{\numberline {4.1.1}Replicating results}{16}{}%
+\contentsline {subsection}{\numberline {4.1}2D Results without Proliferation and Renewal - Homogenous ECM}{14}{}%
+\contentsline {subsubsection}{\numberline {4.1.1}Basecase Analysis}{16}{}%
 \contentsline {subsubsection}{\numberline {4.1.2}Parameter Analysis}{21}{}%
-\contentsline {subsection}{\numberline {4.2}Two dimensional Results with Proliferation and Renewal}{39}{}%
-\contentsline {subsubsection}{\numberline {4.2.1}Parameter Analysis}{41}{}%
-\contentsline {subsection}{\numberline {4.3}Three Dimensional Results with Proliferation and Renewal}{54}{}%
-\contentsline {subsection}{\numberline {4.4}Heterogenous ECM Structure}{54}{}%
+\contentsline {subsection}{\numberline {4.2}2D Results with Proliferation and Renewal - Homogenous ECM}{39}{}%
+\contentsline {subsubsection}{\numberline {4.2.1}Basecase Analysis}{41}{}%
+\contentsline {subsubsection}{\numberline {4.2.2}Parameter Analysis}{41}{}%
+\contentsline {subsection}{\numberline {4.3}3D Results with Proliferation and Renewal - Homogenous ECM}{54}{}%
+\contentsline {subsubsection}{\numberline {4.3.1}Basecase Analysis}{54}{}%
+\contentsline {subsubsection}{\numberline {4.3.2}Parameter Analysis}{54}{}%
+\contentsline {subsection}{\numberline {4.4}2D Results with Proliferation and Renewal - Heterogenous ECM}{54}{}%
+\contentsline {subsection}{\numberline {4.5}3D Results with Proliferation and Renewal - Heterogenous ECM}{57}{}%
 \contentsline {section}{\numberline {5}Conclusion and Discussion}{58}{}%
