@@ -559,6 +559,54 @@
       \verb https://doi.org/10.1155/2011/452320
       \endverb
     \endentry
+    \entry{Lu2011-yt}{article}{}
+      \name{author}{4}{}{%
+        {{hash=7105372b0f161d8a7f87fcad27e4fcc9}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+        {{hash=0451b6c2d8c146e9b19da15ef31d10e6}{%
+           family={Takai},
+           familyi={T\bibinitperiod},
+           given={K},
+           giveni={K\bibinitperiod}}}%
+        {{hash=17896e4def1fc2cae90966e340240de7}{%
+           family={Weaver},
+           familyi={W\bibinitperiod},
+           given={V\bibnamedelima M},
+           giveni={V\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=246a9cae34794dba66f96802bbeff543}{%
+           family={Werb},
+           familyi={W\bibinitperiod},
+           given={Z},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {Cold Spring Harbor Laboratory}%
+      }
+      \strng{namehash}{a886037936b8392b2c4d7ed9a7c158c2}
+      \strng{fullhash}{bae718d2f6c53ae7129e3f47dacdaeed}
+      \strng{bibnamehash}{bae718d2f6c53ae7129e3f47dacdaeed}
+      \strng{authorbibnamehash}{bae718d2f6c53ae7129e3f47dacdaeed}
+      \strng{authornamehash}{a886037936b8392b2c4d7ed9a7c158c2}
+      \strng{authorfullhash}{bae718d2f6c53ae7129e3f47dacdaeed}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cold Spring Harb. Perspect. Biol.}
+      \field{month}{12}
+      \field{number}{12}
+      \field{title}{Extracellular matrix degradation and remodeling in development and disease}
+      \field{volume}{3}
+      \field{year}{2011}
+      \field{pages}{a005058\bibrangedash a005058}
+      \range{pages}{-1}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

@@ -273,18 +273,9 @@ We can assume that with introducing $\beta$ foremost the MDE curve will be lower
 As we see from the results in figure~\ref{fig:beta_variation} a value of $\beta=0.1$ is sufficient to after already $t=4$ reduce the MDE concentration to nearly zero. This decay rate proves to be too high in our case, outpacing prodcution entirely, with matrix-degrading enzymes concentration vanishing spacially and temporaly completely. The immediate decay of the MDEs causes a drastically slower ECM degradation, yet it has no stopped completely since the tumor cells still produce matrix-degrading enzymes. This slow degradation of extracellular matrix, as we saw previously, creates a haptotatic pull that last at lot longer in regions around the origin, which pulls, in this case, all of the cells outward to invade the tissue, leaving no main lump of tumor cells at the origin. Since more MDEs are produced in regions of high tumor cell density, this causes also a more even degradation of the extracellular matrix, causing a stronger stretch of the tumor cells.\newline
 In the other experiments we can observe that with decreasing $\beta$ and slowing down the decay of the matrix-degrading enzymes, first the ECM degradation accellerates and this causes the effects of haptotaxis and diffusion to develop the two lumps of tumor cells, one staying at the center the other invading the tissue, like we saw in all previous experiments.\newline 
 Since the extracellular matrix can be composed of many different organic and anorganic compounds, the enzymes degrading it are also very diverse. This diversity results in different decay rates, chosing the right one for a specific experiment can be crucial. Whils this variation describes the effects of different enzymes, it can also describe, like for the production of the MDEs, the influence of a drug, to accellerate decay of the matrix-degrading enzymes.
-\begin{comment}
-
-We first of all needed to determine a range in which to experiment. Starting with a range of values between $0.1$ and $1.0$, since this is the range $\alpha$ yields reasonable results in and $c$ and $m$ are in the same scale regarding their values, we counter-intuitively saw that those values were much too high. Even for $\beta=0.1$, shown in the dotted curve, the MDEs are almost completely decayed after only $t=4$, leaving only a small portion of MDEs at the origin due to the production from the tumor cells. This makes the ECM degradation process visibly slower and makes the tumor cells a longer time subjected to high effects of haptotaxis, causing to only develop one hill, visible in the red dotted curve.
-
-Looking at the different points in time we can see that though the dotted green MDE curve is nearly everywhere zero we see that degradation still happens visibly and due to the longer exposition on haptotaxis on bigger portions of tumor cells this one lump of cells is being pull through space.
-Decreasing to $\beta=0.01$ we see that the for the solid lines in figure~\ref{fig:beta_variation} the MDE concentration takes on higher values througout the points in time. The tumor cells density show again a distinction between the effects of diffusion and haptotaxis, resulting in a two distinctly different lumps with different maxima and ECM degrading resembles most of the previous experiments, though the gradient here is not as steep especilly in the last point in time. 
-Further decreasing $\beta$ to $\beta = 0.005$ we see the effects observed in $\beta=0.005$ increase, with a higher concentration of MDEs throughout space and time, and also a faster degradation process. The tumor cells for the dashed curve split into mainly two areas, where the density at the origin is higher than the solid line curve for $\beta=0.01$, and have furhter invaded into the tissue, with a lower density at the leading edge.
-Having only one refrence value in Kolev et al's\cite{Kolev2010} paper with $\beta=0.07$ we experimented with this value though saw as we did for $\beta=0.1$ that it was too high distroting the results too strongly, we will further use a range from $0.001$ to $0.01$ to experiment in for $\beta$ as seen in the experiments from figure~\ref{fig:beta_variation}. Here our assumptions were also met, concluding that with rising $\beta$ values the ECM degradation slows down, this also causing the invasion pace of the tumor cells to diminish.
-\end{comment}
 
 \subsubsection*{Cross Variation}
-Having done all those experiments it will be interesting to see how varying multiple parameters affects the outcome of the simulation. For this we took a look at both supporting and countering effects of variation. 
+Having done a variatoin of every parameter of the model,, we saw accellerating effects on the invasion but also countering effects. Now it will be intersting to see how either supporting factors interplay, but also how countering factors affect the simulations, for example how increasing both $\alpha$ and $\beta$, if there can be found some kind of balance. Another interesting experiment will be on how diffusion and haptotaxis behave when increasing or decreasing both factors controlling them.
 
 \subsubsection*{$d_c - \gamma$ Variation}
 \begin{figure}[h]
@@ -293,7 +284,7 @@ Having done all those experiments it will be interesting to see how varying mult
     \caption{Plots show results for varying both $d_c$ and $\gamma$ whilst keeping the other parameters constant, in the images on the left $d_c$ is set to $d_c=0.00005$ with the solid line showing $\gamma = 0.01$ and the dotted line $\gamma=0.001$ on the right $d_c$ is set to $d_c=0.1$ with the solid line showing $\gamma = 0.01$ and the dotted line $\gamma=0.001$.}
     \label{fig:dc_gamma_variation}
 \end{figure}
-
+We therefore started with varying $d_c$ and $\gamma$, and studied for simplicity and overview reasons only the values on their distribution's borders interplaying.\newline
 Having set $d_c=0.00005$ and $\gamma=0.001$ we see no secession of the tumor cells, the effects of haptotaxis are too small leaving the tumor cells only subject to diffusion which results in an even distribution process over time, which also causes a slower invasion pace. Because the tumor cells stay in a lump with its maxima at the origin $x=0$ the MDEs also take on their maximum there, moving farther out they also distribute very evenly. This staying with values around the origin of the MDEs causes a slower ECM degradation. Increasing $\gamma=0.01$ we see that the effects of haptotaxis are now pregnantly visible with a very sharp maxima seen at $t=4$, which equals the maxima of the remaining tumor cell lump at $x=0$. Stronger influence of haptotaxis leads to a faster invasion pace of the tumor cells into the tissue and allowing to create matrix-degrading enzymes in their wake, causing a more even distribution compared to $\gamma=0.001$ and also a faster ECM degrading process. 
 Looking at the right side of the plot ~\ref{fig:dc_gamma_variation} we see the results for $d_c=0.1$ here for both $\gamma$ values diffusion overshadows the effects of haptotaxis completely, with after already $t=0.4$ having a constant distribution of tumor cells throughout space. Due to this fast spread of tumor cells, the MDEs are also produced evenly throughout space, and an even faster ECM degradataion. 
 
@@ -446,16 +437,18 @@ Varying $d_c$ with proliferation terms, we see the same effects as without proli
 When we look at $\gamma$ we also can see the same effects as the model without proliferation shows, with the adjustments as varying $d_c$, with raised curves for all variables. Increasing $\gamma$ means increasing haptotaxis effects, pulling the tumor cells stronger towards the extracellular matrix molecules, which causes a faster invasion pace and also a higher density of tumor cells invading the tissue, but a lower staying at the centere at $x=0$. This also means that the ECM degrading process happens faster and the MDEs are more evenly distributed through space the higher $\gamma$ is. As mentioned above the same effects come in this experiment, introducing proliferation and renewal, with higher values for tumor cell density, MDE and ECM concentration especially at the later points in time clearly depictable. It is interessting to observe that though introducing a renewal factor for the extracellular matrix, the proliferation of the tumor cells causes a faster production of matrix-degrading enzymes, which makes the system produce nearly the same results as without proliferation and renewal concerning the ECM concentration, still  it is to say that introducing the renewal of the ECM results in overall slightly higher concentrations of it.
 
 \subsubsection*{$\mu_1$ Variation}
+The parameter $\mu_1$ describes the proliferation of the tumor cells, using Kolev et al's estimate in \cite{Kolev2010} we assume an even distribution with $\mu_1 \sim U[0.1, 1.0]$. Introducing this factor we can, wtih an increase of the total amount of tumor cells, expect a faster production of the matrix-degradng enzymes and also a faster degradation of the ECM. Though the effect of the faster ECM degradation might be damped by also introducing a renewal term for it, we can especially for higher $\mu_1$ values expect to dominate the simulations and accellerate ECM degradation.\newline
+Since the basecase, using Kolve et al's values, sets the proliferation rate of the tumor cells to $\mu_1=0.1$ we consider in the dotted experiment the effects of only introducing the renewal of the ECM.\newline
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{resources/images/prolif_mu_1_variation.png}
     \caption{Plots show results for varying $\mu_1$ whilst keeping the other parameters constant.}
     \label{fig:prolif_mu_1_variation}
 \end{figure}
-
-The parameter $\mu_1$ describes the proliferation of the tumor cells, using Kolev et al's estimate in \cite{Kolev2010} we can assume an even distribution with $\mu_1 \sim U[0.1, 1.0]$. We see that with varying $\mu_1$ the other curves are also strongly influenced though it takes some time as the plots in figure~\ref{fig:prolif_mu_1_variation} indicate, with after $t=0.4$ they seem to overlay each other. At $t=4$ we see that first of all the tumor cells curve obviously increases with increasing $\mu_1$, this causes the MDE concentration to also increase and in turn the ECM curve is decreased due to faster ECM degradation, because of more availabe matrix-degrading enzumes. At the last point in time this befaviour intensifies, the tumor cells having for high $\mu_1$ values a density of one in the range of $x$ being between $0$ and $0.2$ and for $\mu_1=0.5$ also a lot higher than without proliferation of tumor cells. The MDE concentration exceeds one for the two higher values for $\mu_1$ and the ECM having again degraded faster. Looking at the dotted curve, we can observe what only renewal does to our system and we see clearly, comparing it to the basecase of the model without proliferation, that the concentration of the extracellular matrix especially at the end is visibly higher.
-
-
+The effects of $\mu_1$ take some time to act, as we can see no deviations for all the experiments in figure~\ref{fig:prolif_mu_1_variation} at $t=0.4$.\newline
+At the next point in time at $t=4$, the differences are striking, concerning all variables. With a higher proliferation factor of the tumor cells, the MDE concentration also rises clearly and the ECM degradation is also accellerated. Yet at this point in time the deviations regarding the curve for the ECM concentration are still subtle.\newline 
+It looks different in the last point in time at $t=8$. As mentioned above does an increase of total tumor cells drastically increase the MDE concentration and accellerates the ECM degradation.\newline
+Introducing $\mu_1$ means introducing one of the hallmarks of cancer; sustaining proliferative signalling, which makes the tumor cells themselves responsible for producing them, instead of requiring other hormones or enzymes to trigger growth signalling. Setting $\mu_1=0$ could be the consequences of a drug working, hindering growth signalling.
 
 \subsubsection*{$\eta$ Variation}
 \begin{figure}[h]
@@ -469,18 +462,21 @@ As we compare the $\eta$ variation between with and without proliferation and re
 
 
 \subsubsection*{$\mu_2$ Variation}
+The parameter $\mu_2$ describes the renewal processes of the extracellular matrix molecules. Also using Kolev et al's estimate in \cite{Kolev2010} we can assume an even distribution with $\mu_2 \sim U[0.1, 1.0]$. In natural processes the renewal of the extracellular matrix is important to regulate cell differentionation and wound repair for example~\cite{Lu2011-yt}.
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{resources/images/prolif_mu_2_variation.png}
     \caption{Plots show results for varying $\mu_2$ whilst keeping the other parameters constant.}
     \label{fig:prolif_mu_2_variation}
 \end{figure}
-
-The parameter $\mu_2$ describes the renewal processes of the extracellular matrix molecules, with also eusing Kolev et al's estimate in \cite{Kolev2010} we can assume an even distribution with $\mu_2 \sim U[0.1, 1.0]$.\newline 
-Like we saw for $\mu_1$ the effects of $\mu_2$ need some time to show, here again we can see them after $t=4$ timesteps clearly. Wtih higher ECM renewal we see that we get slightly lower MDE maximum at $x=0$, though having stretched a little more into x-direction. The same goes for the tumor cell density, having a lower maximum at the origin, yet being more evenly distributed, whcih is due to the ECM curve being shifted slightly towards the left, intensifying the effects of haptotaxis. The last image confirms the aforementioned effects with higher ECM concentration due to renewal causes less MDE concentration at its maxima and more stretchig along x-direction, the same holding for the tumor cells. We also observe that the effects of $\mu_2$ are not as impactful on the system as the effects of $\mu_1$ were.
+This renewal process as we see in figure~\ref{fig:prolif_mu_2_variation} takes some time to show effects. There are no deviations for the experiments after $t=0.4$.\newline
+Looking at the results later at $t=4$ the differences are still subtle. Increasing $\mu_2$ slows down the extracellular matrix degradation process and with this affects the motility of the tumor cells, pulling less of them outwards into the surrounding tissue. The MDE concentration nearly overlays completely, with a minimal higher concentration for the lowest $\mu_2$ experiment at the origin, due to the also slightly higher tumor cell density at the origin.\newline 
+The differences at the last point in time at $t=8$ are still minor compared to varying the other parameters. As mentioned before does the slowed ECM degradation diminish haptotatic effects, which leads to slighty less matrix-degrading enzymes concentration at the origin.\newline
+We see that varying the ECM renewal rate at this magnitude shows little influence on the resulting simulations.\newline 
+At this point it is important to say that the renewal rates for tissue in the human body strongly vary. Comparing for example bone tissue with connective tissue, we see these processes at highly different time scales. Out of lack of experimental data for this parameter we only investigated Kolev et al's estimates, but considering realistic cases, it is importnatn to have better measures for this parameter.
 
 \subsubsection*{$d_m$ Variation}
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{resources/images/prolif_dm_variation.png}
     \caption{Plots show results for varying $d_m$ whilst keeping the other parameters constant.}
@@ -490,7 +486,7 @@ Like we saw for $\mu_1$ the effects of $\mu_2$ need some time to show, here agai
 Comparing the results varying the diffusion factor of the matrix-degrading enzymes does as before yield only minor differences between the initial and updated model. As observed before the tumor cell density's curve and the MDE concentration's curves are slightly raised due to proliferation of the tumor cells. The ECM curve for two lower values of varying $d_m$ though seem to be subject to little to no change, only for very high values of $d_m$ we can see that it is clearly raised comparing it to the model without renewal. The other two curves take off at the some point along the x-axis and finish at the same values for their ECM concentration. Looking at the tumor cell density curves for those $d_m$ values we see that towards $x=0.5$ they don't describe a as steep bump as the initial model. This causes to have little less MDE concentration as well, which is responsible for the seemingly unchanged behaviour of the extracellular matrix concentration.
 
 \subsubsection*{$\alpha$ Variation}
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{resources/images/prolif_alpha_variation.png}
     \caption{Plots show results for varying $\alpha$ whilst keeping the other parameters constant.}
@@ -500,7 +496,7 @@ Comparing the results varying the diffusion factor of the matrix-degrading enzym
 Taking a look at comparing the $\alpha$-variation yields more interesting results since, $\mu_1$ acts as a secondary MDE production effect by producing tumor cells which in turn produce the matrix-degrading enzymes. We see that though the overall shape and effects to be observed are the same, after $t=4$ the model with proliferation exceeds one at the origin for the MDE concentration for the two higher $\alpha$ experiments, where in the model without proliferation only the one with the highest $\alpha$ value did. The tumor cell denstiy curve is slightly raised, which allows the MDE concentration. Though the higher values for the MDEs leave the ECM degrading process untouched with not clearly visible difference between the inital model and the updated one. 
 
 \subsubsection*{$\beta$ Variation}
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{resources/images/prolif_beta_variation.png}
     \caption{Plots show results for varying $\beta$ whilst keeping the other parameters constant.}
