@@ -2,7 +2,6 @@
 
 \section{Experiments and Results}
 \label{sec:experiments}
-
 All experiments that consider the ECM to be homogenous start with the same initial values as seen in figure~\ref{fig:2D_homogenous_ECM_initial}. Experiments observing the effects of a heterogenous ECM use different initial values, as seen in figure~\ref{fig:2D_heterogenous_ECM_initial}.
 
 Solving the numerical model HiFlow\textsuperscript{3} will be used with the weak form given with equations~\ref{eq:11} -~\ref{eq:13}. To evaluate the results of the numerical simulation ParaView~\cite{paraview} is used, producing informative plots to compare the evolution of the simulation in time. For this we rely on the tool Plot Over Line to give results for the three variables of tumor cell density, extracellular matrix density and matrix-degrading enzymes concentration. This tool also allows us to compare all three variables in one plot whereas using 2D plots we would need to have one for each variable. Using it makes the results better readable and allows a clearer quantitative insight into the experiments as you will see in figure~\ref{fig:unadjsuted_replication}.
