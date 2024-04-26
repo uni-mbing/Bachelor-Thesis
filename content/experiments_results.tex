@@ -120,19 +120,27 @@ Table~\ref{table:2D_experiments_without_proliferation} gives a detailed overview
     
 \subsubsection{Basecase Analysis}
 We will start with replicating the first experiment from  Anderson et al.\cite{anderson_mathematical_2000}.  Figure~\ref{fig:anderson_experiment} shows a screenshot of this experiment, unfortunately in low resolution, since the original paper had not included any digital data containing the diagrams of their results.
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \centering
-    \includegraphics[width=0.85\textwidth]{resources/images/anderson_experiment.png}
+    \includegraphics[width=\textwidth]{resources/images/anderson_experiment.png}
     \caption{Andersons first one dimensional experiment using the parameter values $d_c = 1\cdot 10^{-3}, d_m = 1\cdot 10^{-3}, \gamma = 0.005, \eta = 10, \alpha = 0.1, \beta = 0, \mu_1 = 0, \mu_2 = 0$}
     \label{fig:anderson_experiment}
 \end{figure}
 In figure~\ref{fig:anderson_experiment} you can see that after $t=1$ in their timescale the tumor cells start to develop a secession at the part invading the tissue. This secession propagates to a pointy peak in the later point in time. The concentration of the matrix-degrading enzymes increases continuously and the concentration of the extracellular matrix decreases continuously. We see that their $x$-axis is streched or rescaled to show an intervale from $0$ to $1$. In our case the interval on the plots has only $x$-values from $0$ to $0.5$.
 \begin{figure}[ht!]
     \centering
-    \includegraphics[width=0.85\textwidth]{resources/images/first_replication_results.png}
-    \caption{Results using Anderson et al's parameters, left side 2D tumor cell density plots, right side results produced by applying the Plot Over Line tool}
+    \includegraphics[width=\textwidth]{resources/images/first_replication_POL.png}
+    \caption{Results using Anderson et al's parameters produced by applying the Plot Over Line tool}
+    \label{fig:unadjsuted_replication}
+\end{figure}\
+\begin{comment}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{resources/images/first_replication_2D.png}
+    \caption{Results using Anderson et al's parameters 2D tumor cell density plots}
     \label{fig:unadjsuted_replication}
 \end{figure}
+\end{comment}
 Replicating this experiment in two dimensions we start with the same parameters as Anderson et al. had used, $d_c = 1\cdot 10^{-3}, d_m = 1\cdot 10^{-3}, \gamma = 0.005, \eta = 10, \alpha = 0.1, \beta = 0$. Figure~\ref{fig:unadjsuted_replication} shows these results for four different points in time. On the left side you can see the two dimensional plots of the tumor cell density and on the right side you can see plots produced by applying the Plot Over Line tool. As mentioned above we will, for the most part, resort to using only the results produced by the Plot Over Line tool. You can see in the plots of figure~\ref{fig:unadjsuted_replication} on the right side the curves for the three variables are clearly distinguishable and we can estimate their values spacially and temporarily better, than using 2D plots to estimate values.
 
 Starting from the inital values we see that after $t=4$ a very small secession of the tumor cells is starting to form. This secession 

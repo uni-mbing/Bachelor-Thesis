@@ -1189,11 +1189,11 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT ./resources/images/first_replication_results.png
-INPUT ./resources/images/first_replication_results.png
-INPUT resources/images/first_replication_results.png
-INPUT ./resources/images/first_replication_results.png
-INPUT ./resources/images/first_replication_results.png
+INPUT ./resources/images/first_replication_POL.png
+INPUT ./resources/images/first_replication_POL.png
+INPUT resources/images/first_replication_POL.png
+INPUT ./resources/images/first_replication_POL.png
+INPUT ./resources/images/first_replication_POL.png
 INPUT ./resources/images/alpha_comparison.png
 INPUT ./resources/images/alpha_comparison.png
 INPUT resources/images/alpha_comparison.png
