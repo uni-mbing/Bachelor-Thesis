@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.24)  26 APR 2024 16:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.24)  27 APR 2024 12:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1316,36 +1316,31 @@ Package pdftex.def Info: resources/images/prolif_eta_mu2_variation.png  used on 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[52 <./resources/images/prolif_dc_gamma_mu1_2.png>] [53 <./resources/images/prolif_eta_mu2_variation.png>]
-<resources/images/2D_initial_conditions_heterogenous_ECM.png, id=266, 578.16pt x 289.08pt>
+[52 <./resources/images/prolif_dc_gamma_mu1_2.png>]
+<resources/images/2D_initial_conditions_heterogenous_ECM.png, id=262, 578.16pt x 289.08pt>
 File: resources/images/2D_initial_conditions_heterogenous_ECM.png Graphic file (type png)
 <use resources/images/2D_initial_conditions_heterogenous_ECM.png>
-Package pdftex.def Info: resources/images/2D_initial_conditions_heterogenous_ECM.png  used on input line 651.
+Package pdftex.def Info: resources/images/2D_initial_conditions_heterogenous_ECM.png  used on input line 650.
 (pdftex.def)             Requested size: 386.96027pt x 193.47968pt.
+ [53 <./resources/images/prolif_eta_mu2_variation.png>]
 
+LaTeX Warning: Reference `fig:tumour_invasion_stage' on page 54 undefined on input line 655.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Reference `fig:tumour_invasion_stage' on page 54 undefined on input line 656.
-
-[54]
-<resources/images/2D_heterogenous_ECM.png, id=271, 578.16pt x 650.43pt>
+<resources/images/2D_heterogenous_ECM.png, id=267, 578.16pt x 650.43pt>
 File: resources/images/2D_heterogenous_ECM.png Graphic file (type png)
 <use resources/images/2D_heterogenous_ECM.png>
-Package pdftex.def Info: resources/images/2D_heterogenous_ECM.png  used on input line 670.
+Package pdftex.def Info: resources/images/2D_heterogenous_ECM.png  used on input line 669.
 (pdftex.def)             Requested size: 578.15858pt x 650.4284pt.
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: Reference `fig:tumour_invasion_stage' on page 55 undefined on input line 676.
+LaTeX Warning: Reference `fig:tumour_invasion_stage' on page 54 undefined on input line 675.
 
-[55 <./resources/images/2D_initial_conditions_heterogenous_ECM.png>] [56 <./resources/images/2D_heterogenous_ECM.png>]) [57]
+[54 <./resources/images/2D_initial_conditions_heterogenous_ECM.png>] [55 <./resources/images/2D_heterogenous_ECM.png>]) [56]
 \openout2 = `content/conclusion_discussion.aux'.
 
- (./content/conclusion_discussion.tex) [58
+ (./content/conclusion_discussion.tex) [57
 
 
 
@@ -1358,10 +1353,10 @@ Overfull \hbox (160.96461pt too wide) in paragraph at lines 66--66
 \T1/cmr/m/n/12 https://doi.org/10.14492/hokmj/1520928060  doi=10.1155/2011/452320, url=https://doi.org/10.1155/2011/452320
  []
 
-[59
+[58
 
 
-] [60] (./bachelors_report.aux (./formalia/bachelors_title_page.aux) (./formalia/eigenständigkeitserklärung.aux) (./formalia/abstract.aux) (./content/introduction.aux) (./content/theoretical_background.aux) (./content/modelling.aux) (./content/experiments_results.aux) (./content/conclusion_discussion.aux))
+] [59] (./bachelors_report.aux (./formalia/bachelors_title_page.aux) (./formalia/eigenständigkeitserklärung.aux) (./formalia/abstract.aux) (./content/introduction.aux) (./content/theoretical_background.aux) (./content/modelling.aux) (./content/experiments_results.aux) (./content/conclusion_discussion.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -1378,10 +1373,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  86i,12n,117p,2273b,1316s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on bachelors_report.pdf (61 pages, 4094842 bytes).
+Output written on bachelors_report.pdf (60 pages, 4093057 bytes).
 PDF statistics:
- 398 PDF objects out of 1000 (max. 8388607)
- 214 compressed objects within 3 object streams
+ 394 PDF objects out of 1000 (max. 8388607)
+ 211 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  193 words of extra memory for PDF output out of 10000 (max. 10000000)
 
