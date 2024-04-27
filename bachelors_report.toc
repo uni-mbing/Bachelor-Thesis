@@ -4,16 +4,16 @@
 \contentsline {subsection}{\numberline {2.2}Mathematical Methods in Oncology}{9}{}%
 \contentsline {section}{\numberline {3}Modelling}{11}{}%
 \contentsline {subsection}{\numberline {3.1}Mathematical Formulation}{11}{}%
-\contentsline {subsection}{\numberline {3.2}Numerical Formulation and Parameters}{12}{}%
-\contentsline {section}{\numberline {4}Experiments and Results}{14}{}%
-\contentsline {subsection}{\numberline {4.1}2D Results without Proliferation and Renewal - Homogenous ECM}{15}{}%
-\contentsline {subsubsection}{\numberline {4.1.1}Basecase Analysis}{17}{}%
-\contentsline {subsubsection}{\numberline {4.1.2}Parameter Analysis}{20}{}%
-\contentsline {subsection}{\numberline {4.2}2D Results with Proliferation and Renewal - Homogenous ECM}{39}{}%
-\contentsline {subsubsection}{\numberline {4.2.1}Basecase Analysis}{42}{}%
-\contentsline {subsubsection}{\numberline {4.2.2}Parameter Analysis}{43}{}%
-\contentsline {subsection}{\numberline {4.3}3D Results with Proliferation and Renewal - Homogenous ECM}{55}{}%
-\contentsline {subsubsection}{\numberline {4.3.1}Basecase Analysis}{55}{}%
-\contentsline {subsection}{\numberline {4.4}2D Results with Proliferation and Renewal - Heterogenous ECM}{55}{}%
-\contentsline {subsection}{\numberline {4.5}3D Results with Proliferation and Renewal - Heterogenous ECM}{57}{}%
-\contentsline {section}{\numberline {5}Conclusion and Discussion}{58}{}%
+\contentsline {subsection}{\numberline {3.2}Numerical Formulation and Parameters}{13}{}%
+\contentsline {section}{\numberline {4}Experiments and Results}{15}{}%
+\contentsline {subsection}{\numberline {4.1}2D Results without Proliferation and Renewal - Homogenous ECM}{16}{}%
+\contentsline {subsubsection}{\numberline {4.1.1}Basecase Analysis}{18}{}%
+\contentsline {subsubsection}{\numberline {4.1.2}Parameter Analysis}{21}{}%
+\contentsline {subsection}{\numberline {4.2}2D Results with Proliferation and Renewal - Homogenous ECM}{40}{}%
+\contentsline {subsubsection}{\numberline {4.2.1}Basecase Analysis}{43}{}%
+\contentsline {subsubsection}{\numberline {4.2.2}Parameter Analysis}{44}{}%
+\contentsline {subsection}{\numberline {4.3}3D Results with Proliferation and Renewal - Homogenous ECM}{56}{}%
+\contentsline {subsubsection}{\numberline {4.3.1}Basecase Analysis}{56}{}%
+\contentsline {subsection}{\numberline {4.4}2D Results with Proliferation and Renewal - Heterogenous ECM}{56}{}%
+\contentsline {subsection}{\numberline {4.5}3D Results with Proliferation and Renewal - Heterogenous ECM}{58}{}%
+\contentsline {section}{\numberline {5}Conclusion and Discussion}{59}{}%
