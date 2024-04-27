@@ -13,7 +13,7 @@ with zero-flux boundary conditions:
 	\zeta \cdot  (-D_c \nabla c + c \chi\nabla e) &= 0 \label{eq4}\\
 	\zeta \cdot (-D_m\nabla m ) &= 0\label{eq5}
 \end{align}
-where the free parameters are $D_c$, $D_m$, $\chi$, $\delta$, $\mu_1$, $\mu_2$, $\mu_3$, $\lambda$ and $\zeta$ is an appropriate outward unit vector. 
+where the free parameters are $D_c$, $D_m$, $\chi$, $\delta$, $\mu_1$, $\mu_2$, $\mu_3$, $\lambda$ and $\zeta$ is an appropriate outward unit vector. These free parameters as well as their updated versions are all assumed to be positive real numbers.
 
 The variable $c$ describes the tumor cell density, $e$ the concentration of the extracellular matrix, and $m$ the matrix-degrading enzyme concentration. All of those functions are mathematically defined to be mapping a one,two or three-dimensional spacial value $x$ and a temporal value $t$ to a scalar value describing the respective quantity at a specific point in space and time $(x,t)$, $\{c,e,m\}: \mathbb{R}^{i} \times \mathbb{R} \rightarrow \mathbb{R}, i \in \{1,2,3\}$.
 
@@ -22,7 +22,7 @@ To derive the expression of the tumor cell density $c$, we are going to assume t
     J_{hapto} = \chi c \nabla e \\
     J_{random} = -D_c \nabla c
 \end{align*}
-$\chi$ is the haptotactic flux coefficient and $D_c$ is a random mobility coefficient, both defined as positive real numbers. These parameters could also be a function of, for example, extracellular matrix and or matrix-degrading enzyme concentration. Knowing that cells grow over time and proliferate, we want to respect this in our model with a term for tumor cell proliferation: $\mu_1 c (1-\frac{c}{c_0} - \frac{e}{e_0})$.
+$\chi$ is the haptotactic flux coefficient and $D_c$ is a random mobility coefficient. These parameters could also be a function of, for example, extracellular matrix and or matrix-degrading enzyme concentration. Knowing that cells grow over time and proliferate, we want to respect this in our model with a term for tumor cell proliferation: $\mu_1 c (1-\frac{c}{c_0} - \frac{e}{e_0})$.
 
 The idea is that this term describes the cell proliferation with a logistic growth model respecting spacial limiting factors of already present extracellular matrix molecules and tumor cells, $\mu_1$ describes the rate at which tumor cell proliferation and growth happens. In the initial model proposed by Anderson et al.~\cite{anderson_continuous_1998, anderson_mathematical_2000} and Chaplain et al.~\cite{anderson_continuous_1998,chaplain_mathematical_2006,franssen_mathematical_2019}, they did not respect proliferation of tumor cells and extracellular matrix renewal. They applied a conservation equation for the tumor cells, which yields:
 \begin{align*}
@@ -39,7 +39,7 @@ To model the extracellular-matrix concentration $e$, we assume that the enzymes 
 \begin{align*}
     \frac{\partial e}{\partial t} = -\delta m e
 \end{align*}
-where $\delta$ is a positive constant describing this degradation process. For the extended model we add a term describing the renewal process of the extracellular matrix, which is also being modeled by logisitc growth incorporating limiting factos of presenet tumor cells and extracellular matrix molecules:
+where $\delta$ is the constant describing this degradation process. For the extended model we add a term describing the renewal process of the extracellular matrix, which is also being modeled by logisitc growth incorporating limiting factos of presenet tumor cells and extracellular matrix molecules:
 \begin{align*}
     \frac{\partial e}{\partial t} = -\delta m e + \mu_2 c (1 - \frac{c}{c_0} - \frac{e}{e_0})
 \end{align*}
