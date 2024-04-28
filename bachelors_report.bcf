@@ -2370,7 +2370,7 @@
     <bcf:citekey order="14">anderson_continuous_1998</bcf:citekey>
     <bcf:citekey order="14">anderson_mathematical_2000</bcf:citekey>
     <bcf:citekey order="15">anderson_continuous_1998</bcf:citekey>
-    <bcf:citekey order="15">chaplain_mathematical_2006</bcf:citekey>
+    <bcf:citekey order="15">chaplain_mathematical_2006-1</bcf:citekey>
     <bcf:citekey order="15">franssen_mathematical_2019</bcf:citekey>
     <bcf:citekey order="16">anderson_mathematical_2000</bcf:citekey>
     <bcf:citekey order="17">hiflow3</bcf:citekey>
@@ -2399,13 +2399,12 @@
     <bcf:citekey order="40">Yin2019-sr</bcf:citekey>
     <bcf:citekey order="41">chaplain_mathematical_2006-1</bcf:citekey>
     <bcf:citekey order="42">Merino-Casallo2022-di</bcf:citekey>
-    <bcf:citekey order="43">chaplain_mathematical_2006</bcf:citekey>
-    <bcf:citekey order="44">hiflow3</bcf:citekey>
-    <bcf:citekey order="45">paraview</bcf:citekey>
-    <bcf:citekey order="46">STEPHANOU200696</bcf:citekey>
-    <bcf:citekey order="47">Kolev2010</bcf:citekey>
-    <bcf:citekey order="48">article</bcf:citekey>
-    <bcf:citekey order="49">Lu2011-yt</bcf:citekey>
+    <bcf:citekey order="43">hiflow3</bcf:citekey>
+    <bcf:citekey order="44">paraview</bcf:citekey>
+    <bcf:citekey order="45">STEPHANOU200696</bcf:citekey>
+    <bcf:citekey order="46">Kolev2010</bcf:citekey>
+    <bcf:citekey order="47">article</bcf:citekey>
+    <bcf:citekey order="48">Lu2011-yt</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

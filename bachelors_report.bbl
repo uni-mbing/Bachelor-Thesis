@@ -357,7 +357,6 @@
       \strng{authorbibnamehash}{e83974044700dd345e2f510a557b13ad}
       \strng{authornamehash}{132df924acb8e1a2bc91073d36a63047}
       \strng{authorfullhash}{e83974044700dd345e2f510a557b13ad}
-      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -435,65 +434,6 @@
       \field{year}{2022}
       \field{pages}{25\bibrangedash 64}
       \range{pages}{40}
-    \endentry
-    \entry{chaplain_mathematical_2006}{article}{}
-      \name{author}{3}{}{%
-        {{hash=6b105805ece9632a432753099f721c1b}{%
-           family={Chaplain},
-           familyi={C\bibinitperiod},
-           given={M.A.J.},
-           giveni={M\bibinitperiod}}}%
-        {{hash=f75d81d2c1ca2442ee9d7d17204cc4cb}{%
-           family={McDougall},
-           familyi={M\bibinitperiod},
-           given={S.R.},
-           giveni={S\bibinitperiod}}}%
-        {{hash=799e3a25a7423ad8a23bb13efa4dee3c}{%
-           family={Anderson},
-           familyi={A\bibinitperiod},
-           given={A.R.A.},
-           giveni={A\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {en}%
-      }
-      \strng{namehash}{132df924acb8e1a2bc91073d36a63047}
-      \strng{fullhash}{584b10aa759ab6e9311a0a691a3b48ba}
-      \strng{bibnamehash}{584b10aa759ab6e9311a0a691a3b48ba}
-      \strng{authorbibnamehash}{584b10aa759ab6e9311a0a691a3b48ba}
-      \strng{authornamehash}{132df924acb8e1a2bc91073d36a63047}
-      \strng{authorfullhash}{584b10aa759ab6e9311a0a691a3b48ba}
-      \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Angiogenesis, the growth of a network of blood vessels, is a crucial component of solid tumor growth, linking the relatively harmless avascular and the potentially fatal vascular growth phases of the tumor. As a process, angiogenesis is a well-orchestrated sequence of events involving endothelial cell migration and proliferation; degradation of tissue; new capillary vessel formation; loop formation (anastomosis) and, crucially, blood flow through the network. Once there is flow associated with the nascent network, subsequent growth evolves both temporally and spatially in response to the combined effects of angiogenic factors, migratory cues via the extracellular matrix, and perfusion-related hemodynamic forces in a manner that may be described as both adaptive and dynamic. In this article, we first present a review of previous theoretical and computational models of angiogenesis and then indicate how recent developments in flow models are providing insight into antiangiogenic and chemotherapeutic drug treatment of solid tumors.}
-      \field{issn}{1523-9829, 1545-4274}
-      \field{journaltitle}{Annual Review of Biomedical Engineering}
-      \field{month}{8}
-      \field{number}{1}
-      \field{title}{{MATHEMATIC﻿@Article{Kolev2010, author={Kolev, M. and Zubik-Kowal, B.}, title={Numerical Solutions for a Model of Tissue Invasion and Migration of Tumour Cells}, journal={Computational and Mathematical Methods in Medicine}, year={2010}, month={Dec}, day={30}, publisher={Hindawi Publishing Corporation}, volume={2011}, pages={452320}, abstract={The goal of this paper is to construct a new algorithm for the numerical simulations of the evolution of tumour invasion and metastasis. By means of mathematical model equations and their numerical solutions we investigate how cancer cells can produce and secrete matrixdegradative enzymes, degrade extracellular matrix, and invade due to diffusion and haptotactic migration. For the numerical simulationsof the interactions between the tumour cells and the surrounding tissue, we apply numerical approximations, which are spectrally accurateand based on small amounts of grid-points. Our numerical experiments illustrate the metastatic ability of tumour cells.},@article{10.14492/hokmj/1520928060, author = {Akio ITO}, title = {{Large-time behavior of solutions to a tumor invasion model of Chaplain–Anderson type with quasi-variational structure}}, volume = {47}, journal = {Hokkaido Mathematical Journal}, number = {1}, publisher = {Hokkaido University, Department of Mathematics}, pages = {33 -- 67}, keywords = {large-time behavior, quasi-variational structure, tumor invasion}, year = {2018}, doi = {10.14492/hokmj/1520928060}, URL = {https://doi.org/10.14492/hokmj/1520928060} } doi={10.1155/2011/452320}, url={https://doi.org/10.1155/2011/452320} } AL} {MODELING} {OF} {TUMOR}-{INDUCED} {ANGIOGENESIS}}
-      \field{urlday}{24}
-      \field{urlmonth}{1}
-      \field{urlyear}{2023}
-      \field{volume}{8}
-      \field{year}{2006}
-      \field{urldateera}{ce}
-      \field{pages}{233\bibrangedash 257}
-      \range{pages}{25}
-      \verb{doi}
-      \verb 10.1146/annurev.bioeng.8.061505.095807
-      \endverb
-      \verb{file}
-      \verb Full Text:/home/valentin/Zotero/storage/ZY9YVELZ/Chaplain et al. - 2006 - MATHEMATICAL MODELING OF TUMOR-INDUCED ANGIOGENESI.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://www.annualreviews.org/doi/10.1146/annurev.bioeng.8.061505.095807
-      \endverb
-      \verb{url}
-      \verb https://www.annualreviews.org/doi/10.1146/annurev.bioeng.8.061505.095807
-      \endverb
     \endentry
     \entry{hiflow3}{article}{}
       \name{author}{3}{}{%
