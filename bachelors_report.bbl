@@ -545,51 +545,6 @@
       \endverb
       \keyw{Angiogenesis,Blood flow,Capillary remodelling}
     \endentry
-    \entry{Kolev2010}{article}{}
-      \name{author}{2}{}{%
-        {{hash=cb57a2a127322c5e47f9d41e5d5b348e}{%
-           family={Kolev},
-           familyi={K\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod}}}%
-        {{hash=02bd4d98ee2c7620b38758877619e116}{%
-           family={Zubik-Kowal},
-           familyi={Z\bibinithyphendelim K\bibinitperiod},
-           given={B.},
-           giveni={B\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Hindawi Publishing Corporation}%
-      }
-      \strng{namehash}{72ad5a221fcbf4c0495dff50596d5b34}
-      \strng{fullhash}{72ad5a221fcbf4c0495dff50596d5b34}
-      \strng{bibnamehash}{72ad5a221fcbf4c0495dff50596d5b34}
-      \strng{authorbibnamehash}{72ad5a221fcbf4c0495dff50596d5b34}
-      \strng{authornamehash}{72ad5a221fcbf4c0495dff50596d5b34}
-      \strng{authorfullhash}{72ad5a221fcbf4c0495dff50596d5b34}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{The goal of this paper is to construct a new algorithm for the numerical simulations of the evolution of tumour invasion and metastasis. By means of mathematical model equations and their numerical solutions we investigate how cancer cells can produce and secrete matrixdegradative enzymes, degrade extracellular matrix, and invade due to diffusion and haptotactic migration. For the numerical simulationsof the interactions between the tumour cells and the surrounding tissue, we apply n@article{10.14492/hokmj/1520928060, author = {Akio ITO}, title = {{Large-time behavior of solutions to a tumor invasion model of Chaplain–Anderson type with quasi-variational structure}}, volume = {47}, journal = {Hokkaido Mathematical Journal}, number = {1}, publisher = {Hokkaido University, Department of Mathematics}, pages = {33 -- 67}, keywords = {large-time behavior, quasi-variational structure, tumor invasion}, year = {2018}, doi = {10.14492/hokmj/1520928060}, URL = {https://doi.org/10.14492/hokmj/1520928060} }umerical approximations, which are spectrally accurateand based on small amounts of grid-points. Our numerical experiments illustrate the metastatic ability of tumour cells.}
-      \field{issn}{1748-670X}
-      \field{journaltitle}{Computational and Mathematical Methods in Medicine}
-      \field{month}{12}
-      \field{title}{Numerical Solutions for a Model of Tissue Invasion and Migration of Tumour Cells}
-      \field{volume}{2011}
-      \field{year}{2010}
-      \field{pages}{452320}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1155/2011/452320
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1155/2011/452320
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1155/2011/452320
-      \endverb
-    \endentry
     \entry{article}{article}{}
       \name{author}{5}{}{%
         {{hash=2b24c2399c94bceb810dc692ccf6f28c}{%
@@ -635,6 +590,51 @@
       \field{year}{1990}
       \field{pages}{1427\bibrangedash 38}
       \range{pages}{12}
+    \endentry
+    \entry{Kolev2010}{article}{}
+      \name{author}{2}{}{%
+        {{hash=cb57a2a127322c5e47f9d41e5d5b348e}{%
+           family={Kolev},
+           familyi={K\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=02bd4d98ee2c7620b38758877619e116}{%
+           family={Zubik-Kowal},
+           familyi={Z\bibinithyphendelim K\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Hindawi Publishing Corporation}%
+      }
+      \strng{namehash}{72ad5a221fcbf4c0495dff50596d5b34}
+      \strng{fullhash}{72ad5a221fcbf4c0495dff50596d5b34}
+      \strng{bibnamehash}{72ad5a221fcbf4c0495dff50596d5b34}
+      \strng{authorbibnamehash}{72ad5a221fcbf4c0495dff50596d5b34}
+      \strng{authornamehash}{72ad5a221fcbf4c0495dff50596d5b34}
+      \strng{authorfullhash}{72ad5a221fcbf4c0495dff50596d5b34}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The goal of this paper is to construct a new algorithm for the numerical simulations of the evolution of tumour invasion and metastasis. By means of mathematical model equations and their numerical solutions we investigate how cancer cells can produce and secrete matrixdegradative enzymes, degrade extracellular matrix, and invade due to diffusion and haptotactic migration. For the numerical simulationsof the interactions between the tumour cells and the surrounding tissue, we apply n@article{10.14492/hokmj/1520928060, author = {Akio ITO}, title = {{Large-time behavior of solutions to a tumor invasion model of Chaplain–Anderson type with quasi-variational structure}}, volume = {47}, journal = {Hokkaido Mathematical Journal}, number = {1}, publisher = {Hokkaido University, Department of Mathematics}, pages = {33 -- 67}, keywords = {large-time behavior, quasi-variational structure, tumor invasion}, year = {2018}, doi = {10.14492/hokmj/1520928060}, URL = {https://doi.org/10.14492/hokmj/1520928060} }umerical approximations, which are spectrally accurateand based on small amounts of grid-points. Our numerical experiments illustrate the metastatic ability of tumour cells.}
+      \field{issn}{1748-670X}
+      \field{journaltitle}{Computational and Mathematical Methods in Medicine}
+      \field{month}{12}
+      \field{title}{Numerical Solutions for a Model of Tissue Invasion and Migration of Tumour Cells}
+      \field{volume}{2011}
+      \field{year}{2010}
+      \field{pages}{452320}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1155/2011/452320
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1155/2011/452320
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1155/2011/452320
+      \endverb
     \endentry
     \entry{Lu2011-yt}{article}{}
       \name{author}{4}{}{%
