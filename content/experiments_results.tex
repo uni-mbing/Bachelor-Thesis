@@ -16,38 +16,79 @@ Looking at the parameter estimates from \cite{anderson_mathematical_2000} to non
 
 Since Anderson et al. do not specify the exact value for $L$, we needed to determine appropriate configurations for $dt$ used in our simulation to get comparable results. We used a timestep of $dt=0.01$, corresponding to $400s$ and let the simulations run for a dimensionless time of $t=8$ corresponding to $320000s=88$ $days$. Looking at the results below, we found that for every unit of time in Anderson et al.'s experiments, in our experiments, $0.4$ units of time have passed.
 
-Another challenge is diffusion and haptotaxis coefficients. Since they depend on the dimension we are in, not only on the concentration of a variable, we have to find our own estimates as a baseline value. The section regarding the 3D experiments with homogenous extracellular matrix structure has an extended discussion of this.
+Another challenge are the diffusion and haptotaxis coefficients. Since they depend on the dimension we are in, we first have to find our own estimates as a baseline value. We will use these baseline values as a foundation for the Parameter Analysis. In the Parameter Analysis we will vary one or more, at most 3 parameters at time to get an overview of their effects. 
 
-For each stage of the experiments, we will use a set of baseline parameters, which will be evaluated experimentally. From there, we will vary one or more parameters at a time to get an overview of their effects. 
+For all the plots of the experiments, the red curve indicates the tumor cell density, the blue curve the ECM concentration and the green curve the MDE concentration.
 
-For all the plots of the experiments, the red curve indicates the tumor cell density, the blue curve the ECM concentration and the green curve the MDE concentration.  
+Before starting with the experiments we need to discuss the system's initial conditions. We state them for three dimensions, but for two or one dimension the $y$ or $z$ terms need to be left out.
+
+We assume for that at dimensionless time $t=0$, there is already a nodule of cells located at the center of the unit domain $\Omega$ that has produced a concentration of matrix-degrading enzymes and has already degraded the extracellular matrix at the center. We therefore define the initial conditions for the tumor cell density as:
+\begin{align*}
+    c(x,y,z,0)= \exp(-\frac{(x-0.5)^2+(y-0.5)^2+(z-0.5)^2}{0.01})
+\end{align*}
+and the initial conditions of the matrix-degrading enzymes are described as:
+\begin{align*}
+    m(x,y,z,0) = 0.5 \exp(-\frac{(x-0.5)^2+(y-0.5)^2+(z-0.5)^2}{0.01})
+\end{align*}
+
+Regarding the structure of the extracellular matrix we are using two cases; first a homogenous ECM strucutre and second a heterogenous ECM structure.
+The strucutre of the homogenous extracellular matrix looks as follow:
+\begin{align*}
+    e(x,y,z,0) = 1 - 0.5 \exp(-\frac{(x-0.5)^2+(y-0.5)^2+(z-0.5)^2}{0.01})
+\end{align*}
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth]{resources/images/2D_initial_conditions_homogenous_ECM.png}
+    \caption{Visualization of the initial value distribution for an experiment in two space dimensions with a homogenous extracellular matrix}
+    \label{fig:2D_homogenous_ECM_initial}
+\end{figure}
+Figure~\ref{fig:2D_homogenous_ECM_initial} shows a 2D plot of the initial conditions using the homogenous extracellular matrix structure. The images describing the tumor cell density and the matrix-degrading enzyme concentration have high values in the center. The image describing the extracellular matrix has high values everywhere except the center since the matrix-degrading enzymes have already degraded the ECM.
+
+
+The other case we are investigating is using a heterogenous structured extracellular matrix. In section~\ref{sec:2D_heterogenous}, we investigate how a more realistic structure of the ECM will affect the results of a 2D simulation. Since we are looking at a heterogenous extracellular matrix only for in experiments with two spacial dimensions we are stating the initial conditions one the variable $e$ also for two spatial dimensions. For this scenario, we also assume a nodule of tumor cells in the center of the simulation that has produced a concentration of matrix-degrading enzymes. Contrary to the homogenous ECM strucutre, we assume that the tumor cells are located at a basement membrane that they already have invaded and are now pushing into the extracellular matrix behind it, located on the left side looking from the center. These assumptions are described in figure~\ref{fig:tumour_invasion_stage}. While the initial conditions on tumor cell density and matrix-degrading enzyme concentration are the same for both cases of ECM strucutre, we have to change the initial values of the variable $e$ to the following:
+\begin{align*}
+    e(x,y,0) = (1 - 0.5 \exp(-\frac{(x-0.5)^2+(y-0.5)^2+(z-0.5)^2}{0.01}))\frac{1}{1+\exp(-\frac{2}{0.1 (x-0.5)})}
+\end{align*}
+
+\begin{figure}[h]
+    \centering
+    \label{fig:Initial_Value_Distribution}
+    \includegraphics[width=\textwidth]{resources/images/2D_initial_conditions_heterogenous_ECM.png}
+    \caption{Visualization of the initial value distribution for an experiment in two space dimensions with a heterogenous extracellular matrix}
+    \label{fig:2D_heterogenous_ECM_initial}
+\end{figure}
+Figure~\ref{fig:2D_heterogenous_ECM_initial} describes these modifications on $e$ and shows the inital conditions for our system using a heterogenous ECM structure.
+  
+
 
 \subsection{Dimension Variation}
 
-
-We will start with replicating the first experiment from Anderson et al.\cite{anderson_mathematical_2000} in two and three spacial dimensions. Figure~\ref{fig:anderson_experiment} shows a screenshot of this experiment, unfortunately in low resolution, since the original paper had not included any digital data containing the diagrams of their results.
+Before starting with the Parameter Analysis, we need to discuss how changing the dimension varies the results and what adjustments we need to take, to make our model mimick the one given by Anderson et al. Therefore we start with using the parameters given by Anderson et al.'s first experiment~\cite{anderson_mathematical_2000}. Figure~\ref{fig:anderson_experiment} shows a screenshot of this experiment, unfortunately in low resolution, since the original paper had not included any digital data containing the diagrams of their results.
 \begin{figure}[ht!]
  \centering
  \includegraphics[width=\textwidth]{resources/images/anderson_experiment.png}
  \caption{Andersons first one dimensional experiment using the parameter values $d_c = 1\cdot 10^{-3}, d_m = 1\cdot 10^{-3}, \gamma = 0.005, \eta = 10, \alpha = 0.1, \beta = 0, \mu_1 = 0, \mu_2 = 0$}
  \label{fig:anderson_experiment}
 \end{figure}
-In figure~\ref{fig:anderson_experiment}, you can see that after $t=1$ in their timescale, the tumor cells develop a division at the part invading the tissue. This division propagates to a pointy peak at a later point in time. The concentration of the matrix-degrading enzymes increases continuously and the concentration of the extracellular matrix decreases continuously. Their $x$-axis is stretched or rescaled to show an interval from $0$ to $1$. In our case, the interval on the plots has only $x$-values from $0$ to $0.5$.
+In the figure, you can see that after $t=1$ in their timescale, the tumor cells develop a division at the part invading the tissue. This division propagates to a pointy peak at a later point in time. The concentration of the matrix-degrading enzymes increases continuously and the concentration of the extracellular matrix decreases continuously. Their $x$-axis is stretched or rescaled to show an interval from $0$ to $1$. In our case, the interval on the plots has only $x$-values from $0$ to $0.5$.
+
 \begin{figure}[ht!]
  \centering
- \includegraphics[width=\textwidth]{resources/images/first_replication_POL.png}
- \caption{Results using Anderson et al.'s parameters produced by applying the Plot Over Line tool}
+ \includegraphics[width=\textwidth]{resources/images/1D_replication_3D.png}
+ \caption{Results using Anderson et al.'s parameters produced by applying the Plot Over Line tool in two and three dimensions}
  \label{fig:unadjsuted_replication}
 \end{figure}
-Replicating this experiment in two dimensions, we start with the same parameters as Anderson et al. had used, $d_c = 1\cdot 10^{-3}, d_m = 1\cdot 10^{-3}, \gamma = 0.005, \eta = 10, \alpha = 0.1, \beta = 0$. Figure~\ref{fig:unadjsuted_replication} shows these results for four different points in time. The two-dimensional plots of the tumor cell density are shown on the left side and on the right side, the plots produced by applying the Plot Over Line tool are displayed. As mentioned above, we will mostly resort to using only the results produced by the Plot Over Line tool. Figure~\ref{fig:unadjsuted_replication} shows on the right side that the curves for the three variables are distinguishable and we can estimate their values spacially and temporarily better than using 2D plots to estimate values.
 
-Starting from the initial values, we see that after $t=4$, a very small division of the tumor cells is starting to form. This division increases in the image at $t=4$, but at $t=8$, it has visibly flattened. It is not as pointy as seen in the one-dimensional experiments. The interplay of the diffusion and haptotaxis factors determines how considerable this division will be that splits from the primary lump of the tumor cells and invades the tissue faster. It will also decide how pointy this secondary lump of tumor cells will be. Biologically, this relation between diffusion and haptotaxis translates to the invasion pace of the tumor cells, the rate at which much of them will remain at the center and how much will invade further into the tissue.
+Replicating this experiment in two and three dimensions, we start with the same parameters as Anderson et al. had used, $d_c = 1\cdot 10^{-3}, d_m = 1\cdot 10^{-3}, \gamma = 0.005, \eta = 10, \alpha = 0.1, \beta = 0$. Figure~\ref{fig:unadjsuted_replication} and adjust them to make our simulation match Anderson et al.'s as good as possible. 
 
-Looking at the concentration of matrix-degrading enzymes, we see it is visibly lower here than in Anderson et al.'s experiment. We see little increase across time. We can change this by changing the production factor of $\alpha$. This factor determines how fast the tumor cells produce the matrix-degrading enzymes, degrading the extracellular matrix and allowing the tumor cells to invade the tissue further.
+Starting from the initial values, we see that after $t=0.4$, a very small division of the tumor cells is starting to form for both dimensions. This division increases strongly for the experiment done in two dimensions and minimal for the experiment done in three dimensions at $t=4$. At $t=8$, both curves visibly flatten. We see that the division of tumor cells detaching from the primary tumor are not as pregnant as in the one-dimensional experiment of Anderson et al. The interplay of the diffusive and haptotatic factors determines how considerable this division will be that detaches from the primary lump of the tumor cells and invades the tissue faster. It will also decide how pointy this secondary lump of tumor cells will be. Biologically, this relation between diffusion and haptotaxis translates to the invasion pace of the tumor cells, the rate at which how much of them will remain at the primary tumor and how much will invade further into the tissue degrading the extracellular matrix.
+
+Looking at the concentration of matrix-degrading enzymes, we see it is visibly lower here than in Anderson et al.'s experiment. We see little increase over time. We can change this by changing the production factor of $\alpha$ or by adjusting the motility of the tumor cells producing them exponentially. The factor $\alpha$ determines how fast the tumor cells produce the matrix-degrading enzymes, degrading the extracellular matrix and allowing the tumor cells to invade the tissue further.
 
 Only the extracellular matrix concentration seems to mimic the behavior of Anderson et al.'s experiment. It decreases continuously and as the last image shows, there is still a considerable amount left.
 
-To replicate Anderson et al.'s results, we will start adjusting the parameters mentioned: the tumor cells' diffusion coefficient, their haptotatic coefficient and the production rate of the matrix-degrading enzymes. Making the curves fit ideally will be impossible due to the system's high degrees of freedom and the change of dimension. Regardless, we will replicate as best as possible, focusing on the values the variables will take at the origin $x=0$.
+To replicate Anderson et al.'s results, we will start adjusting the parameters mentioned exemplary in two spacial dimensions: the tumor cells' diffusion and haptotxis coefficients and the production rate of the matrix-degrading enzymes. We are focusing on the values the variables will take at the origin $x=0$. Since Anderson et al. used in the original paper the model without tumor cell proliferation and extracellular matrix renewal, we are using the same model during the dimensional variation.
 
 \begin{figure}[!htb]
  \centering
@@ -55,6 +96,7 @@ To replicate Anderson et al.'s results, we will start adjusting the parameters m
  \caption{Comparison of $\alpha$ values to replicate Anderson et al.'s experiment}
  \label{fig:replication_alpha_comparison}
 \end{figure}
+
 Starting with comparing different values for $\alpha$, we see in figure~\ref{fig:replication_alpha_comparison} a comparison of how this affects the curve for the matrix-degrading enzyme concentration. A maximum difference between the compared values of $0.2$ already causes drastic changes. In Anderson et al.'s experiment, we observed a value of approximately $m(0,1)=0.5$ after, in their timescale, $t=1$ at the origin. This value is mimicked best for a value of $\alpha=0.2$ in our experiments. However, in the later points in time, we see that this value for $\alpha$ is insufficiently low in terms of increase, though choosing $\alpha$ higher than $\alpha=0.4$ results in an accelerated ECM degradation that is too fast. Taking a value between those two allowed our simulations to exhibit the observed behavior. We choose a value of $\alpha=0.35645$ to use in the later experiments as a basecase.
 
 \begin{figure}[!htb]
@@ -63,6 +105,7 @@ Starting with comparing different values for $\alpha$, we see in figure~\ref{fig
  \caption{Comparison of $d_c$ values to replicate Anderson et al.'s experiment}
  \label{fig:replication_dc_comparison}
 \end{figure}
+
 Looking at the diffusion coefficient for the tumor cells, in figure~\ref{fig:replication_dc_comparison}, you can see different $d_c$ values regarding the tumor cell concentration. It is clear that with decreasing $d_c$, the sharpness of the secondary lump of cells that begins to invade the tissue drastically increases due to increased effects of haptotaxis, which is now the main factor in controlling tumor motility. However, we also observe that with decreasing $d_c$, the remaining lump of tumor cells at the origin increases due to little diffusion here. Over time, we found that $dc=5 \cdot 10^{-4}$ describes Anderson et al.'s experimental results best for our simulations, with a roughly matching density of tumor cells that remains at the origin at all times and, for our case, balanced effects of haptotaxis and diffusion.
 
 \begin{figure}[!htb]
@@ -71,31 +114,17 @@ Looking at the diffusion coefficient for the tumor cells, in figure~\ref{fig:rep
  \caption{Comparison of $\gamma$ values to replicate Anderson et al.'s experiment}
  \label{fig:replication_gamma_comparison}
 \end{figure}
+
 At last, we want to adjust the haptotatic pull slightly; for this, we are looking at a comparison of different $\gamma$ values in figure~\ref{fig:replication_gamma_comparison} depicting the tumor cell density. Comparing our results with Anderson et al.'s, we want a bigger secondary lump that invades the tumor cells faster than the one remaining at the origin. We need to increase $\gamma$ to increase the haptotatic pull that controls tumor cell motility. The figure shows that increasing $\gamma$ yields these effects, but increasing it too much results in a too-fast invasion pace of the surrounding tissue. Increasing $\gamma$ slightly to $\gamma=0.0055$ is sufficient to produce the desired effects.
 
-\begin{figure}[h]
- \centering
- \includegraphics[width=\textwidth]{resources/images/basecase_without_proliferation_.png}
- \caption{Results of using the parameters as described, this experiment will be used as the basecase to compare further experiments regarding the model without proliferation and renewal}
- \label{fig:basecase_without_proliferation}
-\end{figure}
-These adjustments leave us with the final configuration for replicating the system with the curves in figure~\ref{fig:basecase_without_proliferation} and the parameter settings of $d_c=5\cdot 10^{-4}, \gamma=0.0055, \eta=10, d_m=1\cdot 10^{-3}, \alpha=0.35645, \beta=0$. We see the important effects met when comparing our final version with the original experiment we are trying to replicate, figure~\ref{fig:anderson_experiment}. We see that the production of the matrix-degrading enzymes fits the original experiment and the motility of the tumor cells also matches, with balanced effects of haptotaxis and diffusion.
-
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{resources/images/1D_replication_3D.png}
-    \caption{3D Replication of using Anderson et al.'s values}
-    \label{fig:1D_replication_3D}
-\end{figure}
-
-In figure~\ref{fig:1D_replication_3D} you can see a comparison of results produced using Anderson et al.'s values in different dimensions. In the image the solid line describes a 2D replication, the dotted line a 3D replication. This is a very good example of how varying the dimension changes the results; at the first timestep $t=0$ you see that both experiments start with the same initial conditions. However, the second timestep $t=0.4$ shows a tumor cell density that is considerably lower in the 3D experiment than in the 2D experiment. This effect is also observed in the figures~\ref{fig:2D_proliferation_replication_3D} and~\ref{fig:3D_basecase_comparison}. Over time and across the afore mentioned figures the reduced tumor cell density is confirmed. Due to the exponential production of matrix-degrading enzymes by the tumor cells, the change in tumor cell density also effects the MDE concentration massively, resulting also in a lower concentration. The also reduced MDE concentration causes a slower degradation process of the extracellular matrix.
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=\textwidth]{resources/images/2D_proliferation_replication_3D.png}
-    \caption{3D Replication of using the 2D basecases values with proliferation}
+    \includegraphics[width=\textwidth]{resources/images/2D_without_proliferation_replication_3D.png}
+    \caption{3D Replication of using the 2D basecases values}
     \label{fig:2D_proliferation_replication_3D}
 \end{figure}
+
+These adjustments leave us with the final configuration for replicating the system in two dimensions. We see the important effects met when comparing the two dimensional experiment with the original experiment. We see that the production of the matrix-degrading enzymes fits the original experiment and the motility of the tumor cells also matches, with balanced effects of haptotaxis and diffusion. However comparing the three-dimensional experiment to original, there are still major differences. The second timestep $t=0.4$ shows a tumor cell density that is considerably lower in the 3D experiment than in the 2D experiment, which is can also be observed at the later points in time. Due to the exponential production of matrix-degrading enzymes by the tumor cells, the change in tumor cell density also effects the MDE concentration massively, resulting also in a lower concentration. The also reduced MDE concentration causes a slower degradation process of the extracellular matrix.
 
 \begin{figure}[h!]
     \centering
@@ -103,7 +132,8 @@ In figure~\ref{fig:1D_replication_3D} you can see a comparison of results produc
     \caption{Comparing 2D basecase with proliferation and 3D basecase for proliferation}
     \label{fig:3D_basecase_comparison}
 \end{figure}
-Figure~\ref{fig:3D_basecase_comparison} we tried, as we did replicating results of one spacial dimension, to make the results of using 3D simulations align with the results produced in 2D replications. Challenging in this process was, as mentioned previously, that the reduced tumor cell density causes drastic changes in MDE production and ECM degradation. However we can balance this, by increasing the production rate of the matrix-degrading enzymes, as we did in section~\ref{sec:replication_2D_basecase}. Another measure to take is adjusting the relation between diffusion and haptotaxis on the tumor cells. We increased $\gamma$ and decreased $d_c$ for this, because we want more effects of haptotaxis. We choose $\gamma=0.006$ and $d_c=5e-5$. 
+
+In figure~\ref{fig:3D_basecase_comparison}, we used the same scematic we did above, changing $d_c,\gamma$ and $\alpha$ to make the 3D results simulations match the results produced in 2D or 1D. Challenging in this process was, as mentioned previously, that the reduced tumor cell density causes drastic changes in both MDE production and ECM degradation. Settling on the values: $d_c=3 \cdot 10{-4}, \gamma=0.0058, \alpha=0.6$, yields sufficiently matching results.
 
 Now the question arises why we have to change those values to replicate results. We can argue here with the parameter analysis, but also with an algebraic hypothesis. 
 
@@ -141,139 +171,102 @@ Further improvements to make the experiments match better could be made on varyi
 The conclusions we can draw from adjusting the parameters with varying the dimensions are that the most important factor is the tumor cell density. The motility is cruical for the as well the shape of the MDE curve as well as the concentration of it, due to the tumor cells producing them exponentially, but this we can also adjust with the production coefficient $\alpha$. Diffusion coefficient can be calculated algebraicly, as seen above, but for Haptotaxis the coefficient must be determined experimentally. It is to say that due though it is possible to make the simulations across dimensions match at one point in time, it is due to the many different parameters and terms impossible to make them perfeclty fit over time.
 
 
-\begin{longtable}{|c c c c c c c c c c|}
+\begin{longtable}{|c c c c c c c c|}
     \hline
-    Figure & Linestyle & $d_c$ & $\gamma$ & $\mu_1$ & $\eta$ & $\mu_2$ & $d_m$ & $\alpha$ & $\beta$ \\ [0.5ex] 
+    Figure & Linestyle & $d_c$ & $\gamma$ & $\eta$ & $d_m$ & $\alpha$ & $\beta$ \\ [0.5ex] 
     \hline\hline
     \endfirsthead
     \hline
-    Figure & Linestyle & $d_c$ & $\gamma$ & $\mu_1$ & $\eta$ & $\mu_2$ & $d_m$ & $\alpha$ & $\beta$ \\ [0.5ex] 
+    Figure & Linestyle & $d_c$ & $\gamma$ & $\eta$ & $d_m$ & $\alpha$ & $\beta$ \\ [0.5ex] 
     \hline\hline
     \endhead
-    \hline \multicolumn{10}{|r|}{{continued on next page}} \\ \hline
+    \hline \multicolumn{8}{|r|}{{continued on next page}} \\ \hline
     \endfoot
     \endlastfoot
-    \ref{fig:unadjsuted_replication} & \sampleline{} & $1\cdot 10^{-3}$ & $0.005$ & $0$ & $10$ & $0$ & $1\cdot 10^{-3}$ & $0.1$ & $0$\\  \hline
-    \ref{fig:replication_alpha_comparison} & \sampleline{dash pattern=on .7em off .2em on .05em off .2em} & $1\cdot 10^{-3}$ & 0.005 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.2 & 0\\  \hline
-    \ref{fig:replication_alpha_comparison} & \sampleline{dotted} & $1\cdot 10^{-3}$ & 0.005 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3 & 0\\  \hline
-    \ref{fig:replication_alpha_comparison} & \sampleline{} & $1\cdot 10^{-3}$ & 0.005 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.35 & 0\\  \hline
-    \ref{fig:replication_alpha_comparison} & \sampleline{dashed} & $1\cdot 10^{-3}$ & 0.005 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.4 & 0\\  \hline
-    \ref{fig:replication_dc_comparison} & \sampleline{dash pattern=on .7em off .2em on .05em off .2em} & $1\cdot 10^{-3}$ & 0.005 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
-    \ref{fig:replication_dc_comparison} & \sampleline{dotted} & $1\cdot 10^{-4}$ & 0.005 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
-    \ref{fig:replication_dc_comparison} & \sampleline{} & $5\cdot 10^{-4}$ & 0.005 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
-    \ref{fig:replication_dc_comparison} & \sampleline{dashed} & $1\cdot 10^{-5}$ & 0.005 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
-    \ref{fig:replication_gamma_comparison} & \sampleline{dash pattern=on .7em off .2em on .05em off .2em} & $5\cdot 10^{-5}$ & 0.005 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
-    \ref{fig:replication_gamma_comparison} & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
-    \ref{fig:replication_gamma_comparison} & \sampleline{} & $5\cdot 10^{-4}$ & 0.006 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
-    \ref{fig:replication_gamma_comparison} & \sampleline{dashed} & $5\cdot 10^{-4}$ & 0.007 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
-    \ref{fig:basecase_without_proliferation} & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\ \hline
+    \ref{fig:unadjsuted_replication} & \sampleline{} & $1\cdot 10^{-3}$ & $0.005$ & $10$& $1\cdot 10^{-3}$ & $0.1$ & $0$\\  \hline
+    \ref{fig:replication_alpha_comparison} & \sampleline{dash pattern=on .7em off .2em on .05em off .2em} & $1\cdot 10^{-3}$ & 0.005 & 10 & $1\cdot 10^{-3}$ & 0.2 & 0\\  \hline
+    \ref{fig:replication_alpha_comparison} & \sampleline{dotted} & $1\cdot 10^{-3}$ & 0.005 & 10 & $1\cdot 10^{-3}$ & 0.3 & 0\\  \hline
+    \ref{fig:replication_alpha_comparison} & \sampleline{} & $1\cdot 10^{-3}$ & 0.005 & 10 & $1\cdot 10^{-3}$ & 0.35 & 0\\  \hline
+    \ref{fig:replication_alpha_comparison} & \sampleline{dashed} & $1\cdot 10^{-3}$ & 0.005 & 10 & $1\cdot 10^{-3}$ & 0.4 & 0\\  \hline
+    \ref{fig:replication_dc_comparison} & \sampleline{dash pattern=on .7em off .2em on .05em off .2em} & $1\cdot 10^{-3}$ & 0.005 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
+    \ref{fig:replication_dc_comparison} & \sampleline{dotted} & $1\cdot 10^{-4}$ & 0.005 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
+    \ref{fig:replication_dc_comparison} & \sampleline{} & $5\cdot 10^{-4}$ & 0.005 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
+    \ref{fig:replication_dc_comparison} & \sampleline{dashed} & $1\cdot 10^{-5}$ & 0.005 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
+    \ref{fig:replication_gamma_comparison} & \sampleline{dash pattern=on .7em off .2em on .05em off .2em} & $5\cdot 10^{-5}$ & 0.005 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
+    \ref{fig:replication_gamma_comparison} & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
+    \ref{fig:replication_gamma_comparison} & \sampleline{} & $5\cdot 10^{-4}$ & 0.006 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
+    \ref{fig:replication_gamma_comparison} & \sampleline{dashed} & $5\cdot 10^{-4}$ & 0.007 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
+    \ref{fig:2D_proliferation_replication_3D} & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
+    \ref{fig:2D_proliferation_replication_3D} & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
+    \ref{fig:3D_basecase_comparison} & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
+    \ref{fig:3D_basecase_comparison} & \sampleline{} & $3.3\cdot 10^{-4}$ & 0.0058 & 10 & $1\cdot 10^{-3}$ & 0.6 & 0\\  \hline
     \caption{Overview of all experiments conducted for the model without proliferation and renewal producing 2D output}
     \label{table:replication_experiments}
 \end{longtable}
 
-In table~\ref{table:replicatoin_experiments} all experiments with their corresponding parameter configurations and linestyles in the respective figures are listed.
+In table~\ref{table:replication_experiments} all experiments with their corresponding parameter configurations and linestyles in the respective figures are listed.
 
 
 
-\subsection{2D Results without Proliferation and Renewal - Homogenous ECM}
+\subsection{Parameter Analysis without Proliferation and Renewal - Homogenous ECM}
 \label{sec:2D_without_proliferation}
 
-We assume for the initial conditions that at dimensionless time $t=0$, there is already a nodule of cells located at the center of the unit domain $\Omega$ that has produced a concentration of matrix-degrading enzymes and has already degraded the extracellular matrix at the center. Furthermore, we assume the extracellular matrix structure to be homogenous.
+This section describes the Parameter Analysis done in two spacial dimensions on a homogenous extracellular matrix structure. In this section we are using the basecase for established in the previous section with the parameters as used in~\ref{fig:2D_proliferation_replication_3D}. 
 
-Every experiment in this section is done in two spatial dimensions.
-We define the initial conditions for the tumor cell density as:
-\begin{align*}
-    c(x,0)= \exp(\frac{-(x-0.5)^2}{0.01})
-\end{align*}
-The initial conditions of the matrix-degrading enzymes are described as:
-\begin{align*}
-    m(x,0) = 0.5 c(x,0) = 0.5 \exp(\frac{-(x-0.5)^2}{0.01})
-\end{align*}
-The strucutre of the extracellular matrix looks as follow:
-\begin{align*}
-    e(x,0) = 1 - 0.5 c(x,0) = 1 - 0.5 \exp(\frac{-(x-0.5)^2}{0.01})
-\end{align*}
-\begin{figure}[ht!]
-    \centering
-    \includegraphics[width=\textwidth]{resources/images/2D_initial_conditions_homogenous_ECM.png}
-    \caption{Visualization of the initial value distribution for an experiment in two space dimensions with a homogenous extracellular matrix}
-    \label{fig:2D_homogenous_ECM_initial}
-\end{figure}
-Figure~\ref{fig:2D_homogenous_ECM_initial} shows a 2D plot of the initial conditions using the homogenous extracellular matrix structure. The images describing the tumor cell density and the matrix-degrading enzyme concentration have high values in the center. The image describing the extracellular matrix has high values everywhere except the center since the matrix-degrading enzymes have already degraded the ECM.
-
-\begin{longtable}{|c c c c c c c c c c|}
+\begin{longtable}{|c c c c c c c c|}
     \hline
-    Figure & Linestyle & $d_c$ & $\gamma$ & $\mu_1$ & $\eta$ & $\mu_2$ & $d_m$ & $\alpha$ & $\beta$ \\ [0.5ex] 
+    Figure & Linestyle & $d_c$ & $\gamma$ & $\eta$ & $d_m$ & $\alpha$ & $\beta$ \\ [0.5ex] 
     \hline\hline
     \endfirsthead
     \hline
-    Figure & Linestyle & $d_c$ & $\gamma$ & $\mu_1$ & $\eta$ & $\mu_2$ & $d_m$ & $\alpha$ & $\beta$ \\ [0.5ex] 
+    Figure & Linestyle & $d_c$ & $\gamma$ & $\eta$ & $d_m$ & $\alpha$ & $\beta$ \\ [0.5ex] 
     \hline\hline
     \endhead
-    \hline \multicolumn{10}{|r|}{{continued on next page}} \\ \hline
+    \hline \multicolumn{8}{|r|}{{continued on next page}} \\ \hline
     \endfoot
     \endlastfoot
-    \ref{fig:unadjsuted_replication} & \sampleline{} & $1\cdot 10^{-3}$ & $0.005$ & $0$ & $10$ & $0$ & $1\cdot 10^{-3}$ & $0.1$ & $0$\\  \hline
-    \ref{fig:replication_alpha_comparison} & \sampleline{dash pattern=on .7em off .2em on .05em off .2em} & $1\cdot 10^{-3}$ & 0.005 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.2 & 0\\  \hline
-    \ref{fig:replication_alpha_comparison} & \sampleline{dotted} & $1\cdot 10^{-3}$ & 0.005 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3 & 0\\  \hline
-    \ref{fig:replication_alpha_comparison} & \sampleline{} & $1\cdot 10^{-3}$ & 0.005 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.35 & 0\\  \hline
-    \ref{fig:replication_alpha_comparison} & \sampleline{dashed} & $1\cdot 10^{-3}$ & 0.005 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.4 & 0\\  \hline
-    \ref{fig:replication_dc_comparison} & \sampleline{dash pattern=on .7em off .2em on .05em off .2em} & $1\cdot 10^{-3}$ & 0.005 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
-    \ref{fig:replication_dc_comparison} & \sampleline{dotted} & $1\cdot 10^{-4}$ & 0.005 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
-    \ref{fig:replication_dc_comparison} & \sampleline{} & $5\cdot 10^{-4}$ & 0.005 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
-    \ref{fig:replication_dc_comparison} & \sampleline{dashed} & $1\cdot 10^{-5}$ & 0.005 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
-    \ref{fig:replication_gamma_comparison} & \sampleline{dash pattern=on .7em off .2em on .05em off .2em} & $5\cdot 10^{-5}$ & 0.005 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
-    \ref{fig:replication_gamma_comparison} & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
-    \ref{fig:replication_gamma_comparison} & \sampleline{} & $5\cdot 10^{-4}$ & 0.006 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
-    \ref{fig:replication_gamma_comparison} & \sampleline{dashed} & $5\cdot 10^{-4}$ & 0.007 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
-    \ref{fig:basecase_without_proliferation} & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\ \hline
-    \ref{fig:dc_variation} & \sampleline{dash pattern=on .7em off .2em on .05em off .2em} & $5\cdot 10^{-5}$ & 0.0055 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\ \hline
-    \ref{fig:dc_variation} & \sampleline{} & $1\cdot 10^{-4}$ & 0.0055 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\ \hline
-    \ref{fig:dc_variation} & \sampleline{dotted} & $1\cdot 10^{-3}$ & 0.0055 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\ \hline
-    \ref{fig:gamma_variation} & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.002 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\ \hline
-    \ref{fig:gamma_variation} & \sampleline{} & $5\cdot 10^{-4}$ & 0.008 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\ \hline
-    \ref{fig:gamma_variation} & \sampleline{dashed} & $5\cdot 10^{-4}$ & 0.01 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\ \hline
-    \ref{fig:gamma_2D_plot} & \sampleline{} & $5\cdot 10^{-4}$ & 0.1 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\ \hline
-    \ref{fig:gamma_pol_comparison} & \sampleline{} & $5\cdot 10^{-4}$ & 0.1 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\ \hline
-    \ref{fig:eta_variation} & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 2 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\ \hline
-    \ref{fig:eta_variation} & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 12 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0 \\ \hline
-    \ref{fig:eta_variation} & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 20 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0 \\ \hline
-    \ref{fig:dm_variation} & \sampleline{dotted} & $1\cdot 10^{-3}$ & 0.0055 & 0 & 10 & 0 & 0.00001 & 0.3546 & 0 \\ \hline
-    \ref{fig:dm_variation} & \sampleline{} & $1\cdot 10^{-4}$ & 0.0055 & 0 & 10 & 0 & 0.001 & 0.3546 & 0 \\ \hline
-    \ref{fig:dm_variation} & \sampleline{dashed} & $1\cdot 10^{-5}$ & 0.0055 & 0 & 10 & 0 & 0.1 & 0.3546 & 0 \\ \hline
-    \ref{fig:alpha_variation} & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0 & 0 \\ \hline
-    \ref{fig:alpha_variation} & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.6 & 0 \\ \hline
-    \ref{fig:alpha_variation} & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 1.0 & 0 \\ \hline
-    \ref{fig:beta_variation} & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0.1 \\ \hline
-    \ref{fig:beta_variation} & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0.01 \\ \hline
-    \ref{fig:beta_variation} & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0.005 \\ \hline
-    \ref{fig:dc_gamma_variation} - left& \sampleline{dotted} & $5\cdot 10^{-5}$ & 0.001 & 0 & 10 & 0  & $1\cdot 10^{-3}$ & 0.3546 & 0 \\ \hline
-    \ref{fig:dc_gamma_variation} - left & \sampleline{} & $5\cdot 10^{-5}$ & 0.01 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0 \\ \hline
-    \ref{fig:dc_gamma_variation} -right & \sampleline{dotted} & $1\cdot 10^{-3}$ & 0.001 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0 \\ \hline
-    \ref{fig:dc_gamma_variation} -right & \sampleline{} & $1\cdot 10^{-3}$ & 0.01 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0 \\ \hline
-    \ref{fig:dm_eta_variation} - left & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 2 & 0 & $1\cdot 10^{-5}$ & 0.3546 & 0 \\ \hline
-    \ref{fig:dm_eta_variation} - left & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 20 & 0 & $1\cdot 10^{-5}$ & 0.3546 & 0 \\ \hline
-    \ref{fig:dm_eta_variation} -right & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 2 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0 \\ \hline
-    \ref{fig:dm_eta_variation} -right & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 20 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0 \\ \hline
-    \ref{fig:alpha_beta_variation} - left & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.1 & 0.005 \\ \hline
-    \ref{fig:alpha_beta_variation} - left & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.1 & 0.1 \\ \hline
-    \ref{fig:alpha_beta_variation} -right & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 1.0 & 0.005 \\ \hline
-    \ref{fig:alpha_beta_variation} -right & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 1.0 & 0.1 \\ \hline
-    \ref{fig:dm_alpha_beta_variation_1} - left & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 10 & 0 & $1\cdot 10^{-5}$ & 0.1 & 0.005 \\ \hline
-    \ref{fig:dm_alpha_beta_variation_1} - left & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 10 & 0 & $1\cdot 10^{-5}$ & 0.1 & 0.1 \\ \hline
-    \ref{fig:dm_alpha_beta_variation_1} -right & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 10 & 0 & $1\cdot 10^{-5}$ & 1.0 & 0.005 \\ \hline
-    \ref{fig:dm_alpha_beta_variation_1} -right & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 10 & 0 & $1\cdot 10^{-5}$ & 1.0 & 0.1 \\ \hline
-    \ref{fig:dm_alpha_beta_variation_2} - left & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.1 & 0.005 \\ \hline
-    \ref{fig:dm_alpha_beta_variation_2} - left & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.1 & 0.1 \\ \hline
-    \ref{fig:dm_alpha_beta_variation_2} -right & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 1.0 & 0.005 \\ \hline
-    \ref{fig:dm_alpha_beta_variation_2} -right & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 1.0 & 0.1 \\ \hline
+    \ref{fig:dc_variation} & \sampleline{} & $1\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0\\ \hline
+    \ref{fig:dc_variation} & \sampleline{dotted} & $1\cdot 10^{-3}$ & 0.0055 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0\\ \hline
+    \ref{fig:gamma_variation} & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.002 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0\\ \hline
+    \ref{fig:gamma_variation} & \sampleline{} & $5\cdot 10^{-4}$ & 0.008 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0\\ \hline
+    \ref{fig:gamma_variation} & \sampleline{dashed} & $5\cdot 10^{-4}$ & 0.01 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0\\ \hline
+    \ref{fig:gamma_2D_plot} & \sampleline{} & $5\cdot 10^{-4}$ & 0.1 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0\\ \hline
+    \ref{fig:eta_variation} & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 2 & $1\cdot 10^{-3}$ & 0.3546 & 0\\ \hline
+    \ref{fig:eta_variation} & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 12 & $1\cdot 10^{-3}$ & 0.3546 & 0 \\ \hline
+    \ref{fig:eta_variation} & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 20 & $1\cdot 10^{-3}$ & 0.3546 & 0 \\ \hline
+    \ref{fig:dm_variation} & \sampleline{dotted} & $1\cdot 10^{-3}$ & 0.0055 & 10 & 0.00001 & 0.3546 & 0 \\ \hline
+    \ref{fig:dm_variation} & \sampleline{} & $1\cdot 10^{-4}$ & 0.0055 & 10 & 0.001 & 0.3546 & 0 \\ \hline
+    \ref{fig:dm_variation} & \sampleline{dashed} & $1\cdot 10^{-5}$ & 0.0055 & 10 & 0.1 & 0.3546 & 0 \\ \hline
+    \ref{fig:alpha_variation} & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-3}$ & 0 & 0 \\ \hline
+    \ref{fig:alpha_variation} & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-3}$ & 0.6 & 0 \\ \hline
+    \ref{fig:alpha_variation} & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-3}$ & 1.0 & 0 \\ \hline
+    \ref{fig:beta_variation} & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0.1 \\ \hline
+    \ref{fig:beta_variation} & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0.01 \\ \hline
+    \ref{fig:beta_variation} & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0.005 \\ \hline
+    \ref{fig:dc_gamma_variation} - left& \sampleline{dotted} & $5\cdot 10^{-5}$ & 0.001 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0 \\ \hline
+    \ref{fig:dc_gamma_variation} - left & \sampleline{} & $5\cdot 10^{-5}$ & 0.01 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0 \\ \hline
+    \ref{fig:dc_gamma_variation} -right & \sampleline{dotted} & $1\cdot 10^{-3}$ & 0.001 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0 \\ \hline
+    \ref{fig:dc_gamma_variation} -right & \sampleline{} & $1\cdot 10^{-3}$ & 0.01 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0 \\ \hline
+    \ref{fig:dm_eta_variation} - left & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 2 & $1\cdot 10^{-5}$ & 0.3546 & 0 \\ \hline
+    \ref{fig:dm_eta_variation} - left & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 20 & $1\cdot 10^{-5}$ & 0.3546 & 0 \\ \hline
+    \ref{fig:dm_eta_variation} -right & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 2 & $1\cdot 10^{-3}$ & 0.3546 & 0 \\ \hline
+    \ref{fig:dm_eta_variation} -right & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 20 & $1\cdot 10^{-3}$ & 0.3546 & 0 \\ \hline
+    \ref{fig:alpha_beta_variation} - left & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-3}$ & 0.1 & 0.005 \\ \hline
+    \ref{fig:alpha_beta_variation} - left & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-3}$ & 0.1 & 0.1 \\ \hline
+    \ref{fig:alpha_beta_variation} -right & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-3}$ & 1.0 & 0.005 \\ \hline
+    \ref{fig:alpha_beta_variation} -right & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-3}$ & 1.0 & 0.1 \\ \hline
+    \ref{fig:dm_alpha_beta_variation_1} - left & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-5}$ & 0.1 & 0.005 \\ \hline
+    \ref{fig:dm_alpha_beta_variation_1} - left & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-5}$ & 0.1 & 0.1 \\ \hline
+    \ref{fig:dm_alpha_beta_variation_1} -right & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-5}$ & 1.0 & 0.005 \\ \hline
+    \ref{fig:dm_alpha_beta_variation_1} -right & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-5}$ & 1.0 & 0.1 \\ \hline
+    \ref{fig:dm_alpha_beta_variation_2} - left & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-3}$ & 0.1 & 0.005 \\ \hline
+    \ref{fig:dm_alpha_beta_variation_2} - left & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-3}$ & 0.1 & 0.1 \\ \hline
+    \ref{fig:dm_alpha_beta_variation_2} -right & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-3}$ & 1.0 & 0.005 \\ \hline
+    \ref{fig:dm_alpha_beta_variation_2} -right & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-3}$ & 1.0 & 0.1 \\ \hline
     \caption{Overview of all experiments conducted for the model without proliferation and renewal producing 2D output}
     \label{table:2D_experiments_without_proliferation}
 \end{longtable}
 Table~\ref{table:2D_experiments_without_proliferation} gives a detailed overview of all the experiments done in this section and the parameters used to produce the results. We are considering the model without the proliferation of the tumor cells or renewal of the extracellular matrix. Therefore, parameters $\mu_1$ and $\mu_2$ are set to zero. In most figures, more than one experiment will be described; the linestyle in table~\ref{table:2D_experiments_without_proliferation} determines which experiment exactly is described by the set of parameters.
-    
-\subsubsection{Basecase Analysis}
-\label{sec:replication_2D_without_proliferation}
 
 
 \subsubsection{Parameter Analysis}
@@ -737,26 +730,7 @@ Looking at the experiments with raised $\eta$ to accelerate the ECM degrading pr
 
 
 \subsection{2D Results with Proliferation and Renewal - Heterogenous ECM}
-\begin{figure}[h]
- \centering
- \label{fig:Initial_Value_Distribution}
- \includegraphics[width=\textwidth]{resources/images/2D_initial_conditions_heterogenous_ECM.png}
- \caption{Visualization of the initial value distribution for an experiment in two space dimensions with a heterogenous extracellular matrix}
- \label{fig:2D_heterogenous_ECM_initial}
-\end{figure}
-In this section, we investigate how a more realistic structure of the ECM will affect the results of a simulation. We are still using the model with proliferation and renewal. 
-For this scenario, we assume a nodule of tumor cells already in the center of the simulation that has produced a concentration of matrix-degrading enzymes. Contrary to previous experiments, we assume that the tumor cells are located at a basement membrane that they already have invaded and are now pushing into the extracellular matrix behind it. These assumptions are described in figure~\ref{fig:tumour_invasion_stage}. We model this in the following experiment with the initial conditions:
-\begin{align*}
- c(x,0)= \exp(\frac{-(x-0.5)^2}{0.01})
-\end{align*}
-\begin{align*}
- m(x,0) = 0.5 c(x,0) = 0.5 \exp(\frac{-(x-0.5)^2}{0.01})
-\end{align*}
-\begin{align*}
- e(x,0) = 1 - 0.5 c(x,0)
-\end{align*}
-$\textcolor{red}{insert correct ecm description}$
-
+\label{sec:2D_heterogenous_ECM}
 \begin{figure}[h!]
  \centering
  \adjustbox{width=0.85\textwidth}{\includegraphics{resources/images/2D_heterogenous_ECM.png}} 
