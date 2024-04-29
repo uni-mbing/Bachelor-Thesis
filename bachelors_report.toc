@@ -9,10 +9,10 @@
 \contentsline {subsection}{\numberline {4.1}2D Results without Proliferation and Renewal - Homogenous ECM}{16}{}%
 \contentsline {subsubsection}{\numberline {4.1.1}Basecase Analysis}{18}{}%
 \contentsline {subsubsection}{\numberline {4.1.2}Parameter Analysis}{21}{}%
-\contentsline {subsection}{\numberline {4.2}2D Results with Proliferation and Renewal - Homogenous ECM}{40}{}%
+\contentsline {subsection}{\numberline {4.2}2D Results with Proliferation and Renewal - Homogenous ECM}{42}{}%
 \contentsline {subsubsection}{\numberline {4.2.1}Basecase Analysis}{43}{}%
 \contentsline {subsubsection}{\numberline {4.2.2}Parameter Analysis}{44}{}%
-\contentsline {subsection}{\numberline {4.3}3D Results with Proliferation and Renewal - Homogenous ECM}{56}{}%
-\contentsline {subsubsection}{\numberline {4.3.1}Basecase Analysis}{56}{}%
-\contentsline {subsection}{\numberline {4.4}2D Results with Proliferation and Renewal - Heterogenous ECM}{59}{}%
-\contentsline {section}{\numberline {5}Conclusion and Discussion}{62}{}%
+\contentsline {subsection}{\numberline {4.3}3D Results with Proliferation and Renewal - Homogenous ECM}{57}{}%
+\contentsline {subsubsection}{\numberline {4.3.1}Basecase Analysis}{57}{}%
+\contentsline {subsection}{\numberline {4.4}2D Results with Proliferation and Renewal - Heterogenous ECM}{60}{}%
+\contentsline {section}{\numberline {5}Conclusion and Discussion}{63}{}%

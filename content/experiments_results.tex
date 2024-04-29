@@ -329,9 +329,9 @@ Since the extracellular matrix can comprise many different organic and inorganic
 Having varied every model parameter, we saw accelerating effects on the invasion and countering effects. Now, it will be interesting to see how either supporting factors interplay and how countering factors affect the simulations, for example, how to increase both $\alpha$ and $\beta$ if some balance can be found. Another exciting experiment will be on how diffusion and haptotaxis behave when increasing or decreasing both factors controlling them.
 
 \subsubsection*{$d_c - \gamma$ Variation}
-\begin{figure}[h]
+\begin{figure}[h!]
  \centering
- \includegraphics[width=0.85\textwidth]{resources/images/dc_gamma_variation.png}
+ \includegraphics[width=\textwidth]{resources/images/dc_gamma_variation.png}
  \caption{Plots show results for varying both $d_c$ and $\gamma$ while keeping the other parameters constant; in the images on the left, $d_c$ is set to $d_c=0.00005$ with the solid line showing $\gamma = 0.01$ and the dotted line $\gamma=0.001$ on the right $d_c$ is set to $d_c=0.1$ with the solid line showing $\gamma = 0.01$ and the dotted line $\gamma=0.001$.}
  \label{fig:dc_gamma_variation}
 \end{figure}
@@ -348,9 +348,9 @@ Increasing both $d_c$ and $\gamma$, we see the effects of haptotaxis more potent
 These experiments give us an excellent example of the relationship between haptotaxis and diffusion. We see that with decreasing $d_c$ but increasing $\gamma$, we get a leading edge that is very pointy. The higher value of $\gamma$ was sufficient to form a secondary tumor site invading the tissue separately. Decreasing $\gamma$ has proven for high and low $d_c$ values to prevent a secondary lump of cells from forming. 
 
 \subsubsection*{$d_m - \eta$ Variation}
-\begin{figure}[h]
+\begin{figure}[h!]
  \centering
- \includegraphics[width=0.85\textwidth]{resources/images/dm_eta_variation.png}
+ \includegraphics[width=\textwidth]{resources/images/dm_eta_variation.png}
  \caption{Plots show results for varying both $d_m$ and $\eta$ while keeping the other parameters constant, in the images on the left $d_m$ is set to $d_m=1\cdot 10^{-5}$ with the solid line showing $\eta = 2$ and the dotted line $\eta=20$ on the right $d_m$ is set to $d_m=1\cdot 10^{-3}$ with the solid line showing $\eta = 2$ and the dotted line $\eta=20$.}
  \label{fig:dm_eta_variation}
 \end{figure}
@@ -364,9 +364,9 @@ Interestingly, the MDE concentration for lower $d_m$ values is considerably high
 These experiments conclude that the diffusive properties of the matrix-degrading enzymes play only a minor role in degrading the extracellular matrix. Tumor cells producing them in their wake play a more crucial role in the degradation process. An intriguing observation in this experiment is that minimal differences in tumor cell density are sufficient to create major differences in the MDE concentration due to their exponential production.
 
 \subsubsection*{$\alpha - \beta$ Variation}
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
-    \includegraphics[width=0.85\textwidth]{resources/images/alpha_beta_variation.png}
+    \includegraphics[width=\textwidth]{resources/images/alpha_beta_variation.png}
     \caption{Plots show results for varying both $\alpha$ and $\beta$ whilst keeping the other parameters constant, in the images on the left $\alpha=0.1$ with the solid line showing $\beta = 0.005$ and the dotted line $\beta=0.1$ on the right $\alpha=1.0$ with the solid line showing $\beta = 0.005$ and the dotted line $\beta=0.1$.}
     \label{fig:alpha_beta_variation}
 \end{figure}
@@ -380,13 +380,13 @@ Increasing both $\alpha$ and $\beta$, we see in the solid line of the right colu
 \subsubsection*{$d_m - \alpha - \beta$ Variation}
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.85\textwidth]{resources/images/dm_alpha_beta_variation_1.png}
+    \includegraphics[width=\textwidth]{resources/images/dm_alpha_beta_variation_1.png}
     \caption{Plots show results for varying both $\alpha$ and $\beta$ whilst keeping the other parameters constant, in the images on the left $\alpha=0.1$ with the solid line showing $\beta = 0.005$ and the dotted line $\beta=0.1$ on the right $\alpha=1.0$ with the solid line showing $\beta = 0.005$ and the dotted line $\beta=0.1$.}
     \label{fig:dm_alpha_beta_variation_1}
 \end{figure}
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.85\textwidth]{resources/images/dm_alpha_beta_variation_2.png}
+    \includegraphics[width=\textwidth]{resources/images/dm_alpha_beta_variation_2.png}
     \caption{Plots show results for varying both $\alpha$ and $\beta$ whilst keeping the other parameters constant, in the images on the left $\alpha=0.1$ with the solid line showing $\beta = 0.005$ and the dotted line $\beta=0.1$ on the right $\alpha=1.0$ with the solid line showing $\beta = 0.005$ and the dotted line $\beta=0.1$.}
     \label{fig:dm_alpha_beta_variation_2}
 \end{figure}
@@ -593,25 +593,25 @@ Considering $\beta$, we can expect that with the introduction of $\mu_2$, the EC
 \subsubsection*{Cross-Variation}
 
 \subsubsection*{$\mu_1 - \mu_2$ Variation}
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
-    \includegraphics[width=0.85\textwidth]{resources/images/prolif_mu_1_mu_2_variation.png}
+    \includegraphics[width=\textwidth]{resources/images/prolif_mu_1_mu_2_variation.png}
     \caption{Plots show results for varying both $\mu_1$ and $\mu_2$ whilst keeping the other parameters constant.}
     \label{fig:prolif_mu_1_mu_2_variation}
 \end{figure}
 The effects of observing this cross variation take some time, as did the separate variations of both $\mu_1$ and $\mu_2$. For both $\mu_1=\mu_2=0.1$, we see that slower ECM renewal and slower tumor cell proliferation increase the degrading process of the extracellular matrix and, with this, affect the haptotaxis effect to increase slightly. At the center, a lump remains that has a maximum higher than for the experiment with $\mu_2=1.0$ and the invasion of the tissue has proceeded faster. Increasing $\mu_2$, as previously mentioned, results in slower ECM degradation due to the increased renewal term and therefore, the tumor cells are stretched out more evenly along the x-axis. Looking at the results when increasing $\mu_1$, we also see the effects only after $t=4$. For $\mu_2=0.1$, we see that the tumor cell density at $x=0$ is slightly more significant and at $x\approx 2.9$, the curve for $\mu_2=0.1$ is also slightly larger, being a little below $\mu_2=1.0$ in between $x\approx 0.2$ and $x\approx 0.29$. The curve for the MDEs looks very similar in both cases for $\mu_2$ due to the very similar tumor cell density curve, c, though the eECM has visibly faster degraded for $\mu_2=0.1$ due to the slower renewal.
 
 \subsubsection*{$d_c - \gamma - \mu_1$ Variation}
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
-    \adjustbox{width=0.85\textwidth}{\includegraphics{resources/images/prolif_dc_gamma_mu1_1.png}}
+    \adjustbox{width=\textwidth}{\includegraphics{resources/images/prolif_dc_gamma_mu1_1.png}}
     \caption{Plots show results for varying both $d_c$, $\gamma$ and $\mu_1$ whilst keeping the other parameters constant. This plot is the first of two, with the same $d_c$ value for every plot in this figure.}
     \label{fig:prolif_dc_gamma_mu_1_variation_1}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
-    \adjustbox{width=0.85\textwidth}{\includegraphics{resources/images/prolif_dc_gamma_mu1_2.png}}
+    \adjustbox{width=\textwidth}{\includegraphics{resources/images/prolif_dc_gamma_mu1_2.png}}
     \caption{Plots show results for varying both $d_c$, $\gamma$ and $\mu_1$ whilst keeping the other parameters constant. This plot is the second of two, with the same $d_c$ value for every plot in this figure.}
     \label{fig:prolif_dc_gamma_mu_1_variation_2}
 \end{figure}
@@ -624,9 +624,9 @@ Increasing now $d_c$ to $0.1$ we see for all experiments in figure~\ref{fig:prol
 
 
 \subsubsection*{$\eta -\mu_2$ Variation}
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
-    \adjustbox{width=0.85\textwidth}{\includegraphics{resources/images/prolif_eta_mu2_variation.png}}
+    \adjustbox{width=\textwidth}{\includegraphics{resources/images/prolif_eta_mu2_variation.png}}
     \caption{Plots show results for varying both $\eta$ and $\mu_2$ whilst keeping the other parameters constant.}
     \label{fig:prolif_eta_mu_2_variation}
 \end{figure}
@@ -640,7 +640,7 @@ Looking at the experiments with raised $\eta$ to accelerate the ECM degrading pr
 
 \subsection{3D Results with Proliferation and Renewal - Homogenous ECM}
 \subsubsection{Basecase Analysis}
-\begin{figure}[h!]
+\begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{resources/images/1D_replication_3D.png}
     \caption{3D Replication of using Anderson et al.'s values}
@@ -654,6 +654,8 @@ Looking at the experiments with raised $\eta$ to accelerate the ECM degrading pr
     \label{fig:2D_without_proliferation_replication_3D}
 \end{figure}
 \end{comment}
+
+In figure~\ref{fig:1D_replication_3D} you can see a comparison of results produced using Anderson et al.'s values in different dimensions. In the image the solid line describes a 2D replication, the dotted line a 3D replication. This is a very good example of how varying the dimension changes the results; at the first timestep $t=0$ you see that both experiments start with the same initial conditions. However, the second timestep $t=0.4$ shows a tumor cell density that is considerably lower in the 3D experiment than in the 2D experiment. This effect is also observed in the figures~\ref{fig:2D_proliferation_replication_3D} and~\ref{fig:3D_basecase_comparison}. Over time and across the afore mentioned figures the reduced tumor cell density is confirmed. Due to the exponential production of matrix-degrading enzymes by the tumor cells, the change in tumor cell density also effects the MDE concentration massively, resulting also in a lower concentration. The also reduced MDE concentration causes a slower degradation process of the extracellular matrix.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{resources/images/2D_proliferation_replication_3D.png}
@@ -667,8 +669,6 @@ Looking at the experiments with raised $\eta$ to accelerate the ECM degrading pr
     \caption{Comparing 2D basecase with proliferation and 3D basecase for proliferation}
     \label{fig:3D_basecase_comparison}
 \end{figure}
-In figure~\ref{fig:1D_replication_3D} you can see a comparison of results produced using Anderson et al.'s values in different dimensions. In the image the solid line describes a 2D replication, the dotted line a 3D replication. This is a very good example of how varying the dimension changes the results; at the first timestep $t=0$ you see that both experiments start with the same initial conditions. However, the second timestep $t=0.4$ shows a tumor cell density that is considerably lower in the 3D experiment than in the 2D experiment. This effect is also observed in the figures~\ref{fig:2D_proliferation_replication_3D} and~\ref{fig:3D_basecase_comparison}. Over time and across the afore mentioned figures the reduced tumor cell density is confirmed. Due to the exponential production of matrix-degrading enzymes by the tumor cells, the change in tumor cell density also effects the MDE concentration massively, resulting also in a lower concentration. The also reduced MDE concentration causes a slower degradation process of the extracellular matrix.
-
 Figure~\ref{fig:3D_basecase_comparison} we tried, as we did replicating results of one spacial dimension, to make the results of using 3D simulations align with the results produced in 2D replications. Challenging in this process was, as mentioned previously, that the reduced tumor cell density causes drastic changes in MDE production and ECM degradation. However we can balance this, by increasing the production rate of the matrix-degrading enzymes, as we did in section~\ref{sec:replication_2D_basecase}. Another measure to take is adjusting the relation between diffusion and haptotaxis on the tumor cells. We increased $\gamma$ and decreased $d_c$ for this, because we want more effects of haptotaxis. We choose $\gamma=0.006$ and $d_c=5e-5$. 
 
 Now the question arises why we have to change those values to replicate results. We can argue here with the parameter analysis, but also with an algebraic hypothesis. 
@@ -687,7 +687,7 @@ As mentioned above the tumor cell motility plays a cruical role during temporal 
         \hline
         & $1D$ & $2D$ & $3D$ \\ 
         \hline
-        Diffusion: $\Delta c$ & $\frac{\partial^{2}c}{\partial x^{2}}$ & $\frac{\partial^{2}c}{\partial x^{2}}+\frac{\partial^{2}c}{\partial y^{2}}$ & $\frac{\partial^{2}c}{\partial x^{2}}+\frac{\partial^{2}c}{\partial y^{2}}+\frac{\partial^{2}c}{\partial z^{2}}$\\
+        Diffusion & $\frac{\partial^{2}c}{\partial x^{2}}$ & $\frac{\partial^{2}c}{\partial x^{2}}+\frac{\partial^{2}c}{\partial y^{2}}$ & $\frac{\partial^{2}c}{\partial x^{2}}+\frac{\partial^{2}c}{\partial y^{2}}+\frac{\partial^{2}c}{\partial z^{2}}$\\
         \hline
         Haptotaxis & $\frac{\partial c}{\partial x}\frac{\partial e}{\partial x} + \frac{\partial^{2}e}{\partial x^{2}}$ & $\frac{\partial c}{\partial x}\frac{\partial e}{\partial x} + \frac{\partial c}{\partial y} \frac{\partial e}{\partial y} + \frac{\partial^{2}e}{\partial x^{2}} + \frac{\partial^{2}e}{\partial y^{2}} $ & $\frac{\partial c}{\partial x}\frac{\partial e}{\partial x} + \frac{\partial c}{\partial y}\frac{\partial e}{\partial y} + \frac{\partial c}{\partial z}\frac{\partial e}{\partial z} + \frac{\partial^{2}e}{\partial x^{2}} + \frac{\partial^{2}e}{\partial y^{2}} + \frac{\partial^{2}e}{\partial z^{2}}$ \\
         \hline
@@ -710,7 +710,7 @@ The conclusions we can draw from adjusting the parameters with varying the dimen
 \begin{figure}[h]
  \centering
  \label{fig:Initial_Value_Distribution}
- \includegraphics[width=0.85\textwidth]{resources/images/2D_initial_conditions_heterogenous_ECM.png}
+ \includegraphics[width=\textwidth]{resources/images/2D_initial_conditions_heterogenous_ECM.png}
  \caption{Visualization of the initial value distribution for an experiment in two space dimensions with a heterogenous extracellular matrix}
  \label{fig:2D_heterogenous_ECM_initial}
 \end{figure}
