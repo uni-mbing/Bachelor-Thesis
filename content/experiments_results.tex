@@ -120,6 +120,8 @@ Figure~\ref{fig:2D_homogenous_ECM_initial} shows a 2D plot of the initial condit
 Table~\ref{table:2D_experiments_without_proliferation} gives a detailed overview of all the experiments done in this section and the parameters used to produce the results. We are considering the model without the proliferation of the tumor cells or renewal of the extracellular matrix. Therefore, parameters $\mu_1$ and $\mu_2$ are set to zero. In most figures, more than one experiment will be described; the linestyle in table~\ref{table:2D_experiments_without_proliferation} determines which experiment exactly is described by the set of parameters.
     
 \subsubsection{Basecase Analysis}
+\label{sec:replication_2D_without_proliferation}
+
 We will start with replicating the first experiment from Anderson et al.\cite{anderson_mathematical_2000}. Figure~\ref{fig:anderson_experiment} shows a screenshot of this experiment, unfortunately in low resolution, since the original paper had not included any digital data containing the diagrams of their results.
 \begin{figure}[ht!]
  \centering
@@ -638,7 +640,62 @@ Looking at the experiments with raised $\eta$ to accelerate the ECM degrading pr
 
 \subsection{3D Results with Proliferation and Renewal - Homogenous ECM}
 \subsubsection{Basecase Analysis}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{resources/images/1D_replication_3D.png}
+    \caption{3D Replication of using Anderson et al.'s values}
+    \label{fig:1D_replication_3D}
+\end{figure}
+\begin{comment}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{resources/images/2D_without_proliferation_replication_3D.png}
+    \caption{3D Replication of using the 2D basecases values without proliferation}
+    \label{fig:2D_without_proliferation_replication_3D}
+\end{figure}
+\end{comment}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{resources/images/2D_proliferation_replication_3D.png}
+    \caption{3D Replication of using the 2D basecases values with proliferation}
+    \label{fig:2D_proliferation_replication_3D}
+\end{figure}
 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{resources/images/basecase_replication.png}
+    \caption{Comparing 2D basecase with proliferation and 3D basecase for proliferation}
+    \label{fig:3D_basecase_comparison}
+\end{figure}
+In figure~\ref{fig:1D_replication_3D} you can see a comparison of results produced using Anderson et al.'s values in different dimensions. In the image the solid line describes a 2D replication, the dotted line a 3D replication. This is a very good example of how varying the dimension changes the results; at the first timestep $t=0$ you see that both experiments start with the same initial conditions. However, the second timestep $t=0.4$ shows a tumor cell density that is considerably lower in the 3D experiment than in the 2D experiment. This effect is also observed in the figures~\ref{fig:2D_proliferation_replication_3D} and~\ref{fig:3D_basecase_comparison}. Over time and across the afore mentioned figures the reduced tumor cell density is confirmed. Due to the exponential production of matrix-degrading enzymes by the tumor cells, the change in tumor cell density also effects the MDE concentration massively, resulting also in a lower concentration. The also reduced MDE concentration causes a slower degradation process of the extracellular matrix.
+
+Figure~\ref{fig:3D_basecase_comparison} we tried, as we did replicating results of one spacial dimension, to make the results of using 3D simulations align with the results produced in 2D replications. Challenging in this process was, as mentioned previously, that the reduced tumor cell density causes drastic changes in MDE production and ECM degradation. However we can balance this, by increasing the production rate of the matrix-degrading enzymes, as we did in section~\ref{sec:replication_2D_basecase}. Another measure to take is adjusting the relation between diffusion and haptotaxis on the tumor cells. We increased $\gamma$ and decreased $d_c$ for this, because we want more effects of haptotaxis. We choose $\gamma=0.006$ and $d_c=5e-5$. 
+
+Now the question arises why we have to change those values to replicate results. We can argue here with the parameter analysis, but also with an algebraic hypothesis. 
+
+Since $\beta$ is assumed for most experiments to be zero, also in repilication one-dimensional results in two dimensions, we also set it to zero in this case. 
+
+Looking at the parameter analysis for $d_m$ we saw that this parameter has litlle influence compared to other on the simulation, excepting the overall MDE concentration in certain regions, which is neglectable when in those regions the ECM is already fully degraded. Also regarding the spacial occupation and distribution of the matrix-degrading enzymes we saw that a more important factor is the motility of the tumor cells producing them in their wake. 
+
+Inspecting the term concerning $\eta$ we see that it depends on local values for the ECM and MDE concentrations; $-\eta m(x,y,z,t)e(x,y,z,t)$. In the expereiments regarding replicating we see that we can influence the MDE concentration well with adjusting the motility of the tumor cells and their production of the MDEs. In figure~\ref{fig:3D_basecase_comparison} you see that the concentration of the matrix-degrading enzymes roughly matches over time for both dimensions. In the plots $m(x,y,z,t)e(x,y,z,t)$ therefore also roughly match, resulting in similar ECM degradation rate. Becasue of this, we also do not change $\eta$.
+
+As mentioned above the tumor cell motility plays a cruical role during temporal developement of the whole system. It is therefore a key component to match these curves. The motility is goverened by diffusion and haptotaxis: $d_c\Delta c - \gamma \nabla\cdot (c\nabla e)=d_c\Delta c - \gamma (\nabla c \cdot \nabla e + \Delta e)$.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        & $1D$ & $2D$ & $3D$ \\ 
+        \hline
+        Diffusion: $\Delta c$ & $\frac{\partial^{2}c}{\partial x^{2}}$ & $\frac{\partial^{2}c}{\partial x^{2}}+\frac{\partial^{2}c}{\partial y^{2}}$ & $\frac{\partial^{2}c}{\partial x^{2}}+\frac{\partial^{2}c}{\partial y^{2}}+\frac{\partial^{2}c}{\partial z^{2}}$\\
+        \hline
+        Haptotaxis & $\frac{\partial c}{\partial x}\frac{\partial e}{\partial x} + \frac{\partial^{2}e}{\partial x^{2}}$ & $\frac{\partial c}{\partial x}\frac{\partial e}{\partial x} + \frac{\partial c}{\partial y} \frac{\partial e}{\partial y} + \frac{\partial^{2}e}{\partial x^{2}} + \frac{\partial^{2}e}{\partial y^{2}} $ & $\frac{\partial c}{\partial x}\frac{\partial e}{\partial x} + \frac{\partial c}{\partial y}\frac{\partial e}{\partial y} + \frac{\partial c}{\partial z}\frac{\partial e}{\partial z} + \frac{\partial^{2}e}{\partial x^{2}} + \frac{\partial^{2}e}{\partial y^{2}} + \frac{\partial^{2}e}{\partial z^{2}}$ \\
+        \hline
+    \end{tabular}
+    \caption{Overview of Diffusion and Haptotaxis terms across varying dimensions}
+    \label{tab:diff_hapto}
+\end{table}
+Table~\ref{tab:diff_hapto} gives an overview of the diffusion and haptotaxis terms for the treated dimensions in this work. For the diffusion we see that with increasing the dimension we get one additional term, assuming for simplicity $\frac{\partial^{2}c}{\partial x^{2}}=\frac{\partial^{2}c}{\partial y^{2}}=\frac{\partial^{2}c}{\partial z^{2}}=\kappa$. Also assuming a constant factor $M$ for diffusion, this yields in one spacial dimension $M=d_{c,1}\kappa$, equivalent to $d_{c,1}=\frac{M}{\kappa}=1\cdot 10^{-3}$; in two spacial dimensions $d_{c,2}=\frac{M}{2\kappa}=\frac{1}{2}d_{c,1}=\frac{1}{2} 10^{-3}=5 \cdot 10^{-4}$ and in three dimensions $d_{c,3}=\frac{M}{3\kappa}=\frac{1}{3}d_{c,1}=\frac{1}{3} 10^{-3}=3.33 \cdot 10^{-4}$
 
 
 
@@ -683,5 +740,3 @@ The next point shows increased ECM degradation, further invading tumor cells int
 The last row depicts the experiment after $t=8$ timesteps and the abovementioned effects are propagated. The ECM degradation has continued, as has the invasion of the tumor cells. The wave moving in the direction of the remaining extracellular matrix molecules has spread through space, decreasing its strength. The MDEs still show little influence on the heterogeneous ECM structure, with the primary lump staying centered and only making it difficult to recognize more concentration towards the movement of the tumor cells and concentration of the extracellular matrix.
  
 Considering different extracellular matrix molecules and structures or physical influences such as heat or radiation, the ECM structure and the system's behavior can be adjusted to simulate better real-life scenarios of cancer invading tissue.
-
-\subsection{3D Results with Proliferation and Renewal - Heterogenous ECM}
