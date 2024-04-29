@@ -141,6 +141,39 @@ Further improvements to make the experiments match better could be made on varyi
 The conclusions we can draw from adjusting the parameters with varying the dimensions are that the most important factor is the tumor cell density. The motility is cruical for the as well the shape of the MDE curve as well as the concentration of it, due to the tumor cells producing them exponentially, but this we can also adjust with the production coefficient $\alpha$. Diffusion coefficient can be calculated algebraicly, as seen above, but for Haptotaxis the coefficient must be determined experimentally. It is to say that due though it is possible to make the simulations across dimensions match at one point in time, it is due to the many different parameters and terms impossible to make them perfeclty fit over time.
 
 
+\begin{longtable}{|c c c c c c c c c c|}
+    \hline
+    Figure & Linestyle & $d_c$ & $\gamma$ & $\mu_1$ & $\eta$ & $\mu_2$ & $d_m$ & $\alpha$ & $\beta$ \\ [0.5ex] 
+    \hline\hline
+    \endfirsthead
+    \hline
+    Figure & Linestyle & $d_c$ & $\gamma$ & $\mu_1$ & $\eta$ & $\mu_2$ & $d_m$ & $\alpha$ & $\beta$ \\ [0.5ex] 
+    \hline\hline
+    \endhead
+    \hline \multicolumn{10}{|r|}{{continued on next page}} \\ \hline
+    \endfoot
+    \endlastfoot
+    \ref{fig:unadjsuted_replication} & \sampleline{} & $1\cdot 10^{-3}$ & $0.005$ & $0$ & $10$ & $0$ & $1\cdot 10^{-3}$ & $0.1$ & $0$\\  \hline
+    \ref{fig:replication_alpha_comparison} & \sampleline{dash pattern=on .7em off .2em on .05em off .2em} & $1\cdot 10^{-3}$ & 0.005 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.2 & 0\\  \hline
+    \ref{fig:replication_alpha_comparison} & \sampleline{dotted} & $1\cdot 10^{-3}$ & 0.005 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3 & 0\\  \hline
+    \ref{fig:replication_alpha_comparison} & \sampleline{} & $1\cdot 10^{-3}$ & 0.005 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.35 & 0\\  \hline
+    \ref{fig:replication_alpha_comparison} & \sampleline{dashed} & $1\cdot 10^{-3}$ & 0.005 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.4 & 0\\  \hline
+    \ref{fig:replication_dc_comparison} & \sampleline{dash pattern=on .7em off .2em on .05em off .2em} & $1\cdot 10^{-3}$ & 0.005 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
+    \ref{fig:replication_dc_comparison} & \sampleline{dotted} & $1\cdot 10^{-4}$ & 0.005 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
+    \ref{fig:replication_dc_comparison} & \sampleline{} & $5\cdot 10^{-4}$ & 0.005 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
+    \ref{fig:replication_dc_comparison} & \sampleline{dashed} & $1\cdot 10^{-5}$ & 0.005 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
+    \ref{fig:replication_gamma_comparison} & \sampleline{dash pattern=on .7em off .2em on .05em off .2em} & $5\cdot 10^{-5}$ & 0.005 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
+    \ref{fig:replication_gamma_comparison} & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
+    \ref{fig:replication_gamma_comparison} & \sampleline{} & $5\cdot 10^{-4}$ & 0.006 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
+    \ref{fig:replication_gamma_comparison} & \sampleline{dashed} & $5\cdot 10^{-4}$ & 0.007 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
+    \ref{fig:basecase_without_proliferation} & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 0 & 10 & 0 & $1\cdot 10^{-3}$ & 0.3546 & 0\\ \hline
+    \caption{Overview of all experiments conducted for the model without proliferation and renewal producing 2D output}
+    \label{table:replication_experiments}
+\end{longtable}
+
+In table~\ref{table:replicatoin_experiments} all experiments with their corresponding parameter configurations and linestyles in the respective figures are listed.
+
+
 
 \subsection{2D Results without Proliferation and Renewal - Homogenous ECM}
 \label{sec:2D_without_proliferation}
