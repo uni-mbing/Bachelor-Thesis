@@ -1,19 +1,19 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'bachelors_report.blg'
-[45] biber:340> INFO - === Mo Apr 29, 2024, 09:38:14
-[53] Biber.pm:418> INFO - Reading 'bachelors_report.bcf'
-[119] Biber.pm:972> INFO - Found 14 citekeys in bib section 0
-[135] Biber.pm:4383> INFO - Processing section 0
-[147] Biber.pm:4574> INFO - Looking for bibtex file 'lib.bib' for section 0
-[152] bibtex.pm:1713> INFO - LaTeX decoding ...
-[192] bibtex.pm:1518> INFO - Found BibTeX data source 'lib.bib'
-[261] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[261] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[261] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[261] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[272] bbl.pm:654> INFO - Writing 'bachelors_report.bbl' with encoding 'UTF-8'
-[284] bbl.pm:757> INFO - Output to bachelors_report.bbl
-[284] Biber.pm:130> WARN - legacy month field 'Dec' in entry 'Kolev2010' is not an integer - this will probably not sort properly.
-[284] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_JLvL/0e04ca0c8092d95de8fa9a92148e45c0_268771.utf8, line 36, warning: possible runaway string started at line 35
-[285] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_JLvL/0e04ca0c8092d95de8fa9a92148e45c0_268771.utf8, line 246, warning: possible runaway string started at line 245
-[285] Biber.pm:132> INFO - WARNINGS: 3
+[44] biber:340> INFO - === Mo Apr 29, 2024, 10:59:28
+[52] Biber.pm:418> INFO - Reading 'bachelors_report.bcf'
+[86] Biber.pm:972> INFO - Found 14 citekeys in bib section 0
+[93] Biber.pm:4383> INFO - Processing section 0
+[99] Biber.pm:4574> INFO - Looking for bibtex file 'lib.bib' for section 0
+[102] bibtex.pm:1713> INFO - LaTeX decoding ...
+[131] bibtex.pm:1518> INFO - Found BibTeX data source 'lib.bib'
+[198] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[198] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[198] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[198] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[205] bbl.pm:654> INFO - Writing 'bachelors_report.bbl' with encoding 'UTF-8'
+[211] bbl.pm:757> INFO - Output to bachelors_report.bbl
+[211] Biber.pm:130> WARN - legacy month field 'Dec' in entry 'Kolev2010' is not an integer - this will probably not sort properly.
+[211] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_7qAo/0e04ca0c8092d95de8fa9a92148e45c0_271193.utf8, line 36, warning: possible runaway string started at line 35
+[211] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_7qAo/0e04ca0c8092d95de8fa9a92148e45c0_271193.utf8, line 246, warning: possible runaway string started at line 245
+[211] Biber.pm:132> INFO - WARNINGS: 3

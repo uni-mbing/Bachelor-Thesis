@@ -14,5 +14,5 @@
 \contentsline {subsubsection}{\numberline {4.2.2}Parameter Analysis}{44}{}%
 \contentsline {subsection}{\numberline {4.3}3D Results with Proliferation and Renewal - Homogenous ECM}{56}{}%
 \contentsline {subsubsection}{\numberline {4.3.1}Basecase Analysis}{56}{}%
-\contentsline {subsection}{\numberline {4.4}2D Results with Proliferation and Renewal - Heterogenous ECM}{58}{}%
+\contentsline {subsection}{\numberline {4.4}2D Results with Proliferation and Renewal - Heterogenous ECM}{59}{}%
 \contentsline {section}{\numberline {5}Conclusion and Discussion}{62}{}%

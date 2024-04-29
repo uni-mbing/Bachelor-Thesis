@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.24)  29 APR 2024 10:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.24)  29 APR 2024 11:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1351,31 +1351,27 @@ Overfull \hbox (34.41595pt too wide) in paragraph at lines 686--695
  [][] 
  []
 
-<resources/images/2D_initial_conditions_heterogenous_ECM.png, id=285, 578.16pt x 289.08pt>
+[58]
+<resources/images/2D_initial_conditions_heterogenous_ECM.png, id=288, 578.16pt x 289.08pt>
 File: resources/images/2D_initial_conditions_heterogenous_ECM.png Graphic file (type png)
 <use resources/images/2D_initial_conditions_heterogenous_ECM.png>
-Package pdftex.def Info: resources/images/2D_initial_conditions_heterogenous_ECM.png  used on input line 707.
+Package pdftex.def Info: resources/images/2D_initial_conditions_heterogenous_ECM.png  used on input line 713.
 (pdftex.def)             Requested size: 386.96027pt x 193.47968pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
 
+LaTeX Warning: Reference `fig:tumour_invasion_stage' on page 59 undefined on input line 718.
 
-LaTeX Warning: Reference `fig:tumour_invasion_stage' on page 58 undefined on input line 712.
-
-[58]
-<resources/images/2D_heterogenous_ECM.png, id=289, 578.16pt x 650.43pt>
+[59 <./resources/images/2D_initial_conditions_heterogenous_ECM.png>]
+<resources/images/2D_heterogenous_ECM.png, id=293, 578.16pt x 650.43pt>
 File: resources/images/2D_heterogenous_ECM.png Graphic file (type png)
 <use resources/images/2D_heterogenous_ECM.png>
-Package pdftex.def Info: resources/images/2D_heterogenous_ECM.png  used on input line 726.
+Package pdftex.def Info: resources/images/2D_heterogenous_ECM.png  used on input line 732.
 (pdftex.def)             Requested size: 578.15858pt x 650.4284pt.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Reference `fig:tumour_invasion_stage' on page 60 undefined on input line 738.
 
-
-LaTeX Warning: Reference `fig:tumour_invasion_stage' on page 59 undefined on input line 732.
-
-[59 <./resources/images/2D_initial_conditions_heterogenous_ECM.png>] [60 <./resources/images/2D_heterogenous_ECM.png>]) [61]
+[60 <./resources/images/2D_heterogenous_ECM.png>]) [61]
 \openout2 = `content/conclusion_discussion.aux'.
 
  (./content/conclusion_discussion.tex) [62
@@ -1406,7 +1402,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  86i,12n,117p,2273b,1316s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on bachelors_report.pdf (65 pages, 4363957 bytes).
+Output written on bachelors_report.pdf (65 pages, 4366972 bytes).
 PDF statistics:
  416 PDF objects out of 1000 (max. 8388607)
  222 compressed objects within 3 object streams
