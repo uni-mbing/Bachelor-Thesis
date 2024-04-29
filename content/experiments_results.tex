@@ -22,6 +22,126 @@ For each stage of the experiments, we will use a set of baseline parameters, whi
 
 For all the plots of the experiments, the red curve indicates the tumor cell density, the blue curve the ECM concentration and the green curve the MDE concentration.  
 
+\subsection{Dimension Variation}
+
+
+We will start with replicating the first experiment from Anderson et al.\cite{anderson_mathematical_2000} in two and three spacial dimensions. Figure~\ref{fig:anderson_experiment} shows a screenshot of this experiment, unfortunately in low resolution, since the original paper had not included any digital data containing the diagrams of their results.
+\begin{figure}[ht!]
+ \centering
+ \includegraphics[width=\textwidth]{resources/images/anderson_experiment.png}
+ \caption{Andersons first one dimensional experiment using the parameter values $d_c = 1\cdot 10^{-3}, d_m = 1\cdot 10^{-3}, \gamma = 0.005, \eta = 10, \alpha = 0.1, \beta = 0, \mu_1 = 0, \mu_2 = 0$}
+ \label{fig:anderson_experiment}
+\end{figure}
+In figure~\ref{fig:anderson_experiment}, you can see that after $t=1$ in their timescale, the tumor cells develop a division at the part invading the tissue. This division propagates to a pointy peak at a later point in time. The concentration of the matrix-degrading enzymes increases continuously and the concentration of the extracellular matrix decreases continuously. Their $x$-axis is stretched or rescaled to show an interval from $0$ to $1$. In our case, the interval on the plots has only $x$-values from $0$ to $0.5$.
+\begin{figure}[ht!]
+ \centering
+ \includegraphics[width=\textwidth]{resources/images/first_replication_POL.png}
+ \caption{Results using Anderson et al.'s parameters produced by applying the Plot Over Line tool}
+ \label{fig:unadjsuted_replication}
+\end{figure}
+Replicating this experiment in two dimensions, we start with the same parameters as Anderson et al. had used, $d_c = 1\cdot 10^{-3}, d_m = 1\cdot 10^{-3}, \gamma = 0.005, \eta = 10, \alpha = 0.1, \beta = 0$. Figure~\ref{fig:unadjsuted_replication} shows these results for four different points in time. The two-dimensional plots of the tumor cell density are shown on the left side and on the right side, the plots produced by applying the Plot Over Line tool are displayed. As mentioned above, we will mostly resort to using only the results produced by the Plot Over Line tool. Figure~\ref{fig:unadjsuted_replication} shows on the right side that the curves for the three variables are distinguishable and we can estimate their values spacially and temporarily better than using 2D plots to estimate values.
+
+Starting from the initial values, we see that after $t=4$, a very small division of the tumor cells is starting to form. This division increases in the image at $t=4$, but at $t=8$, it has visibly flattened. It is not as pointy as seen in the one-dimensional experiments. The interplay of the diffusion and haptotaxis factors determines how considerable this division will be that splits from the primary lump of the tumor cells and invades the tissue faster. It will also decide how pointy this secondary lump of tumor cells will be. Biologically, this relation between diffusion and haptotaxis translates to the invasion pace of the tumor cells, the rate at which much of them will remain at the center and how much will invade further into the tissue.
+
+Looking at the concentration of matrix-degrading enzymes, we see it is visibly lower here than in Anderson et al.'s experiment. We see little increase across time. We can change this by changing the production factor of $\alpha$. This factor determines how fast the tumor cells produce the matrix-degrading enzymes, degrading the extracellular matrix and allowing the tumor cells to invade the tissue further.
+
+Only the extracellular matrix concentration seems to mimic the behavior of Anderson et al.'s experiment. It decreases continuously and as the last image shows, there is still a considerable amount left.
+
+To replicate Anderson et al.'s results, we will start adjusting the parameters mentioned: the tumor cells' diffusion coefficient, their haptotatic coefficient and the production rate of the matrix-degrading enzymes. Making the curves fit ideally will be impossible due to the system's high degrees of freedom and the change of dimension. Regardless, we will replicate as best as possible, focusing on the values the variables will take at the origin $x=0$.
+
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=\textwidth]{resources/images/alpha_comparison.png}
+ \caption{Comparison of $\alpha$ values to replicate Anderson et al.'s experiment}
+ \label{fig:replication_alpha_comparison}
+\end{figure}
+Starting with comparing different values for $\alpha$, we see in figure~\ref{fig:replication_alpha_comparison} a comparison of how this affects the curve for the matrix-degrading enzyme concentration. A maximum difference between the compared values of $0.2$ already causes drastic changes. In Anderson et al.'s experiment, we observed a value of approximately $m(0,1)=0.5$ after, in their timescale, $t=1$ at the origin. This value is mimicked best for a value of $\alpha=0.2$ in our experiments. However, in the later points in time, we see that this value for $\alpha$ is insufficiently low in terms of increase, though choosing $\alpha$ higher than $\alpha=0.4$ results in an accelerated ECM degradation that is too fast. Taking a value between those two allowed our simulations to exhibit the observed behavior. We choose a value of $\alpha=0.35645$ to use in the later experiments as a basecase.
+
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=\textwidth]{resources/images/dc_comparison.png}
+ \caption{Comparison of $d_c$ values to replicate Anderson et al.'s experiment}
+ \label{fig:replication_dc_comparison}
+\end{figure}
+Looking at the diffusion coefficient for the tumor cells, in figure~\ref{fig:replication_dc_comparison}, you can see different $d_c$ values regarding the tumor cell concentration. It is clear that with decreasing $d_c$, the sharpness of the secondary lump of cells that begins to invade the tissue drastically increases due to increased effects of haptotaxis, which is now the main factor in controlling tumor motility. However, we also observe that with decreasing $d_c$, the remaining lump of tumor cells at the origin increases due to little diffusion here. Over time, we found that $dc=5 \cdot 10^{-4}$ describes Anderson et al.'s experimental results best for our simulations, with a roughly matching density of tumor cells that remains at the origin at all times and, for our case, balanced effects of haptotaxis and diffusion.
+
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=\textwidth]{resources/images/gamma_comparison.png}
+ \caption{Comparison of $\gamma$ values to replicate Anderson et al.'s experiment}
+ \label{fig:replication_gamma_comparison}
+\end{figure}
+At last, we want to adjust the haptotatic pull slightly; for this, we are looking at a comparison of different $\gamma$ values in figure~\ref{fig:replication_gamma_comparison} depicting the tumor cell density. Comparing our results with Anderson et al.'s, we want a bigger secondary lump that invades the tumor cells faster than the one remaining at the origin. We need to increase $\gamma$ to increase the haptotatic pull that controls tumor cell motility. The figure shows that increasing $\gamma$ yields these effects, but increasing it too much results in a too-fast invasion pace of the surrounding tissue. Increasing $\gamma$ slightly to $\gamma=0.0055$ is sufficient to produce the desired effects.
+
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=\textwidth]{resources/images/basecase_without_proliferation_.png}
+ \caption{Results of using the parameters as described, this experiment will be used as the basecase to compare further experiments regarding the model without proliferation and renewal}
+ \label{fig:basecase_without_proliferation}
+\end{figure}
+These adjustments leave us with the final configuration for replicating the system with the curves in figure~\ref{fig:basecase_without_proliferation} and the parameter settings of $d_c=5\cdot 10^{-4}, \gamma=0.0055, \eta=10, d_m=1\cdot 10^{-3}, \alpha=0.35645, \beta=0$. We see the important effects met when comparing our final version with the original experiment we are trying to replicate, figure~\ref{fig:anderson_experiment}. We see that the production of the matrix-degrading enzymes fits the original experiment and the motility of the tumor cells also matches, with balanced effects of haptotaxis and diffusion.
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{resources/images/1D_replication_3D.png}
+    \caption{3D Replication of using Anderson et al.'s values}
+    \label{fig:1D_replication_3D}
+\end{figure}
+
+In figure~\ref{fig:1D_replication_3D} you can see a comparison of results produced using Anderson et al.'s values in different dimensions. In the image the solid line describes a 2D replication, the dotted line a 3D replication. This is a very good example of how varying the dimension changes the results; at the first timestep $t=0$ you see that both experiments start with the same initial conditions. However, the second timestep $t=0.4$ shows a tumor cell density that is considerably lower in the 3D experiment than in the 2D experiment. This effect is also observed in the figures~\ref{fig:2D_proliferation_replication_3D} and~\ref{fig:3D_basecase_comparison}. Over time and across the afore mentioned figures the reduced tumor cell density is confirmed. Due to the exponential production of matrix-degrading enzymes by the tumor cells, the change in tumor cell density also effects the MDE concentration massively, resulting also in a lower concentration. The also reduced MDE concentration causes a slower degradation process of the extracellular matrix.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{resources/images/2D_proliferation_replication_3D.png}
+    \caption{3D Replication of using the 2D basecases values with proliferation}
+    \label{fig:2D_proliferation_replication_3D}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{resources/images/basecase_replication.png}
+    \caption{Comparing 2D basecase with proliferation and 3D basecase for proliferation}
+    \label{fig:3D_basecase_comparison}
+\end{figure}
+Figure~\ref{fig:3D_basecase_comparison} we tried, as we did replicating results of one spacial dimension, to make the results of using 3D simulations align with the results produced in 2D replications. Challenging in this process was, as mentioned previously, that the reduced tumor cell density causes drastic changes in MDE production and ECM degradation. However we can balance this, by increasing the production rate of the matrix-degrading enzymes, as we did in section~\ref{sec:replication_2D_basecase}. Another measure to take is adjusting the relation between diffusion and haptotaxis on the tumor cells. We increased $\gamma$ and decreased $d_c$ for this, because we want more effects of haptotaxis. We choose $\gamma=0.006$ and $d_c=5e-5$. 
+
+Now the question arises why we have to change those values to replicate results. We can argue here with the parameter analysis, but also with an algebraic hypothesis. 
+
+Since $\beta$ is assumed for most experiments to be zero, also in repilication one-dimensional results in two dimensions, we also set it to zero in this case. 
+
+Looking at the parameter analysis for $d_m$ we saw that this parameter has litlle influence compared to other on the simulation, excepting the overall MDE concentration in certain regions, which is neglectable when in those regions the ECM is already fully degraded. Also regarding the spacial occupation and distribution of the matrix-degrading enzymes we saw that a more important factor is the motility of the tumor cells producing them in their wake. 
+
+Inspecting the term concerning $\eta$ we see that it depends on local values for the ECM and MDE concentrations; $-\eta m(x,y,z,t)e(x,y,z,t)$. In the expereiments regarding replicating we see that we can influence the MDE concentration well with adjusting the motility of the tumor cells and their production of the MDEs. In figure~\ref{fig:3D_basecase_comparison} you see that the concentration of the matrix-degrading enzymes roughly matches over time for both dimensions. In the plots $m(x,y,z,t)e(x,y,z,t)$ therefore also roughly match, resulting in similar ECM degradation rate. Becasue of this, we also do not change $\eta$.
+
+As mentioned above the tumor cell motility plays a cruical role during temporal developement of the whole system. It is therefore a key component to match these curves. The motility is goverened by diffusion and haptotaxis: 
+\begin{align*}
+    d_c\Delta c - \gamma \nabla\cdot (c\nabla e)=d_c\Delta c - \gamma (\nabla c \cdot \nabla e + \Delta e)
+\end{align*}.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        & $1D$ & $2D$ & $3D$ \\ 
+        \hline
+        Diffusion & $\frac{\partial^{2}c}{\partial x^{2}}$ & $\frac{\partial^{2}c}{\partial x^{2}}+\frac{\partial^{2}c}{\partial y^{2}}$ & $\frac{\partial^{2}c}{\partial x^{2}}+\frac{\partial^{2}c}{\partial y^{2}}+\frac{\partial^{2}c}{\partial z^{2}}$\\
+        \hline
+        Haptotaxis & $\frac{\partial c}{\partial x}\frac{\partial e}{\partial x} + \frac{\partial^{2}e}{\partial x^{2}}$ & $\frac{\partial c}{\partial x}\frac{\partial e}{\partial x} + \frac{\partial c}{\partial y} \frac{\partial e}{\partial y} + \frac{\partial^{2}e}{\partial x^{2}} + \frac{\partial^{2}e}{\partial y^{2}} $ & $\frac{\partial c}{\partial x}\frac{\partial e}{\partial x} + \frac{\partial c}{\partial y}\frac{\partial e}{\partial y} + \frac{\partial c}{\partial z}\frac{\partial e}{\partial z} + \frac{\partial^{2}e}{\partial x^{2}} + \frac{\partial^{2}e}{\partial y^{2}} + \frac{\partial^{2}e}{\partial z^{2}}$ \\
+        \hline
+    \end{tabular}
+    \caption{Overview of Diffusion and Haptotaxis terms across varying dimensions}
+    \label{tab:diff_hapto}
+\end{table}
+Table~\ref{tab:diff_hapto} gives an overview of the diffusion and haptotaxis terms for the treated dimensions in this work. For the diffusion we see that with increasing the dimension we get one additional term, assuming for simplicity $\frac{\partial^{2}c}{\partial x^{2}}=\frac{\partial^{2}c}{\partial y^{2}}=\frac{\partial^{2}c}{\partial z^{2}}=\kappa(t)$. Also assuming a constant factor $M$ for diffusion, this yields in one spacial dimension $M=d_{c,1}\kappa(t)$, equivalent to $d_{c,1}=\frac{M}{\kappa(t)}=1\cdot 10^{-3}$; in two spacial dimensions $d_{c,2}=\frac{M}{2\kappa(t)}=\frac{1}{2}d_{c,1}=\frac{1}{2} 10^{-3}=5 \cdot 10^{-4}$ and in three dimensions $d_{c,3}=\frac{M}{3\kappa(t)}=\frac{1}{3}d_{c,1}=\frac{1}{3} 10^{-3}=3.33 \cdot 10^{-4}$. 
+
+If we applied the same hypothesis for $\gamma$; assuming a constant factor $H$ for it and assuming $\frac{\partial c}{\partial x}\frac{\partial e}{\partial x}=\frac{\partial c}{\partial y}\frac{\partial e}{\partial y}=\frac{\partial c}{\partial z}\frac{\partial e}{\partial z}=\iota$, $\frac{\partial^{2}e}{\partial x^{2}}=\frac{\partial^{2}e}{\partial y^{2}}=\frac{\partial^{2}e}{\partial z^{2}}=\theta$, we would get in one dimension: $\gamma_1 = \frac{H}{\iota + \kappa(t)} = 0.005$, in two: $\gamma_2 = \frac{H}{2\iota + 2\kappa(t)} = \frac{1}{2} \gamma_1 = 0.0025$ and in three dimensions: $\gamma_3 = \frac{H}{3\iota + 3\kappa(t)} = \frac{1}{3} \gamma_1 = 0.00166$. We see from experimental results that using $\gamma=0.002$ and $d_c=5\cdot 10^{-4}$ yields a curve for the tumor cells that has no secondary lump of cells splitting off the primary tumor. Adjusting $\gamma$ we cannot employ the same hypothesis, since the equation describing haptotaxis also incorporates a term regarding the gradients of both curves; $\nabla c \cdot \nabla e$ not only the laplacian of the extracellular matrix concentratin $\Delta e$. Depending on the point in space and time we look at $\nabla c(x,y,z,t) \cdot \nabla e(x,y,z,t)$, this term can damping increasing or no effect at all. We therefore resort to determining this value experimentally with a value of $\gamma=0.0057$.
+
+Further improvements to make the experiments match better could be made on varying $\mu_1$ and $\mu_2$ to either match the tumor cell density more acurately or the degradation rate of the extracellular matrix.
+
+The conclusions we can draw from adjusting the parameters with varying the dimensions are that the most important factor is the tumor cell density. The motility is cruical for the as well the shape of the MDE curve as well as the concentration of it, due to the tumor cells producing them exponentially, but this we can also adjust with the production coefficient $\alpha$. Diffusion coefficient can be calculated algebraicly, as seen above, but for Haptotaxis the coefficient must be determined experimentally. It is to say that due though it is possible to make the simulations across dimensions match at one point in time, it is due to the many different parameters and terms impossible to make them perfeclty fit over time.
+
+
+
 \subsection{2D Results without Proliferation and Renewal - Homogenous ECM}
 \label{sec:2D_without_proliferation}
 
@@ -121,62 +241,6 @@ Table~\ref{table:2D_experiments_without_proliferation} gives a detailed overview
     
 \subsubsection{Basecase Analysis}
 \label{sec:replication_2D_without_proliferation}
-
-We will start with replicating the first experiment from Anderson et al.\cite{anderson_mathematical_2000}. Figure~\ref{fig:anderson_experiment} shows a screenshot of this experiment, unfortunately in low resolution, since the original paper had not included any digital data containing the diagrams of their results.
-\begin{figure}[ht!]
- \centering
- \includegraphics[width=\textwidth]{resources/images/anderson_experiment.png}
- \caption{Andersons first one dimensional experiment using the parameter values $d_c = 1\cdot 10^{-3}, d_m = 1\cdot 10^{-3}, \gamma = 0.005, \eta = 10, \alpha = 0.1, \beta = 0, \mu_1 = 0, \mu_2 = 0$}
- \label{fig:anderson_experiment}
-\end{figure}
-In figure~\ref{fig:anderson_experiment}, you can see that after $t=1$ in their timescale, the tumor cells develop a division at the part invading the tissue. This division propagates to a pointy peak at a later point in time. The concentration of the matrix-degrading enzymes increases continuously and the concentration of the extracellular matrix decreases continuously. Their $x$-axis is stretched or rescaled to show an interval from $0$ to $1$. In our case, the interval on the plots has only $x$-values from $0$ to $0.5$.
-\begin{figure}[ht!]
- \centering
- \includegraphics[width=\textwidth]{resources/images/first_replication_POL.png}
- \caption{Results using Anderson et al.'s parameters produced by applying the Plot Over Line tool}
- \label{fig:unadjsuted_replication}
-\end{figure}
-Replicating this experiment in two dimensions, we start with the same parameters as Anderson et al. had used, $d_c = 1\cdot 10^{-3}, d_m = 1\cdot 10^{-3}, \gamma = 0.005, \eta = 10, \alpha = 0.1, \beta = 0$. Figure~\ref{fig:unadjsuted_replication} shows these results for four different points in time. The two-dimensional plots of the tumor cell density are shown on the left side and on the right side, the plots produced by applying the Plot Over Line tool are displayed. As mentioned above, we will mostly resort to using only the results produced by the Plot Over Line tool. Figure~\ref{fig:unadjsuted_replication} shows on the right side that the curves for the three variables are distinguishable and we can estimate their values spacially and temporarily better than using 2D plots to estimate values.
-
-Starting from the initial values, we see that after $t=4$, a very small division of the tumor cells is starting to form. This division increases in the image at $t=4$, but at $t=8$, it has visibly flattened. It is not as pointy as seen in the one-dimensional experiments. The interplay of the diffusion and haptotaxis factors determines how considerable this division will be that splits from the primary lump of the tumor cells and invades the tissue faster. It will also decide how pointy this secondary lump of tumor cells will be. Biologically, this relation between diffusion and haptotaxis translates to the invasion pace of the tumor cells, the rate at which much of them will remain at the center and how much will invade further into the tissue.
-
-Looking at the concentration of matrix-degrading enzymes, we see it is visibly lower here than in Anderson et al.'s experiment. We see little increase across time. We can change this by changing the production factor of $\alpha$. This factor determines how fast the tumor cells produce the matrix-degrading enzymes, degrading the extracellular matrix and allowing the tumor cells to invade the tissue further.
-
-Only the extracellular matrix concentration seems to mimic the behavior of Anderson et al.'s experiment. It decreases continuously and as the last image shows, there is still a considerable amount left.
-
-To replicate Anderson et al.'s results, we will start adjusting the parameters mentioned: the tumor cells' diffusion coefficient, their haptotatic coefficient and the production rate of the matrix-degrading enzymes. Making the curves fit ideally will be impossible due to the system's high degrees of freedom and the change of dimension. Regardless, we will replicate as best as possible, focusing on the values the variables will take at the origin $x=0$.
-
-\begin{figure}[!htb]
- \centering
- \includegraphics[width=\textwidth]{resources/images/alpha_comparison.png}
- \caption{Comparison of $\alpha$ values to replicate Anderson et al.'s experiment}
- \label{fig:replication_alpha_comparison}
-\end{figure}
-Starting with comparing different values for $\alpha$, we see in figure~\ref{fig:replication_alpha_comparison} a comparison of how this affects the curve for the matrix-degrading enzyme concentration. A maximum difference between the compared values of $0.2$ already causes drastic changes. In Anderson et al.'s experiment, we observed a value of approximately $m(0,1)=0.5$ after, in their timescale, $t=1$ at the origin. This value is mimicked best for a value of $\alpha=0.2$ in our experiments. However, in the later points in time, we see that this value for $\alpha$ is insufficiently low in terms of increase, though choosing $\alpha$ higher than $\alpha=0.4$ results in an accelerated ECM degradation that is too fast. Taking a value between those two allowed our simulations to exhibit the observed behavior. We choose a value of $\alpha=0.35645$ to use in the later experiments as a basecase.
-
-\begin{figure}[!htb]
- \centering
- \includegraphics[width=\textwidth]{resources/images/dc_comparison.png}
- \caption{Comparison of $d_c$ values to replicate Anderson et al.'s experiment}
- \label{fig:replication_dc_comparison}
-\end{figure}
-Looking at the diffusion coefficient for the tumor cells, in figure~\ref{fig:replication_dc_comparison}, you can see different $d_c$ values regarding the tumor cell concentration. It is clear that with decreasing $d_c$, the sharpness of the secondary lump of cells that begins to invade the tissue drastically increases due to increased effects of haptotaxis, which is now the main factor in controlling tumor motility. However, we also observe that with decreasing $d_c$, the remaining lump of tumor cells at the origin increases due to little diffusion here. Over time, we found that $dc=5 \cdot 10^{-4}$ describes Anderson et al.'s experimental results best for our simulations, with a roughly matching density of tumor cells that remains at the origin at all times and, for our case, balanced effects of haptotaxis and diffusion.
-
-\begin{figure}[!htb]
- \centering
- \includegraphics[width=\textwidth]{resources/images/gamma_comparison.png}
- \caption{Comparison of $\gamma$ values to replicate Anderson et al.'s experiment}
- \label{fig:replication_gamma_comparison}
-\end{figure}
-At last, we want to adjust the haptotatic pull slightly; for this, we are looking at a comparison of different $\gamma$ values in figure~\ref{fig:replication_gamma_comparison} depicting the tumor cell density. Comparing our results with Anderson et al.'s, we want a bigger secondary lump that invades the tumor cells faster than the one remaining at the origin. We need to increase $\gamma$ to increase the haptotatic pull that controls tumor cell motility. The figure shows that increasing $\gamma$ yields these effects, but increasing it too much results in a too-fast invasion pace of the surrounding tissue. Increasing $\gamma$ slightly to $\gamma=0.0055$ is sufficient to produce the desired effects.
-
-\begin{figure}[h]
- \centering
- \includegraphics[width=\textwidth]{resources/images/basecase_without_proliferation_.png}
- \caption{Results of using the parameters as described, this experiment will be used as the basecase to compare further experiments regarding the model without proliferation and renewal}
- \label{fig:basecase_without_proliferation}
-\end{figure}
-These adjustments leave us with the final configuration for replicating the system with the curves in figure~\ref{fig:basecase_without_proliferation} and the parameter settings of $d_c=5\cdot 10^{-4}, \gamma=0.0055, \eta=10, d_m=1\cdot 10^{-3}, \alpha=0.35645, \beta=0$. We see the important effects met when comparing our final version with the original experiment we are trying to replicate, figure~\ref{fig:anderson_experiment}. We see that the production of the matrix-degrading enzymes fits the original experiment and the motility of the tumor cells also matches, with balanced effects of haptotaxis and diffusion.
 
 
 \subsubsection{Parameter Analysis}
@@ -635,72 +699,6 @@ Varying both $\eta$ and $\mu_2$, we can expect apparent changes in the curve des
 Looking at the experiments with raised $\eta$ to accelerate the ECM degrading process, we can only see pregnant differences in the curve describing the ECM concentration; the other two look across the steps in time to be widely similar. For the ECM curve, we see that the experiment with the lower $\mu_2$ value results in a faster degradation process.
 
 
-
-
-\subsection{3D Results with Proliferation and Renewal - Homogenous ECM}
-\subsubsection{Basecase Analysis}
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{resources/images/1D_replication_3D.png}
-    \caption{3D Replication of using Anderson et al.'s values}
-    \label{fig:1D_replication_3D}
-\end{figure}
-\begin{comment}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\textwidth]{resources/images/2D_without_proliferation_replication_3D.png}
-    \caption{3D Replication of using the 2D basecases values without proliferation}
-    \label{fig:2D_without_proliferation_replication_3D}
-\end{figure}
-\end{comment}
-
-In figure~\ref{fig:1D_replication_3D} you can see a comparison of results produced using Anderson et al.'s values in different dimensions. In the image the solid line describes a 2D replication, the dotted line a 3D replication. This is a very good example of how varying the dimension changes the results; at the first timestep $t=0$ you see that both experiments start with the same initial conditions. However, the second timestep $t=0.4$ shows a tumor cell density that is considerably lower in the 3D experiment than in the 2D experiment. This effect is also observed in the figures~\ref{fig:2D_proliferation_replication_3D} and~\ref{fig:3D_basecase_comparison}. Over time and across the afore mentioned figures the reduced tumor cell density is confirmed. Due to the exponential production of matrix-degrading enzymes by the tumor cells, the change in tumor cell density also effects the MDE concentration massively, resulting also in a lower concentration. The also reduced MDE concentration causes a slower degradation process of the extracellular matrix.
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\textwidth]{resources/images/2D_proliferation_replication_3D.png}
-    \caption{3D Replication of using the 2D basecases values with proliferation}
-    \label{fig:2D_proliferation_replication_3D}
-\end{figure}
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\textwidth]{resources/images/basecase_replication.png}
-    \caption{Comparing 2D basecase with proliferation and 3D basecase for proliferation}
-    \label{fig:3D_basecase_comparison}
-\end{figure}
-Figure~\ref{fig:3D_basecase_comparison} we tried, as we did replicating results of one spacial dimension, to make the results of using 3D simulations align with the results produced in 2D replications. Challenging in this process was, as mentioned previously, that the reduced tumor cell density causes drastic changes in MDE production and ECM degradation. However we can balance this, by increasing the production rate of the matrix-degrading enzymes, as we did in section~\ref{sec:replication_2D_basecase}. Another measure to take is adjusting the relation between diffusion and haptotaxis on the tumor cells. We increased $\gamma$ and decreased $d_c$ for this, because we want more effects of haptotaxis. We choose $\gamma=0.006$ and $d_c=5e-5$. 
-
-Now the question arises why we have to change those values to replicate results. We can argue here with the parameter analysis, but also with an algebraic hypothesis. 
-
-Since $\beta$ is assumed for most experiments to be zero, also in repilication one-dimensional results in two dimensions, we also set it to zero in this case. 
-
-Looking at the parameter analysis for $d_m$ we saw that this parameter has litlle influence compared to other on the simulation, excepting the overall MDE concentration in certain regions, which is neglectable when in those regions the ECM is already fully degraded. Also regarding the spacial occupation and distribution of the matrix-degrading enzymes we saw that a more important factor is the motility of the tumor cells producing them in their wake. 
-
-Inspecting the term concerning $\eta$ we see that it depends on local values for the ECM and MDE concentrations; $-\eta m(x,y,z,t)e(x,y,z,t)$. In the expereiments regarding replicating we see that we can influence the MDE concentration well with adjusting the motility of the tumor cells and their production of the MDEs. In figure~\ref{fig:3D_basecase_comparison} you see that the concentration of the matrix-degrading enzymes roughly matches over time for both dimensions. In the plots $m(x,y,z,t)e(x,y,z,t)$ therefore also roughly match, resulting in similar ECM degradation rate. Becasue of this, we also do not change $\eta$.
-
-As mentioned above the tumor cell motility plays a cruical role during temporal developement of the whole system. It is therefore a key component to match these curves. The motility is goverened by diffusion and haptotaxis: $d_c\Delta c - \gamma \nabla\cdot (c\nabla e)=d_c\Delta c - \gamma (\nabla c \cdot \nabla e + \Delta e)$.
-
-\begin{table}[htbp]
-    \centering
-    \begin{tabular}{|c|c|c|c|}
-        \hline
-        & $1D$ & $2D$ & $3D$ \\ 
-        \hline
-        Diffusion & $\frac{\partial^{2}c}{\partial x^{2}}$ & $\frac{\partial^{2}c}{\partial x^{2}}+\frac{\partial^{2}c}{\partial y^{2}}$ & $\frac{\partial^{2}c}{\partial x^{2}}+\frac{\partial^{2}c}{\partial y^{2}}+\frac{\partial^{2}c}{\partial z^{2}}$\\
-        \hline
-        Haptotaxis & $\frac{\partial c}{\partial x}\frac{\partial e}{\partial x} + \frac{\partial^{2}e}{\partial x^{2}}$ & $\frac{\partial c}{\partial x}\frac{\partial e}{\partial x} + \frac{\partial c}{\partial y} \frac{\partial e}{\partial y} + \frac{\partial^{2}e}{\partial x^{2}} + \frac{\partial^{2}e}{\partial y^{2}} $ & $\frac{\partial c}{\partial x}\frac{\partial e}{\partial x} + \frac{\partial c}{\partial y}\frac{\partial e}{\partial y} + \frac{\partial c}{\partial z}\frac{\partial e}{\partial z} + \frac{\partial^{2}e}{\partial x^{2}} + \frac{\partial^{2}e}{\partial y^{2}} + \frac{\partial^{2}e}{\partial z^{2}}$ \\
-        \hline
-    \end{tabular}
-    \caption{Overview of Diffusion and Haptotaxis terms across varying dimensions}
-    \label{tab:diff_hapto}
-\end{table}
-Table~\ref{tab:diff_hapto} gives an overview of the diffusion and haptotaxis terms for the treated dimensions in this work. For the diffusion we see that with increasing the dimension we get one additional term, assuming for simplicity $\frac{\partial^{2}c}{\partial x^{2}}=\frac{\partial^{2}c}{\partial y^{2}}=\frac{\partial^{2}c}{\partial z^{2}}=\kappa$. Also assuming a constant factor $M$ for diffusion, this yields in one spacial dimension $M=d_{c,1}\kappa$, equivalent to $d_{c,1}=\frac{M}{\kappa}=1\cdot 10^{-3}$; in two spacial dimensions $d_{c,2}=\frac{M}{2\kappa}=\frac{1}{2}d_{c,1}=\frac{1}{2} 10^{-3}=5 \cdot 10^{-4}$ and in three dimensions $d_{c,3}=\frac{M}{3\kappa}=\frac{1}{3}d_{c,1}=\frac{1}{3} 10^{-3}=3.33 \cdot 10^{-4}$. 
-
-If we applied the same hypothesis for $\gamma$; assuming a constant factor $H$ for it and assuming $\frac{\partial c}{\partial x}\frac{\partial e}{\partial x}=\frac{\partial c}{\partial y}\frac{\partial e}{\partial y}=\frac{\partial c}{\partial z}\frac{\partial e}{\partial z}=\iota$, $\frac{\partial^{2}e}{\partial x^{2}}=\frac{\partial^{2}e}{\partial y^{2}}=\frac{\partial^{2}e}{\partial z^{2}}=\theta$, we would get in one dimension: $\gamma_1 = \frac{H}{\iota + \kappa} = 0.005$, in two: $\gamma_2 = \frac{H}{2\iota + 2\kappa} = \frac{1}{2} \gamma_1 = 0.0025$ and in three dimensions: $\gamma_3 = \frac{H}{3\iota + 3\kappa} = \frac{1}{3} \gamma_1 = 0.00166$. We see from experimental results that using $\gamma=0.002$ and $d_c=5\cdot 10^{-4}$ yields a curve for the tumor cells that has no secondary lump of cells splitting off the primary tumor. Adjusting $\gamma$ we cannot employ the same hypothesis, since the equation describing haptotaxis also incorporates a term regarding the gradients of both curves; $\nabla c \cdot \nabla e$ not only the laplacian of the extracellular matrix concentratin $\Delta e$. Depending on the point in space and time we look at $\nabla c(x,y,z,t) \cdot \nabla e(x,y,z,t)$, this term can damping increasing or no effect at all. We therefore resort to determining this value experimentally with a value of $\gamma=0.0057$.
-
-Further improvements to make the experiments match better could be made on varying $\mu_1$ and $\mu_2$ to either match the tumor cell density more acurately or the degradation rate of the extracellular matrix.
-
-The conclusions we can draw from adjusting the parameters with varying the dimensions are that the most important factor is the tumor cell density. The motility is cruical for the as well the shape of the MDE curve as well as the concentration of it, due to the tumor cells producing them exponentially, but this we can also adjust with the production coefficient $\alpha$. Diffusion coefficient can be calculated algebraicly, as seen above, but for Haptotaxis the coefficient must be determined experimentally.
 
 
 
