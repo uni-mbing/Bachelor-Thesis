@@ -11,7 +11,7 @@ For all the plots of the experiments, the red curve indicates the tumor cell den
 
 Looking at the parameter estimates from \cite{anderson_mathematical_2000} to non-dimensionalise the time, we see that $L \in [0.1cm,1cm]$ and $D\approx 10^{-6}\frac{cm^2}{s}$, $t = \frac{L^2}{D}$ gives a big temporal range between, $t_{min} = 1000s$ and $t_{max} = 1000000s$, in which the simulations take place. However, using estimates taken from~\cite{STEPHANOU200696} and~\cite{franssen_mathematical_2019} for the length scale $L$, with $L=0.2cm$ gives a concrete value for the non-dimensional time, $t=40000s$.
 
-In the experiments below a timestep of $dt=0.01$ was chosen, corresponding to $400s$. The simulations are run for a dimensionless time of $t=8$ corresponding to $320000s=88$ $days$. Looking at the results below, it was found that for every unit of time in Anderson et al.'s experiments, $0.4$ units of time have passed here.
+In the experiments below a timestep of $dt=0.01$ was chosen, corresponding to $400s$. The simulations are run for a dimensionless time of $t=8$ corresponding to $320000s=88$ $days$. The experiments during replicating  showed that a relationship between Anderson et al.'s and this work's temporal scale of one unit of time in Anderson et al.'s to $0.4$ units of time in this work's timescale make the simulations well comparable.
 
 Another challenge is the diffusion and Haptotaxis coefficients. Since they depend on the dimension the simulation is performed in, the first step is to find appropriate estimates as baseline values. They will be used as a foundation for the Parameter Analysis, where one or more parameters at a time are varied, to get an overview of their effects. 
 
@@ -580,11 +580,11 @@ For the Parameter Analysis of the model with proliferation and renewal, the focu
     \label{fig:prolif_dc_comparison}
 \end{figure}
 
-Varying $d_c$ with proliferation terms, we see the same effects as without proliferation. Higher values for $d_c$ cause a more substantial influence of diffusion and a weaker one for the Haptotaxis. This leads to a curve with less or no secondary lump of tumor cells invading the space separately but to a faster distribution process of tumor cells throughout space. The MDE concentration follows this behavior, depending on its production of the tumor cell density distribution in space. The ECM decays faster and the faster the tissue is invaded, the higher the diffusion factor is. Comparing them, we see little differences; only tumor cell density and ECM are raised a little in each plot due to the renewal and proliferation factors, which also causes a higher MDE concentration due to higher tumor cell densities.
+Varying $d_c$ with proliferation and renewal terms, the observed effects are the same as without proliferation. Higher values for $d_c$ cause a more substantial influence of diffusion and a weaker one for Haptotaxis. This leads to a curve with less of secondary lump of tumor cells, but to a more even distribution of them throughout space. The MDE concentration follows this behavior, depending on its production of the tumor cell density distribution in space. The ECM decays faster and the tissue is also faster invaded. 
 
+Comparing both models, we see differences regarding the total volume of the tumor cells and on the higher volume of ECM concentration. The increased tumor density results in a MDE production that in the plot of the last point in time exceeds a value of one. Due to the ECM renewal its' degradation is happening slower and the invasion of the tissue by tumor cells and matrix-degrading enzymes is slowed as well.
 
 \subsubsection*{$\gamma$ Variation}
-
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{resources/images/prolif_gamma_variation.png}
@@ -592,7 +592,11 @@ Varying $d_c$ with proliferation terms, we see the same effects as without proli
     \label{fig:prolif_gamma_variation}
 \end{figure}
 
-When we look at $\gamma$, we also can see the same effects as the model without proliferation shows, with the adjustments varying $d_c$, with raised curves for all variables. Increasing $\gamma$ means increasing Haptotaxis effects, pulling the tumor cells stronger towards the extracellular matrix molecules. This causes a faster invasion pace and a higher density of tumor cells invading the tissue, but a lower staying at the center at $x=0$. This also means that the ECM degrading process happens faster and the MDEs are more evenly distributed through space the higher $\gamma$ is. As mentioned above, the same effects come in this experiment, introducing proliferation and renewal, with higher values for tumor cell density, MDE and ECM concentration, especially at the later points in time, clearly depictable. Interestingly, by introducing a renewal factor for the extracellular matrix, the proliferation of the tumor cells causes a faster production of matrix-degrading enzymes, which makes the system produce nearly the same results without proliferation and renewal concerning the ECM concentration. Still, introducing the renewal of the ECM results in slightly higher concentrations overall.
+Looking at $\gamma$, the same effects as the model without proliferation and renewal are observable. Increasing $\gamma$ means increasing Haptotaxis effects, pulling the tumor cells stronger towards the extracellular matrix molecules. This causes a faster invasion pace, but with a lower density of tumor cells invading the tissue. It also causes the ECM degrading process to happen faster and the MDEs are more evenly distributed through space the higher $\gamma$ is.
+
+The effects of introducing proliferation and renewal are the same as for varying $d_c$. An increase in total tumor cell denisty and a slowed ECM degradation. 
+
+As mentioned above, the same effects come in this experiment, introducing proliferation and renewal, with higher values for tumor cell density, MDE and ECM concentration, especially at the later points in time, clearly depictable. Interestingly, by introducing a renewal factor for the extracellular matrix, the proliferation of the tumor cells causes a faster production of matrix-degrading enzymes, which makes the system produce nearly the same results without proliferation and renewal concerning the ECM concentration. Still, introducing the renewal of the ECM results in slightly higher concentrations overall.
 
 \subsubsection*{$\mu_1$ Variation}
 The parameter $\mu_1$ describes the proliferation of the tumor cells, using Kolev et al.'s estimate in \cite{Kolev2010} we assume an even distribution with $\mu_1 \sim U[0.1, 1.0]$. Introducing this factor, we can expect a faster production of the matrix-degrading enzymes and a faster degradation of the ECM with an increase in the total amount of tumor cells. Though the effect of the faster ECM degradation might be damped by also introducing a renewal term, we can, especially for higher $\mu_1$ values, expect to dominate the simulations and accelerate ECM degradation.
