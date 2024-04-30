@@ -14,13 +14,13 @@ Due to the immense computational effort, we will do a slimmer replication 3D exp
 
 Looking at the parameter estimates from \cite{anderson_mathematical_2000} to non-dimensionalise the time, we see that with $L \in [0.1cm,1cm]$ and $D\approx 10^{-6}\frac{cm^2}{s}$, $t = \frac{L^2}{D}$ would give us a big temporal range, $t_{min} = 1000s$ and $t_{max} = 1000000s$ in which the simulations take place. However, using estimates taken from~\cite{STEPHANOU200696} and~\cite{franssen_mathematical_2019} for the length scale, with $L=0.2cm$ gives us a concrete value for our non-dimensional time, $t=40000s$.
 
-Since Anderson et al. do not specify the exact value for $L$, we needed to determine appropriate configurations for $dt$ used in our simulation to get comparable results. We used a timestep of $dt=0.01$, corresponding to $400s$ and let the simulations run for a dimensionless time of $t=8$ corresponding to $320000s=88$ $days$. Looking at the results below, we found that for every unit of time in Anderson et al.'s experiments, in our experiments, $0.4$ units of time have passed.
+We choose a timestep of $dt=0.01$ in the simulations, corresponding to $400s$ and let the them run for a dimensionless time of $t=8$ corresponding to $320000s=88$ $days$. Looking at the results below, it was found that for every unit of time in Anderson et al.'s experiments, $0.4$ units of time have passed here.
 
-Another challenge are the diffusion and haptotaxis coefficients. Since they depend on the dimension we are in, we first have to find our own estimates as a baseline value. We will use these baseline values as a foundation for the Parameter Analysis. In the Parameter Analysis we will vary one or more, at most 3 parameters at time to get an overview of their effects. 
+Another challenge is the diffusion and haptotaxis coefficients. Since they depend on the dimension we are in, we first have to find our own estimates as a baseline value. They will be used as baseline values as a foundation for the Parameter Analysis. In the Parameter Analysis one or more parameters at a time are varied, to get an overview of their effects. 
 
 For all the plots of the experiments, the red curve indicates the tumor cell density, the blue curve the ECM concentration and the green curve the MDE concentration.
 
-Before starting with the experiments we need to discuss the system's initial conditions. We state them for three dimensions, but for two or one dimension the $y$ or $z$ terms need to be left out.
+Before starting with the experiments there is need to discuss the system's initial conditions. They are stated for three dimensions, but for two or one dimension the $y$- or $z$-terms need to be left out.
 
 We assume for that at dimensionless time $t=0$, there is already a nodule of cells located at the center of the unit domain $\Omega$ that has produced a concentration of matrix-degrading enzymes and has already degraded the extracellular matrix at the center. We therefore define the initial conditions for the tumor cell density as:
 \begin{align*}
