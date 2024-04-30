@@ -68,13 +68,13 @@ The equation modeling the matrix-degrading enzyme concentration also combines mo
 Before starting with the Parameter Analysis, the changes in the results varying the dimensions need to be discussed, and what adjustments need to be taken to make higher dimension models mimic the one given by Anderson et al. As a starting point, the parameters provided by Anderson et al.'s first experiment~\cite{anderson_mathematical_2000} are used. Figure~\ref{fig:anderson_experiment} shows a screenshot of this experiment, unfortunately in low image resolution, since the original paper had not included any digital data containing the diagrams of their results.
 \begin{figure}[ht!]
  \centering
- \includegraphics[width=0.7\textwidth]{resources/images/anderson_experiment.png}
+ \includegraphics[width=0.85\textwidth]{resources/images/anderson_experiment.png}
  \caption{Plot of Anderson's first one dimensional experiment}
  \label{fig:anderson_experiment}
 \end{figure}
 \begin{figure}[ht!]
     \centering
-    \includegraphics[width=\textwidth]{resources/images/1D_replication_3D.png}
+    \includegraphics[width=0.85\textwidth]{resources/images/1D_replication_3D.png}
     \caption{Plots using Anderson et al.'s parameters in 2D and 3D}
     \label{fig:unadjsuted_replication}
 \end{figure}
@@ -760,7 +760,7 @@ Here, the characteristic two lumps of tumor cells form, though with a less even 
 
 Figure~\ref{fig:2D_heterogenous_ECM} shows the effects of using a heterogeneous extracellular matrix structure. The plots depict the tumor cell density in the left column, the extracellular matrix concentration in the middle column and the matrix-degrading enzyme concentration on the right. For the parameters, we assumed the basecase studying the model with proliferation; the values used are: $d_c=5\cdot 10^{-4}$, $\gamma=0.0055$, $\mu_1 = 0.1$, $\eta=10$, $\mu_2=0.5$, $d_m = 1\cdot 10^{-3}$, $\alpha = 0.3564$, $\beta = 0$.
 
-This experiment describes a more realistic biological scenario, as seen in figure~\ref{fig:tumour_invasion_stage}, where the tumor cells are located at the basement membrane of neighboring tissue and have degraded this membrane to invade the surrounding tissue and degrade the extracellular matrix within.
+This experiment describes a more realistic biological scenario, as seen in figure~\ref{fig:tumor_invasion_stage}, where the tumor cells are located at the basement membrane of neighboring tissue and have degraded this membrane to invade the surrounding tissue and degrade the extracellular matrix within.
 
 The first plot in the middle column shows the experiment's initial distribution of the ECM structure. The extracellular matrix molecule concentration is only on the plot's right side, indicating the neighboring tissue that will be invaded. In the center of the plot, there is a hollow spot where the tumor cells of the initial distribution are located, assuming they have already degraded the ECM there.
 
