@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.24)  30 APR 2024 18:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.24)  30 APR 2024 20:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1336,12 +1336,12 @@ Package pdftex.def Info: resources/images/prolif_mu_1_mu_2_variation.png  used o
 <resources/images/prolif_dc_gamma_mu1_1.png, id=259, 722.7pt x 703.9098pt>
 File: resources/images/prolif_dc_gamma_mu1_1.png Graphic file (type png)
 <use resources/images/prolif_dc_gamma_mu1_1.png>
-Package pdftex.def Info: resources/images/prolif_dc_gamma_mu1_1.png  used on input line 703.
+Package pdftex.def Info: resources/images/prolif_dc_gamma_mu1_1.png  used on input line 713.
 (pdftex.def)             Requested size: 722.69823pt x 703.9081pt.
 <resources/images/prolif_dc_gamma_mu1_2.png, id=260, 722.7pt x 703.9098pt>
 File: resources/images/prolif_dc_gamma_mu1_2.png Graphic file (type png)
 <use resources/images/prolif_dc_gamma_mu1_2.png>
-Package pdftex.def Info: resources/images/prolif_dc_gamma_mu1_2.png  used on input line 710.
+Package pdftex.def Info: resources/images/prolif_dc_gamma_mu1_2.png  used on input line 720.
 (pdftex.def)             Requested size: 722.69823pt x 703.9081pt.
 
 
@@ -1351,7 +1351,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <resources/images/prolif_eta_mu2_variation.png, id=269, 722.7pt x 703.9098pt>
 File: resources/images/prolif_eta_mu2_variation.png Graphic file (type png)
 <use resources/images/prolif_eta_mu2_variation.png>
-Package pdftex.def Info: resources/images/prolif_eta_mu2_variation.png  used on input line 730.
+Package pdftex.def Info: resources/images/prolif_eta_mu2_variation.png  used on input line 738.
 (pdftex.def)             Requested size: 722.69823pt x 703.9081pt.
  [55 <./resources/images/prolif_dc_gamma_mu1_1.png>]
 
@@ -1361,14 +1361,14 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <resources/images/2D_heterogenous_ECM.png, id=278, 652.4375pt x 853.1875pt>
 File: resources/images/2D_heterogenous_ECM.png Graphic file (type png)
 <use resources/images/2D_heterogenous_ECM.png>
-Package pdftex.def Info: resources/images/2D_heterogenous_ECM.png  used on input line 748.
+Package pdftex.def Info: resources/images/2D_heterogenous_ECM.png  used on input line 757.
 (pdftex.def)             Requested size: 652.4359pt x 853.18542pt.
  [57 <./resources/images/prolif_eta_mu2_variation.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: Reference `fig:tumour_invasion_stage' on page 58 undefined on input line 754.
+LaTeX Warning: Reference `fig:tumour_invasion_stage' on page 58 undefined on input line 764.
 
 ) [58]
 
@@ -1404,11 +1404,11 @@ Here is how much of TeX's memory you used:
  485507 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  86i,12n,117p,2502b,1578s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on bachelors_report.pdf (63 pages, 4198604 bytes).
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on bachelors_report.pdf (63 pages, 4188533 bytes).
 PDF statistics:
- 406 PDF objects out of 1000 (max. 8388607)
- 218 compressed objects within 3 object streams
+ 401 PDF objects out of 1000 (max. 8388607)
+ 215 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  198 words of extra memory for PDF output out of 10000 (max. 10000000)
 
