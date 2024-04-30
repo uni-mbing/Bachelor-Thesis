@@ -8,6 +8,27 @@
 \contentsline {section}{\numberline {4}Experiments and Results}{14}{}%
 \contentsline {subsection}{\numberline {4.1}Dimension Variation}{17}{}%
 \contentsline {subsection}{\numberline {4.2}Parameter Analysis without Proliferation and Renewal - Homogenous ECM}{25}{}%
+\contentsline {subsubsection}{\numberline {4.2.1}$d_c$ Variation}{26}{}%
+\contentsline {subsubsection}{\numberline {4.2.2}$\gamma $ Variation}{28}{}%
+\contentsline {subsubsection}{\numberline {4.2.3}$\eta $ Variation}{31}{}%
+\contentsline {subsubsection}{\numberline {4.2.4}$d_m$ Variation}{32}{}%
+\contentsline {subsubsection}{\numberline {4.2.5}$\alpha $ Variation}{34}{}%
+\contentsline {subsubsection}{\numberline {4.2.6}$\beta $ Variation}{35}{}%
+\contentsline {subsubsection}{\numberline {4.2.7}$d_c - \gamma $ Variation}{37}{}%
+\contentsline {subsubsection}{\numberline {4.2.8}$\eta - d_m$ Variation}{38}{}%
+\contentsline {subsubsection}{\numberline {4.2.9}$\alpha - \beta $ Variation}{40}{}%
+\contentsline {subsubsection}{\numberline {4.2.10}$d_m - \alpha - \beta $ Variation}{41}{}%
 \contentsline {subsection}{\numberline {4.3}Parameter Analysis with Proliferation and Renewal - Homogenous ECM}{42}{}%
-\contentsline {subsection}{\numberline {4.4}2D Results with Proliferation and Renewal - Heterogenous ECM}{57}{}%
-\contentsline {section}{\numberline {5}Conclusion and Discussion}{61}{}%
+\contentsline {subsubsection}{\numberline {4.3.1}$d_c$ Variation}{46}{}%
+\contentsline {subsubsection}{\numberline {4.3.2}$\gamma $ Variation}{47}{}%
+\contentsline {subsubsection}{\numberline {4.3.3}$\mu _1$ Variation}{47}{}%
+\contentsline {subsubsection}{\numberline {4.3.4}$\eta $ Variation}{49}{}%
+\contentsline {subsubsection}{\numberline {4.3.5}$\mu _2$ Variation}{49}{}%
+\contentsline {subsubsection}{\numberline {4.3.6}$d_m$ Variation}{50}{}%
+\contentsline {subsubsection}{\numberline {4.3.7}$\alpha $ Variation}{51}{}%
+\contentsline {subsubsection}{\numberline {4.3.8}$\beta $ Variation}{51}{}%
+\contentsline {subsubsection}{\numberline {4.3.9}$\mu _1 - \mu _2$ Variation}{53}{}%
+\contentsline {subsubsection}{\numberline {4.3.10}$d_c - \gamma - \mu _1$ Variation}{53}{}%
+\contentsline {subsubsection}{\numberline {4.3.11}$\eta -\mu _2$ Variation}{56}{}%
+\contentsline {subsection}{\numberline {4.4}2D Results with Proliferation and Renewal - Heterogenous ECM}{58}{}%
+\contentsline {section}{\numberline {5}Conclusion and Discussion}{60}{}%
