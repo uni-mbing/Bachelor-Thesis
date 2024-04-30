@@ -435,40 +435,20 @@
       \field{pages}{25\bibrangedash 64}
       \range{pages}{40}
     \endentry
-    \entry{hiflow3}{article}{}
-      \name{author}{3}{}{%
-        {{hash=82192861ec43b543847b9720ebcb895c}{%
-           family={Klawonn},
-           familyi={K\bibinitperiod},
-           given={A.},
-           giveni={A\bibinitperiod}}}%
-        {{hash=7fba9a367d21df28b83c200070d6dfba}{%
-           family={Köhler},
-           familyi={K\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod}}}%
-        {{hash=657221a0c1792cd9f84afb8e81f3f5da}{%
-           family={Rheinbach},
-           familyi={R\bibinitperiod},
-           given={O.},
-           giveni={O\bibinitperiod}}}%
-      }
-      \strng{namehash}{87fe38180bc50573f336e6e1772e80d2}
-      \strng{fullhash}{f45288edc3258de0fe304de9111065ce}
-      \strng{bibnamehash}{f45288edc3258de0fe304de9111065ce}
-      \strng{authorbibnamehash}{f45288edc3258de0fe304de9111065ce}
-      \strng{authornamehash}{87fe38180bc50573f336e6e1772e80d2}
-      \strng{authorfullhash}{f45288edc3258de0fe304de9111065ce}
+    \entry{BibEntry2024Apr}{misc}{}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Innovative Parallel Computing, Proceedings of the 5th International Conference ParCo2001}
-      \field{title}{HiFlow3 -- A Hardware-Oriented Parallel Finite Element Package}
-      \field{volume}{13}
-      \field{year}{2002}
-      \field{pages}{213\bibrangedash 220}
-      \range{pages}{8}
+      \field{month}{4}
+      \field{note}{[Online; accessed 30. Apr. 2024]}
+      \field{title}{{No. 06 (2017): HiFlow3 {–} Technical Report on Release 2.0 {$\vert$} Preprint Series of the Engineering Mathematics and Computing Lab}}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://journals.ub.uni-heidelberg.de/index.php/emcl-pp/issue/view/3655
+      \endverb
+      \verb{url}
+      \verb https://journals.ub.uni-heidelberg.de/index.php/emcl-pp/issue/view/3655
+      \endverb
     \endentry
     \entry{paraview}{misc}{}
       \name{author}{1}{}{%
