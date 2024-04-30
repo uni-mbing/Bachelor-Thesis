@@ -13,17 +13,23 @@ with zero-flux boundary conditions:
 	\zeta \cdot  (-D_c \nabla c + c \chi\nabla e) &= 0 \label{eq4}\\
 	\zeta \cdot (-D_m\nabla m ) &= 0\label{eq5}
 \end{align}
-where the free parameters are $D_c$, $D_m$, $\chi$, $\delta$, $\mu_1$, $\mu_2$, $\mu_3$, $\lambda$ and $\zeta$ is an appropriate outward unit vector. These free parameters as well as their updated versions are all assumed to be positive real numbers.
+where the free parameters are $D_c$, $D_m$, $\chi$, $\delta$, $\mu_1$, $\mu_2$, $\mu_3$, $\lambda$ and $\zeta$ is an appropriate outward unit vector. These free parameters as well as their non-dimensionalized versions are all assumed to be positive real numbers.
 
-The variable $c$ describes the tumor cell density, $e$ the concentration of the extracellular matrix and $m$ the matrix-degrading enzyme concentration. All of those functions are mathematically defined to be mapping a one-, two- or three-dimensional spacial value $x$ and a temporal value $t$ to a scalar value describing the respective quantity at a specific point in space and time $(x,t)$, $\{c,e,m\}: \mathbb{R}^{i} \times \mathbb{R} \rightarrow \mathbb{R}, i \in \{1,2,3\}$.
+The variable $c$ describes the tumor cell density, $e$ the concentration of the extracellular matrix and $m$ the matrix-degrading enzyme concentration. All of those functions are mathematically defined to be mapping a one-, two- or three-dimensional spacial value $x$ and a temporal value $t$ to a scalar value describing the respective quantity at a specific point in space and time $(x,t)$:
+\begin{align*}
+     \{c,e,m\}: \mathbb{R}^{i} \times \mathbb{R} \rightarrow \mathbb{R}, i \in \{1,2,3\}
+\end{align*}
 
 To derive the expression of the tumor cell density $c$, we are going to assume that the tumor cell's motility is subject to two influences: haptotaxis and random movement. Haptotaxis is a directed migratory response of cells to gradients of fixed or bound chemicals~\cite{anderson_continuous_1998} and random movement is influenced by, for example, mechanical stress, electric charge or other such physical effects~\cite{Merino-Casallo2022-di}. We must define flux to get an expression of how much or how fast the tumor cells move. Flux is defined to be the amount of a substance that crosses a unit area in a unit time. Incorporating the two assumed influencing factors into our mathematical model; we define the haptotatic flux $J_{hapto}$ and random flux $J_{random}$:
 \begin{align*}
     J_{hapto} = \chi c \nabla e \\
     J_{random} = -D_c \nabla c
 \end{align*}
-$\chi$ is the haptotactic flux coefficient and $D_c$ is a random mobility coefficient. These parameters could also be a function of, for example, extracellular matrix and or matrix-degrading enzyme concentration. Knowing that cells grow over time and proliferate, we want to respect this in our model with a term for tumor cell proliferation: $\mu_1 c (1-\frac{c}{c_0} - \frac{e}{e_0})$.
-
+$\chi$ is the haptotactic flux coefficient and $D_c$ is a random mobility coefficient. These parameters could also be a function of, for example, extracellular matrix and or matrix-degrading enzyme concentration. Knowing that cells grow over time and proliferate, we want to respect this in our model with a term for tumor cell 
+proliferation: 
+\begin{align*}
+    \mu_1 c (1-\frac{c}{c_0} - \frac{e}{e_0})
+\end{align*}
 The idea is that this term describes the cell proliferation with a logistic growth model respecting spacial limiting factors of already present extracellular matrix molecules and tumor cells, $\mu_1$ describes the rate at which tumor cell proliferation and growth happens. In the initial model proposed by Anderson et al.~\cite{anderson_continuous_1998, anderson_mathematical_2000} and Chaplain et al.~\cite{anderson_continuous_1998,chaplain_mathematical_2006-1,franssen_mathematical_2019}, they did not respect proliferation of tumor cells and extracellular matrix renewal. They applied a conservation equation for the tumor cells, which yields:
 \begin{align*}
     \frac{\partial c}{\partial t} = -\nabla \cdot (J_{hapto} + J_{random}) \\
@@ -45,10 +51,14 @@ where $\delta$ is the constant describing this degradation process. For the exte
 \end{align*}
 with $\mu_2$ being the coefficient describing the rate of the renewal process.
 
-Modeling the matrix-degrading enzyme concentration $m$, we combine a diffusion term with production and decay terms. The diffusion term is described like for the tumor cells, $J_{random} = -D_m \nabla m$. The production term depends on the tumor cell density $c$ and the decay term on the extracellular matrix concentration $m$. In both cases production and decay we are assuming exponential growth. Incorporating this gives us equation~\ref{eq3}:
+Modeling the matrix-degrading enzyme concentration $m$, we combine a diffusion term with production and decay terms. The diffusion term is described like for the tumor cells:
+\begin{align*}
+    J_{random} = -D_m \nabla c
+\end{align*}
+The production term depends on the tumor cell density $c$ and the decay term on the extracellular matrix concentration $m$. In both cases production and decay we are assuming exponential growth. Incorporating this gives us equation~\ref{eq3}:
 \begin{align*}
     \frac{\partial m}{\partial t} = \nabla \cdot J_{random} + \mu c - \lambda e \\
-    \frac{\partial m}{\partial t} = D_m \Delta m + \mu_3 c - \lambda m
+    \frac{\partial m}{\partial t} = D_m \Delta c + \mu_3 c - \lambda m
 \end{align*}
 $\mu_3$ and $\delta$ describing production and decay coefficients.
 
@@ -73,8 +83,8 @@ with $D$ being a reference chemical diffusion coefficient.
 
 These modifications make the new system of coupled partial differential equations, where henceforth the tildes are dropped and we assume $t$ as $\tau$ for simplicities' sake:
 \begin{align}
-	\frac{\partial c}{\partial t} &= d_c \Delta c - \gamma \nabla \cdot (c\nabla e)  + \mu_1 c\left(1-\frac{c}{c_0}-\frac{e}{e_0}\right)\label{eq:6}\\
-	\frac{\partial e}{\partial t} &= -\eta m e  + \mu_2 e\left(1-\frac{c}{c_0}-\frac{e}{e_0}\right)\label{eq:7}\\
+	\frac{\partial c}{\partial t} &= d_c \Delta c - \gamma \nabla \cdot (c\nabla e)  + \mu_1 c\left(1-c-e\right)\label{eq:6}\\
+	\frac{\partial e}{\partial t} &= -\eta m e  + \mu_2 e\left(1-c-e\right)\label{eq:7}\\
 	\frac{\partial m}{\partial t} &= d_m \Delta c + \alpha c - \beta m\label{eq:8}
 \end{align}
 with also updated zero-flux boundary conditions:
