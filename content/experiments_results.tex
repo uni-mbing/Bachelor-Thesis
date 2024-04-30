@@ -235,7 +235,7 @@ In table~\ref{table:replication_experiments} all experiments with their correspo
 \subsection{Parameter Analysis without Proliferation and Renewal - Homogenous ECM}
 \label{sec:2D_without_proliferation}
 
-This section describes the Parameter Analysis done in two spacial dimensions on a homogenous extracellular matrix structure. In this section we are using the basecase for established in the previous section with the parameters as used in~\ref{fig:2D_proliferation_replication_3D}. 
+The replicated results shown in figure~\ref{fig:basecase_without_proliferation}, confirm that the results can also vary strongly, varying only one parameter. This section describes a Parameter Analysis done in two spacial dimensions on a homogenous extracellular matrix structure. A basecase, which was established during varying the dimensions, with the parameters as used in~\ref{fig:2D_proliferation_replication_3D} for two dimensions is used as a foundation. First every parameter is varied seperately keeping the others constant, next in Cross-Variation multiple parameters, at most three, are varied simultaneously.
 
 \begin{longtable}{|c c c c c c c c|}
     \hline
@@ -249,6 +249,7 @@ This section describes the Parameter Analysis done in two spacial dimensions on 
     \hline \multicolumn{8}{|r|}{{continued on next page}} \\ \hline
     \endfoot
     \endlastfoot
+    \ref{fig:dc_variation} & \sampleline{dashed} & $5\cdot 10^{-5}$ & 0.0055 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0\\ \hline
     \ref{fig:dc_variation} & \sampleline{} & $1\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0\\ \hline
     \ref{fig:dc_variation} & \sampleline{dotted} & $1\cdot 10^{-3}$ & 0.0055 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0\\ \hline
     \ref{fig:gamma_variation} & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.002 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0\\ \hline
@@ -290,37 +291,33 @@ This section describes the Parameter Analysis done in two spacial dimensions on 
     \caption{Overview of all experiments conducted for the model without proliferation and renewal producing 2D output}
     \label{table:2D_experiments_without_proliferation}
 \end{longtable}
-Table~\ref{table:2D_experiments_without_proliferation} gives a detailed overview of all the experiments done in this section and the parameters used to produce the results. We are considering the model without the proliferation of the tumor cells or renewal of the extracellular matrix. Therefore, parameters $\mu_1$ and $\mu_2$ are set to zero. In most figures, more than one experiment will be described; the linestyle in table~\ref{table:2D_experiments_without_proliferation} determines which experiment exactly is described by the set of parameters.
-
-
-\subsubsection{Parameter Analysis}
-From the replicated results shown in figure~\ref{fig:basecase_without_proliferation}, we saw that the results can vary strongly if we vary the parameters one at a time. We will first look at how changing one parameter at a time affects the output of the simulation. After this, we will consider changing multiple parameters simultaneously in the cross-variation section. For varying the parameters, we assume the other parameters of the system are constant and use the baseline experiment as their values.
+Table~\ref{table:2D_experiments_without_proliferation} gives a detailed overview of all the experiments done in this section and the parameters used to produce the results. We are considering the model without the proliferation of the tumor cells or renewal of the extracellular matrix. In every figure, more than one experiment will be described; the linestyle in table~\ref{table:2D_experiments_without_proliferation} determines exactly which experiment by the set of parameters.
 
 \subsubsection*{$d_c$ Variation}
-This parameter describes the diffusive properties of the tumor cells. As Chaplain et al. assumed in~\cite{STEPHANOU200696}, we are also assuming an even distribution of this parameter with $d_c \sim U[1\cdot 10^{-5}, 1\cdot 10^{-3}]$. However, our experiments encountered numerical instabilities reducing the parameter further than $5 \cdot 10^{-5}$. 
+This parameter describes the diffusive properties of the tumor cells. As Chaplain et al. assumed in~\cite{STEPHANOU200696}, her also an even distribution of this parameter with $d_c \sim U[1\cdot 10^{-5}, 1\cdot 10^{-3}]$ is assumed. However, the experiments here encountered numerical instabilities reducing the parameter below $5 \cdot 10^{-5}$. 
 
-As described, the intuition is that decreasing $d_c$ will increase the effects of Haptotaxis and make $\gamma$ more influential. This means the tumor cells will drift faster outward with a bigger secondary lump, forming a pointier leading edge. On the other hand, if we increase $d_c$, the effects of Haptotaxis will diminish and the tumor cells will be subject to higher diffusion, distributing them more evenly in the tissue. Additionally, there will be less division from the primary lump of cells. 
+As described, the intuition is that decreasing $d_c$ will increase the effects of Haptotaxis and make $\gamma$ more influential. This means the tumor cells will drift faster outward with a bigger secondary lump, forming a pointier leading edge. On the other hand, if $d_c$ is increased, the effects of Haptotaxis will diminish and the tumor cells will be subject to higher diffusion, distributing them more evenly in the accessible area. Additionally, there will be less division from the primary lump of cells. 
 \begin{figure}[h!]
  \centering
  \includegraphics[width=\textwidth]{resources/images/dc_variation.png}
  \caption{Results of varying $d_c$ in the basecase parameter set, keeping the other parameters constant, using the Plot Over Line tool}
  \label{fig:dc_variation}
 \end{figure}
-Looking at the experiments in figure~\ref{fig:dc_variation}, we can see these assumptions met. The smaller $d_c$ gets, the higher the influence of Haptotaxis; therefore, $\gamma$ will be and vice versa.
+Looking at the experiments in figure~\ref{fig:dc_variation}, these assumptions are met. The smaller $d_c$ gets, the higher the influence of Haptotaxis and vice versa.
 
-Considering the tumor cell density curves shown in red, we can see minor differences after already $t=0.4$. For the two lower values of $d_c$, the solid and dashed curves, we see the tumor cells having a higher concentration at the origin than for the biggest value of $d_c$, dotted curve, nearly overlaying each other. The red dashed curve is considerably lower at the origin, though it is stretched out more than the other two, indicating a faster invasion rate. The other curves describing EDM and MDE concentration do not show any deviations from each other at this point.
+Considering the tumor cell density curves shown in red, minor differences are visible after already $t=0.4$. For the two lower values of $d_c$, the solid and dashed curves, the tumor cells have a higher concentration at the origin than for the biggest value of $d_c$, with nearly overlaying each other. Though the red dashed curve for the highest $d_c$ value is considerably lower at the origin, it is stretched out more than the other two, indicating a faster invasion. The other curves describing ECM and MDE concentrations do not show any deviations from each other at this point in time.
 
-Looking at the plot results, at time $t=4$, we see the previously observed effects increase. The curves of the tumor cells confirm that with increasing $d_c$, the remaining lump of cells at the origin decreases, distributing the tumor cells more evenly in space and also reducing the effect of Haptotaxis, making the secondary lump, which is still visible for the highest diffusion term, less sharp. At this point, the other two curves also show differentiating behavior. The ECM is degraded faster with increasing $d_c$ and the slope the ECM describes is less steep. Looking at the extracellular matrix, we see minor differences between the lower two values for $d_c$. Due to the tumor cells' exponential production of the MDEs and the more even spread of the tumor cells, we see them taking on a lower concentration at the origin. However, we can also observe that they have spread farther out than the MDE concentrations describing the experiments with lower $d_c$ values.
+Looking at the plot results, at time $t=4$, the previously observed effects increase. The curves of the tumor cells confirm that with increasing $d_c$, the remaining lump of cells at the origin decreases, distributing the tumor cells more evenly in space and reducing the effect of Haptotaxis, making the secondary lump, which is still visible for the highest diffusion term, less sharp. At this point, the other two curves also show differing behavior. The ECM is degraded faster with increasing $d_c$ and the slope the ECM curve describes is less steep. Looking at the extracellular matrix, minor differences are depictable between the lower two values of $d_c$. Due to the tumor cells' exponential production of MDEs and the more even spread of the tumor cells,they take on a lower concentration at the origin. However, they have spread farther out than the MDE concentrations describing the experiments with lower $d_c$ values.
 
-Studying the last image of $t=8$, we see no new effects, only the already mentioned propagated; with increasing $d_c$, we see a more even spread of the tumor cells and a reduction of the secondary lump, leading to the invasion of the tissue. For the MDE concentration, we observe less concentration in total due to the exponential growth rate, especially at the origin. However, we also see a more even distribution of them and a slightly faster invasion pace. This causes the extracellular matrix degradation to work faster.
+Studying the last image of $t=8$, no new effects are observable. Increasing $d_c$, results in a more even spread of the tumor cells and a reduction of the secondary lump, detaching form the primary tumor. This causes a reduced MDE concentration in total due to the exponential growth rate, especially well observable at the origin. However, they have a more even distribution in space and faster invasion pace. This causes the extracellular matrix degradation process to work faster.
 
 Regarding the sensitivity of this parameter, the higher the value is, the more sensitive the system reacts. Though the lower two values for $d_c$ are only separated by $5\cdot 10^{-5}$ and we can unfortunately not experiment with $d_c=1 \cdot 10^{-5}$ due to numerical instabilities, the differences between those two were minimal compared to the difference between the higher two values of $d_c$.
 
-From a biological point of view, this increase in diffusion might be caused by a change in temperature, electric potential or mechanical pressure differences. The higher diffusion results in a more even spread of the two actively moving quantities of tumor cells and matrix-degrading enzymes, which degrade their surrounding tissue, the ECM, at a faster rate.
+From a biological point of view, this increase in diffusion might be caused by a change in temperature, electric potential or mechanical pressure differences. The higher diffusion results in a more even spread of the two actively moving quantities, tumor cells and matrix-degrading enzymes, which degrade their surrounding tissue faster.
 
 
 \subsubsection*{$\gamma$ Variation}
-$\gamma$ describes the effects of Haptotaxis; it is assumed that it is evenly distributed in $\gamma \sim U[0.001,0.01]$, like Anderson et al. ~\cite{anderson_mathematical_2000} assumed. Like Anderson et al., we will also look at values exceeding this region, though most likely losing their biological meaning. Inspecting the effects of $\gamma$, we can assume the countering effects on the tumor cells as for varying $d_c$; selecting higher values for $\gamma$ will increase the effects of Haptotaxis, creating a larger secondary lump of cells that is being pulled faster into the tissue.
+$\gamma$ describes the effects of Haptotaxis; it is assumed that it is evenly distributed in $\gamma \sim U[0.001,0.01]$, like Anderson et al.~\cite{anderson_mathematical_2000} did. Values exceeding this interval are also studied in this section, though losing their biological meaning. Inspecting the effects of $\gamma$, countering effects on the tumor cells as for varying $d_c$ can be assumed; selecting higher values for $\gamma$ will increase the effects of Haptotaxis, creating a larger secondary lump with a sharper maximu that is being pulled faster into the tissue.
 \begin{figure}[h!]
  \centering
  \includegraphics[width=\textwidth]{resources/images/gamma_variation.png}
