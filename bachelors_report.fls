@@ -1199,12 +1199,6 @@ INPUT ./resources/images/anderson_experiment.png
 INPUT resources/images/anderson_experiment.png
 INPUT ./resources/images/anderson_experiment.png
 INPUT ./resources/images/anderson_experiment.png
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT ./resources/images/1D_replication_3D.png
 INPUT ./resources/images/1D_replication_3D.png
 INPUT resources/images/1D_replication_3D.png
@@ -1215,6 +1209,12 @@ INPUT ./resources/images/alpha_comparison.png
 INPUT resources/images/alpha_comparison.png
 INPUT ./resources/images/alpha_comparison.png
 INPUT ./resources/images/alpha_comparison.png
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT ./resources/images/dc_comparison.png
 INPUT ./resources/images/dc_comparison.png
 INPUT resources/images/dc_comparison.png
