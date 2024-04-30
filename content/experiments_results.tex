@@ -235,7 +235,7 @@ In table~\ref{table:replication_experiments} all experiments with their correspo
 \subsection{Parameter Analysis without Proliferation and Renewal - Homogenous ECM}
 \label{sec:2D_without_proliferation}
 
-The replicated results shown in figure~\ref{fig:basecase_without_proliferation}, confirm that the results can also vary strongly, varying only one parameter. This section describes a Parameter Analysis done in two spacial dimensions on a homogenous extracellular matrix structure. A basecase, which was established during varying the dimensions, with the parameters as used in~\ref{fig:2D_proliferation_replication_3D} for two dimensions is used as a foundation. First every parameter is varied seperately keeping the others constant, next in Cross-Variation multiple parameters, at most three, are varied simultaneously.
+The replicated results shown in figure~\ref{fig:3D_basecase_comparison}, confirm that the results can also vary strongly, varying only one parameter. This section describes a Parameter Analysis done in two spacial dimensions on a homogenous extracellular matrix structure. A basecase, which was established during varying the dimensions, with the parameters as used in~\ref{fig:2D_proliferation_replication_3D} for two dimensions is used as a foundation. First every parameter is varied seperately keeping the others constant, next in Cross-Variation multiple parameters, at most three, are varied simultaneously.
 
 \begin{longtable}{|c c c c c c c c|}
     \hline
@@ -300,7 +300,7 @@ As described, the intuition is that decreasing $d_c$ will increase the effects o
 \begin{figure}[h!]
  \centering
  \includegraphics[width=\textwidth]{resources/images/dc_variation.png}
- \caption{Results of varying $d_c$ in the basecase parameter set, keeping the other parameters constant, using the Plot Over Line tool}
+ \caption{Plot results for varying $d_m$, keeping the other parameters constant}
  \label{fig:dc_variation}
 \end{figure}
 Looking at the experiments in figure~\ref{fig:dc_variation}, these assumptions are met. The smaller $d_c$ gets, the higher the influence of Haptotaxis and vice versa.
@@ -321,7 +321,7 @@ $\gamma$ describes the effects of Haptotaxis; it is assumed that it is evenly di
 \begin{figure}[h!]
  \centering
  \includegraphics[width=\textwidth]{resources/images/gamma_variation.png}
- \caption{Results of varying $\gamma$ in the basecase parameter set, keeping the other parameters constant, using the Plot Over Line tool}
+ \caption{Plot results for varying $\gamma$, keeping the other parameters constant}
  \label{fig:gamma_variation}
 \end{figure}
 The experiments described in figure~\ref{fig:gamma_variation} verify the expected behavior.
@@ -335,7 +335,7 @@ In the last plot at $t=8$, the observations from the previous points in time are
 \begin{figure}[h!]
  \centering
  \includegraphics[width=0.95\textwidth]{resources/images/gamma_2D_plot_.png}
- \caption{2D plot showing experiment for $\gamma=0.1$, left tumor cell density, middle ECM concentration, right MDE concentration}
+ \caption{2D Plot results for increasing $\gamma$ above the definition area, keeping the other parameters constant}
  \label{fig:gamma_2D_plot}
 \end{figure}
 Out of curiosity, a step furhter is taken increasing $\gamma$ by one power to $\gamma=0.1$. As previously observed, Haptotaxis pulling the cells into surrounding tissue increase towards high ECM concentrations, causes an even faster invasion process. However, in this case, the invasion pace of the tumor cells is so high that no cells remain at the origin; everything is being pulled into the surrounding tissue. Before finishing the simulation after $t=8$, the tumor cells have reached the domain $\Omega$'s border. Upon hitting the border the cells are being reflected back inward due to the boundary conditions of the investigated model, equations~\ref{eq:9} and~\ref{eq:10}. In figure~\ref{fig:gamma_2D_plot}, this process is observable. Shortly after $t=2$ the tumor cells reach border, the next plot at $t=3$ shows them being reflected and moving into the corners of the domain $\Omega$, where the ECM concentration is highest. At this point, the pace of the ECM degradation has not been able to keep up with the invasion pace of the tumor cells. After being pulled into the corners at $t=3$ and degrading the ECM there, at $t=6$, the tumor cells are being pulled back toward the center of the simulation, where extracellular matrix molecules are still left.
@@ -350,7 +350,7 @@ The parameter $\eta$ controls the degradation process of the extracellular matri
 \begin{figure}[h!]
  \centering
  \includegraphics[width=\textwidth]{resources/images/eta_variation.png}
- \caption{Plots show results for varying $\eta$ while keeping the other parameters constant; in the images you can see the effects of $\eta=20$ in the dashed curve, $\eta=0$ in the dotted curve and $\eta=12$ in the solid line.}
+ \caption{Plot results for varying $\eta$, keeping the other parameters constant}
  \label{fig:eta_variation}
 \end{figure}
 Inspecting the results in figure~\ref{fig:eta_variation} confirms these assumptions.
@@ -368,7 +368,7 @@ $d_m$ describes the diffusion coefficient for the matrix-degrading enzymes. As e
 \begin{figure}[h]
  \centering
  \includegraphics[width=\textwidth]{resources/images/dm_variation.png}
- \caption{Plots show results for varying $d_m$ while keeping the other parameters constant; in the images you can see the effects of $d_m=0.1$ in the dashed curve, $d_m=0$ in the dotted curve and $d_m=1\cdot 10^{-3}$ in the solid line.}
+ \caption{Plot results for varying $d_m$, keeping the other parameters constant}
  \label{fig:dm_variation}
 \end{figure}
 Inspecting the results in figure~\ref{fig:dm_variation}, in the second plot after $t=0.4$ it can be observed, that the curves describing the tumor cell density and the ECM are mostly untouched, though looking closely, for the highest $d_m$ value, the dotted lines, the ECM has at the origin higher and farther out lower concentrations of extracellular matrix molecules. This is caused by the more even distribution of the matrix-degrading enzymes, which reduces the concentration at the origin and causes a faster invasion of the surrounding area of the MDEs, better observable in the plots of later points in time.
@@ -386,7 +386,7 @@ The parameter $\alpha$ influences how fast the tumor cells produce matrix-degrad
 \begin{figure}[h]
  \centering
  \includegraphics[width=\textwidth]{resources/images/alpha_variation.png}
- \caption{Plots show results for varying $\alpha$ while keeping the other parameters constant; in the images, you can see the effects of $\alpha=1.0$ in the dashed curve, $\alpha=0$ in the dotted curve and $\alpha=0.6$ in the solid line.}
+ \caption{Plot results for varying $\alpha$, keeping the other parameters constant}
  \label{fig:alpha_variation}
 \end{figure}
 
@@ -411,7 +411,7 @@ With introducing $\beta$, the MDE curve will be lower or at least increase slowe
 \begin{figure}[h]
  \centering
  \includegraphics[width=\textwidth]{resources/images/beta_variation.png}
- \caption{Plots show results for varying $\beta$ while keeping the other parameters constant; in the images, you can see the effects of $\beta=0.005$ in the dashed curve, $\beta=0.1$ in the dotted curve and $\beta=0.01$ in the solid line.}
+ \caption{Plot results for varying $\beta$, keeping the other parameters constant}
  \label{fig:beta_variation}
 \end{figure}
 As seen in the results of figure~\ref{fig:beta_variation}, a value of $\beta=0.1$ is sufficient to after already $t=0.4$ reduce the MDE concentration to nearly zero. In this case, the decay rate turned out to be too high, outpacing production entirely, with matrix-degrading enzyme concentration vanishing spacially and temporarily. The immediate decay of the MDEs causes a drastically slower ECM degradation, yet it has not stopped entirely since the tumor cells still produce matrix-degrading enzymes. This slow degradation of the extracellular matrix, creates a haptotatic pull, as already described, that lasts a lot longer temporarily in regions around the origin, which pulls all of the cancer cells outward to invade the tissue, leaving no primary lump of tumor cells at the origin. Since more MDEs are produced in regions with high tumor cell density, this also causes a, yet considerably slower, but more even degradation of the extracellular matrix, causing a more substantial stretch of the tumor cells.
@@ -421,40 +421,36 @@ In the other experiments, it is observed that with decreasing $\beta$ and slowin
 Since the extracellular matrix can comprise many different organic and inorganic compounds, the matrix-degrading enzymes are also very diverse. This diversity results in different decay rates, so choosing the right one for a specific experiment can be crucial. While this variation describes the effects of different enzymes, it can also describe, like for the production of the MDEs, the influence of a drug to accelerate the decay of the matrix-degrading enzymes.
 
 \subsubsection*{Cross-Variation}
-Having varied every model parameter, we saw accelerating effects on the invasion and countering effects. Now, it will be interesting to see how either supporting factors interplay and how countering factors affect the simulations, for example, how to increase both $\alpha$ and $\beta$ if some balance can be found. Another exciting experiment will be on how diffusion and Haptotaxis behave when increasing or decreasing both factors controlling them.
+Having varied every parameter of the model given by equations~\ref{eq:6},~\ref{eq:7} and~\ref{eq:8}, neglecting proliferation and renewal, both accelerating and slowing effects on the invasion of the tumor cells were observed. In this section it is examined how supporting and annihilating factors interplay and influence the simulation outcomes, for example, how increasing both $\alpha$ and $\beta$ affects the MDe concentration. Another interesting experiment is how diffusion and Haptotaxis behave when increasing or decreasing both factors.
 
 \subsubsection*{$d_c - \gamma$ Variation}
 \begin{figure}[h!]
  \centering
  \includegraphics[width=\textwidth]{resources/images/dc_gamma_variation.png}
- \caption{Plots show results for varying both $d_c$ and $\gamma$ while keeping the other parameters constant; in the images on the left, $d_c$ is set to $d_c=0.00005$ with the solid line showing $\gamma = 0.01$ and the dotted line $\gamma=0.001$ on the right $d_c$ is set to $d_c=0.1$ with the solid line showing $\gamma = 0.01$ and the dotted line $\gamma=0.001$.}
+ \caption{Plot results for varying $d_c, \gamma$, keeping the other parameters constant}
  \label{fig:dc_gamma_variation}
 \end{figure}
-We, therefore, started with varying $d_c$ and $\gamma$ and studied for simplicity and overview reasons only the values on their distribution's borders interplaying, shown in figure~\ref{fig:dc_gamma_variation}.
+Started with varying $d_c$ and $\gamma$ and studying these results in figure~\ref{fig:dc_gamma_variation}, gives a clearer understanding of the interplay between diffusion and Haptotaxis.
 
-Having set $d_c=5\cdot 10^{-5}$ and $\gamma=0.001$, we see no division of the tumor cells; the effects of Haptotaxis are too small, leaving the tumor cells only subject to diffusion, which results in an even distribution process over time, which also causes a slower invasion pace. Because the tumor cells stay in a lump with their maxima at the origin $x=0$, the MDEs also take on their maximum there, moving farther out and distributing very evenly. This staying with values around the origin of the MDEs causes a slower ECM degradation. 
+Having set $d_c=5\cdot 10^{-5}$ and $\gamma=0.001$, no division of tumor cells is depictable; the effects of Haptotaxis being too small leaves the tumor cells only subject to diffusion, which results in an even distribution process over time, also causing a slower invasion pace. Because the tumor cells stay in a lump at the origin $x=0$, their curve decreasing monotonely outward, the MDEs also take on their maximum at the origin. The slower invasion pace of both tumor cells and matrix-degrading enzymes causes a slower ECM degradation process. 
 
-Increasing $\gamma=0.01$, we see that the effects of Haptotaxis are now pregnantly visible with a very sharp maximum seen at $t=4$, which equals the maxima of the remaining tumor cell lump at $x=0$. A more substantial influence of Haptotaxis leads to a faster invasion pace of the tumor cells into the tissue. It allows the creation of matrix-degrading enzymes in their wake, causing a more even distribution compared to $\gamma=0.001$ and a faster ECM degrading process. 
+Setting $\gamma=0.01$, the effects of Haptotaxis are now distinctive with a very sharp maximum of the detaching lump of cancer cells seen at $t=4$, which equals the maxima of the remaining tumor cell lump at $x=0$. The substantial increase of Haptotaxis leads to a faster invasion pace of the tumor cells into the tissue, when $d_c$ is kept konstant. With the creation of the matrix-degrading enzymes while invading the surrounding tissue, a more even distribution of the MDEs is observed as well as faster ECM degradation. 
 
-Looking at the right side of the plot~\ref{fig:dc_gamma_variation}, we see the results for $d_c=1 \cdot 10^{-3}$. Comparing $\gamma$ values with this $d_c$ value, we can, as on the left side, see that the experiment showing $\gamma=0.001$ does not form a division for the tumor cells, with the main lump of cell staying at the origin. No secondary site of tumor cells is formed that invades the tissue faster. This is also shown on the ECM concentration for the dotted experiment, with a considerably slower degradation process and when comparing both dotted experiments on left and right side images. Staying near the center of the tumor cells also causes a much higher MDE concentration there compared to the $\gamma$-increased experiment. 
+Looking at the right side of the plot~\ref{fig:dc_gamma_variation}, the results for increasing $d_c=1\cdot 10^{-3}$ are shown. In total both columns of plots yield the same results, though on the right side, the influence of diffusion is clear to see. Though with a low $\gamma$ value the red dotted curve depciting the tumor cell density on the right-side plots does not develop a division of tumor cells as well, it invades the tissue considerably faster than the experiemnt with low diffusion values. This change is also clearly visible in the MDE and ECM concentrations. Considering the experiment with high values for both diffusion and Haptotaxis we see that the tumor cells develop the seondary lump of cells detaching from the main lump, yet in this experiment the maximum of it is not as sharp as for the low diffusion and high Haptotaxis experiment.
 
-Increasing both $d_c$ and $\gamma$, we see the effects of Haptotaxis more potent with the secondary site of tumor forming. However, comparing this experiment with the experiment having high $\gamma$ and low $d_c$ values shows that the division has no peaky leading edge.
+These experiments give an excellent example of the relationship between Haptotaxis and diffusion. With decreasing $d_c$ but increasing $\gamma$, a sharp leading edge develops. The high value for $\gamma$ was for both cases of $d_c$ sufficient to form a secondary tumor site invading the tissue separately, though also increasing $d_c$ showed that this measure decreases the effect of Haptotaxis. Decreasing $\gamma$ has proven for high and low $d_c$ values to prevent a secondary lump of cells from developing. 
 
-These experiments give us an excellent example of the relationship between Haptotaxis and diffusion. We see that with decreasing $d_c$ but increasing $\gamma$, we get a leading edge that is very pointy. The higher value of $\gamma$ was sufficient to form a secondary tumor site invading the tissue separately. Decreasing $\gamma$ has proven for high and low $d_c$ values to prevent a secondary lump of cells from forming. 
-
-\subsubsection*{$d_m - \eta$ Variation}
+\subsubsection*{$\eta - d_m$ Variation}
 \begin{figure}[h!]
  \centering
  \includegraphics[width=\textwidth]{resources/images/dm_eta_variation.png}
- \caption{Plots show results for varying both $d_m$ and $\eta$ while keeping the other parameters constant, in the images on the left $d_m$ is set to $d_m=1\cdot 10^{-5}$ with the solid line showing $\eta = 2$ and the dotted line $\eta=20$ on the right $d_m$ is set to $d_m=1\cdot 10^{-3}$ with the solid line showing $\eta = 2$ and the dotted line $\eta=20$.}
+ \caption{Plot results for varying $\eta, d_m$, keeping the other parameters constant}
  \label{fig:dm_eta_variation}
 \end{figure}
 
-Comparing both columns for varying $d_m$ in figure~\ref{fig:dm_eta_variation}, though looking at the same $\eta$ valued experiments, we can only see minor differences regarding the shape of the tumor cell density curve and ECM concentration curve. On the left side, we see that the ECM degradation is happening slower, which causes a different relation regarding the diffusion-Haptotaxis effects. The curves on the left side are not as evenly stretched as on the right, with a more significant hill at the secondary lump of cells. This behavior is due to the extended exposition of more substantial Haptotaxis effects on the tumor cells in regions closer to the origin. 
+Comparing both columns for varying $d_m$ in figure~\ref{fig:dm_eta_variation}, though looking at the same $\eta$ valued experiments, only minor differences are to be seen regarding the shape of the tumor cell density curve and ECM concentration curve. On the left side, the ECM degradation is happening slightly slower, which causes the haptotatic effects on the tumor cells to change, increasing the detaching secondary lump of cells invading the tissue. The curves on the left side regarding tumor cell density and MDE concentration are not as evenly stretched as on the right.
 
-The ECM degradation is happening slower on the left side due to minor diffusive motility, which is slowing the MDE invasion process.
-
-Interestingly, the MDE concentration for lower $d_m$ values is considerably higher for both experiments than for the ones with higher $d_m$ values. Since the tumor cells produce the MDEs, it is apparent that only the slightest visible change in the tumor cell density is sufficient to cause such drastic changes in the production of the MDEs due to exponential growth. 
+Interestingly, the MDE concentration for lower $d_m$ values is considerably higher for both experiments varying $\eta$, than for the ones with higher $d_m$ values. Since the tumor cells produce the MDEs, and on the plots on the left side their density is higher in the region near the origin, the exponential prodution rate can explain this behavior. However it is intreesting to see these minimal differences causing dratic changes in the MDE concentratoin. 
 
 These experiments conclude that the diffusive properties of the matrix-degrading enzymes play only a minor role in degrading the extracellular matrix. Tumor cells producing them in their wake play a more crucial role in the degradation process. An intriguing observation in this experiment is that minimal differences in tumor cell density are sufficient to create major differences in the MDE concentration due to their exponential production.
 
@@ -462,41 +458,40 @@ These experiments conclude that the diffusive properties of the matrix-degrading
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{resources/images/alpha_beta_variation.png}
-    \caption{Plots show results for varying both $\alpha$ and $\beta$ whilst keeping the other parameters constant, in the images on the left $\alpha=0.1$ with the solid line showing $\beta = 0.005$ and the dotted line $\beta=0.1$ on the right $\alpha=1.0$ with the solid line showing $\beta = 0.005$ and the dotted line $\beta=0.1$.}
+    \caption{Plot results for varying $\alpha, \beta$, keeping the other parameters constant}
     \label{fig:alpha_beta_variation}
 \end{figure}
+Looking at figure~\ref{fig:alpha_beta_variation} the experimental results varying both $\alpha$ and $\beta$ are displayed. For low MDE production and low MDE decay, the curve for the MDEs is still visible at up to $t=4$; at $t=8$, it is zero. This causes the ECM degrading to happen faster than for high $\beta$ values; therefore, the tumor cells develop the two characteristic lumps of cells, with one invading the tissue and the other staying at the origin. The maxima for both lumps are lower than in previous experiments, indicating a more even distribution of the tumor cells between the two lumps. Increasing $\beta=0.1$, the MDE curve appears to be zero after again already $t=0.4$ and stays there until the end of this experiment, as was shown in the section varying $\beta$. This low concentration of MDEs causes a slower ECM degrading process, leading the tumor cells to develop only one lump, invading the space. For $\alpha=0.1$, both values of $\beta$ shown to be too high, decaying the matrix-degrading enzymes too fast to keep up with production.
 
+On the other hand, increasing $\alpha$ to $1.0$ and keeping $\beta=0.005$, we see that production outweighs decay. At the end of the experiment at $t=8$, the MDEs still have a considerable concentration left. In this experiment, the ECM degradation was sufficiently fast to make the tumor cells develop two lumps of cells. Increasing both $\alpha$ and $\beta$, the solid line of the right column of figure~\ref{fig:alpha_beta_variation} shows that decay outweighs production again, after $t=0.4$ we can only see a small remaining portion of matrix-degrading enzymes at the origin. This again causes slower ECM degradation and develops only one lump of tumor cells due to the strong effects of Haptotaxis, though this singular lump is stretched very flat along the x-axis.
 
-Looking at figure~\ref{fig:alpha_beta_variation} we see experimental results varying both $\alpha$ and $\beta$. For low MDE production and low MDE decay, we can see that the curve for the MDEs is still visible at up to $t=4$; at $t=8$, it is zero. We see that the ECM degrading happens faster than for high $\beta$ values; therefore, the tumor cells develop two lumps, with one invading the tissue and the other staying at $x=0$. The maxima for both lumps are lower than in previous experiments, though the cells seem to be more evenly distributed between the two lumps. Increasing $\beta=0.1$, the MDE curve appears to be zero after already $t=0.4$ and stays there until the end of this experiment. This low concentration of MDEs causes a slower ECM degrading process, leading the tumor cells to develop only one lump, invading the space, with its maxima moving at the center of this lump. For $\alpha=0.1$, both values for $\beta$ have proven too high, decaying the matrix-degrading enzymes too fast to keep up with production.
-
-On the other hand, increasing $\alpha$ to $1.0$ and keeping $\beta=0.05$, we see that production outweighs decay, with at the end of the experiment, the MDEs still have a concentration of about $0.4$ at $x=0$. For this experiment, we see that the tumor cells develop two lumps, indicating that diffusion and Haptotaxis effects are also in some balance and ECM degradation seems to resemble, due to similarities with the basecase for the MDE curve, also the ECM degradation of the basecase experiment.
-Increasing both $\alpha$ and $\beta$, we see in the solid line of the right column of figure~\ref{fig:alpha_beta_variation} that decay outweighs production again, after $t=0.4$ we can only see a small remaining portion of matrix-degrading enzymes at the origin. This causes slower ECM degradation and forms only one lump of tumor cells due to the strong effects of Haptotaxis, though this singular lump is stretched flat along the x-axis.
+In these experiments we see that varying both $\alpha$ and $\beta$ it is possible to find a balance between the two, not letting one of them get the upper hand suppressing important effects.
 
 \subsubsection*{$d_m - \alpha - \beta$ Variation}
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{resources/images/dm_alpha_beta_variation_1.png}
-    \caption{Plots show results for varying both $\alpha$ and $\beta$ whilst keeping the other parameters constant, in the images on the left $\alpha=0.1$ with the solid line showing $\beta = 0.005$ and the dotted line $\beta=0.1$ on the right $\alpha=1.0$ with the solid line showing $\beta = 0.005$ and the dotted line $\beta=0.1$.}
+    \caption{Plot results for varying $d_m, \alpha, \beta$, keeping the other parameters constant}
     \label{fig:dm_alpha_beta_variation_1}
 \end{figure}
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{resources/images/dm_alpha_beta_variation_2.png}
-    \caption{Plots show results for varying both $\alpha$ and $\beta$ whilst keeping the other parameters constant, in the images on the left $\alpha=0.1$ with the solid line showing $\beta = 0.005$ and the dotted line $\beta=0.1$ on the right $\alpha=1.0$ with the solid line showing $\beta = 0.005$ and the dotted line $\beta=0.1$.}
+    \caption{Plot results for varying $d_m, \alpha, \beta$, keeping the other parameters constant}
     \label{fig:dm_alpha_beta_variation_2}
 \end{figure}
 
-Varying all parameters regarding the equation for the matrix-degrading enzymes required to split the results into two figures,~\ref{fig:dm_alpha_beta_variation_1} and ~\ref{fig:dm_alpha_beta_variation_2}.
+Varying all parameters regarding the equation for the matrix-degrading enzymes required to split the results into two figures,~\ref{fig:dm_alpha_beta_variation_1} and~\ref{fig:dm_alpha_beta_variation_2}.
 
-Looking at the results, we see that for the same $\alpha$ and $\beta$ values, the curve describing the tumor cell density shares the behavior across varying $d_m$. For low $\beta$ values, we see in every experiment that the tumor cells develop the secondary lump that detaches from the primary lump and invades the surrounding tissue separately. Considering how $\alpha$ influences this lump, we observe that with increasing $\alpha$, the lump gets smaller and more of the tumor cells stay near the origin. Taking the experiments with high $\beta$ values in regard, we observe that this curve fails to develop a secondary lump of tumor cells to invade separately. As seen in all the experiments varying $\eta$, a slowed degradation rate of the extracellular matrix leads to the extended exposition of the tumor cells at the origin to more substantial Haptotaxis effects. This leads to all tumor cells being pulled outward, leaving little or no near the origin. This results in only one lump of cells that invades, with its maximum moving into the surrounding tissue. In the experiments with high values for $\beta$, we see that the diffusion of the matrix-degrading enzymes has nearly no effect, as there are no apparent changes in the plot images.
+Looking at the results for the same $\alpha$ and $\beta$ values, the curves describing the tumor cell density share their behavior across varying $d_m$. For low $\beta$ values, the division of tumor cells, detaching from the primary tumor, is observable in every experiment. Considering how $\alpha$ influences this lump, it is observable that with increasing $\alpha$, the lump gets smaller and more of the tumor cells stay near the origin. Taking the experiments with high $\beta$ values in regard, the curves fail to develop a secondary lump of tumor cells to invade separately in every case of $d_m$ or $\alpha$. As seen in all the experiments varying $\eta$, a slowed degradation rate of the extracellular matrix leads to the extended exposition of the tumor cells at the origin to more substantial Haptotaxis effects. This leads to all tumor cells being pulled outward into the tissue, leaving little or no cells near the origin. This results in only one lump of cells to invade the surrounding area.
 
-Taking the curve of the extracellular matrix into account now, we can also see minimal deviation when varying $d_m$. We see no apparent changes in figures~\ref{fig:dm_alpha_beta_variation_1} and~\ref{fig:dm_alpha_beta_variation_2} regarding the ECM concentration which supports our claim from above that the diffusion of the matrix-degrading enzymes plays only a minor role in degrading the ECM, but also for the whole system in total.
+Taking the curve of the extracellular matrix into account, only minimal deviations when varying $d_m$ are observable, with no apparent changes in figures~\ref{fig:dm_alpha_beta_variation_1} and~\ref{fig:dm_alpha_beta_variation_2} regarding the ECM concentration. That supports our claim from above that the diffusion of the matrix-degrading enzymes plays only a minor role in degrading the ECM, and also for the entire system.
 
-The MDE curve can explain the effects mentioned above on ECM and tumor cell density curves. We see that for every experiment where $\beta$ was set to $\beta=0.1$, the curve of the MDEs was after already $t=0.4$ zero. Increasing the production rate $\alpha$ was visibly insufficient to counter the matrix-degrading enzymes' fast decay process, resulting in the drastically slowed ECM degradation process, which in turn is responsible for the Haptotaxis effects on the tumor cells. This explains why we saw no visible changes in the experiments varying $d_m$ and $\alpha$. This again shows the significance of the decay parameter of the matrix-degrading enzymes. 
+The MDE curve can explain the effects mentioned above on ECM and tumor cell density curves. For every experiment reagrding the high value for $\beta$ it is observed, that the curve of the MDEs was after already $t=0.4$ zero. Increasing the production rate $\alpha$ was insufficient to counter the matrix-degrading enzymes' fast decay process, resulting in the drastically slowed ECM degradation process. That in turn caused the immense effects of Haptotaxis on the tumor cells, explaining why there is no visible change in the experiments varying $d_m$ and $\alpha$. This again underlines the significance of the decay parameter $\beta$ and setting it not too high distorting the outcomes. 
 
 
-\subsection{2D Results with Proliferation and Renewal - Homogenous ECM}
-This section will examine how introducing tumor cell proliferation and extracellular matrix renewal influences the system. Modeled as logistic growth terms, with a limiting factor of spacial occupation, the parameters $\mu_1$ for tumor cell proliferation and $\mu_2$ for extracellular matrix renewal describe their influences. Those parameters were also incorporated in the previous experiments, though they were set to zero. Instead of treating them as parameters to vary, we are inspecting the whole system as new since they can drastically change the resulting simulations.
+\subsection{Parameter Analysis with Proliferation and Renewal - Homogenous ECM}
+This section will examine how introducing tumor cell proliferation and extracellular matrix renewal influences the system. Modeled as logistic growth terms, with a limiting factor of spacial occupation, the parameters $\mu_1$ for tumor cell proliferation and growth and $\mu_2$ for extracellular matrix renewal describe their influences. Instead of treating them as parameters to vary, the entire system is inspected again, since they have the capabilities to change the resulting simulations massively.
 
 Tumor cell proliferation describes the natural ability of cells to proliferate. However, in the case of tumor cells, the production signaling comes from themselves, surpassing the control chain that limits normal cells to proliferate uncontrollably.
 
@@ -560,35 +555,28 @@ As in section~\ref{sec:2D_without_proliferation}, we use the same initial condit
     \caption{Overview of all experiments conducted for the model with proliferation and renewal producing 2D output}
     \label{table:2D_experiments_with_proliferation}
 \end{longtable}
-As in section~\ref{sec:2D_without_proliferation}, we see in table~\ref{table:2D_experiments_with_proliferation} a detailed overview of all the experiments done in this section and the parameters used to produce the results. As before, most figures describe multiple experiments; the linestyle of the curve in the figure determines which experiment is precisely described by the set of parameters.
+Also like in section~\ref{sec:2D_without_proliferation}, in table~\ref{table:2D_experiments_with_proliferation} a detailed overview of all the experiments done in this section is displayed for the parameters used to produce the results. All figures describe multiple experiments; the linestyle of the curve in the figure determines which experiment is precisely described by the set of parameters.
 
-
-\subsubsection{Basecase Analysis}
-
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{resources/images/basecase_comparison.png}
     \caption{Describing the updated basecase, in the image above only the updated basecase is plotted, below it is compared to the initial basecase.}
     \label{fig:2D_basecase_comparison}
 \end{figure}
 
-Establishing a basecase to compare the following parameter analysis results against it makes sense. In figure~\ref{fig:2D_basecase_comparison}, you can see how introducing tumor cell proliferation and extracellular matrix renewal changes the simulation outcome. For this, we used the values $\mu_1= 0.1$ and $\mu_2=0.5$ according to the only experiment found for this system of equations in the paper of Kolev et al. \cite{Kolev2010}.
+Figure~\ref{fig:2D_basecase_comparison} compares how introducing both parameters $\mu_1=0.1$ and $\mu_2=0.5$ affects the system. These estimates are taken from Kolev et al.'s experiments with this model. Like in the Parameter Analysis regarding the system without proliferaiton and renewal the set of parameters introducing $\mu_1$ and $\mu_2$ are used as a foundation to compare the following results against.
 
-Comparing this new basecase to our initial model's basecase, we can see the influences of both $\mu_1$ and $\mu_2$, as the tumor cell density curve is visibly higher than without proliferation, causing a higher production of matrix-degrading enzymes, which would lead to faster ECM degradation. However, this is countered by the renewal factor $\mu_2$ causing the ECM concentration to be higher at the end, at $t=8$, than in the initial basecase experiment.
+Comparing the basecase of the extended model to the basecase of the model without proliferation or renewal, the influences of both $\mu_1$ and $\mu_2$ are distinctive. The tumor cell density curve is visibly higher than without proliferation, causing a higher production of matrix-degrading enzymes. However, this is countered by the renewal factor $\mu_2$, causing the ECM concentration to be higher at the end, at $t=8$, than in the initial basecase experiment, yet having both higher density for the tumor cells and the matrix-degrading enzyme concentration.
 
+Regarding the variation of dimensions, these measures can be used to mimic tumor cell density curves better across different dimensions.
 
-
-
-
-\subsubsection{Parameter Analysis}
-
-For the Parameter Analysis of the model with proliferation and renewal, we are focusing on comparing the updated model's results with those produced by the model without proliferation and renewal. This will point out again the influence of $\mu_1$ and $\mu_2$ on the system.
+For the Parameter Analysis of the model with proliferation and renewal, the focus lies on comparing the extended model's results with those produced by the model without proliferation and renewal. This will underline the influence $\mu_1$ and $\mu_2$ have on the system.
 
 \subsubsection*{$d_c$ Variation}
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{resources/images/prolif_dc_variation.png}
-    \caption{Plots show results for varying $d_c$ whilst keeping the other parameters constant}
+    \caption{Plot results for varying $d_c$, keeping the other parameters constant}
     \label{fig:prolif_dc_comparison}
 \end{figure}
 
@@ -600,7 +588,7 @@ Varying $d_c$ with proliferation terms, we see the same effects as without proli
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{resources/images/prolif_gamma_variation.png}
-    \caption{Plots show results for varying $\gamma$ whilst keeping the other parameters constant.}
+    \caption{Plot results for varying $\gamma$, keeping the other parameters constant}
     \label{fig:prolif_gamma_variation}
 \end{figure}
 

@@ -8,8 +8,6 @@
 \contentsline {section}{\numberline {4}Experiments and Results}{14}{}%
 \contentsline {subsection}{\numberline {4.1}Dimension Variation}{17}{}%
 \contentsline {subsection}{\numberline {4.2}Parameter Analysis without Proliferation and Renewal - Homogenous ECM}{25}{}%
-\contentsline {subsection}{\numberline {4.3}2D Results with Proliferation and Renewal - Homogenous ECM}{44}{}%
-\contentsline {subsubsection}{\numberline {4.3.1}Basecase Analysis}{46}{}%
-\contentsline {subsubsection}{\numberline {4.3.2}Parameter Analysis}{46}{}%
-\contentsline {subsection}{\numberline {4.4}2D Results with Proliferation and Renewal - Heterogenous ECM}{59}{}%
-\contentsline {section}{\numberline {5}Conclusion and Discussion}{62}{}%
+\contentsline {subsection}{\numberline {4.3}Parameter Analysis with Proliferation and Renewal - Homogenous ECM}{42}{}%
+\contentsline {subsection}{\numberline {4.4}2D Results with Proliferation and Renewal - Heterogenous ECM}{58}{}%
+\contentsline {section}{\numberline {5}Conclusion and Discussion}{61}{}%
