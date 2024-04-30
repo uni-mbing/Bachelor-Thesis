@@ -1,6 +1,6 @@
 \section{Modeling}
 
-\subsection{Mathematical Formulation}
+\subsection{Mathematical Derivation}
 
 The model proposed by Anderson et al.~\cite{anderson_continuous_1998,anderson_mathematical_2000} and Chaplain et al.~\cite{anderson_continuous_1998,chaplain_mathematical_2006-1,franssen_mathematical_2019}, extended with terms for modeling cell proliferation and extracellular matrix renewal consists of a system of coupled partial differential equations: 
 \begin{align}
@@ -63,7 +63,7 @@ The production term depends on the tumor cell density $c$ and the decay term on 
 $\mu_3$ and $\delta$ describing production and decay coefficients.
 
 
-\subsection{Numerical Formulation and Parameters}
+\subsection{Numerical Formulation}
 
 To make solving the model easier, we will first non-dimensionalize all the equations~\ref{eq1} to~\ref{eq5} in a standard way to rescale the space domain to a unit size domain $\Omega$. For one space dimension this results in the unit interval $[0,1]$, for two the unit square $[0,1] \times [0,1]$ and for three spacial dimensions the unit cube $[0,1] \times [0,1] \times [0,1]$.
 

@@ -3,11 +3,11 @@
 \contentsline {subsection}{\numberline {2.1}Basics of Tumor Biology}{6}{}%
 \contentsline {subsection}{\numberline {2.2}Mathematical Methods in Oncology}{8}{}%
 \contentsline {section}{\numberline {3}Modeling}{10}{}%
-\contentsline {subsection}{\numberline {3.1}Mathematical Formulation}{10}{}%
-\contentsline {subsection}{\numberline {3.2}Numerical Formulation and Parameters}{12}{}%
+\contentsline {subsection}{\numberline {3.1}Mathematical Derivation}{10}{}%
+\contentsline {subsection}{\numberline {3.2}Numerical Formulation}{12}{}%
 \contentsline {section}{\numberline {4}Experiments and Results}{14}{}%
 \contentsline {subsection}{\numberline {4.1}Dimension Variation}{17}{}%
-\contentsline {subsection}{\numberline {4.2}Parameter Analysis without Proliferation and Renewal - Homogenous ECM}{25}{}%
-\contentsline {subsection}{\numberline {4.3}Parameter Analysis with Proliferation and Renewal - Homogenous ECM}{42}{}%
-\contentsline {subsection}{\numberline {4.4}2D Results with Proliferation and Renewal - Heterogenous ECM}{58}{}%
+\contentsline {subsection}{\numberline {4.2}Parameter Analysis without Proliferation and Renewal}{25}{}%
+\contentsline {subsection}{\numberline {4.3}Parameter Analysis with Proliferation and Renewal}{42}{}%
+\contentsline {subsection}{\numberline {4.4}Heterogenous ECM Structure}{58}{}%
 \contentsline {section}{\numberline {5}Conclusion and Discussion}{60}{}%

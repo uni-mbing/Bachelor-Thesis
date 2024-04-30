@@ -214,6 +214,59 @@
       \verb https://doi.org/10.1158/2159-8290.CD-21-1059
       \endverb
     \endentry
+    \entry{Novikov2021}{article}{}
+      \name{author}{4}{}{%
+        {{hash=edc4b56eb156c01a5022e1da1ef02452}{%
+           family={Novikov},
+           familyi={N\bibinitperiod},
+           given={Nikita\bibnamedelima M.},
+           giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=12c42e0aa1f38ab8300f2ce2901ce226}{%
+           family={Zolotaryova},
+           familyi={Z\bibinitperiod},
+           given={Sofia\bibnamedelima Y.},
+           giveni={S\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=643756c3945a8b922106cd1d1ee5c0c2}{%
+           family={Gautreau},
+           familyi={G\bibinitperiod},
+           given={Alexis\bibnamedelima M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=82da7cdff2cde5e8f63ee6c8f21d54f9}{%
+           family={Denisov},
+           familyi={D\bibinitperiod},
+           given={Evgeny\bibnamedelima V.},
+           giveni={E\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{517af8c8589edc6315c742ba59fcbc00}
+      \strng{fullhash}{e2550ed5bba58b4c0eeee1ada52f2f50}
+      \strng{bibnamehash}{e2550ed5bba58b4c0eeee1ada52f2f50}
+      \strng{authorbibnamehash}{e2550ed5bba58b4c0eeee1ada52f2f50}
+      \strng{authornamehash}{517af8c8589edc6315c742ba59fcbc00}
+      \strng{authorfullhash}{e2550ed5bba58b4c0eeee1ada52f2f50}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Genomic instability and mutations underlie the hallmarks of cancer---genetic alterations determine cancer cell fate by affecting cell proliferation, apoptosis and immune response, and increasing data show that mutations are involved in metastasis, a crucial event in cancer progression and a life-threatening problem in cancer patients. Invasion is the first step in the metastatic cascade, when tumour cells acquire the ability to move, penetrate into the surrounding tissue and enter lymphatic and blood vessels in order to disseminate. A role for genetic alterations in invasion is not universally accepted, with sceptics arguing that cellular motility is related only to external factors such as hypoxia, chemoattractants and the rigidity of the extracellular matrix. However, increasing evidence shows that mutations might trigger and accelerate the migration and invasion of different types of cancer cells. In this review, we summarise data from published literature on the effect of chromosomal instability and genetic mutations on cancer cell migration and invasion.}
+      \field{issn}{1532-1827}
+      \field{journaltitle}{British Journal of Cancer}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Mutational drivers of cancer cell migration and invasion}
+      \field{volume}{124}
+      \field{year}{2021}
+      \field{pages}{102\bibrangedash 114}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1038/s41416-020-01149-0
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/s41416-020-01149-0
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/s41416-020-01149-0
+      \endverb
+    \endentry
     \entry{franssen_mathematical_2019}{article}{}
       \name{author}{4}{}{%
         {{hash=5c0e319449d7341ef938d6476c1d64b4}{%
@@ -246,8 +299,8 @@
       \strng{authorbibnamehash}{799315e6a2abd1cb95227706ac7367b8}
       \strng{authornamehash}{064a638fff452f33394b95c25e6fe0be}
       \strng{authorfullhash}{799315e6a2abd1cb95227706ac7367b8}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0092-8240, 1522-9602}
@@ -436,8 +489,8 @@
       \range{pages}{40}
     \endentry
     \entry{BibEntry2024Apr}{misc}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{month}{4}
       \field{note}{[Online; accessed 30. Apr. 2024]}
@@ -593,8 +646,8 @@
       \strng{authorbibnamehash}{72ad5a221fcbf4c0495dff50596d5b34}
       \strng{authornamehash}{72ad5a221fcbf4c0495dff50596d5b34}
       \strng{authorfullhash}{72ad5a221fcbf4c0495dff50596d5b34}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The goal of this paper is to construct a new algorithm for the numerical simulations of the evolution of tumour invasion and metastasis. By means of mathematical model equations and their numerical solutions we investigate how cancer cells can produce and secrete matrixdegradative enzymes, degrade extracellular matrix, and invade due to diffusion and haptotactic migration. For the numerical simulationsof the interactions between the tumour cells and the surrounding tissue, we apply n@article{10.14492/hokmj/1520928060, author = {Akio ITO}, title = {{Large-time behavior of solutions to a tumor invasion model of Chaplain–Anderson type with quasi-variational structure}}, volume = {47}, journal = {Hokkaido Mathematical Journal}, number = {1}, publisher = {Hokkaido University, Department of Mathematics}, pages = {33 -- 67}, keywords = {large-time behavior, quasi-variational structure, tumor invasion}, year = {2018}, doi = {10.14492/hokmj/1520928060}, URL = {https://doi.org/10.14492/hokmj/1520928060} }umerical approximations, which are spectrally accurateand based on small amounts of grid-points. Our numerical experiments illustrate the metastatic ability of tumour cells.}
