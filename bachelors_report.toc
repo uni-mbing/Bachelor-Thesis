@@ -9,5 +9,5 @@
 \contentsline {subsection}{\numberline {4.1}Dimension Variation}{17}{}%
 \contentsline {subsection}{\numberline {4.2}Parameter Analysis without Proliferation and Renewal}{25}{}%
 \contentsline {subsection}{\numberline {4.3}Parameter Analysis with Proliferation and Renewal}{42}{}%
-\contentsline {subsection}{\numberline {4.4}Heterogenous ECM Structure}{58}{}%
+\contentsline {subsection}{\numberline {4.4}Heterogeneous ECM Structure}{58}{}%
 \contentsline {section}{\numberline {5}Conclusion and Discussion}{60}{}%
