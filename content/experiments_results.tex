@@ -585,7 +585,7 @@ Varying $d_c$ with proliferation terms, we see the same effects as without proli
 
 \subsubsection*{$\gamma$ Variation}
 
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{resources/images/prolif_gamma_variation.png}
     \caption{Plot results for varying $\gamma$, keeping the other parameters constant}
@@ -599,7 +599,7 @@ The parameter $\mu_1$ describes the proliferation of the tumor cells, using Kole
 
 Since the basecase, using Kolve et al.'s values, sets the proliferation rate of the tumor cells to $\mu_1=0.1$; we consider in the dotted experiment the effects of only introducing the renewal of the ECM.
 
-\begin{figure}[h]
+\begin{figure}[h!]
  \centering
  \includegraphics[width=\textwidth]{resources/images/prolif_mu_1_variation.png}
  \caption{Plots show results for varying $\mu_1$ whilst keeping the other parameters constant.}
@@ -614,7 +614,7 @@ It looks different at the last point in time, at $t=8$. As mentioned above, an i
 Introducing $\mu_1$ means introducing one of the hallmarks of cancer, sustaining proliferative signaling, which makes the tumor cells themselves responsible for producing them instead of requiring other hormones or enzymes to trigger growth signaling. Setting $\mu_1=0$ could result from a drug working, hindering growth signaling.
 
 \subsubsection*{$\eta$ Variation}
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{resources/images/prolif_eta_variation.png}
     \caption{Plots show results for varying $\eta$ whilst keeping the other parameters constant.}
@@ -627,7 +627,7 @@ Additionally, the other two experiments showed a visible increase in the tumor c
 
 \subsubsection*{$\mu_2$ Variation}
 The parameter $\mu_2$ describes the renewal processes of the extracellular matrix molecules. Also, using Kolev et al.'s estimate in \cite{Kolev2010}, we can assume an even distribution with $\mu_2 \sim U[0.1, 1.0]$. In natural processes, the renewal of the extracellular matrix is essential to regulate cell differentiation and wound repair, for example~\cite{Lu2011-yt}.
-\begin{figure}[h]
+\begin{figure}[h!]
  \centering
  \includegraphics[width=\textwidth]{resources/images/prolif_mu_2_variation.png}
  \caption{Plots show results for varying $\mu_2$ whilst keeping the other parameters constant.}
