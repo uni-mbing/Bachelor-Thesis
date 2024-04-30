@@ -28,7 +28,7 @@ and the initial conditions of the matrix-degrading enzymes are described by:
     m(x,y,z,0) = 0.5 \exp(-\frac{(x-0.5)^2+(y-0.5)^2+(z-0.5)^2}{0.01})
 \end{align*}
 
-As mentioned above, two cases are discussed regarding the structure of the extracellular matrix: a homogenous ECM structure and a heterogenous ECM structure.
+As mentioned above, two cases are discussed regarding the structure of the extracellular matrix: a homogenous ECM structure and a heterogeneous ECM structure.
 The structure of the homogenous extracellular matrix is defined by:
 \begin{align*}
     e(x,y,z,0) = 1 - 0.5 \exp(-\frac{(x-0.5)^2+(y-0.5)^2+(z-0.5)^2}{0.01})
@@ -37,7 +37,7 @@ The structure of the homogenous extracellular matrix is defined by:
 \begin{figure}[ht!]
     \centering
     \includegraphics[width=\textwidth]{resources/images/2D_initial_conditions_homogenous_ECM.png}
-    \caption{Visualization of the initial value distribution for an experiment in two space dimensions with a homogenous extracellular matrix}
+    \caption{Initial conditions in 2D with a homogeneous extracellular matrix}
     \label{fig:2D_homogenous_ECM_initial}
 \end{figure}
 Figure~\ref{fig:2D_homogenous_ECM_initial} shows a 2D plot of the initial conditions using the homogenous extracellular matrix structure.
@@ -51,10 +51,10 @@ The other case investigated uses a heterogeneous structure on the extracellular 
     \centering
     \label{fig:Initial_Value_Distribution}
     \includegraphics[width=\textwidth]{resources/images/2D_initial_conditions_heterogenous_ECM.png}
-    \caption{Visualization of the initial value distribution for an experiment in two space dimensions with a heterogenous extracellular matrix}
+    \caption{Initial conditions in 2D with a heterogeneous extracellular matrix}
     \label{fig:2D_heterogenous_ECM_initial}
 \end{figure}
-Figure~\ref{fig:2D_heterogenous_ECM_initial} describes these modifications on $e$ and shows the initial conditions for the system using a heterogenous ECM structure.
+Figure~\ref{fig:2D_heterogenous_ECM_initial} describes these modifications on $e$ and shows the initial conditions for the system using a heterogeneous ECM structure.
   
 It is worth discussing the mathematical intuition concerning the system of partial differential equations briefly before starting with the main part of this work. 
 
@@ -69,13 +69,13 @@ Before starting with the Parameter Analysis, the changes in the results varying 
 \begin{figure}[ht!]
  \centering
  \includegraphics[width=0.85\textwidth]{resources/images/anderson_experiment.png}
- \caption{Plot of Anderson's first one dimensional experiment}
+ \caption{Results of Anderson's first one dimensional experiment}
  \label{fig:anderson_experiment}
 \end{figure}
 \begin{figure}[ht!]
     \centering
     \includegraphics[width=0.85\textwidth]{resources/images/1D_replication_3D.png}
-    \caption{Plots using Anderson et al.'s parameters in 2D and 3D}
+    \caption{Results using Anderson et al.'s parameters in 2D and 3D}
     \label{fig:unadjsuted_replication}
 \end{figure}
 
@@ -94,7 +94,7 @@ The focus lies on the values of the variables at the origin $x=0$ and the same m
 \begin{figure}[!htb]
  \centering
  \includegraphics[width=\textwidth]{resources/images/alpha_comparison.png}
- \caption{Comparison of $\alpha$ values to replicate Anderson et al.'s experiment}
+ \caption{Comparison of $\alpha$ values to replicate Anderson et al.'s results}
  \label{fig:replication_alpha_comparison}
 \end{figure}
 
@@ -103,7 +103,7 @@ Starting with comparing different values for $\alpha$, the figure~\ref{fig:repli
 \begin{figure}[!htb]
  \centering
  \includegraphics[width=\textwidth]{resources/images/dc_comparison.png}
- \caption{Comparison of $d_c$ values to replicate Anderson et al.'s experiment}
+ \caption{Comparison of $d_c$ values to replicate Anderson et al.'s results}
  \label{fig:replication_dc_comparison}
 \end{figure}
 
@@ -112,7 +112,7 @@ Looking at the diffusion coefficient for the tumor cells, in figure~\ref{fig:rep
 \begin{figure}[!htb]
  \centering
  \includegraphics[width=\textwidth]{resources/images/gamma_comparison.png}
- \caption{Comparison of $\gamma$ values to replicate Anderson et al.'s experiment}
+ \caption{Comparison of $\gamma$ values to replicate Anderson et al.'s results}
  \label{fig:replication_gamma_comparison}
 \end{figure}
 
@@ -123,7 +123,7 @@ These comparisons already underline the interplay between diffusion and Haptotax
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{resources/images/2D_without_proliferation_replication_3D.png}
-    \caption{3D Replication of using the 2D basecases values}
+    \caption{Results using the 2D basecases values in 2D and 3D}
     \label{fig:2D_proliferation_replication_3D}
 \end{figure}
 
@@ -132,7 +132,7 @@ The adjustments on $d_c,\gamma$ and $\alpha$ generate the final configuration fo
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{resources/images/basecase_replication.png}
-    \caption{Comparing 2D basecase without proliferation and 3D basecase}
+    \caption{Comparing 2D basecase values and 3D basecase values}
     \label{fig:3D_basecase_comparison}
 \end{figure}
 
@@ -166,7 +166,7 @@ As mentioned above, tumor cell motility plays a crucial role during the temporal
         Haptotaxis & $\frac{\partial c}{\partial x}\frac{\partial e}{\partial x} + \frac{\partial^{2}e}{\partial x^{2}}$ & $\frac{\partial c}{\partial x}\frac{\partial e}{\partial x} + \frac{\partial c}{\partial y} \frac{\partial e}{\partial y} + \frac{\partial^{2}e}{\partial x^{2}} + \frac{\partial^{2}e}{\partial y^{2}} $ & $\frac{\partial c}{\partial x}\frac{\partial e}{\partial x} + \frac{\partial c}{\partial y}\frac{\partial e}{\partial y} + \frac{\partial c}{\partial z}\frac{\partial e}{\partial z} + \frac{\partial^{2}e}{\partial x^{2}} + \frac{\partial^{2}e}{\partial y^{2}} + \frac{\partial^{2}e}{\partial z^{2}}$ \\
         \hline
     \end{tabular}
-    \caption{Overview of Diffusion and Haptotaxis terms across dimensions}
+    \caption{Diffusion and Haptotaxis terms varying dimensions}
     \label{tab:diff_hapto}
 \end{table}
 Comparing the terms for diffusion and Haptotxis with varying dimensions in figure~\ref{tab:diff_hapto} explains why those values need to be adjusted in different dimensions. For the diffusion, an additional term is added for each increased dimension. Assuming that $\frac{\partial^{2}c}{\partial x^{2}}=\frac{\partial^{2}c}{\partial y^{2}}=\frac{\partial^{2}c}{\partial z^{2}}=\kappa(t)$ and also assuming a constant factor $M$ for diffusion throughout varying the dimensions, this yields for the different dimensions:
@@ -223,7 +223,7 @@ The conclusion drawn from adjusting the parameters with varying dimensions is th
     \ref{fig:2D_proliferation_replication_3D} & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
     \ref{fig:3D_basecase_comparison} & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-3}$ & 0.3546 & 0\\  \hline
     \ref{fig:3D_basecase_comparison} & \sampleline{} & $3.3\cdot 10^{-4}$ & 0.0058 & 10 & $1\cdot 10^{-3}$ & 0.6 & 0\\  \hline
-    \caption{Overview of all experiments conducted for the model without proliferation and renewal producing 2D output}
+    \caption{Experiments and corresponding parameters for plots replicating Anderson et al.'s results and varying the dimensions}
     \label{table:replication_experiments}
 \end{longtable}
 
@@ -287,7 +287,7 @@ The replicated results shown in figure~\ref{fig:3D_basecase_comparison} confirm 
     \ref{fig:dm_alpha_beta_variation_2} - left & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-3}$ & 0.1 & 0.1 \\ \hline
     \ref{fig:dm_alpha_beta_variation_2} -right & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-3}$ & 1.0 & 0.005 \\ \hline
     \ref{fig:dm_alpha_beta_variation_2} -right & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 10 & $1\cdot 10^{-3}$ & 1.0 & 0.1 \\ \hline
-    \caption{Overview of all experiments conducted for the model without proliferation and renewal producing 2D output}
+    \caption{Experiments and corresponding parameters for plots in the Parameter Analysis for the model without proliferation and renewal}
     \label{table:2D_experiments_without_proliferation}
 \end{longtable}
 Table~\ref{table:2D_experiments_without_proliferation} gives a detailed overview of all the experiments done in this section and the parameters used to produce the results. We are considering the model without the proliferation of the tumor cells or renewal of the extracellular matrix. In every figure, more than one experiment will be described; the linestyle in table~\ref{table:2D_experiments_without_proliferation} determines exactly which experiment by the set of parameters.
@@ -299,7 +299,7 @@ As described, the intuition is that decreasing $d_c$ will increase the effects o
 \begin{figure}[h!]
  \centering
  \includegraphics[width=\textwidth]{resources/images/dc_variation.png}
- \caption{Plot results for varying $d_m$, keeping the other parameters constant}
+ \caption{Plot results for varying $d_m$ keeping the other parameters constant}
  \label{fig:dc_variation}
 \end{figure}
 These assumptions are met by looking at the experiments in figure~\ref{fig:dc_variation}. The smaller $d_c$ gets, the higher the influence of Haptotaxis and vice versa.
@@ -320,7 +320,7 @@ $\gamma$ describes the effects of Haptotaxis; it is assumed that it is evenly di
 \begin{figure}[h!]
  \centering
  \includegraphics[width=\textwidth]{resources/images/gamma_variation.png}
- \caption{Plot results for varying $\gamma$, keeping the other parameters constant}
+ \caption{Plot results for varying $\gamma$ keeping the other parameters constant}
  \label{fig:gamma_variation}
 \end{figure}
 The experiments described in figure~\ref{fig:gamma_variation} verify the expected behavior.
@@ -334,7 +334,7 @@ In the last plot at $t=8$, the observations from the previous points in time are
 \begin{figure}[h!]
  \centering
  \includegraphics[width=0.95\textwidth]{resources/images/gamma_2D_plot_.png}
- \caption{2D Plot results for increasing $\gamma$ above the definition area, keeping the other parameters constant}
+ \caption{2D Plot results for increasing $\gamma$ above the definition area keeping the other parameters constant}
  \label{fig:gamma_2D_plot}
 \end{figure}
 Out of curiosity, a step further is taken, increasing $\gamma$ by one power to $\gamma=0.1$. As previously observed, Haptotaxis pulling the cells into surrounding tissue increases towards high ECM concentrations, causing an even faster invasion process. However, in this case, the invasion pace of the tumor cells is so high that no cells remain at the origin; everything is being pulled into the surrounding tissue. Before finishing the simulation after $t=8$, the tumor cells have reached the domain $\Omega$'s border. Upon hitting the border, the cells are being reflected back inward due to the boundary conditions of the investigated model, equations~\ref{eq:9} and~\ref{eq:10}. In figure~\ref{fig:gamma_2D_plot}, this process is observable. Shortly after $t=2$, the tumor cells reach the border and the following plot at $t=3$ shows them being reflected and moving into the corners of the domain $\Omega$, where the ECM concentration is highest. At this point, the pace of the ECM degradation has not been able to keep up with the invasion pace of the tumor cells. After being pulled into the corners at $t=3$ and degrading the ECM there, at $t=6$, the tumor cells are pulled back toward the center of the simulation, where extracellular matrix molecules are still left.
@@ -349,7 +349,7 @@ The parameter $\eta$ controls the degradation process of the extracellular matri
 \begin{figure}[h!]
  \centering
  \includegraphics[width=\textwidth]{resources/images/eta_variation.png}
- \caption{Plot results for varying $\eta$, keeping the other parameters constant}
+ \caption{Plot results for varying $\eta$ keeping the other parameters constant}
  \label{fig:eta_variation}
 \end{figure}
 Inspecting the results in figure~\ref{fig:eta_variation} confirms these assumptions.
@@ -367,7 +367,7 @@ $d_m$ describes the diffusion coefficient for the matrix-degrading enzymes. As e
 \begin{figure}[h]
  \centering
  \includegraphics[width=\textwidth]{resources/images/dm_variation.png}
- \caption{Plot results for varying $d_m$, keeping the other parameters constant}
+ \caption{Plot results for varying $d_m$ keeping the other parameters constant}
  \label{fig:dm_variation}
 \end{figure}
 Inspecting the results in figure~\ref{fig:dm_variation}, in the second plot after $t=0.4$, it can be observed that the curves describing the tumor cell density and the ECM are mostly untouched, though looking closely, for the highest $d_m$ value, the dotted lines, the ECM has at the origin higher and farther out lower concentrations of extracellular matrix molecules. This is caused by the more even distribution of the matrix-degrading enzymes, which reduces the concentration at the origin and causes a faster invasion of the surrounding area of the MDEs, which is better observable in the plots of later points in time.
@@ -385,7 +385,7 @@ The parameter $\alpha$ influences how fast the tumor cells produce matrix-degrad
 \begin{figure}[h]
  \centering
  \includegraphics[width=\textwidth]{resources/images/alpha_variation.png}
- \caption{Plot results for varying $\alpha$, keeping the other parameters constant}
+ \caption{Plot results for varying $\alpha$ keeping the other parameters constant}
  \label{fig:alpha_variation}
 \end{figure}
 
@@ -410,7 +410,7 @@ With the introduction of $\beta$, the MDE curve will be lower or increase slower
 \begin{figure}[h]
  \centering
  \includegraphics[width=\textwidth]{resources/images/beta_variation.png}
- \caption{Plot results for varying $\beta$, keeping the other parameters constant}
+ \caption{Plot results for varying $\beta$ keeping the other parameters constant}
  \label{fig:beta_variation}
 \end{figure}
 As seen in the results of figure~\ref{fig:beta_variation}, a value of $\beta=0.1$ is sufficient to after already $t=0.4$ reduce the MDE concentration to nearly zero. In this case, the decay rate turned out to be too high, outpacing production entirely, with matrix-degrading enzyme concentration vanishing spatially and temporarily. The immediate decay of the MDEs causes a drastically slower ECM degradation, yet it has not stopped entirely since the tumor cells still produce matrix-degrading enzymes. This slow degradation of the extracellular matrix creates a haptotatic pull, as already described, that lasts a lot longer temporarily in regions around the origin, which pulls all cancer cells outward to invade the tissue, leaving no primary lump of tumor cells at the origin. Since more MDEs are produced in regions with high tumor cell density, this also causes a considerably slower but more even degradation of the extracellular matrix, causing a more substantial stretch of the tumor cells.
@@ -423,7 +423,7 @@ The matrix-degrading enzymes are also very diverse since the extracellular matri
 \begin{figure}[h!]
  \centering
  \includegraphics[width=\textwidth]{resources/images/dc_gamma_variation.png}
- \caption{Plot results for varying $d_c, \gamma$, keeping the other parameters constant}
+ \caption{Plot results for varying $d_c, \gamma$ keeping the other parameters constant}
  \label{fig:dc_gamma_variation}
 \end{figure}
 Started with varying $d_c$ and $\gamma$ and studying these results in figure~\ref{fig:dc_gamma_variation}, gives a clearer understanding of the interplay between diffusion and Haptotaxis.
@@ -440,7 +440,7 @@ These experiments give an excellent example of the relationship between Haptotax
 \begin{figure}[h!]
  \centering
  \includegraphics[width=\textwidth]{resources/images/dm_eta_variation.png}
- \caption{Plot results for varying $\eta, d_m$, keeping the other parameters constant}
+ \caption{Plot results for varying $\eta, d_m$ keeping the other parameters constant}
  \label{fig:dm_eta_variation}
 \end{figure}
 
@@ -454,7 +454,7 @@ These experiments conclude that the diffusive properties of the matrix-degrading
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{resources/images/alpha_beta_variation.png}
-    \caption{Plot results for varying $\alpha, \beta$, keeping the other parameters constant}
+    \caption{Plot results for varying $\alpha, \beta$ keeping the other parameters constant}
     \label{fig:alpha_beta_variation}
 \end{figure}
 Looking at figure~\ref{fig:alpha_beta_variation}, the experimental results varying both $\alpha$ and $\beta$ are displayed. For low MDE production and low MDE decay, the curve for the MDEs is still visible at up to $t=4$; at $t=8$, it is zero. This causes the ECM degrading to happen faster than for high $\beta$ values; therefore, the tumor cells develop the two characteristic lumps of cells, one invading the tissue and the other staying at the origin. The maxima for both lumps are lower than in previous experiments, indicating a more even distribution of the tumor cells between the two lumps. Increasing $\beta=0.1$, the MDE curve appears to be zero after again already $t=0.4$ and stays there until the end of this experiment, as was shown in the section varying $\beta$. This low concentration of MDEs causes a slower ECM degrading process, leading the tumor cells to develop only one lump, invading the space. For $\alpha=0.1$, both values of $\beta$ are shown to be too high, decaying the matrix-degrading enzymes too fast to keep up with production.
@@ -464,16 +464,16 @@ On the other hand, by increasing $\alpha$ to $1.0$ and keeping $\beta=0.005$, we
 In these experiments, we see that it is possible to find a balance between them by varying both $\alpha$ and $\beta$, not letting one get the upper hand suppressing important effects.
 
 \subsubsection*{$d_m - \alpha - \beta$ Variation}
-\begin{figure}[h!]
+\begin{figure}[htb!]
     \centering
     \includegraphics[width=\textwidth]{resources/images/dm_alpha_beta_variation_1.png}
-    \caption{Plot results for varying $d_m, \alpha, \beta$, keeping the other parameters constant}
+    \caption{Plot results for varying $d_m, \alpha, \beta$ keeping the other parameters constant}
     \label{fig:dm_alpha_beta_variation_1}
 \end{figure}
-\begin{figure}[h!]
+\begin{figure}[htb!]
     \centering
     \includegraphics[width=\textwidth]{resources/images/dm_alpha_beta_variation_2.png}
-    \caption{Plot results for varying $d_m, \alpha, \beta$, keeping the other parameters constant}
+    \caption{Plot results for varying $d_m, \alpha, \beta$ keeping the other parameters constant}
     \label{fig:dm_alpha_beta_variation_2}
 \end{figure}
 
@@ -548,7 +548,7 @@ As in section~\ref{sec:2D_without_proliferation}, we use the same initial condit
     \ref{fig:prolif_eta_mu_2_variation} - left & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 0.1 & 2 & 1.0 & $1\cdot 10^{-3}$ & 0.3564 & 0 \\ \hline
     \ref{fig:prolif_eta_mu_2_variation} - right & \sampleline{dotted} & $5\cdot 10^{-4}$ & 0.0055 & 0.1 & 20 & 0.1 & $1\cdot 10^{-3}$ & 0.3564 & 0 \\ \hline
     \ref{fig:prolif_eta_mu_2_variation} - right & \sampleline{} & $5\cdot 10^{-4}$ & 0.0055 & 0.1 & 20 & 1.0 & $1\cdot 10^{-3}$ & 0.3564 & 0 \\ \hline
-    \caption{Overview of all experiments conducted for the model with proliferation and renewal producing 2D output}
+    \caption{Experiments and corresponding parameters for plots in the Parameter Analysis for the model with proliferation and renewal}
     \label{table:2D_experiments_with_proliferation}
 \end{longtable}
 Also, like in section~\ref{sec:2D_without_proliferation}, in table~\ref{table:2D_experiments_with_proliferation}, a detailed overview of all the experiments done in this section is displayed for the parameters used to produce the results. All figures describe multiple experiments; the linestyle of the curve in the figure determines which experiment is precisely described by the set of parameters.
@@ -556,7 +556,7 @@ Also, like in section~\ref{sec:2D_without_proliferation}, in table~\ref{table:2D
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{resources/images/basecase_comparison.png}
-    \caption{Describing the updated basecase, in the image above only the updated basecase is plotted, below it is compared to the initial basecase.}
+    \caption{Comparing the basecases of the two investigated models}
     \label{fig:2D_basecase_comparison}
 \end{figure}
 
@@ -572,7 +572,7 @@ For the Parameter Analysis of the model with proliferation and renewal, the focu
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{resources/images/prolif_dc_variation.png}
-    \caption{Plot results for varying $d_c$, keeping the other parameters constant}
+    \caption{Plot results for varying $d_c$ keeping the other parameters constant}
     \label{fig:prolif_dc_comparison}
 \end{figure}
 
@@ -584,7 +584,7 @@ Comparing both models, we see differences regarding the total volume of the tumo
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{resources/images/prolif_gamma_variation.png}
-    \caption{Plot results for varying $\gamma$, keeping the other parameters constant}
+    \caption{Plot results for varying $\gamma$ keeping the other parameters constant}
     \label{fig:prolif_gamma_variation}
 \end{figure}
 
@@ -597,7 +597,7 @@ The parameter $\mu_1$ describes the proliferation of the tumor cells, using Kole
 \begin{figure}[h!]
  \centering
  \includegraphics[width=\textwidth]{resources/images/prolif_mu_1_variation.png}
- \caption{Plots show results for varying $\mu_1$ whilst keeping the other parameters constant.}
+ \caption{Plot results for varying $\mu_1$ keeping the other parameters constant}
  \label{fig:prolif_mu_1_variation}
 \end{figure}
 Figure~\ref{fig:prolif_mu_1_variation} shows the resulting plots.
@@ -616,7 +616,7 @@ Introducing $\mu_1$ means introducing one of the hallmarks of cancer, sustaining
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{resources/images/prolif_eta_variation.png}
-    \caption{Plots show results for varying $\eta$ whilst keeping the other parameters constant.}
+    \caption{Plot results for varying $\eta$ keeping the other parameters constant}
     \label{fig:prolif_eta_variation}
 \end{figure}
 
@@ -632,7 +632,7 @@ In natural processes, the renewal of the extracellular matrix is an essential me
 \begin{figure}[h!]
  \centering
  \includegraphics[width=\textwidth]{resources/images/prolif_mu_2_variation.png}
- \caption{Plots show results for varying $\mu_2$ whilst keeping the other parameters constant.}
+ \caption{Plot results for varying $\mu_2$ keeping the other parameters constant}
  \label{fig:prolif_mu_2_variation}
 \end{figure}
 As seen in figure~\ref{fig:prolif_mu_2_variation}, this renewal process takes some time to show effects, but after $t=8$, the initial assumptions are confirmed only in a minor expression. 
@@ -651,7 +651,7 @@ At this point, it is important to say that the renewal rates for tissue in the h
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{resources/images/prolif_dm_variation.png}
-    \caption{Plots show results for varying $d_m$ whilst keeping the other parameters constant.}
+    \caption{Plot results for varying $d_m$ keeping the other parameters constant}
     \label{fig:prolif_dm_variation}
 \end{figure}
 
@@ -663,7 +663,7 @@ The changes between the models are minimal. As mentioned, they exhibit the same 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{resources/images/prolif_alpha_variation.png}
-    \caption{Plots show results for varying $\alpha$ whilst keeping the other parameters constant.}
+    \caption{Plot results for varying $\alpha$ keeping the other parameters constant}
     \label{fig:prolif_alpha_variation}
 \end{figure}
 
@@ -675,7 +675,7 @@ However, changes are apparent when comparing the initial and the extended models
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{resources/images/prolif_beta_variation.png}
-    \caption{Plots show results for varying $\beta$ whilst keeping the other parameters constant.}
+    \caption{Plot results for varying $\beta$ keeping the other parameters constant}
     \label{fig:prolif_beta_variation}
 \end{figure}
 
@@ -691,7 +691,7 @@ As seen in the results, the driving factor in this experiment for tumor invasion
 \begin{figure}[ht!]
     \centering
     \includegraphics[width=\textwidth]{resources/images/prolif_mu_1_mu_2_variation.png}
-    \caption{Plots show results for varying both $\mu_1$ and $\mu_2$ whilst keeping the other parameters constant.}
+    \caption{Plot results for varying $\mu_1, \mu_2$ keeping the other parameters constant}
     \label{fig:prolif_mu_1_mu_2_variation}
 \end{figure}
 The effects in this cross variation take some time to take hold, as did the separate variations of both $\mu_1$ and $\mu_2$. 
@@ -710,14 +710,14 @@ The curves for the MDEs are similar in both cases of varying $\mu_2$ and keeping
 \begin{figure}[ht!]
     \centering
     \adjustbox{width=\textwidth}{\includegraphics{resources/images/prolif_dc_gamma_mu1_1.png}}
-    \caption{Plots show results for varying both $d_c$, $\gamma$ and $\mu_1$ whilst keeping the other parameters constant. This plot is the first of two, with the same $d_c$ value for every plot in this figure.}
+    \caption{Plot results for varying $d_c,\gamma,\mu_1$ keeping the other parameters constant}
     \label{fig:prolif_dc_gamma_mu_1_variation_1}
 \end{figure}
 
 \begin{figure}[h!]
     \centering
     \adjustbox{width=\textwidth}{\includegraphics{resources/images/prolif_dc_gamma_mu1_2.png}}
-    \caption{Plots show results for varying both $d_c$, $\gamma$ and $\mu_1$ whilst keeping the other parameters constant. This plot is the second of two, with the same $d_c$ value for every plot in this figure.}
+    \caption{Plot results for varying $d_c,\gamma,\mu_1$ keeping the other parameters constant}
     \label{fig:prolif_dc_gamma_mu_1_variation_2}
 \end{figure}
 
@@ -735,7 +735,7 @@ This variation is an excellent example of the relationship between Haptotaxis an
 \begin{figure}[h!]
     \centering
     \adjustbox{width=\textwidth}{\includegraphics{resources/images/prolif_eta_mu2_variation.png}}
-    \caption{Plots show results for varying both $\eta$ and $\mu_2$ whilst keeping the other parameters constant.}
+    \caption{Plot results for varying $\eta,\mu_2$ keeping the other parameters constant}
     \label{fig:prolif_eta_mu_2_variation}
 \end{figure}
 
@@ -754,7 +754,7 @@ Here, the characteristic two lumps of tumor cells form, though with a less even 
 \begin{figure}[h!]
  \centering
  \adjustbox{width=0.95\textwidth}{\includegraphics{resources/images/2D_heterogenous_ECM.png}} 
- \caption{2D results using a heterogeneous ECM with the parameter values of the basecase from the model with proliferation; left: tumor cell density, middle: ECM concentration, right: MDE concentration.}
+ \caption{2D results using a heterogeneous ECM with the parameter values of the basecase from the model with proliferation and renewal; left: tumor cell density, middle: ECM concentration, right: MDE concentration.}
  \label{fig:2D_heterogenous_ECM}
 \end{figure}
 
